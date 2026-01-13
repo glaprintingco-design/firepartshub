@@ -8,8 +8,15 @@
     .brand { font-size: 1.6em; font-weight: 800; color: #fff; text-transform: uppercase; letter-spacing: -0.5px; }
     .brand span { color: #d32f2f; }
     .nav-links a { color: #bbb; margin-left: 20px; font-size: 0.9em; font-weight: 600; text-transform: uppercase; }
-    footer { background-color: #1a1a1a; color: #777; padding: 50px 0; margin-top: 60px; font-size: 0.9em; border-top: 4px solid #d32f2f; }
-    footer .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    
+    /* Footer Centrado y Limpio */
+    footer { background-color: #1a1a1a; color: #777; padding: 40px 0; margin-top: 60px; font-size: 0.9em; border-top: 4px solid #d32f2f; text-align: center; }
+    footer .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+    footer h4 { color: #ddd; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; }
+    footer .legal-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+    footer .legal-links a { color: #999; border-bottom: 1px dotted #555; }
+    footer .legal-links a:hover { color: #fff; border-bottom: 1px solid #fff; }
+
     .main-container { max-width: 1200px; margin: 40px auto; padding: 0 20px; min-height: 60vh; }
     .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
     .card { background: white; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; transition: transform 0.2s; }
@@ -20,19 +27,16 @@
     .card-price { color: #d32f2f; font-size: 1.2em; font-weight: 800; }
     .btn-primary { display: block; background-color: #333; color: white; padding: 10px; border-radius: 4px; text-align: center; margin-top: 10px; font-size: 0.9em; }
     
-    /* Estilos Categorias */
     .silo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; margin-bottom: 50px; }
     .silo-card { background: white; padding: 30px; border-radius: 8px; text-align: center; border: 1px solid #ddd; transition: 0.3s; }
     .silo-card:hover { border-color: #d32f2f; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(211, 47, 47, 0.15); }
     .silo-title { font-size: 1.2em; font-weight: 800; color: #333; margin-bottom: 5px; }
     .silo-count { color: #777; font-size: 0.9em; }
 
-    /* Estilos Buscador */
     .search-container { max-width: 600px; margin: -30px auto 40px auto; position: relative; z-index: 10; }
     .search-input { width: 100%; padding: 18px 25px; font-size: 1.1em; border: none; border-radius: 50px; outline: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
     .search-input:focus { box-shadow: 0 4px 20px rgba(211, 47, 47, 0.3); }
     
-    /* Resultados de busqueda dinamicos */
     #searchResultsArea { display: none; margin-bottom: 40px; background: #fff; padding: 20px; border-radius: 8px; border: 1px solid #ddd; }
     .search-hit { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #eee; }
     .search-hit:last-child { border-bottom: none; }
@@ -1125,18 +1129,19 @@
         </div></div></div>
 <footer>
     <div class="container">
-        <div>
+        <div style="margin-bottom: 30px;">
             <h4>About FirePartsHub</h4>
             <p>Organized inventory for Facility Managers.</p>
         </div>
-        <div style="text-align:right;">
-            <h4>Legal</h4>
-            <div style="display:flex; flex-direction:column; gap:5px;">
-                <a href="terms.html">Terms of Service</a>
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="disclosure.html">Affiliate Disclosure</a>
-                <a href="contact.html">Contact</a>
-            </div>
+        
+        <div class="legal-links">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="disclosure.html">Affiliate Disclosure</a>
+        </div>
+        
+        <div style="margin-top: 30px; font-size: 0.8em; opacity: 0.6;">
+            &copy; 2026 FirePartsHub. Not affiliated with listed brands.
         </div>
     </div>
 </footer>
