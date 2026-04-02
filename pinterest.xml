@@ -45,7 +45,7 @@
         <g:title>Honeywell 0RA-100BD</g:title>
         <g:description>Original replacement part: Honeywell 0RA-100BD. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/0ra-100bd.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/5PkAAeSwmGVpyCsV/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -69,7 +69,7 @@
         <g:title>Edwards Security Light Dock Base 101BS-E1</g:title>
         <g:description>Original replacement part: Edwards Security Light Dock Base 101BS-E1. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/101bs-e1.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/S1UAAeSwp1Bomyzq/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -141,7 +141,7 @@
         <g:title>Edwards Security Strobe Light 102DMBS-N5</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Light 102DMBS-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/102dmbs-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/Gv8AAOSw-s5c-A1r/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -153,7 +153,7 @@
         <g:title>Edwards Security Strobe Lens 102LM-G</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Lens 102LM-G. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/102lm-g.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/vf4AAOSwhIRkP3NR/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -189,7 +189,7 @@
         <g:title>Edwards Security Strobe Light 102LS-FLEDB-G1</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Light 102LS-FLEDB-G1. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/102ls-fledb-g1.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/3UAAAOSwVEtoB-mh/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -201,7 +201,7 @@
         <g:title>Edwards Security Strobe Light 102LS-FLEDG-G1</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Light 102LS-FLEDG-G1. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/102ls-fledg-g1.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/CUYAAOSwNNxWFIVQ/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -213,7 +213,7 @@
         <g:title>Edwards Security Strobe Light 102LS-SLEDG-N5</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Light 102LS-SLEDG-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/102ls-sledg-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/0AEAAOSwyyxn7DPc/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -293,11 +293,35 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>1064-g5.html</g:id>
+        <g:title>Edwards Security Buzzer 1064-G5</g:title>
+        <g:description>Original replacement part: Edwards Security Buzzer 1064-G5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/1064-g5.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/ed-1064g5.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>29.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>1065-n5.html</g:id>
+        <g:title>Edwards Security Buzzer 1065-N5</g:title>
+        <g:description>Original replacement part: Edwards Security Buzzer 1065-N5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/1065-n5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/H5QAAeSwg1Jo~PT6/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>30.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>12-a27021-000-05-0t.html</g:id>
         <g:title>Kidde 12-A27021-000-05-0T</g:title>
         <g:description>Original replacement part: Kidde 12-A27021-000-05-0T. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/12-a27021-000-05-0t.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/BncAAeSwQWppA63j/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -321,7 +345,7 @@
         <g:title>Kidde 12-H27121-000-09-0T</g:title>
         <g:description>Original replacement part: Kidde 12-H27121-000-09-0T. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/12-h27121-000-09-0t.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/btIAAOSwygVnaEKt/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -333,7 +357,7 @@
         <g:title>Kidde Temperature Sensor 12-H28021-005-0T</g:title>
         <g:description>Original replacement part: Kidde Temperature Sensor 12-H28021-005-0T. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/12-h28021-005-0t.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/xMEAAeSwMploeCBB/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -345,7 +369,7 @@
         <g:title>Edwards Security Strobe Light 125XBRIRGA24DB</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Light 125XBRIRGA24DB. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/125xbrirga24db.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/j3gAAeSwAGpplM2m/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -357,7 +381,7 @@
         <g:title>Honeywell 1309A0056</g:title>
         <g:description>Original replacement part: Honeywell 1309A0056. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/1309a0056.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/dlYAAOSwFZtnc-~0/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -381,7 +405,7 @@
         <g:title>Honeywell 1309K0002</g:title>
         <g:description>Original replacement part: Honeywell 1309K0002. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/1309k0002.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/3KUAAOSwrJJmpKAx/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -410,6 +434,30 @@
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
         <g:price>60.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>156g-4am.html</g:id>
+        <g:title>Edwards Security Alarm 156G-4AM</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 156G-4AM. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/156g-4am.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/ed-156g4am.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>40.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>156g-6am.html</g:id>
+        <g:title>Edwards Security Alarm 156G-6AM</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 156G-6AM. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/156g-6am.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/2JUAAeSwUGdoXsSQ/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>44.79 USD</g:price>
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
@@ -525,7 +573,7 @@
         <g:title>Kidde Smoke Detector 20SDR</g:title>
         <g:description>Original replacement part: Kidde Smoke Detector 20SDR. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/20sdr.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/IIcAAeSwVZdpqK5s/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -537,7 +585,7 @@
         <g:title>Kidde Carbon Monoxide Monitor 21009942</g:title>
         <g:description>Original replacement part: Kidde Carbon Monoxide Monitor 21009942. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/21009942.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/gxgAAeSwF95ppiFt/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -549,7 +597,7 @@
         <g:title>Kidde Carbon Monoxide Alarm 2101-0073</g:title>
         <g:description>Original replacement part: Kidde Carbon Monoxide Alarm 2101-0073. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/2101-0073.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/nSYAAeSw2dxpbzm9/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -561,7 +609,7 @@
         <g:title>Kidde Carbon Monoxide Alarm 21025772</g:title>
         <g:description>Original replacement part: Kidde Carbon Monoxide Alarm 21025772. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/21025772.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/rEwAAOSwRydlemS6/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -573,7 +621,7 @@
         <g:title>Kidde Carbon Monoxide Alarm 21026350</g:title>
         <g:description>Original replacement part: Kidde Carbon Monoxide Alarm 21026350. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/21026350.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/sXwAAOSwyJZmpwHj/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -597,7 +645,7 @@
         <g:title>Kidde Carbon Monoxide Alarm 21026458</g:title>
         <g:description>Original replacement part: Kidde Carbon Monoxide Alarm 21026458. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/21026458.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/HqUAAeSwF9hpbqEb/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -609,7 +657,7 @@
         <g:title>Kidde Carbon Monoxide Alarm 21031211</g:title>
         <g:description>Original replacement part: Kidde Carbon Monoxide Alarm 21031211. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/21031211.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/J-kAAOSwWnBnQkzX/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -621,7 +669,7 @@
         <g:title>Kidde Smoke Detector 21031428</g:title>
         <g:description>Original replacement part: Kidde Smoke Detector 21031428. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/21031428.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/1vAAAeSwFVlph13N/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -633,7 +681,7 @@
         <g:title>Kidde Smoke Detector 21031466</g:title>
         <g:description>Original replacement part: Kidde Smoke Detector 21031466. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/21031466.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/t58AAeSw0WxpyUzw/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -657,7 +705,7 @@
         <g:title>Kidde Smoke Detector 21032064</g:title>
         <g:description>Original replacement part: Kidde Smoke Detector 21032064. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/21032064.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/x0UAAeSw5bVoyy0m/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -717,7 +765,7 @@
         <g:title>Edwards Security Strobe Light 248LEDMA24AD</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Light 248LEDMA24AD. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/248ledma24ad.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/FW0AAeSwbVVpTVYw/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -741,7 +789,7 @@
         <g:title>Kidde Temperature Sensor 27021-0</g:title>
         <g:description>Original replacement part: Kidde Temperature Sensor 27021-0. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/27021-0.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/1LgAAeSwtLtpxT43/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -765,7 +813,7 @@
         <g:title>Edwards Security Strobe Light 270LEDMR24AD</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Light 270LEDMR24AD. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/270ledmr24ad.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/dnMAAeSwF0RpRGL5/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -789,7 +837,7 @@
         <g:title>Edwards Security Strobe Light 270LEDSA24ADB</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Light 270LEDSA24ADB. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/270ledsa24adb.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/eeYAAeSw7Ztot6qN/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -801,7 +849,7 @@
         <g:title>Edwards Security Strobe Light 270LEDSG24ADB</g:title>
         <g:description>Original replacement part: Edwards Security Strobe Light 270LEDSG24ADB. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/270ledsg24adb.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/PI8AAeSwAPJpmyON/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -909,7 +957,7 @@
         <g:title>Kidde Smoke Detector 28021-5</g:title>
         <g:description>Original replacement part: Kidde Smoke Detector 28021-5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/28021-5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/edIAAOSwmY1jnN5H/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -993,7 +1041,7 @@
         <g:title>Honeywell 301-EM-US3</g:title>
         <g:description>Original replacement part: Honeywell 301-EM-US3. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/301-em-us3.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/d4UAAeSwzchpi207/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1017,7 +1065,7 @@
         <g:title>Honeywell Gas Alarm Control Panel 301C</g:title>
         <g:description>Original replacement part: Honeywell Gas Alarm Control Panel 301C. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/301c.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/b1AAAOSwZ-dh-wQ~/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1029,7 +1077,7 @@
         <g:title>Edwards Fixed Temperature Heat Detector 302-AW-194</g:title>
         <g:description>Original replacement part: Edwards Fixed Temperature Heat Detector 302-AW-194. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/302-aw-194.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/8-MAAOSw9pRkyXlz/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1053,7 +1101,7 @@
         <g:title>Edwards Temperature Sensor 302-ET-194</g:title>
         <g:description>Original replacement part: Edwards Temperature Sensor 302-ET-194. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/302-et-194.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/fjcAAOSwEUVmA1nn/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1065,11 +1113,107 @@
         <g:title>Edwards Siren 315A-AH</g:title>
         <g:description>Original replacement part: Edwards Siren 315A-AH. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/315a-ah.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/nfgAAeSwt5Fpeq1o/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
         <g:price>2291.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>333ex-10g1.html</g:id>
+        <g:title>Edwards Security Alarm 333EX-10G1</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 333EX-10G1. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/333ex-10g1.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/ed-333ex10g1.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>509.96 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>340-4e5.html</g:id>
+        <g:title>Edwards Security Alarm 340-4E5</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 340-4E5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/340-4e5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/8SIAAeSw58xpyZpn/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>40.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>340-4g5.html</g:id>
+        <g:title>Edwards Security Alarm 340-4G5</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 340-4G5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/340-4g5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/SXAAAOSwnR1nzcOz/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>20.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>340-4n5.html</g:id>
+        <g:title>Edwards Security Alarm 340-4N5</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 340-4N5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/340-4n5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/R2QAAOSwa4Bl83Vu/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>18.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>340-6e5.html</g:id>
+        <g:title>Edwards Security Alarm 340-6E5</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 340-6E5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/340-6e5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/DRgAAOSwEghhrUtr/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>29.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>340-6g5.html</g:id>
+        <g:title>Edwards Alarm Bell 340-6G5</g:title>
+        <g:description>Original replacement part: Edwards Alarm Bell 340-6G5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/340-6g5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/rYwAAeSwRAZo0rkY/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>189.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>340-6n5.html</g:id>
+        <g:title>Edwards Security Alarm 340-6N5</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 340-6N5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/340-6n5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/Rt0AAeSwj9dpelqC/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>75.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>340a-g5.html</g:id>
+        <g:title>Edwards Security Buzzer 340A-G5</g:title>
+        <g:description>Original replacement part: Edwards Security Buzzer 340A-G5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/340a-g5.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/ed-340ag5.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>149.00 USD</g:price>
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
@@ -1193,6 +1337,210 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>432-g5.html</g:id>
+        <g:title>Edwards Alarm Bell 432-G5</g:title>
+        <g:description>Original replacement part: Edwards Alarm Bell 432-G5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/432-g5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/gEcAAeSw9lhpg6Kl/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>21.97 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>432-n5.html</g:id>
+        <g:title>Edwards Security Alarm 432-N5</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 432-N5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/432-n5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/HoIAAOSwVV1gnyp1/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>23.98 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>435-10e1.html</g:id>
+        <g:title>Edwards Alarm Bell 435-10E1</g:title>
+        <g:description>Original replacement part: Edwards Alarm Bell 435-10E1. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/435-10e1.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/YrkAAOSwOKNnweEF/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>129.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>435-10g1.html</g:id>
+        <g:title>Edwards Security Alarm 435-10G1</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 435-10G1. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/435-10g1.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/t7AAAeSwXfNpiOdo/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>208.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>435-4e1.html</g:id>
+        <g:title>Edwards Audible Signaling Devices 435-4E1</g:title>
+        <g:description>Original replacement part: Edwards Audible Signaling Devices 435-4E1. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/435-4e1.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/yRYAAOSwe29kiiPU/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>129.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>435-4g1.html</g:id>
+        <g:title>Edwards Alarm Bell 435-4G1</g:title>
+        <g:description>Original replacement part: Edwards Alarm Bell 435-4G1. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/435-4g1.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/ed-4354g1.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>70.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>435-6c1.html</g:id>
+        <g:title>Edwards Security Alarm 435-6C1</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 435-6C1. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/435-6c1.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/MFUAAOSw8FJm-Jae/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>49.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>435-6e1.html</g:id>
+        <g:title>Edwards 435-6E1</g:title>
+        <g:description>Original replacement part: Edwards 435-6E1. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/435-6e1.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/YA4AAeSwNDppLcnJ/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>227.63 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>435-6g1.html</g:id>
+        <g:title>Edwards Security Alarm 435-6G1</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 435-6G1. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/435-6g1.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/ed-4356g1.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>35.85 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>438d-10n5-r.html</g:id>
+        <g:title>Edwards Alarm Bell 438D-10N5-R</g:title>
+        <g:description>Original replacement part: Edwards Alarm Bell 438D-10N5-R. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/438d-10n5-r.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/dHMAAeSwWfxpov5o/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>142.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>438d-6n5-r.html</g:id>
+        <g:title>Edwards Security Alarm 438D-6N5-R</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 438D-6N5-R. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/438d-6n5-r.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/IjgAAOSw8hRmAvb4/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>50.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>438d-6n5.html</g:id>
+        <g:title>Edwards Security Alarm 438D-6N5</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 438D-6N5. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/438d-6n5.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/Kz4AAOSwevhmYKBB/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>42.45 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>439d-10aw.html</g:id>
+        <g:title>Kidde Alarm Bell 439D-10AW</g:title>
+        <g:description>Original replacement part: Kidde Alarm Bell 439D-10AW. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/439d-10aw.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/BhsAAOSwo6doFO-I/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>59.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>439d-6aw.html</g:id>
+        <g:title>Edwards Security Alarm 439D-6AW</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 439D-6AW. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/439d-6aw.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/frsAAOSwTVpgeJFB/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>25.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>439d-8aw-r.html</g:id>
+        <g:title>Kidde Alarm Bell 439D-8AW-R</g:title>
+        <g:description>Original replacement part: Kidde Alarm Bell 439D-8AW-R. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/439d-8aw-r.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/wWoAAOSwFT1luucG/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>69.95 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>439d-8aw.html</g:id>
+        <g:title>Edwards Security Alarm 439D-8AW</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 439D-8AW. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/439d-8aw.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/wWoAAOSwFT1luucG/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>69.95 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>43t-g6-24-r.html</g:id>
+        <g:title>Eaton Security Alarm 43T-G6-24-R</g:title>
+        <g:description>Original replacement part: Eaton Security Alarm 43T-G6-24-R. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/43t-g6-24-r.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/VSsAAOSwJJ5kXwxF/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>40.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>4890061.html</g:id>
         <g:title>Potter 4890061</g:title>
         <g:description>Original replacement part: Potter 4890061. Verified for fire alarm systems.</g:description>
@@ -1245,7 +1593,7 @@
         <g:title>Fire-Lite Hardware Kit 50133288-001</g:title>
         <g:description>Original replacement part: Fire-Lite Hardware Kit 50133288-001. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/50133288-001.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/M7QAAOSw6r5io3Yh/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1257,7 +1605,7 @@
         <g:title>Honeywell Fixed Temperature Heat Detector 503</g:title>
         <g:description>Original replacement part: Honeywell Fixed Temperature Heat Detector 503. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/503.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/caMAAOSwKohhgXUz/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1281,7 +1629,7 @@
         <g:title>Edwards Halogen Light Bulb 50LMP-40WH</g:title>
         <g:description>Original replacement part: Edwards Halogen Light Bulb 50LMP-40WH. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/50lmp-40wh.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/ogUAAOSwl61jINNg/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1317,7 +1665,7 @@
         <g:title>Honeywell Smoke Detector 5193SD</g:title>
         <g:description>Original replacement part: Honeywell Smoke Detector 5193SD. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/5193sd.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/iCYAAeSwTP1px-M~/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1329,7 +1677,7 @@
         <g:title>Edwards Horn Strobe 51R-G1</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 51R-G1. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/51r-g1.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/-ZcAAOSwVt1e-8vv/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1341,7 +1689,7 @@
         <g:title>Edwards Horn Strobe 51R-N5-40W</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 51R-N5-40W. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/51r-n5-40w.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/9X4AAOSwUIRmUZTr/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1365,7 +1713,7 @@
         <g:title>Silent Knight Direct Connect Module 5220</g:title>
         <g:description>Original replacement part: Silent Knight Direct Connect Module 5220. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/5220.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/B7UAAOSwrIllnFGU/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1409,6 +1757,18 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>55-6am.html</g:id>
+        <g:title>Edwards Security Alarm 55-6AM</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 55-6AM. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/55-6am.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/ed-556am.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>15.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>5522md-aw.html</g:id>
         <g:title>Edwards 5522MD-AW</g:title>
         <g:description>Original replacement part: Edwards 5522MD-AW. Verified for fire alarm systems.</g:description>
@@ -1425,7 +1785,7 @@
         <g:title>Edwards Security Alarm 5531M-24N5</g:title>
         <g:description>Original replacement part: Edwards Security Alarm 5531M-24N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/5531m-24n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/2bUAAeSw3XppJaXx/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1497,7 +1857,7 @@
         <g:title>System Sensor Temperature and Humidity Sensor 5604</g:title>
         <g:description>Original replacement part: System Sensor Temperature and Humidity Sensor 5604. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/5604.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/USIAAeSwtVhoxBsa/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1509,7 +1869,7 @@
         <g:title>System Sensor Temperature Sensor 5621</g:title>
         <g:description>Original replacement part: System Sensor Temperature Sensor 5621. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/5621.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/gMUAAOSw7K1euZz~/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1533,7 +1893,7 @@
         <g:title>System Sensor Temperature Sensor 5623</g:title>
         <g:description>Original replacement part: System Sensor Temperature Sensor 5623. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/5623.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/oHEAAOSwnLBltalY/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1569,7 +1929,7 @@
         <g:title>Silent Knight I/O Driver Module 5880</g:title>
         <g:description>Original replacement part: Silent Knight I/O Driver Module 5880. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/5880.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/Z4MAAOSw9yRmQDiu/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1781,11 +2141,35 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>720.html</g:id>
+        <g:title>Edwards Security Alarm 720</g:title>
+        <g:description>Original replacement part: Edwards Security Alarm 720. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/720.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/JMUAAeSwfmtoeUHL/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>27.75 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>730.html</g:id>
+        <g:title>Edwards Doorbell 730</g:title>
+        <g:description>Original replacement part: Edwards Doorbell 730. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/730.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/ed-730.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>19.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>75203.html</g:id>
         <g:title>Fire-Lite Battery Cord 75203</g:title>
         <g:description>Original replacement part: Fire-Lite Battery Cord 75203. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/75203.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/I7wAAeSwcUpprwrU/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1797,7 +2181,7 @@
         <g:title>Fire-Lite Battery Cord 75287</g:title>
         <g:description>Original replacement part: Fire-Lite Battery Cord 75287. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/75287.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/p8AAAOSwaB5XqjC6/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1905,7 +2289,7 @@
         <g:title>Edwards Horn 868-AQ</g:title>
         <g:description>Original replacement part: Edwards Horn 868-AQ. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/868-aq.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/f1oAAOSwvHdj87pX/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1917,7 +2301,7 @@
         <g:title>Edwards Horn Strobe 868STRA-N5</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 868STRA-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/868stra-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/yfEAAOSwSgFn6Wkc/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1929,7 +2313,7 @@
         <g:title>Edwards Horn Strobe 868STRB-N5</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 868STRB-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/868strb-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/toQAAeSwx-5pkBGb/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1941,7 +2325,7 @@
         <g:title>Edwards Horn Strobe 868STRC-AQ</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 868STRC-AQ. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/868strc-aq.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/aDAAAeSwuutpbo0g/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1953,7 +2337,7 @@
         <g:title>Edwards Horn Strobe 868STRC-N5</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 868STRC-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/868strc-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/M3QAAeSwX59pQCXu/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1977,7 +2361,7 @@
         <g:title>Edwards Horn Strobe 868STRR-N5</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 868STRR-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/868strr-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/eN4AAeSw0r1plRWL/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -1989,7 +2373,7 @@
         <g:title>Edwards Horn Strobe 869STRA-N5</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 869STRA-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/869stra-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/l1sAAeSwPwtpDKCh/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2001,7 +2385,7 @@
         <g:title>Edwards Horn Strobe 869STRB-N5</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 869STRB-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/869strb-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/suIAAeSwuWVpNKSu/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2013,7 +2397,7 @@
         <g:title>Edwards Horn Strobe 869STRC-N5</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 869STRC-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/869strc-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/AucAAOSw6~BiuZhz/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2025,7 +2409,7 @@
         <g:title>Edwards Horn Strobe 869STRR-AQ</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe 869STRR-AQ. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/869strr-aq.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/GO0AAeSw1eVoyMAi/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2061,7 +2445,7 @@
         <g:title>Edwards Horn 871P-G1</g:title>
         <g:description>Original replacement part: Edwards Horn 871P-G1. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/871p-g1.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/fKMAAeSwqaJpyKkz/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2073,7 +2457,7 @@
         <g:title>Edwards Horn 873DPO-G1</g:title>
         <g:description>Original replacement part: Edwards Horn 873DPO-G1. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/873dpo-g1.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/ocMAAeSwIz9pjEbQ/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2145,7 +2529,7 @@
         <g:title>Edwards Horn 878DEX-N5</g:title>
         <g:description>Original replacement part: Edwards Horn 878DEX-N5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/878dex-n5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/csEAAOSwMKpoITE6/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2157,7 +2541,7 @@
         <g:title>Edwards Horn 878EX-G5</g:title>
         <g:description>Original replacement part: Edwards Horn 878EX-G5. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/878ex-g5.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/VWEAAeSw3etpmx-0/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2193,7 +2577,7 @@
         <g:title>Edwards Explosion-Proof Horn 879EX-G1</g:title>
         <g:description>Original replacement part: Edwards Explosion-Proof Horn 879EX-G1. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/879ex-g1.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/hnsAAOSwh~pnFrjv/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2217,7 +2601,7 @@
         <g:title>Kidde Smoke/Carbon Monoxide Alarm 900-0113-02</g:title>
         <g:description>Original replacement part: Kidde Smoke/Carbon Monoxide Alarm 900-0113-02. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/900-0113-02.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/yW0AAeSwCoRpzBcq/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2349,7 +2733,7 @@
         <g:title>Macurco AM Replacement Sensor</g:title>
         <g:description>Original replacement part: Macurco AM Replacement Sensor. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/am-replacement-sensor.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/L3IAAeSwN~9pxUZr/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2385,7 +2769,7 @@
         <g:title>Edwards ANS50XG</g:title>
         <g:description>Original replacement part: Edwards ANS50XG. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ans50xg.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/6qIAAeSw-8VpFqic/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2397,7 +2781,7 @@
         <g:title>Edwards Alarm Control Panel Expansion Module ANS50XR</g:title>
         <g:description>Original replacement part: Edwards Alarm Control Panel Expansion Module ANS50XR. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ans50xr.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/0VIAAeSwdiFpGAhJ/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2433,7 +2817,7 @@
         <g:title>Honeywell BDA-TOOL-SA-BAG</g:title>
         <g:description>Original replacement part: Honeywell BDA-TOOL-SA-BAG. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/bda-tool-sa-bag.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/p0UAAOSwNmZmzief/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2505,7 +2889,7 @@
         <g:title>Fire-Lite Annunciator Module CAC-4</g:title>
         <g:description>Original replacement part: Fire-Lite Annunciator Module CAC-4. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/cac-4.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/S4cAAeSwSltpt3aT/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2613,7 +2997,7 @@
         <g:title>Potter Horn/Strobe CHS-24BR-WP</g:title>
         <g:description>Original replacement part: Potter Horn/Strobe CHS-24BR-WP. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/chs-24br-wp.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/xFIAAOSwKWRn7v5A/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2625,7 +3009,7 @@
         <g:title>Potter Horn Strobe CHS-24BW</g:title>
         <g:description>Original replacement part: Potter Horn Strobe CHS-24BW. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/chs-24bw.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/7qkAAOSwpSRoG682/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2709,7 +3093,7 @@
         <g:title>System Sensor Gas Leak Sensor CO1224T</g:title>
         <g:description>Original replacement part: System Sensor Gas Leak Sensor CO1224T. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/co1224t.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/ZikAAeSwMgloaAtr/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2757,7 +3141,7 @@
         <g:title>Edwards CTM</g:title>
         <g:description>Original replacement part: Edwards CTM. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ctm.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/07sAAOSwMjVfU--x/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2769,7 +3153,7 @@
         <g:title>Macurco CX-6-CO</g:title>
         <g:description>Original replacement part: Macurco CX-6-CO. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/cx-6-co.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/klAAAOSwHOdmDE~G/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2781,7 +3165,7 @@
         <g:title>Macurco Gas Leak Sensor CX-CO</g:title>
         <g:description>Original replacement part: Macurco Gas Leak Sensor CX-CO. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/cx-co.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/Vg8AAOSw2XZhy1u4/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2793,7 +3177,7 @@
         <g:title>Macurco CX-ND SENSOR</g:title>
         <g:description>Original replacement part: Macurco CX-ND SENSOR. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/cx-nd-sensor.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/AfIAAeSwpAxpWB0t/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2909,6 +3293,18 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>db15048nr.html</g:id>
+        <g:title>Eaton DB15048NR</g:title>
+        <g:description>Original replacement part: Eaton DB15048NR. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/db15048nr.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/BaoAAeSwzYNpYXkj/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>2051.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>dnr.html</g:id>
         <g:title>Fire-Lite Smoke Detector Cover DNR</g:title>
         <g:description>Original replacement part: Fire-Lite Smoke Detector Cover DNR. Verified for fire alarm systems.</g:description>
@@ -2949,7 +3345,7 @@
         <g:title>Fire-Lite Flange Panel DP-9692</g:title>
         <g:description>Original replacement part: Fire-Lite Flange Panel DP-9692. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/dp-9692.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/onoAAOSwYZVkXr0K/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -2961,7 +3357,7 @@
         <g:title>Fire-Lite Flange Panel DP-MS2/4</g:title>
         <g:description>Original replacement part: Fire-Lite Flange Panel DP-MS2/4. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/dp-ms2-4.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/uUAAAeSwWERpo3iB/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -3021,7 +3417,7 @@
         <g:title>Honeywell E3H2S</g:title>
         <g:description>Original replacement part: Honeywell E3H2S. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/e3h2s.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/7q4AAOSwc6lkO7a4/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -3033,7 +3429,7 @@
         <g:title>Honeywell Gas Detector Cartridge E3M</g:title>
         <g:description>Original replacement part: Honeywell Gas Detector Cartridge E3M. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/e3m.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/~JYAAeSwxOBpHmKv/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -3105,7 +3501,7 @@
         <g:title>Honeywell Gas Leak Sensor E3SRMNO2</g:title>
         <g:description>Original replacement part: Honeywell Gas Leak Sensor E3SRMNO2. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/e3srmno2.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/1pIAAOSwOudm4IUa/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -3129,7 +3525,7 @@
         <g:title>Edwards LED EC-LED</g:title>
         <g:description>Original replacement part: Edwards LED EC-LED. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ec-led.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/PXIAAeSwq4xpO5Lp/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -3273,7 +3669,7 @@
         <g:title>Honeywell Fire Amplifier ECS-50WBD</g:title>
         <g:description>Original replacement part: Honeywell Fire Amplifier ECS-50WBD. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ecs-50wbd.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/pcIAAOSwxztjf7Uc/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -3285,7 +3681,7 @@
         <g:title>Honeywell ECS-CE4</g:title>
         <g:description>Original replacement part: Honeywell ECS-CE4. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ecs-ce4.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/CV8AAOSwjPtnrBn2/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -3297,7 +3693,7 @@
         <g:title>Honeywell ECS-SW24</g:title>
         <g:description>Original replacement part: Honeywell ECS-SW24. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ecs-sw24.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/OGIAAeSw-ExpVV7K/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -5397,7 +5793,7 @@
         <g:title>Kidde Horn EG1R-P</g:title>
         <g:description>Original replacement part: Kidde Horn EG1R-P. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/eg1r-p.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/-RUAAeSwy4ZpmyfC/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -5421,7 +5817,7 @@
         <g:title>Kidde Horn Strobe EGCAVWF</g:title>
         <g:description>Original replacement part: Kidde Horn Strobe EGCAVWF. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/egcavwf.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/8gQAAeSwngNpadGJ/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -5453,6 +5849,18 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>el3rmtst-fr.html</g:id>
+        <g:title>Eaton Sounder Strobe EL3RMTST-FR</g:title>
+        <g:description>Original replacement part: Eaton Sounder Strobe EL3RMTST-FR. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/el3rmtst-fr.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/wh-3rmtstfr.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>196.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>el4xhs-fr.html</g:id>
         <g:title>Eaton Horn Strobe EL4XHS-FR</g:title>
         <g:description>Original replacement part: Eaton Horn Strobe EL4XHS-FR. Verified for fire alarm systems.</g:description>
@@ -5474,6 +5882,18 @@
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
         <g:price>149.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>elfhsr.html</g:id>
+        <g:title>Eaton Sounder Strobe ELFHSR</g:title>
+        <g:description>Original replacement part: Eaton Sounder Strobe ELFHSR. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/elfhsr.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/pQ8AAOSwEP1m-Aup/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>116.45 USD</g:price>
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
@@ -5505,7 +5925,7 @@
         <g:title>Eaton Horn Strobe ELHSRC</g:title>
         <g:description>Original replacement part: Eaton Horn Strobe ELHSRC. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/elhsrc.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/HYUAAeSw3ulpyDE8/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -5541,7 +5961,7 @@
         <g:title>Eaton Horn Strobe ELMTSWC</g:title>
         <g:description>Original replacement part: Eaton Horn Strobe ELMTSWC. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/elmtswc.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/umwAAOSwjThnvMq8/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -5721,7 +6141,7 @@
         <g:title>Silent Knight Switch Expander EVS-SW24</g:title>
         <g:description>Original replacement part: Silent Knight Switch Expander EVS-SW24. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/evs-sw24.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/fKEAAeSwHXVoUvLD/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -5745,7 +6165,7 @@
         <g:title>Honeywell Annunciator Driver Module F679S</g:title>
         <g:description>Original replacement part: Honeywell Annunciator Driver Module F679S. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/f679s.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/YLkAAeSwiupowx1J/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -5793,11 +6213,23 @@
         <g:title>Silent Knight Handset FFT-RHS</g:title>
         <g:description>Original replacement part: Silent Knight Handset FFT-RHS. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/fft-rhs.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/U74AAOSwrNpn4-EU/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
         <g:price>127.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>fh-400-lf-ww.html</g:id>
+        <g:title>Secutron FH-400-LF-WW</g:title>
+        <g:description>Original replacement part: Secutron FH-400-LF-WW. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/fh-400-lf-ww.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/VMgAAeSwzoJo5xi5/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>47.50 USD</g:price>
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
@@ -5810,6 +6242,18 @@
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
         <g:price>14.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>fhs-400-lf-rr.html</g:id>
+        <g:title>Secutron FHS-400-LF-RR</g:title>
+        <g:description>Original replacement part: Secutron FHS-400-LF-RR. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/fhs-400-lf-rr.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/5t-fhs400lr.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>58.00 USD</g:price>
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
@@ -5853,7 +6297,7 @@
         <g:title>Fire-Lite Handset FHS-F</g:title>
         <g:description>Original replacement part: Fire-Lite Handset FHS-F. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/fhs-f.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/r4UAAeSwH0Bpa3L2/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -6753,7 +7197,7 @@
         <g:title>Kidde Addressable Input Module FX-IDC1A</g:title>
         <g:description>Original replacement part: Kidde Addressable Input Module FX-IDC1A. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/fx-idc1a.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/XlYAAeSw-2Fn4bro/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -6837,7 +7281,7 @@
         <g:title>Edwards Horn Strobe G1WA-VMA</g:title>
         <g:description>Original replacement part: Edwards Horn Strobe G1WA-VMA. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/g1wa-vma.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/MnAAAOSw3xhj3tIU/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -7929,7 +8373,7 @@
         <g:title>Kidde Input Module GSA-CT2</g:title>
         <g:description>Original replacement part: Kidde Input Module GSA-CT2. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/gsa-ct2.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/5d0AAeSwRGVpStCb/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -8037,7 +8481,7 @@
         <g:title>Edwards Detector Base GSA-T3T4</g:title>
         <g:description>Original replacement part: Edwards Detector Base GSA-T3T4. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/gsa-t3t4.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/U3IAAeSwETNpStGr/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -8126,6 +8570,18 @@
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
         <g:price>43.50 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>hcrl-lf.html</g:id>
+        <g:title>System Sensor Low Frequency HCRL-LF</g:title>
+        <g:description>Original replacement part: System Sensor Low Frequency HCRL-LF. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/hcrl-lf.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/bk-hcrllf.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>41.24 USD</g:price>
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
@@ -8517,7 +8973,7 @@
         <g:title>System Sensor Low Frequency HRL-LF</g:title>
         <g:description>Original replacement part: System Sensor Low Frequency HRL-LF. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/hrl-lf.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/7hcAAeSwRohpNgeu/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -8529,7 +8985,7 @@
         <g:title>System Sensor Horn HRL</g:title>
         <g:description>Original replacement part: System Sensor Horn HRL. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/hrl.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/nisAAeSwBo9pyCzg/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -8553,7 +9009,7 @@
         <g:title>Potter Horn Strobe HS-24WR</g:title>
         <g:description>Original replacement part: Potter Horn Strobe HS-24WR. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/hs-24wr.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/Gw8AAOSw9HRmUZJu/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -8853,7 +9309,7 @@
         <g:title>Honeywell Fire Alarm Control Panel IFP-75B</g:title>
         <g:description>Original replacement part: Honeywell Fire Alarm Control Panel IFP-75B. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ifp-75b.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/c6gAAeSwRbxo3I10/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -8877,7 +9333,7 @@
         <g:title>Edwards Horn INT-T</g:title>
         <g:description>Original replacement part: Edwards Horn INT-T. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/int-t.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/QO0AAOSwBNtm28F9/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -8913,7 +9369,7 @@
         <g:title>Kidde Fixed Temperature Heat Detector KI-HFD</g:title>
         <g:description>Original replacement part: Kidde Fixed Temperature Heat Detector KI-HFD. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ki-hfd.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/7fIAAOSwFd1mbfZ2/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -9105,7 +9561,7 @@
         <g:title>System Sensor Security Strobe Lens LENS-A</g:title>
         <g:description>Original replacement part: System Sensor Security Strobe Lens LENS-A. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/lens-a.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/y04AAeSw-6hoeSfQ/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -9117,7 +9573,7 @@
         <g:title>System Sensor Security Strobe Lens LENS-A2</g:title>
         <g:description>Original replacement part: System Sensor Security Strobe Lens LENS-A2. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/lens-a2.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/4AMAAeSwUs1ooN-n/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -9141,7 +9597,7 @@
         <g:title>System Sensor Security Strobe Lens LENS-AC2</g:title>
         <g:description>Original replacement part: System Sensor Security Strobe Lens LENS-AC2. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/lens-ac2.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/bmgAAOSwoVhnT3Bh/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -9165,7 +9621,7 @@
         <g:title>System Sensor Lens Attachment LENS-BC</g:title>
         <g:description>Original replacement part: System Sensor Lens Attachment LENS-BC. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/lens-bc.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/-9cAAOSw4L1ndq4C/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -9173,11 +9629,35 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>lfh-24r.html</g:id>
+        <g:title>Potter LFH-24R</g:title>
+        <g:description>Original replacement part: Potter LFH-24R. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/lfh-24r.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/pl-lfh24r.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>75.66 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>lfh-24w.html</g:id>
+        <g:title>Potter Low Frequency LFH-24W</g:title>
+        <g:description>Original replacement part: Potter Low Frequency LFH-24W. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/lfh-24w.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/kRwAAeSwOcBpI28A/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>50.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>lfhs-177w.html</g:id>
         <g:title>Potter Horn Strobe LFHS-177W</g:title>
         <g:description>Original replacement part: Potter Horn Strobe LFHS-177W. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/lfhs-177w.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/Nq4AAeSwvbhnx10z/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -9201,7 +9681,7 @@
         <g:title>Honeywell M-502875</g:title>
         <g:description>Original replacement part: Honeywell M-502875. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/m-502875.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/vQMAAeSwUaRphwre/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -9233,6 +9713,30 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>mb-g6-12-s.html</g:id>
+        <g:title>Eaton Security Alarm MB-G6-12-S</g:title>
+        <g:description>Original replacement part: Eaton Security Alarm MB-G6-12-S. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/mb-g6-12-s.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/MtoAAOSwSfBii9ao/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>24.32 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
+        <g:id>mb-g6-24-s.html</g:id>
+        <g:title>Eaton Alarm Bell MB-G6-24-S</g:title>
+        <g:description>Original replacement part: Eaton Alarm Bell MB-G6-24-S. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/mb-g6-24-s.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/wh-104222.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>77.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>mdf-300.html</g:id>
         <g:title>Fire-Lite Addressable Monitor Module MDF-300</g:title>
         <g:description>Original replacement part: Fire-Lite Addressable Monitor Module MDF-300. Verified for fire alarm systems.</g:description>
@@ -9249,7 +9753,7 @@
         <g:title>System Sensor Sync Circuit Module MDL3R</g:title>
         <g:description>Original replacement part: System Sensor Sync Circuit Module MDL3R. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/mdl3r.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/S90AAeSwPfVpIKAj/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -9261,7 +9765,7 @@
         <g:title>Potter Horn MHT-1224R</g:title>
         <g:description>Original replacement part: Potter Horn MHT-1224R. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/mht-1224r.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/zicAAOSwHYFnBWqY/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -9273,7 +9777,7 @@
         <g:title>System Sensor Horn MHW</g:title>
         <g:description>Original replacement part: System Sensor Horn MHW. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/mhw.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/jJQAAeSwTSJoYtUq/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -10077,7 +10581,7 @@
         <g:title>Secutron MP-300</g:title>
         <g:description>Original replacement part: Secutron MP-300. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/mp-300.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/Vt0AAOSwTqxlB7nm/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -11517,7 +12021,7 @@
         <g:title>System Sensor Horn Strobe, LED Strobe P2GRKLED</g:title>
         <g:description>Original replacement part: System Sensor Horn Strobe, LED Strobe P2GRKLED. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/p2grkled.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/Jr4AAeSw-M9pclP2/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -11613,7 +12117,7 @@
         <g:title>System Sensor Horn Strobe P2WL-P</g:title>
         <g:description>Original replacement part: System Sensor Horn Strobe P2WL-P. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/p2wl-p.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/dpsAAeSwHkppQry~/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -11625,7 +12129,7 @@
         <g:title>System Sensor P2WLED-LF</g:title>
         <g:description>Original replacement part: System Sensor P2WLED-LF. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/p2wled-lf.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/088AAeSwXUppgtsy/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -11709,7 +12213,7 @@
         <g:title>Potter Notification Appliance Circuit PAD100-NAC</g:title>
         <g:description>Original replacement part: Potter Notification Appliance Circuit PAD100-NAC. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/pad100-nac.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/ggEAAeSwwiVoXxN3/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -11825,6 +12329,18 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>pc2rl-lf.html</g:id>
+        <g:title>System Sensor Sounder Strobe PC2RL-LF</g:title>
+        <g:description>Original replacement part: System Sensor Sounder Strobe PC2RL-LF. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/pc2rl-lf.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/bk-pc2rllf.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>84.99 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>pc2rl.html</g:id>
         <g:title>System Sensor Horn Strobe PC2RL</g:title>
         <g:description>Original replacement part: System Sensor Horn Strobe PC2RL. Verified for fire alarm systems.</g:description>
@@ -11865,7 +12381,7 @@
         <g:title>System Sensor Horn Strobe PC2WK</g:title>
         <g:description>Original replacement part: System Sensor Horn Strobe PC2WK. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/pc2wk.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/lBEAAeSw5ohpyCzP/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -11925,7 +12441,7 @@
         <g:title>Secutron PCS-100</g:title>
         <g:description>Original replacement part: Secutron PCS-100. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/pcs-100.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/214AAOSwDFBZ-5kr/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -12933,7 +13449,7 @@
         <g:title>Kidde Fire Extinguisher Pro 20 MP</g:title>
         <g:description>Original replacement part: Kidde Fire Extinguisher Pro 20 MP. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/pro-20-mp.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/RcIAAOSwBahVGLrJ/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -13497,7 +14013,7 @@
         <g:title>Edwards RZI16-2RS</g:title>
         <g:description>Original replacement part: Edwards RZI16-2RS. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/rzi16-2rs.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/hzYAAOSwF15jSEK1/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -13533,7 +14049,7 @@
         <g:title>Edwards Fire Panel Network Interface Card SA-CLA</g:title>
         <g:description>Original replacement part: Edwards Fire Panel Network Interface Card SA-CLA. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/sa-cla.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/puMAAOSwMLBghG21/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -17637,7 +18153,7 @@
         <g:title>Silent Knight Alarm Control Panel Notification Module SK-CONTROL</g:title>
         <g:description>Original replacement part: Silent Knight Alarm Control Panel Notification Module SK-CONTROL. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/sk-control.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/UfAAAOSwknJjuL10/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -17769,7 +18285,7 @@
         <g:title>Silent Knight Installation Kit SK-NIC-KIT</g:title>
         <g:description>Original replacement part: Silent Knight Installation Kit SK-NIC-KIT. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/sk-nic-kit.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/eRgAAeSwQKxpxcNp/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -17961,7 +18477,7 @@
         <g:title>Napco Security Technologies Alarm Communicator SLE-LTEV-FIRE</g:title>
         <g:description>Original replacement part: Napco Security Technologies Alarm Communicator SLE-LTEV-FIRE. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/sle-ltev-fire.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/NxwAAeSw~rFpyDLd/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -18033,7 +18549,7 @@
         <g:title>Kidde Transceiver SMXLO2</g:title>
         <g:description>Original replacement part: Kidde Transceiver SMXLO2. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/smxlo2.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/dgIAAOSwbERmyMe-/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -18117,7 +18633,7 @@
         <g:title>Honeywell SPXCDXSRXSS</g:title>
         <g:description>Original replacement part: Honeywell SPXCDXSRXSS. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/spxcdxsrxss.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/zCAAAeSwV0Zo48mY/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -18153,7 +18669,7 @@
         <g:title>System Sensor Thermal Detector SS-HEAT-ROR</g:title>
         <g:description>Original replacement part: System Sensor Thermal Detector SS-HEAT-ROR. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/ss-heat-ror.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/9boAAeSwbY5ouIFN/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -18197,11 +18713,23 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>ssm24-6.html</g:id>
+        <g:title>System Sensor Alarm Bell SSM24-6</g:title>
+        <g:description>Original replacement part: System Sensor Alarm Bell SSM24-6. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/ssm24-6.html</g:link>
+        <g:image_link>https://i.ebayimg.com/images/g/9LoAAOSwMsNkEGeM/s-l225.jpg</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>16.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>sth-15s.html</g:id>
         <g:title>Eaton Horn STH-15S</g:title>
         <g:description>Original replacement part: Eaton Horn STH-15S. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/sth-15s.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/ZFUAAeSwNDppQxM5/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -19121,6 +19649,18 @@
         <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
     </item>
     <item>
+        <g:id>tb-593.html</g:id>
+        <g:title>Eaton Phone Ringer TB-593</g:title>
+        <g:description>Original replacement part: Eaton Phone Ringer TB-593. Verified for fire alarm systems.</g:description>
+        <g:link>https://www.firepartshub.com/tb-593.html</g:link>
+        <g:image_link>https://cdn.firepartshub.com/images/wh-104103.webp</g:image_link>
+        <g:brand>Fire Alarm Part</g:brand>
+        <g:condition>used</g:condition>
+        <g:availability>in stock</g:availability>
+        <g:price>109.00 USD</g:price>
+        <g:google_product_category>Business &amp; Industrial &gt; Safety &amp; Security &gt; Fire Protection</g:google_product_category>
+    </item>
+    <item>
         <g:id>td-200.html</g:id>
         <g:title>Mircom Heat Detector Outlet Body TD-200</g:title>
         <g:description>Original replacement part: Mircom Heat Detector Outlet Body TD-200. Verified for fire alarm systems.</g:description>
@@ -19161,7 +19701,7 @@
         <g:title>Telguard Fire Alarm Control/Communicator TG-7FS-V</g:title>
         <g:description>Original replacement part: Telguard Fire Alarm Control/Communicator TG-7FS-V. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/tg-7fs-v.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/uCcAAeSwHwxonOEh/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -19497,7 +20037,7 @@
         <g:title>Fire-Lite Temperature and Humidity Sensor W-H355</g:title>
         <g:description>Original replacement part: Fire-Lite Temperature and Humidity Sensor W-H355. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/w-h355.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/82UAAeSw5A9puvmV/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -19557,7 +20097,7 @@
         <g:title>Edwards Horn WG4WF-H</g:title>
         <g:description>Original replacement part: Edwards Horn WG4WF-H. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/wg4wf-h.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/vwAAAOSwiqBcD9bu/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -19629,7 +20169,7 @@
         <g:title>Honeywell XNX-UTAI-NNNNN</g:title>
         <g:description>Original replacement part: Honeywell XNX-UTAI-NNNNN. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/xnx-utai-nnnnn.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/oRgAAeSwgdZpb8lS/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
@@ -19641,7 +20181,7 @@
         <g:title>Honeywell XNX-UTAI-RNNNN</g:title>
         <g:description>Original replacement part: Honeywell XNX-UTAI-RNNNN. Verified for fire alarm systems.</g:description>
         <g:link>https://www.firepartshub.com/xnx-utai-rnnnn.html</g:link>
-        <g:image_link>https://via.placeholder.com/400x400?text=No+Image+Available</g:image_link>
+        <g:image_link>https://i.ebayimg.com/images/g/AyUAAOSwwzJoQ6Rd/s-l225.jpg</g:image_link>
         <g:brand>Fire Alarm Part</g:brand>
         <g:condition>used</g:condition>
         <g:availability>in stock</g:availability>
