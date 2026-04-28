@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /*.pdf$
 Sitemap: https://www.firepartshub.com/sitemap.xml
+Sitemap: https://www.firepartshub.com/blog/sitemap_blog.xml
