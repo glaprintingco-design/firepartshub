@@ -54,6 +54,7 @@
 
 
 
+
 <style>
     * { box-sizing: border-box; }
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; line-height: 1.6; }
@@ -137,7 +138,37 @@
         .product-layout { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
         .price-tag { font-size: 2.5em; }
     }
+
+    /* --- CTR BOOST: STICKY MOBILE CTA & INLINE TOP BUTTON --- */
+    .sticky-cta {
+        display: none;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        padding: 10px 15px;
+        background: #fff;
+        box-shadow: 0 -3px 15px rgba(0,0,0,0.18);
+        z-index: 9999;
+    }
+    .sticky-cta .btn-ebay {
+        margin: 0;
+        padding: 14px;
+        font-size: 1.05em;
+        border-radius: 6px;
+    }
+    .btn-ebay-inline {
+        margin-top: 8px !important;
+        margin-bottom: 22px !important;
+        font-size: 0.95em !important;
+        padding: 14px !important;
+        background: #e53935 !important;
+    }
+    .btn-ebay-inline:hover { background: #b71c1c !important; }
+    @media (max-width: 768px) {
+        .sticky-cta { display: block; }
+        body { padding-bottom: 72px; }
+    }
 </style>
+
 
 
 
@@ -184,6 +215,7 @@
 
 <link rel="icon" type="image/png" href="favicon.png"><link rel="canonical" href="https://www.firepartshub.com/privacy.html" />
 </head><body>
+
 
 
 
@@ -285,6 +317,7 @@
 
 
 
+
 <div class='main-container' style='background:white; padding:40px; border-radius:8px;'><h1>Privacy Policy</h1>
     <h3>1. Information We Collect</h3>
     <p>We are committed to protecting your privacy. Unlike typical e-commerce sites, <strong>we do not collect payment information, shipping addresses, or credit card numbers.</strong> All transactions occur securely on eBay's platform.</p>
@@ -295,6 +328,7 @@
         <li><strong>Analytics:</strong> We may use anonymous analytics tools to understand site traffic patterns.</li>
     </ul>
     </div>
+
 
 
 
@@ -356,6 +390,7 @@
         </div>
     </div>
 </footer>
+
 
 
 

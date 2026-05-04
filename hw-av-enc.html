@@ -46,6 +46,7 @@
 
 
 
+
 <style>
     * { box-sizing: border-box; }
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; line-height: 1.6; }
@@ -129,7 +130,39 @@
         .product-layout { grid-template-columns: 1fr; padding: 20px; gap: 20px; }
         .price-tag { font-size: 2.5em; }
     }
+
+    /* --- CTR BOOST: STICKY MOBILE CTA & INLINE TOP BUTTON --- */
+    .sticky-cta {
+        display: none;
+        position: fixed;
+        bottom: 0; left: 0; right: 0;
+        padding: 10px 15px;
+        background: #fff;
+        box-shadow: 0 -3px 15px rgba(0,0,0,0.18);
+        z-index: 9999;
+    }
+    .sticky-cta .btn-ebay {
+        margin: 0;
+        padding: 14px;
+        font-size: 1.05em;
+        border-radius: 6px;
+    }
+    .btn-ebay-inline {
+        margin-top: 8px !important;
+        margin-bottom: 22px !important;
+        font-size: 0.95em !important;
+        padding: 14px !important;
+        background: #e53935 !important;
+    }
+    .btn-ebay-inline:hover { background: #b71c1c !important; }
+    @media (max-width: 768px) {
+        .sticky-cta { display: block; }
+        body { padding-bottom: 72px; }
+    }
 </style>
+
+
+
 
 
 
@@ -262,7 +295,7 @@
         "url": "https://www.firepartshub.com/hw-av-enc.html",
         "priceCurrency": "USD",
         "price": "40.00",
-        "priceValidUntil": "2027-04-28",
+        "priceValidUntil": "2027-05-04",
         "itemCondition": "https://schema.org/UsedCondition",
         "availability": "https://schema.org/InStock"
       }
@@ -273,6 +306,7 @@
 </head>
 <body>
     
+
 
 
 
@@ -344,13 +378,14 @@
 
 
 
+
     <div class="product-container">
         <p style="color:#777;"><a href="index.html">Catalog</a> > Honeywell > HW-AV-ENC...</p>
         
         <div class="product-layout">
             <div style="text-align:center;">
                 <img src="https://cdn.firepartshub.com/images/0h-hwavenckt.webp" alt="Honeywell HW-AV-ENC" style="width:100%; border-radius:8px; border:1px solid #eee; object-fit: contain;">
-                <div style="margin-top:10px; margin-bottom:20px; color:#999; font-size:0.8em;">Verified: April 28, 2026</div>
+                <div style="margin-top:10px; margin-bottom:20px; color:#999; font-size:0.8em;">Verified: May 04, 2026</div>
                 <h3 class="section-title">Documents & Manuals</h3><div class="downloads-section"><a href="https://cdn.firepartshub.com/pdfs/0h-hwavenckt_datasheet.pdf" target="_blank" class="btn-download">📄 <span style="margin-left:8px;">Data Sheet (PDF)</span></a>
 <a href="https://cdn.firepartshub.com/pdfs/0h-hwavenckt_install.pdf" target="_blank" class="btn-download">🔧 <span style="margin-left:8px;">Installation Guide (PDF)</span></a>
 <a href="https://cdn.firepartshub.com/pdfs/0h-hwavenckt_manual.pdf" target="_blank" class="btn-download">📖 <span style="margin-left:8px;">User Manual (PDF)</span></a></div>
@@ -402,6 +437,7 @@
 
 
 
+
 <footer>
     <div class="container">
         <div style="margin-bottom: 30px;">
@@ -419,6 +455,7 @@
         </div>
     </div>
 </footer>
+
 
 
 
