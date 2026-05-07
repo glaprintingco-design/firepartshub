@@ -139,6 +139,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #d32f2f;
+            box-shadow: 0 2px 10px rgba(211,47,47,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #fff8f8;
+            border: 1px solid #f5c6c6;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { background: #b71c1c; }
+    </style>
 </head>
 <body>
     
@@ -157,11 +212,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Simplex</span></p>
-        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:30px;">Simplex Parts Catalog</h1>
-        <p class="lead">Browsing 83 verified items available for facility management.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Simplex</span></p>
+        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:20px;">Simplex Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 83 verified items. Search by part number or name:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Simplex part number (e.g. Visible)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Simplex part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex part# 0626232 (new) 4904-9135 visible">
             <a href="simplex-0626232.html"><img src="https://i.ebayimg.com/images/g/nfoAAeSwwdBpCRyW/s-l225.jpg" alt="Simplex Part# 0626232 (New) 4904-9135 Visible - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-0626232.html">Simplex Part# 0626232 (New) 4904-9135 Visible</a></div>
@@ -169,7 +242,7 @@
                 <a href="simplex-0626232.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 0631132 duct sensor detector housing 4098-9755     *pi">
             <a href="simplex-0631132.html"><img src="https://i.ebayimg.com/images/g/ci8AAeSwUqJo-oRT/s-l225.jpg" alt="Simplex 0631132 Duct Sensor Detector Housing 4098-9755     *PI - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-0631132.html">Simplex 0631132 Duct Sensor Detector Housing 4098-9755     *PI</a></div>
@@ -177,7 +250,7 @@
                 <a href="simplex-0631132.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 112-133 fire alarm control panel battery 12v 12.0ah">
             <a href="simplex-112-133-0ah.html"><img src="https://i.ebayimg.com/images/g/SE4AAOSwJw1lmHYN/s-l225.jpg" alt="Simplex 112-133 Fire Alarm Control Panel Battery 12V 12.0Ah - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-112-133-0ah.html">Simplex 112-133 Fire Alarm Control Panel Battery 12V 12.0Ah</a></div>
@@ -185,7 +258,7 @@
                 <a href="simplex-112-133-0ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 112-112 fire alarm control panel 12v 8ah replacement interstate battery">
             <a href="simplex-112-8ah.html"><img src="https://i.ebayimg.com/images/g/Q6cAAOSwb6Bk5qMz/s-l225.jpg" alt="Simplex 112-112 Fire Alarm Control Panel 12V 8Ah Replacement INTERSTATE Battery - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-112-8ah.html">Simplex 112-112 Fire Alarm Control Panel 12V 8Ah Replacement INTERSTATE Battery</a></div>
@@ -193,7 +266,7 @@
                 <a href="simplex-112-8ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 88 fire alarm control panel battery 12v 12ah alarm replacement battery">
             <a href="simplex-12ah.html"><img src="https://i.ebayimg.com/images/g/1DMAAOSwvfRmbdjj/s-l225.jpg" alt="Simplex 88 Fire Alarm Control Panel Battery 12V 12Ah Alarm Replacement Battery - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-12ah.html">Simplex 88 Fire Alarm Control Panel Battery 12V 12Ah Alarm Replacement Battery</a></div>
@@ -201,7 +274,7 @@
                 <a href="simplex-12ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 75 fire alarm control panel battery 12v 18ah nb replacement battery">
             <a href="simplex-18ah.html"><img src="https://i.ebayimg.com/images/g/w~IAAOSwzA9gRnHI/s-l225.jpg" alt="Simplex 75 Fire Alarm Control Panel Battery 12V 18Ah NB Replacement Battery - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-18ah.html">Simplex 75 Fire Alarm Control Panel Battery 12V 18Ah NB Replacement Battery</a></div>
@@ -209,7 +282,7 @@
                 <a href="simplex-18ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new simplex potter rms-1t-kl fire alarm pull station ">
             <a href="simplex-1t.html"><img src="https://i.ebayimg.com/images/g/J9YAAeSwm0dpYU7s/s-l225.jpg" alt="NEW Simplex Potter RMS-1T-KL Fire Alarm Pull Station  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-1t.html">NEW Simplex Potter RMS-1T-KL Fire Alarm Pull Station </a></div>
@@ -217,7 +290,7 @@
                 <a href="simplex-1t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 2001-3072 fire alarm control panel battery replacement 6v 12ah f1">
             <a href="simplex-2001-3072-12ah.html"><img src="https://i.ebayimg.com/images/g/NoAAAOSwp5xj9GSj/s-l225.jpg" alt="Simplex 2001-3072 Fire Alarm Control Panel Battery Replacement 6V 12Ah F1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-2001-3072-12ah.html">Simplex 2001-3072 Fire Alarm Control Panel Battery Replacement 6V 12Ah F1</a></div>
@@ -225,7 +298,7 @@
                 <a href="simplex-2001-3072-12ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 2350 fire alarm control panel 12v 8ah f1 compatible replacement battery">
             <a href="simplex-2350-8ah-f1.html"><img src="https://i.ebayimg.com/images/g/Q6cAAOSwb6Bk5qMz/s-l225.jpg" alt="Simplex 2350 Fire Alarm Control Panel 12V 8Ah F1 Compatible Replacement Battery - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-2350-8ah-f1.html">Simplex 2350 Fire Alarm Control Panel 12V 8Ah F1 Compatible Replacement Battery</a></div>
@@ -233,7 +306,7 @@
                 <a href="simplex-2350-8ah-f1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 2350 fire alarm control panel 12v 8ah replacement interstate battery">
             <a href="simplex-2350-8ah.html"><img src="https://i.ebayimg.com/images/g/Q6cAAOSwb6Bk5qMz/s-l225.jpg" alt="Simplex 2350 Fire Alarm Control Panel 12V 8Ah Replacement INTERSTATE Battery - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-2350-8ah.html">Simplex 2350 Fire Alarm Control Panel 12V 8Ah Replacement INTERSTATE Battery</a></div>
@@ -241,7 +314,7 @@
                 <a href="simplex-2350-8ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4004-9806 class a adaptor module (part no. 0740954)">
             <a href="simplex-4004.html"><img src="https://i.ebayimg.com/images/g/axAAAOSw~XpZVrgs/s-l225.jpg" alt="Simplex 4004-9806 Class A Adaptor Module (Part No. 0740954) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4004.html">Simplex 4004-9806 Class A Adaptor Module (Part No. 0740954)</a></div>
@@ -249,7 +322,7 @@
                 <a href="simplex-4004.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4009 idnet nac extender for parts">
             <a href="simplex-4009-idnet.html"><img src="https://i.ebayimg.com/images/g/EpIAAOSwYU1lakQ8/s-l225.jpg" alt="Simplex 4009 IDNet NAC Extender FOR PARTS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4009-idnet.html">Simplex 4009 IDNet NAC Extender FOR PARTS</a></div>
@@ -257,7 +330,7 @@
                 <a href="simplex-4009-idnet.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4010-9813 expansion power supply 120v fire alarm part # 0742097">
             <a href="simplex-4010-9813-0742097.html"><img src="https://i.ebayimg.com/images/g/Tj8AAOSwGn9jmTcX/s-l225.jpg" alt="Simplex 4010-9813 Expansion Power Supply 120V Fire Alarm Part # 0742097 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4010-9813-0742097.html">Simplex 4010-9813 Expansion Power Supply 120V Fire Alarm Part # 0742097</a></div>
@@ -265,7 +338,7 @@
                 <a href="simplex-4010-9813-0742097.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4010-9813 expansion power supply 120v fire alarm part">
             <a href="simplex-4010-9813.html"><img src="https://i.ebayimg.com/images/g/-1kAAeSwK0RpGjPh/s-l225.jpg" alt="Simplex 4010-9813 Expansion Power Supply 120V Fire Alarm Part - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4010-9813.html">Simplex 4010-9813 Expansion Power Supply 120V Fire Alarm Part</a></div>
@@ -273,7 +346,7 @@
                 <a href="simplex-4010-9813.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4051 part no. 624-615  fire alarm horn 24 volts .1 amps hz dc red">
             <a href="simplex-4051-624-615.html"><img src="https://i.ebayimg.com/images/g/DcMAAeSwp6NpUm4t/s-l225.jpg" alt="Simplex 4051 Part No. 624-615  Fire Alarm HORN 24 Volts .1 Amps Hz DC Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4051-624-615.html">Simplex 4051 Part No. 624-615  Fire Alarm HORN 24 Volts .1 Amps Hz DC Red</a></div>
@@ -281,7 +354,7 @@
                 <a href="simplex-4051-624-615.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex type 4070￼-2 single stroke part # 642-482. hz 50/60. amp .1">
             <a href="simplex-4070.html"><img src="https://i.ebayimg.com/images/g/bbAAAOSwZ9JlAKe4/s-l225.jpg" alt="Simplex Type 4070￼-2 Single Stroke Part # 642-482. Hz 50/60. Amp .1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4070.html">Simplex Type 4070￼-2 Single Stroke Part # 642-482. Hz 50/60. Amp .1</a></div>
@@ -289,7 +362,7 @@
                 <a href="simplex-4070.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 2 simplex 4090-9001 iam supervised idnet | part no 0617952">
             <a href="simplex-4090-9001-idnet.html"><img src="https://i.ebayimg.com/images/g/lHMAAOSwsOZmu6LV/s-l225.jpg" alt="Lot of 2 Simplex 4090-9001 IAM Supervised IDNET | Part No 0617952 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4090-9001-idnet.html">Lot of 2 Simplex 4090-9001 IAM Supervised IDNET | Part No 0617952</a></div>
@@ -297,7 +370,7 @@
                 <a href="simplex-4090-9001-idnet.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4090-9002 idnet individual addressable relay module">
             <a href="simplex-4090-9002-idnet.html"><img src="https://i.ebayimg.com/images/g/r7UAAeSwrjpoel~t/s-l225.jpg" alt="Simplex 4090-9002 IDNet Individual Addressable Relay Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4090-9002-idnet.html">Simplex 4090-9002 IDNet Individual Addressable Relay Module</a></div>
@@ -305,7 +378,7 @@
                 <a href="simplex-4090-9002-idnet.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4090-9002 relay idnet iam 0617950 fire alarm - new">
             <a href="simplex-4090-9002-idnet1-1.html"><img src="https://i.ebayimg.com/images/g/8noAAOSw9DtlnDqE/s-l225.jpg" alt="SIMPLEX 4090-9002 RELAY IDNET IAM 0617950 FIRE ALARM - New - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4090-9002-idnet1-1.html">SIMPLEX 4090-9002 RELAY IDNET IAM 0617950 FIRE ALARM - New</a></div>
@@ -313,7 +386,7 @@
                 <a href="simplex-4090-9002-idnet1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4090-9008 dual relay iam-idnet">
             <a href="simplex-4090-9008-idnet.html"><img src="https://i.ebayimg.com/images/g/VQgAAeSw87ZpUo1W/s-l225.jpg" alt="SIMPLEX 4090-9008 Dual Relay IAM-IDNET - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4090-9008-idnet.html">SIMPLEX 4090-9008 Dual Relay IAM-IDNET</a></div>
@@ -321,7 +394,7 @@
                 <a href="simplex-4090-9008-idnet.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4090-9101 module monitor zam class b idnet">
             <a href="simplex-4090-9101-idnet.html"><img src="https://i.ebayimg.com/images/g/QKMAAeSwE7locZ9a/s-l225.jpg" alt="Simplex 4090-9101 Module Monitor ZAM Class B Idnet - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4090-9101-idnet.html">Simplex 4090-9101 Module Monitor ZAM Class B Idnet</a></div>
@@ -329,7 +402,7 @@
                 <a href="simplex-4090-9101-idnet.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4090-9118 idnet fire alarm relay module">
             <a href="simplex-4090-9118-idnet.html"><img src="https://i.ebayimg.com/images/g/h5UAAOSwRlJn2Ewf/s-l225.jpg" alt="Simplex 4090-9118 IDNET Fire Alarm Relay Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4090-9118-idnet.html">Simplex 4090-9118 IDNET Fire Alarm Relay Module</a></div>
@@ -337,7 +410,7 @@
                 <a href="simplex-4090-9118-idnet.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="tyco simplex grinnell 4098-9640ea  type a heat detector head 614ta p2c2">
             <a href="simplex-4098-9640ea-614ta.html"><img src="https://i.ebayimg.com/images/g/MMYAAOSw32hlKYW4/s-l225.jpg" alt="Tyco SIMPLEX GRINNELL 4098-9640EA  Type A Heat Detector Head 614TA P2C2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4098-9640ea-614ta.html">Tyco SIMPLEX GRINNELL 4098-9640EA  Type A Heat Detector Head 614TA P2C2</a></div>
@@ -345,7 +418,7 @@
                 <a href="simplex-4098-9640ea-614ta.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new simplex 4098-9733 heat sensor with dust cover. part #0677116cn">
             <a href="simplex-4098-9733-0677116cn.html"><img src="https://i.ebayimg.com/images/g/wXYAAOSw7WNjDlOK/s-l225.jpg" alt="New SIMPLEX 4098-9733 Heat Sensor with dust cover. Part #0677116CN - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4098-9733-0677116cn.html">New SIMPLEX 4098-9733 Heat Sensor with dust cover. Part #0677116CN</a></div>
@@ -353,7 +426,7 @@
                 <a href="simplex-4098-9733-0677116cn.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4098-9756 duct smoke sensor / air duct sensor housing — fire alarm part">
             <a href="simplex-4098-9756.html"><img src="https://i.ebayimg.com/images/g/kCsAAeSwqpNpngD8/s-l225.jpg" alt="Simplex 4098-9756 Duct Smoke Sensor / Air Duct Sensor Housing — Fire Alarm Part - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4098-9756.html">Simplex 4098-9756 Duct Smoke Sensor / Air Duct Sensor Housing — Fire Alarm Part</a></div>
@@ -361,7 +434,7 @@
                 <a href="simplex-4098-9756.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4098 9792 smoke detector base 12360z">
             <a href="simplex-4098-9792-12360z.html"><img src="https://i.ebayimg.com/images/g/NdEAAOSwSKZmPuUg/s-l225.jpg" alt="SIMPLEX 4098 9792 Smoke Detector Base 12360Z - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4098-9792-12360z.html">SIMPLEX 4098 9792 Smoke Detector Base 12360Z</a></div>
@@ -369,7 +442,7 @@
                 <a href="simplex-4098-9792-12360z.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4099-9001 addressable pull station fire alarm part">
             <a href="simplex-4099-9001.html"><img src="https://i.ebayimg.com/images/g/jUUAAOSwWttfYQDG/s-l225.jpg" alt="SIMPLEX 4099-9001 ADDRESSABLE PULL STATION FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4099-9001.html">SIMPLEX 4099-9001 ADDRESSABLE PULL STATION FIRE ALARM PART</a></div>
@@ -377,7 +450,7 @@
                 <a href="simplex-4099-9001.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4100 fire alarm auxilary relay board card 562-760 aux certified part">
             <a href="simplex-4100-562-760.html"><img src="https://i.ebayimg.com/images/g/UZIAAOSwpbtl-v-Y/s-l225.jpg" alt="SIMPLEX 4100 FIRE ALARM AUXILARY RELAY BOARD CARD 562-760 AUX Certified Part - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4100-562-760.html">SIMPLEX 4100 FIRE ALARM AUXILARY RELAY BOARD CARD 562-760 AUX Certified Part</a></div>
@@ -385,7 +458,7 @@
                 <a href="simplex-4100-562-760.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4265-135 heat detector for fire alarm systems 477-005 temp rating 135°">
             <a href="simplex-4265.html"><img src="https://i.ebayimg.com/images/g/e4kAAeSwIPVnt2PC/s-l225.jpg" alt="Simplex 4265-135 Heat Detector For Fire Alarm Systems 477-005 Temp Rating 135° - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4265.html">Simplex 4265-135 Heat Detector For Fire Alarm Systems 477-005 Temp Rating 135°</a></div>
@@ -393,7 +466,7 @@
                 <a href="simplex-4265.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4266-135 heat detector for fire alarm systems 477-007 temp rating 135°">
             <a href="simplex-4266.html"><img src="https://i.ebayimg.com/images/g/QV0AAeSwlW5nt2L0/s-l225.jpg" alt="Simplex 4266-135 Heat Detector For Fire Alarm Systems 477-007 Temp Rating 135° - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4266.html">Simplex 4266-135 Heat Detector For Fire Alarm Systems 477-007 Temp Rating 135°</a></div>
@@ -401,7 +474,7 @@
                 <a href="simplex-4266.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4602-9150 graphic drive board part # 0740701">
             <a href="simplex-4602.html"><img src="https://i.ebayimg.com/images/g/1xYAAOSw5ahjWBA6/s-l225.jpg" alt="Simplex 4602-9150 Graphic Drive Board Part # 0740701 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4602.html">Simplex 4602-9150 Graphic Drive Board Part # 0740701</a></div>
@@ -409,7 +482,7 @@
                 <a href="simplex-4602.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4603-9101 lcd remote annunciator - same day shipping">
             <a href="simplex-4603-9101-lcd.html"><img src="https://i.ebayimg.com/images/g/pPwAAeSw2E1ozwjR/s-l225.jpg" alt="Simplex 4603-9101 LCD Remote Annunciator - SAME DAY SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4603-9101-lcd.html">Simplex 4603-9101 LCD Remote Annunciator - SAME DAY SHIPPING</a></div>
@@ -417,7 +490,7 @@
                 <a href="simplex-4603-9101-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex time recorder 4603-9101 lcd remote annunciator 07431007 with trim plate">
             <a href="simplex-4603-9101-lcd1-1.html"><img src="https://i.ebayimg.com/images/g/cFoAAeSwCm5pWbhT/s-l225.jpg" alt="Simplex Time Recorder 4603-9101 LCD Remote Annunciator 07431007 With Trim Plate - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4603-9101-lcd1-1.html">Simplex Time Recorder 4603-9101 LCD Remote Annunciator 07431007 With Trim Plate</a></div>
@@ -425,7 +498,7 @@
                 <a href="simplex-4603-9101-lcd1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex time recorder 4603-9101 lcd remote annunciator 07431007 w/ trim plate">
             <a href="simplex-4603-9101-lcd2-1.html"><img src="https://i.ebayimg.com/images/g/GooAAeSw~eVpWc0w/s-l225.jpg" alt="Simplex Time Recorder 4603-9101 LCD Remote Annunciator 07431007 W/ Trim Plate - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4603-9101-lcd2-1.html">Simplex Time Recorder 4603-9101 LCD Remote Annunciator 07431007 W/ Trim Plate</a></div>
@@ -433,7 +506,7 @@
                 <a href="simplex-4603-9101-lcd2-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex time recorder 4603-9101 lcd remote annunciator - same day shipping">
             <a href="simplex-4603-9101-lcd3-1.html"><img src="https://i.ebayimg.com/images/g/7yMAAeSwLSFouaYO/s-l225.jpg" alt="Simplex Time Recorder 4603-9101 LCD Remote Annunciator - SAME DAY SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4603-9101-lcd3-1.html">Simplex Time Recorder 4603-9101 LCD Remote Annunciator - SAME DAY SHIPPING</a></div>
@@ -441,7 +514,7 @@
                 <a href="simplex-4603-9101-lcd3-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4603-9101 lcd remote annunciator 07431007 w/ trim plate">
             <a href="simplex-4603-9101-lcd4-1.html"><img src="https://i.ebayimg.com/images/g/MuIAAeSwiWJpZBNf/s-l225.jpg" alt="Simplex 4603-9101 LCD Remote Annunciator 07431007 W/ Trim Plate - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4603-9101-lcd4-1.html">Simplex 4603-9101 LCD Remote Annunciator 07431007 W/ Trim Plate</a></div>
@@ -449,7 +522,7 @@
                 <a href="simplex-4603-9101-lcd4-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4603-9101 4100 fire alarm remote annunciator">
             <a href="simplex-4603.html"><img src="https://i.ebayimg.com/images/g/11sAAeSw4NBpWnqh/s-l225.jpg" alt="Simplex 4603-9101 4100 Fire Alarm Remote Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4603.html">Simplex 4603-9101 4100 Fire Alarm Remote Annunciator</a></div>
@@ -457,7 +530,7 @@
                 <a href="simplex-4603.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4606-9101 lcd remote annunciator">
             <a href="simplex-4606-9101-lcd.html"><img src="https://i.ebayimg.com/images/g/dPUAAeSwXbVpQ-0~/s-l225.jpg" alt="Simplex 4606-9101 LCD Remote Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4606-9101-lcd.html">Simplex 4606-9101 LCD Remote Annunciator</a></div>
@@ -465,7 +538,7 @@
                 <a href="simplex-4606-9101-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4606-9101 lcd remote annunciator free shipping !!!">
             <a href="simplex-4606-9101-lcd1-1.html"><img src="https://i.ebayimg.com/images/g/a6MAAeSwxvppYS2Z/s-l225.jpg" alt="Simplex 4606-9101 LCD Remote Annunciator FREE SHIPPING !!! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4606-9101-lcd1-1.html">Simplex 4606-9101 LCD Remote Annunciator FREE SHIPPING !!!</a></div>
@@ -473,7 +546,7 @@
                 <a href="simplex-4606-9101-lcd1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4606-9101 remote lcd annunciator">
             <a href="simplex-4606-9101-lcd2-1.html"><img src="https://i.ebayimg.com/images/g/wk0AAeSwHUFpBOw0/s-l225.jpg" alt="Simplex 4606-9101 Remote LCD Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4606-9101-lcd2-1.html">Simplex 4606-9101 Remote LCD Annunciator</a></div>
@@ -481,7 +554,7 @@
                 <a href="simplex-4606-9101-lcd2-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4606-9102 annunciator remote lcd for 4010es fast shipping sealed">
             <a href="simplex-4606-9102-lcd.html"><img src="https://i.ebayimg.com/images/g/kD8AAeSwwWFpN28W/s-l225.jpg" alt="Simplex 4606-9102 Annunciator Remote LCD For 4010ES Fast Shipping SEALED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4606-9102-lcd.html">Simplex 4606-9102 Annunciator Remote LCD For 4010ES Fast Shipping SEALED</a></div>
@@ -489,7 +562,7 @@
                 <a href="simplex-4606-9102-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4606-9102 annunciator remote lcd for 4010es beige">
             <a href="simplex-4606-9102-lcd1-1.html"><img src="https://i.ebayimg.com/images/g/dekAAeSwjVBpODtY/s-l225.jpg" alt="Simplex 4606-9102 Annunciator Remote LCD For 4010ES Beige - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4606-9102-lcd1-1.html">Simplex 4606-9102 Annunciator Remote LCD For 4010ES Beige</a></div>
@@ -497,7 +570,7 @@
                 <a href="simplex-4606-9102-lcd1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4606-9102 fire alarm panel annunciator remote lcd for 4010es">
             <a href="simplex-4606-9102-lcd2-1.html"><img src="https://i.ebayimg.com/images/g/Rd0AAeSwUXtpVC6E/s-l225.jpg" alt="Simplex 4606-9102 Fire Alarm Panel Annunciator Remote LCD For 4010ES - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4606-9102-lcd2-1.html">Simplex 4606-9102 Fire Alarm Panel Annunciator Remote LCD For 4010ES</a></div>
@@ -505,7 +578,7 @@
                 <a href="simplex-4606-9102-lcd2-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4606-9102 annunciator remote lcd for 4010es ">
             <a href="simplex-4606-9102-lcd3-1.html"><img src="https://i.ebayimg.com/images/g/SH0AAeSwxxBpQkig/s-l225.jpg" alt="Simplex 4606-9102 Annunciator Remote LCD For 4010ES  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4606-9102-lcd3-1.html">Simplex 4606-9102 Annunciator Remote LCD For 4010ES </a></div>
@@ -513,7 +586,7 @@
                 <a href="simplex-4606-9102-lcd3-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4606-9205 4007es touchscreen color remote lcd annunciator 07431557">
             <a href="simplex-4606-9205-4007es.html"><img src="https://i.ebayimg.com/images/g/QksAAeSwprdpH7Mb/s-l225.jpg" alt="SIMPLEX 4606-9205 4007ES Touchscreen Color Remote Lcd Annunciator 07431557 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4606-9205-4007es.html">SIMPLEX 4606-9205 4007ES Touchscreen Color Remote Lcd Annunciator 07431557</a></div>
@@ -521,7 +594,7 @@
                 <a href="simplex-4606-9205-4007es.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4903-9428 15cd white wall mount horn/strobe 0626687 - brand new">
             <a href="simplex-4903-9428-15cd.html"><img src="https://i.ebayimg.com/images/g/INkAAeSwpwNozWwU/s-l225.jpg" alt="SIMPLEX 4903-9428 15CD WHITE WALL MOUNT HORN/STROBE 0626687 - BRAND NEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4903-9428-15cd.html">SIMPLEX 4903-9428 15CD WHITE WALL MOUNT HORN/STROBE 0626687 - BRAND NEW</a></div>
@@ -529,7 +602,7 @@
                 <a href="simplex-4903-9428-15cd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4904-9164 visual only vo 1hz 110cd sq red ceiling fire alarm strobe">
             <a href="simplex-4904-9164-110cd.html"><img src="https://i.ebayimg.com/images/g/A94AAOSw~atcLjYk/s-l225.jpg" alt="SIMPLEX 4904-9164 VISUAL ONLY VO 1HZ 110CD SQ RED CEILING FIRE ALARM STROBE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4904-9164-110cd.html">SIMPLEX 4904-9164 VISUAL ONLY VO 1HZ 110CD SQ RED CEILING FIRE ALARM STROBE</a></div>
@@ -537,7 +610,7 @@
                 <a href="simplex-4904-9164-110cd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4904-9170 non-addressable red 110cd free run v/o assy part no:0626585">
             <a href="simplex-4904-9170-110cd.html"><img src="https://i.ebayimg.com/images/g/stQAAOSwRzRiIb1P/s-l225.jpg" alt="Simplex 4904-9170 NON-ADDRESSABLE RED 110CD FREE RUN V/O ASSY PART NO:0626585 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4904-9170-110cd.html">Simplex 4904-9170 NON-ADDRESSABLE RED 110CD FREE RUN V/O ASSY PART NO:0626585</a></div>
@@ -545,7 +618,7 @@
                 <a href="simplex-4904-9170-110cd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 4906-9253 mc truealert s/v red speaker strobe">
             <a href="simplex-4906-9253-mc.html"><img src="https://i.ebayimg.com/images/g/a7oAAOSwSStl3iXV/s-l225.jpg" alt="SIMPLEX 4906-9253 MC TRUEALERT S/V RED SPEAKER STROBE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-4906-9253-mc.html">SIMPLEX 4906-9253 MC TRUEALERT S/V RED SPEAKER STROBE</a></div>
@@ -553,7 +626,7 @@
                 <a href="simplex-4906-9253-mc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 49av addressable multi-candela indoor notification appliance strobe horn">
             <a href="simplex-49av.html"><img src="https://i.ebayimg.com/images/g/mHIAAeSwMX9pUvIi/s-l225.jpg" alt="Simplex 49AV Addressable Multi-Candela Indoor Notification Appliance Strobe Horn - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-49av.html">Simplex 49AV Addressable Multi-Candela Indoor Notification Appliance Strobe Horn</a></div>
@@ -561,7 +634,7 @@
                 <a href="simplex-49av.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 49mtv-wwf addressable wall horn strobe">
             <a href="simplex-49mtv.html"><img src="https://i.ebayimg.com/images/g/DXYAAeSwoiloYBUj/s-l225.jpg" alt="Simplex 49MTV-WWF Addressable Wall Horn Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-49mtv.html">Simplex 49MTV-WWF Addressable Wall Horn Strobe</a></div>
@@ -569,7 +642,7 @@
                 <a href="simplex-49mtv.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 49sv-applw fire alarm speaker strobe in box, part #07431639">
             <a href="simplex-49sv.html"><img src="https://i.ebayimg.com/images/g/kEQAAeSwxz9pAmrt/s-l225.jpg" alt="Simplex 49SV-APPLW Fire Alarm Speaker Strobe In Box, Part #07431639 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-49sv.html">Simplex 49SV-APPLW Fire Alarm Speaker Strobe In Box, Part #07431639</a></div>
@@ -577,7 +650,7 @@
                 <a href="simplex-49sv.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex addressable strobe light fire alarm 49vo-wwfo-ba">
             <a href="simplex-49vo.html"><img src="https://i.ebayimg.com/images/g/nCEAAOSwLzNlore8/s-l225.jpg" alt="Simplex Addressable Strobe Light Fire Alarm 49VO-WWFO-BA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-49vo.html">Simplex Addressable Strobe Light Fire Alarm 49VO-WWFO-BA</a></div>
@@ -585,7 +658,7 @@
                 <a href="simplex-49vo.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 10 - new simplex 49voc-wrfire vo cover wall red fire - part # 07431110">
             <a href="simplex-49voc.html"><img src="https://i.ebayimg.com/images/g/voIAAeSweIJo7Uqf/s-l225.jpg" alt="Lot of 10 - New Simplex 49VOC-WRFIRE VO Cover Wall Red Fire - Part # 07431110 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-49voc.html">Lot of 10 - New Simplex 49VOC-WRFIRE VO Cover Wall Red Fire - Part # 07431110</a></div>
@@ -593,7 +666,7 @@
                 <a href="simplex-49voc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 49wpbb-avvowr weatherproof back box (part no. 07431269) p1">
             <a href="simplex-49wpbb-p1.html"><img src="https://i.ebayimg.com/images/g/-cgAAOSwa-9nrW6l/s-l225.jpg" alt="Simplex 49WPBB-AVVOWR Weatherproof Back Box (Part No. 07431269) P1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-49wpbb-p1.html">Simplex 49WPBB-AVVOWR Weatherproof Back Box (Part No. 07431269) P1</a></div>
@@ -601,7 +674,7 @@
                 <a href="simplex-49wpbb-p1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex  556-244d  fire alarm battery monitor module circuit board  556244d">
             <a href="simplex-556-244d-556244d.html"><img src="https://i.ebayimg.com/images/g/U2oAAOSwx51n8AyV/s-l225.jpg" alt="SIMPLEX  556-244D  FIRE ALARM BATTERY MONITOR MODULE CIRCUIT BOARD  556244D - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-556-244d-556244d.html">SIMPLEX  556-244D  FIRE ALARM BATTERY MONITOR MODULE CIRCUIT BOARD  556244D</a></div>
@@ -609,7 +682,7 @@
                 <a href="simplex-556-244d-556244d.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new simplex 556-707 power supply board 8556707 fire alarm part">
             <a href="simplex-556-707-8556707.html"><img src="https://i.ebayimg.com/images/g/s3QAAOSwaNBUj8Kd/s-l225.jpg" alt="NEW SIMPLEX 556-707 POWER SUPPLY BOARD 8556707 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-556-707-8556707.html">NEW SIMPLEX 556-707 POWER SUPPLY BOARD 8556707 FIRE ALARM PART</a></div>
@@ -617,7 +690,7 @@
                 <a href="simplex-556-707-8556707.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new simplex 556-810 d zone module 556-168 d simplex 2001 fire alarm part">
             <a href="simplex-556-810-168.html"><img src="https://i.ebayimg.com/images/g/RCAAAOSw4a1bW3iN/s-l225.jpg" alt="NEW SIMPLEX 556-810 D ZONE MODULE 556-168 D SIMPLEX 2001 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-556-810-168.html">NEW SIMPLEX 556-810 D ZONE MODULE 556-168 D SIMPLEX 2001 FIRE ALARM PART</a></div>
@@ -625,7 +698,7 @@
                 <a href="simplex-556-810-168.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex grinnell 562-511 96k pram control board module 562-510c  -  card 2">
             <a href="simplex-562-511-96k.html"><img src="https://i.ebayimg.com/images/g/xBAAAOSwkr1daB8u/s-l225.jpg" alt="SIMPLEX GRINNELL 562-511 96K PRAM CONTROL BOARD MODULE 562-510C  -  CARD 2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-562-511-96k.html">SIMPLEX GRINNELL 562-511 96K PRAM CONTROL BOARD MODULE 562-510C  -  CARD 2</a></div>
@@ -633,7 +706,7 @@
                 <a href="simplex-562-511-96k.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 562-775 rev g 2 signal expansion circuit board fire alarm part">
             <a href="simplex-562-775.html"><img src="https://i.ebayimg.com/images/g/8wEAAeSw7txpXHVx/s-l225.jpg" alt="SIMPLEX 562-775 REV G 2 SIGNAL EXPANSION CIRCUIT BOARD FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-562-775.html">SIMPLEX 562-775 REV G 2 SIGNAL EXPANSION CIRCUIT BOARD FIRE ALARM PART</a></div>
@@ -641,7 +714,7 @@
                 <a href="simplex-562-775.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 562-797 rev g 2 signal expansion circuit board fire alarm part">
             <a href="simplex-562-797.html"><img src="https://i.ebayimg.com/images/g/a7sAAOSwLOZiq17Z/s-l225.jpg" alt="SIMPLEX 562-797 REV G 2 SIGNAL EXPANSION CIRCUIT BOARD FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-562-797.html">SIMPLEX 562-797 REV G 2 SIGNAL EXPANSION CIRCUIT BOARD FIRE ALARM PART</a></div>
@@ -649,7 +722,7 @@
                 <a href="simplex-562-797.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 562-829 rev g 2 signal expansion circuit board fire alarm part">
             <a href="simplex-562-829.html"><img src="https://i.ebayimg.com/images/g/~UYAAeSwDN1pXHj0/s-l225.jpg" alt="SIMPLEX 562-829 REV G 2 SIGNAL EXPANSION CIRCUIT BOARD FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-562-829.html">SIMPLEX 562-829 REV G 2 SIGNAL EXPANSION CIRCUIT BOARD FIRE ALARM PART</a></div>
@@ -657,7 +730,7 @@
                 <a href="simplex-562-829.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 565-325 / 565-324 master controller fire alarm part 8565-325 4020 cpu">
             <a href="simplex-565-325-324.html"><img src="https://i.ebayimg.com/images/g/svAAAOSwOd9drZAg/s-l225.jpg" alt="SIMPLEX 565-325 / 565-324 MASTER CONTROLLER FIRE ALARM PART 8565-325 4020 CPU - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-565-325-324.html">SIMPLEX 565-325 / 565-324 MASTER CONTROLLER FIRE ALARM PART 8565-325 4020 CPU</a></div>
@@ -665,7 +738,7 @@
                 <a href="simplex-565-325-324.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 565-325 master controller fire alarm part 8565-325 4020 cpu">
             <a href="simplex-565-325-8565.html"><img src="https://i.ebayimg.com/images/g/ZQkAAOSwibph2EhS/s-l225.jpg" alt="SIMPLEX 565-325 MASTER CONTROLLER FIRE ALARM PART 8565-325 4020 CPU - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-565-325-8565.html">SIMPLEX 565-325 MASTER CONTROLLER FIRE ALARM PART 8565-325 4020 CPU</a></div>
@@ -673,7 +746,7 @@
                 <a href="simplex-565-325-8565.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 566-084 power distribution board fire alarm part simplex 4100">
             <a href="simplex-566-084-4100.html"><img src="https://i.ebayimg.com/images/g/WdQAAOSwcchcjiqF/s-l225.jpg" alt="SIMPLEX 566-084 POWER DISTRIBUTION BOARD FIRE ALARM PART SIMPLEX 4100 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-566-084-4100.html">SIMPLEX 566-084 POWER DISTRIBUTION BOARD FIRE ALARM PART SIMPLEX 4100</a></div>
@@ -681,7 +754,7 @@
                 <a href="simplex-566-084-4100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 617-836 6' db25 male to db9 female cable part no:0617836">
             <a href="simplex-617-836-db25.html"><img src="https://i.ebayimg.com/images/g/BB0AAeSwBYJpMTWw/s-l225.jpg" alt="SIMPLEX 617-836 6' DB25 Male to DB9 Female CABLE PART NO:0617836 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-617-836-db25.html">SIMPLEX 617-836 6' DB25 Male to DB9 Female CABLE PART NO:0617836</a></div>
@@ -689,7 +762,7 @@
                 <a href="simplex-617-836-db25.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 636-341 goldwing power supply for 4020/4100+ ** parts or repair only **">
             <a href="simplex-636.html"><img src="https://i.ebayimg.com/images/g/YZ4AAeSwYVtodqbJ/s-l225.jpg" alt="Simplex 636-341 GoldWing Power Supply for 4020/4100+ ** PARTS OR REPAIR ONLY ** - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-636.html">Simplex 636-341 GoldWing Power Supply for 4020/4100+ ** PARTS OR REPAIR ONLY **</a></div>
@@ -697,7 +770,7 @@
                 <a href="simplex-636.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex fire alarm transformer assembly part #686-061">
             <a href="simplex-686-061.html"><img src="https://i.ebayimg.com/images/g/ThcAAOSwRixlZl40/s-l225.jpg" alt="Simplex Fire Alarm Transformer Assembly Part #686-061 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-686-061.html">Simplex Fire Alarm Transformer Assembly Part #686-061</a></div>
@@ -705,7 +778,7 @@
                 <a href="simplex-686-061.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 740-683 map eprom module rev 5.01 ck # 3b7a part #740683 4100 387a">
             <a href="simplex-740-683-3b7a.html"><img src="https://i.ebayimg.com/images/g/2rcAAOSwYMtlZ9BN/s-l225.jpg" alt="SIMPLEX 740-683 MAP Eprom Module REV 5.01 CK # 3B7A Part #740683 4100 387A - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-740-683-3b7a.html">SIMPLEX 740-683 MAP Eprom Module REV 5.01 CK # 3B7A Part #740683 4100 387A</a></div>
@@ -713,7 +786,7 @@
                 <a href="simplex-740-683-3b7a.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 7ah gel f1 replaces simplex 4006 fire control panel - 2 pack">
             <a href="simplex-7ah-f1.html"><img src="https://i.ebayimg.com/images/g/YigAAeSwTH5op14J/s-l225.jpg" alt="Mighty Max 12V 7AH GEL F1 Replaces Simplex 4006 Fire Control Panel - 2 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-7ah-f1.html">Mighty Max 12V 7AH GEL F1 Replaces Simplex 4006 Fire Control Panel - 2 Pack</a></div>
@@ -721,7 +794,7 @@
                 <a href="simplex-7ah-f1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="interstate batteries 12v 7ah sla simplex 2350 fire alarm control panel battery ">
             <a href="simplex-7ah.html"><img src="https://i.ebayimg.com/images/g/8RUAAOSw19Jd31U~/s-l225.jpg" alt="INTERSTATE BATTERIES 12V 7Ah SLA Simplex 2350 Fire Alarm Control Panel Battery  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-7ah.html">INTERSTATE BATTERIES 12V 7Ah SLA Simplex 2350 Fire Alarm Control Panel Battery </a></div>
@@ -729,7 +802,7 @@
                 <a href="simplex-7ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex dual zone w/switch fire alarm control board 8556-896 module 8556896">
             <a href="simplex-8556.html"><img src="https://i.ebayimg.com/images/g/sCEAAOSwI5ZluQJL/s-l225.jpg" alt="Simplex Dual Zone w/Switch Fire Alarm Control Board 8556-896 Module 8556896 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-8556.html">Simplex Dual Zone w/Switch Fire Alarm Control Board 8556-896 Module 8556896</a></div>
@@ -737,7 +810,7 @@
                 <a href="simplex-8556.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="interstate batteries 12v 8ah sla simplex 2350 fire alarm control panel battery">
             <a href="simplex-8ah.html"><img src="https://i.ebayimg.com/images/g/Q6cAAOSwb6Bk5qMz/s-l225.jpg" alt="INTERSTATE BATTERIES 12V 8Ah SLA Simplex 2350 Fire Alarm Control Panel Battery - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-8ah.html">INTERSTATE BATTERIES 12V 8Ah SLA Simplex 2350 Fire Alarm Control Panel Battery</a></div>
@@ -745,7 +818,7 @@
                 <a href="simplex-8ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex z-51-9544 fire alarm control panel transformer 478-322">
             <a href="simplex-9544.html"><img src="https://i.ebayimg.com/images/g/1KwAAOSwZItkW6Zm/s-l225.jpg" alt="SIMPLEX Z-51-9544 FIRE ALARM CONTROL PANEL TRANSFORMER 478-322 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-9544.html">SIMPLEX Z-51-9544 FIRE ALARM CONTROL PANEL TRANSFORMER 478-322</a></div>
@@ -753,7 +826,7 @@
                 <a href="simplex-9544.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 976098 thorn grinnell 125-485-885 fire alarm 42-02sn module part">
             <a href="simplex-976098-125-485.html"><img src="https://i.ebayimg.com/images/g/pQwAAOSw~bFWFw59/s-l225.jpg" alt="SIMPLEX 976098 THORN GRINNELL 125-485-885 FIRE ALARM 42-02SN MODULE PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-976098-125-485.html">SIMPLEX 976098 THORN GRINNELL 125-485-885 FIRE ALARM 42-02SN MODULE PART</a></div>
@@ -761,7 +834,7 @@
                 <a href="simplex-976098-125-485.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 976098 thorn grinnell 125-485-885 fire alarm 42-02sn module part">
             <a href="simplex-976098.html"><img src="https://i.ebayimg.com/images/g/pQwAAOSw~bFWFw59/s-l225.jpg" alt="SIMPLEX 976098 THORN GRINNELL 125-485-885 FIRE ALARM 42-02SN MODULE PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-976098.html">SIMPLEX 976098 THORN GRINNELL 125-485-885 FIRE ALARM 42-02SN MODULE PART</a></div>
@@ -769,7 +842,7 @@
                 <a href="simplex-976098.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex photoelectric smoke sensor 707320763">
             <a href="simplex-generic-parts.html"><img src="https://i.ebayimg.com/images/g/~2gAAOSwz8Bi7X7P/s-l225.jpg" alt="Simplex Photoelectric Smoke Sensor 707320763 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-generic-parts.html">Simplex Photoelectric Smoke Sensor 707320763</a></div>
@@ -777,7 +850,7 @@
                 <a href="simplex-generic-parts.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex lock part - inner passage mode bypass 1/4 turn">
             <a href="simplex-lock.html"><img src="https://i.ebayimg.com/images/g/ytEAAeSwix1oADB8/s-l225.jpg" alt="Simplex Lock Part - Inner Passage mode Bypass 1/4 Turn - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-lock.html">Simplex Lock Part - Inner Passage mode Bypass 1/4 Turn</a></div>
@@ -785,7 +858,7 @@
                 <a href="simplex-lock.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex pid: 4098-9755 2- wire duct sensor housing w/o relay part#0631132">
             <a href="simplex-pid4098.html"><img src="https://i.ebayimg.com/images/g/JToAAOSwtZlj2WaL/s-l225.jpg" alt="Simplex PID: 4098-9755 2- wire duct sensor housing w/o relay Part#0631132 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-pid4098.html">Simplex PID: 4098-9755 2- wire duct sensor housing w/o relay Part#0631132</a></div>
@@ -793,7 +866,7 @@
                 <a href="simplex-pid4098.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex, ceiling speaker (white). pid:4902-9721, part no:0626708">
             <a href="simplex-pid4902.html"><img src="https://i.ebayimg.com/images/g/UxgAAOSwlU5mRjOw/s-l225.jpg" alt="Simplex, Ceiling Speaker (White). PID:4902-9721, PART NO:0626708 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-pid4902.html">Simplex, Ceiling Speaker (White). PID:4902-9721, PART NO:0626708</a></div>
@@ -801,7 +874,7 @@
                 <a href="simplex-pid4902.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="rm2-6433 top cover w/control panel m452nw m454nw simplex wireless for hp">
             <a href="simplex-rm2-6433-m452nw.html"><img src="https://i.ebayimg.com/images/g/e84AAOSwuSpfD3NW/s-l225.jpg" alt="RM2-6433 Top Cover w/Control Panel M452NW M454NW Simplex Wireless For HP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-rm2-6433-m452nw.html">RM2-6433 Top Cover w/Control Panel M452NW M454NW Simplex Wireless For HP</a></div>
@@ -809,7 +882,7 @@
                 <a href="simplex-rm2-6433-m452nw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex t371-9408 0743493 vertical wall mounted visible strobe, 24vdc, red">
             <a href="simplex-t371.html"><img src="https://i.ebayimg.com/images/g/D-YAAeSwg-ZpV1YL/s-l225.jpg" alt="SIMPLEX T371-9408 0743493 VERTICAL WALL MOUNTED VISIBLE STROBE, 24VDC, RED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-t371.html">SIMPLEX T371-9408 0743493 VERTICAL WALL MOUNTED VISIBLE STROBE, 24VDC, RED</a></div>
@@ -817,7 +890,7 @@
                 <a href="simplex-t371.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="u186 simplex 4090-9002  relay  module lot of 2  free shipping">
             <a href="simplex-u186.html"><img src="https://i.ebayimg.com/images/g/D-sAAOSw0ZlkL2Lx/s-l225.jpg" alt="U186 SIMPLEX 4090-9002  RELAY  MODULE LOT OF 2  FREE SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="simplex-u186.html">U186 SIMPLEX 4090-9002  RELAY  MODULE LOT OF 2  FREE SHIPPING</a></div>
@@ -844,6 +917,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Simplex";
+    var CAMPAIGN_ID = "5339136270";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID + 
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

@@ -139,6 +139,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #d32f2f;
+            box-shadow: 0 2px 10px rgba(211,47,47,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #fff8f8;
+            border: 1px solid #f5c6c6;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { background: #b71c1c; }
+    </style>
 </head>
 <body>
     
@@ -157,11 +212,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Silent Knight</span></p>
-        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:30px;">Silent Knight Parts Catalog</h1>
-        <p class="lead">Browsing 167 verified items available for facility management.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Silent Knight</span></p>
+        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:20px;">Silent Knight Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 167 verified items. Search by part number or name:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Silent Knight part number (e.g. 067000BD)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Silent Knight part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight alarm control panel board 067000bd">
             <a href="067000bd.html"><img src="https://cdn.firepartshub.com/images/sk-067000bd.webp" alt="Silent Knight Alarm Control Panel Board 067000BD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="067000bd.html">Silent Knight Alarm Control Panel Board 067000BD</a></div>
@@ -169,7 +242,7 @@
                 <a href="067000bd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight direct connect module 5220">
             <a href="5220.html"><img src="https://i.ebayimg.com/images/g/B7UAAOSwrIllnFGU/s-l225.jpg" alt="Silent Knight Direct Connect Module 5220 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5220.html">Silent Knight Direct Connect Module 5220</a></div>
@@ -177,7 +250,7 @@
                 <a href="5220.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight panel extender 5815xl">
             <a href="5815xl.html"><img src="https://cdn.firepartshub.com/images/sk-5815xl.webp" alt="Silent Knight Panel Extender 5815XL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5815xl.html">Silent Knight Panel Extender 5815XL</a></div>
@@ -185,7 +258,7 @@
                 <a href="5815xl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight serial/parallel module 5824">
             <a href="5824.html"><img src="https://cdn.firepartshub.com/images/sk-5824.webp" alt="Silent Knight Serial/Parallel Module 5824 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5824.html">Silent Knight Serial/Parallel Module 5824</a></div>
@@ -193,7 +266,7 @@
                 <a href="5824.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight i/o driver module 5880">
             <a href="5880.html"><img src="https://i.ebayimg.com/images/g/Z4MAAOSw9yRmQDiu/s-l225.jpg" alt="Silent Knight I/O Driver Module 5880 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5880.html">Silent Knight I/O Driver Module 5880</a></div>
@@ -201,7 +274,7 @@
                 <a href="5880.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight relay expander 5883">
             <a href="5883.html"><img src="https://cdn.firepartshub.com/images/sk-5883.webp" alt="Silent Knight Relay Expander 5883 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5883.html">Silent Knight Relay Expander 5883</a></div>
@@ -209,7 +282,7 @@
                 <a href="5883.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight intelligent distributed power module 5895xl">
             <a href="5895xl.html"><img src="https://cdn.firepartshub.com/images/sk-058950xl.webp" alt="Silent Knight Intelligent Distributed Power Module 5895XL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5895xl.html">Silent Knight Intelligent Distributed Power Module 5895XL</a></div>
@@ -217,7 +290,7 @@
                 <a href="5895xl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fire alarm control panel 6700">
             <a href="6700.html"><img src="https://cdn.firepartshub.com/images/sk-6700.webp" alt="Silent Knight Fire Alarm Control Panel 6700 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="6700.html">Silent Knight Fire Alarm Control Panel 6700</a></div>
@@ -225,7 +298,7 @@
                 <a href="6700.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight alarm control panel board 6808">
             <a href="6808.html"><img src="https://cdn.firepartshub.com/images/sk-068080bd.webp" alt="Silent Knight Alarm Control Panel Board 6808 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="6808.html">Silent Knight Alarm Control Panel Board 6808</a></div>
@@ -233,7 +306,7 @@
                 <a href="6808.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight signaling line circuit expander 6815">
             <a href="6815.html"><img src="https://cdn.firepartshub.com/images/sk-6815.webp" alt="Silent Knight Signaling Line Circuit Expander 6815 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="6815.html">Silent Knight Signaling Line Circuit Expander 6815</a></div>
@@ -241,7 +314,7 @@
                 <a href="6815.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fire alarm control panel 6820">
             <a href="6820.html"><img src="https://cdn.firepartshub.com/images/sk-6820.webp" alt="Silent Knight Fire Alarm Control Panel 6820 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="6820.html">Silent Knight Fire Alarm Control Panel 6820</a></div>
@@ -249,7 +322,7 @@
                 <a href="6820.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fire alarm control panel 6820evs">
             <a href="6820evs.html"><img src="https://cdn.firepartshub.com/images/sk-6820evs.webp" alt="Silent Knight Fire Alarm Control Panel 6820EVS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="6820evs.html">Silent Knight Fire Alarm Control Panel 6820EVS</a></div>
@@ -257,7 +330,7 @@
                 <a href="6820evs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fire amplifier evs-100wbu">
             <a href="evs-100wbu.html"><img src="https://cdn.firepartshub.com/images/sk-evs100wbu.webp" alt="Silent Knight Fire Amplifier EVS-100WBU - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="evs-100wbu.html">Silent Knight Fire Amplifier EVS-100WBU</a></div>
@@ -265,7 +338,7 @@
                 <a href="evs-100wbu.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fire amplifier evs-125w">
             <a href="evs-125w.html"><img src="https://cdn.firepartshub.com/images/sk-evs125w.webp" alt="Silent Knight Fire Amplifier EVS-125W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="evs-125w.html">Silent Knight Fire Amplifier EVS-125W</a></div>
@@ -273,7 +346,7 @@
                 <a href="evs-125w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight audio circuit expander evs-ce4">
             <a href="evs-ce4.html"><img src="https://cdn.firepartshub.com/images/sk-evsce4.webp" alt="Silent Knight Audio Circuit Expander EVS-CE4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="evs-ce4.html">Silent Knight Audio Circuit Expander EVS-CE4</a></div>
@@ -281,7 +354,7 @@
                 <a href="evs-ce4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fire amplifier evs-int50w">
             <a href="evs-int50w.html"><img src="https://cdn.firepartshub.com/images/sk-evsint50w.webp" alt="Silent Knight Fire Amplifier EVS-INT50W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="evs-int50w.html">Silent Knight Fire Amplifier EVS-INT50W</a></div>
@@ -289,7 +362,7 @@
                 <a href="evs-int50w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight local operator console evs-loc">
             <a href="evs-loc.html"><img src="https://cdn.firepartshub.com/images/sk-evsloc.webp" alt="Silent Knight Local Operator Console EVS-LOC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="evs-loc.html">Silent Knight Local Operator Console EVS-LOC</a></div>
@@ -297,7 +370,7 @@
                 <a href="evs-loc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight voice evacuation system evs-rcu">
             <a href="evs-rcu.html"><img src="https://cdn.firepartshub.com/images/sk-evsrcu.webp" alt="Silent Knight Voice Evacuation System EVS-RCU - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="evs-rcu.html">Silent Knight Voice Evacuation System EVS-RCU</a></div>
@@ -305,7 +378,7 @@
                 <a href="evs-rcu.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight switch expander evs-sw24">
             <a href="evs-sw24.html"><img src="https://i.ebayimg.com/images/g/fKEAAeSwHXVoUvLD/s-l225.jpg" alt="Silent Knight Switch Expander EVS-SW24 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="evs-sw24.html">Silent Knight Switch Expander EVS-SW24</a></div>
@@ -313,7 +386,7 @@
                 <a href="evs-sw24.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight faceplate fft-fpj">
             <a href="fft-fpj.html"><img src="https://cdn.firepartshub.com/images/sk-fftfpj.webp" alt="Silent Knight Faceplate FFT-FPJ - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fft-fpj.html">Silent Knight Faceplate FFT-FPJ</a></div>
@@ -321,7 +394,7 @@
                 <a href="fft-fpj.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight handset fft-rhs">
             <a href="fft-rhs.html"><img src="https://i.ebayimg.com/images/g/U74AAOSwrNpn4-EU/s-l225.jpg" alt="Silent Knight Handset FFT-RHS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fft-rhs.html">Silent Knight Handset FFT-RHS</a></div>
@@ -329,7 +402,7 @@
                 <a href="fft-rhs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fault isolator module iso-6">
             <a href="iso-6.html"><img src="https://cdn.firepartshub.com/images/sk-iso6.webp" alt="Silent Knight Fault Isolator Module ISO-6 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="iso-6.html">Silent Knight Fault Isolator Module ISO-6</a></div>
@@ -337,7 +410,7 @@
                 <a href="iso-6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station ps-da">
             <a href="ps-da.html"><img src="https://cdn.firepartshub.com/images/sk-psda.webp" alt="Silent Knight Pull Station PS-DA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps-da.html">Silent Knight Pull Station PS-DA</a></div>
@@ -345,7 +418,7 @@
                 <a href="ps-da.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station ps-dah">
             <a href="ps-dah.html"><img src="https://i.ebayimg.com/images/g/eDEAAOSwT6pVrHPo/s-l225.jpg" alt="Silent Knight Pull Station PS-DAH - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps-dah.html">Silent Knight Pull Station PS-DAH</a></div>
@@ -353,7 +426,7 @@
                 <a href="ps-dah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station ps-dalob">
             <a href="ps-dalob.html"><img src="https://cdn.firepartshub.com/images/sk-psdalob.webp" alt="Silent Knight Pull Station PS-DALOB - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps-dalob.html">Silent Knight Pull Station PS-DALOB</a></div>
@@ -361,7 +434,7 @@
                 <a href="ps-dalob.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station ps-dasp">
             <a href="ps-dasp.html"><img src="https://i.ebayimg.com/images/g/bmIAAOSwz1dm-YBl/s-l225.jpg" alt="Silent Knight Pull Station PS-DASP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps-dasp.html">Silent Knight Pull Station PS-DASP</a></div>
@@ -369,7 +442,7 @@
                 <a href="ps-dasp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station ps-satk-wp">
             <a href="ps-satk-wp.html"><img src="https://cdn.firepartshub.com/images/sk-pssatkwp.webp" alt="Silent Knight Pull Station PS-SATK-WP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps-satk-wp.html">Silent Knight Pull Station PS-SATK-WP</a></div>
@@ -377,7 +450,7 @@
                 <a href="ps-satk-wp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station ps-satk">
             <a href="ps-satk.html"><img src="https://cdn.firepartshub.com/images/sk-pssatk.webp" alt="Silent Knight Pull Station PS-SATK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps-satk.html">Silent Knight Pull Station PS-SATK</a></div>
@@ -385,7 +458,7 @@
                 <a href="ps-satk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight 005860r red remote annunciator">
             <a href="silent-knight-005860r.html"><img src="https://i.ebayimg.com/images/g/zawAAOSwrVBiC5Ca/s-l225.jpg" alt="HONEYWELL SILENT KNIGHT 005860R RED REMOTE ANNUNCIATOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-005860r.html">HONEYWELL SILENT KNIGHT 005860R RED REMOTE ANNUNCIATOR</a></div>
@@ -393,7 +466,7 @@
                 <a href="silent-knight-005860r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight 005860tr red remote annunciator trim ring">
             <a href="silent-knight-005860tr.html"><img src="https://i.ebayimg.com/images/g/UTYAAOSwlEdmavIJ/s-l225.jpg" alt="HONEYWELL SILENT KNIGHT 005860TR RED REMOTE ANNUNCIATOR TRIM RING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-005860tr.html">HONEYWELL SILENT KNIGHT 005860TR RED REMOTE ANNUNCIATOR TRIM RING</a></div>
@@ -401,7 +474,7 @@
                 <a href="silent-knight-005860tr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="replacement cable 130294 for silent knight remote annunciator sk-5230 sk-5220">
             <a href="silent-knight-130294-sk5230-sk5220.html"><img src="https://i.ebayimg.com/images/g/L6AAAeSwPJJouZvL/s-l225.jpg" alt="Replacement Cable 130294 For Silent Knight Remote Annunciator SK-5230 SK-5220 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-130294-sk5230-sk5220.html">Replacement Cable 130294 For Silent Knight Remote Annunciator SK-5230 SK-5220</a></div>
@@ -409,7 +482,7 @@
                 <a href="silent-knight-130294-sk5230-sk5220.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="addressable heat detector head & base, 135 degree, silent knight sk-heat-ror">
             <a href="silent-knight-135-sk.html"><img src="https://i.ebayimg.com/images/g/-cwAAOSwLdRlzqvt/s-l225.jpg" alt="Addressable Heat Detector Head & Base, 135 Degree, Silent Knight SK-HEAT-ROR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-135-sk.html">Addressable Heat Detector Head & Base, 135 Degree, Silent Knight SK-HEAT-ROR</a></div>
@@ -417,7 +490,7 @@
                 <a href="silent-knight-135-sk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight  4724-2 fire alarm part">
             <a href="silent-knight-4724.html"><img src="https://i.ebayimg.com/images/g/CzgAAeSwPE9phLaA/s-l225.jpg" alt="Silent Knight  4724-2 Fire Alarm Part - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-4724.html">Silent Knight  4724-2 Fire Alarm Part</a></div>
@@ -425,7 +498,7 @@
                 <a href="silent-knight-4724.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire alarm lot wheelock speaker strobe lights silent knight 5104b untested as is">
             <a href="silent-knight-5104b.html"><img src="https://i.ebayimg.com/images/g/EygAAeSwgaVpYJN3/s-l225.jpg" alt="Fire Alarm Lot Wheelock Speaker Strobe Lights Silent Knight 5104B Untested As Is - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-5104b.html">Fire Alarm Lot Wheelock Speaker Strobe Lights Silent Knight 5104B Untested As Is</a></div>
@@ -433,7 +506,7 @@
                 <a href="silent-knight-5104b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sp-tr trim ring for ipf-25 5600 ifp-50 & 5700 control panel">
             <a href="silent-knight-5600-ifp50.html"><img src="https://i.ebayimg.com/images/g/vwkAAOSwkMJkf01h/s-l225.jpg" alt="Silent Knight SP-TR Trim Ring for IPF-25 5600 IFP-50 & 5700 Control Panel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-5600-ifp50.html">Silent Knight SP-TR Trim Ring for IPF-25 5600 IFP-50 & 5700 Control Panel</a></div>
@@ -441,7 +514,7 @@
                 <a href="silent-knight-5600-ifp50.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight 5860 grey remote annunciator fire alarm - 058600h.1">
             <a href="silent-knight-5860-058600h.html"><img src="https://i.ebayimg.com/images/g/MJwAAOSwYYVmkIAY/s-l225.jpg" alt="Silent Knight 5860 Grey Remote Annunciator Fire Alarm - 058600H.1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-5860-058600h.html">Silent Knight 5860 Grey Remote Annunciator Fire Alarm - 058600H.1</a></div>
@@ -449,7 +522,7 @@
                 <a href="silent-knight-5860-058600h.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight 5860r remote annunciator - same day shipping">
             <a href="silent-knight-5860r.html"><img src="https://i.ebayimg.com/images/g/S~4AAeSweWlpENmy/s-l225.jpg" alt="Silent Knight 5860R Remote Annunciator - SAME DAY SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-5860r.html">Silent Knight 5860R Remote Annunciator - SAME DAY SHIPPING</a></div>
@@ -457,7 +530,7 @@
                 <a href="silent-knight-5860r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight 5860tr remote annunciator trim ring">
             <a href="silent-knight-5860tr.html"><img src="https://i.ebayimg.com/images/g/jcMAAeSwlJ9pIMUA/s-l225.jpg" alt="Silent Knight 5860TR Remote Annunciator Trim Ring - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-5860tr.html">Silent Knight 5860TR Remote Annunciator Trim Ring</a></div>
@@ -465,7 +538,7 @@
                 <a href="silent-knight-5860tr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="[for parts - no ac - read] silent knight model 5897 power supply for 5820xl facp">
             <a href="silent-knight-5897-5820xl.html"><img src="https://i.ebayimg.com/images/g/~J4AAeSwgjRpSgRK/s-l225.jpg" alt="[FOR PARTS - NO AC - READ] Silent Knight Model 5897 Power Supply for 5820XL FACP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-5897-5820xl.html">[FOR PARTS - NO AC - READ] Silent Knight Model 5897 Power Supply for 5820XL FACP</a></div>
@@ -473,7 +546,7 @@
                 <a href="silent-knight-5897-5820xl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="repair service for honeywell silent knight 6860 remote annunciator 6monwarr">
             <a href="silent-knight-6860-6monwarr.html"><img src="https://i.ebayimg.com/images/g/MEsAAOSwKcBi9Y2Z/s-l225.jpg" alt="Repair Service for Honeywell Silent Knight 6860 Remote Annunciator 6MonWarr - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-6860-6monwarr.html">Repair Service for Honeywell Silent Knight 6860 Remote Annunciator 6MonWarr</a></div>
@@ -481,7 +554,7 @@
                 <a href="silent-knight-6860-6monwarr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight 6860 remote annunciator / ifp-2100 keypad">
             <a href="silent-knight-6860-ifp2100.html"><img src="https://i.ebayimg.com/images/g/V4MAAeSw4LZoPH0x/s-l225.jpg" alt="Silent Knight 6860 Remote Annunciator / IFP-2100 Keypad - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-6860-ifp2100.html">Silent Knight 6860 Remote Annunciator / IFP-2100 Keypad</a></div>
@@ -489,7 +562,7 @@
                 <a href="silent-knight-6860-ifp2100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 7ah gel f1 replaces silent knight 5808 control panel - 6 pack">
             <a href="silent-knight-7ah-f1.html"><img src="https://i.ebayimg.com/images/g/cKwAAeSwcidop18m/s-l225.jpg" alt="Mighty Max 12V 7AH GEL F1 Replaces Silent Knight 5808 Control Panel - 6 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-7ah-f1.html">Mighty Max 12V 7AH GEL F1 Replaces Silent Knight 5808 Control Panel - 6 Pack</a></div>
@@ -497,7 +570,7 @@
                 <a href="silent-knight-7ah-f1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="upg 12v 8ah battery for silent knight 5820xl fire control panel - 2 pack">
             <a href="silent-knight-8ah-5820xl.html"><img src="https://i.ebayimg.com/images/g/R6kAAeSwDJpnr4Gn/s-l225.jpg" alt="UPG 12V 8Ah Battery for Silent Knight 5820xl Fire Control Panel - 2 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-8ah-5820xl.html">UPG 12V 8Ah Battery for Silent Knight 5820xl Fire Control Panel - 2 Pack</a></div>
@@ -505,7 +578,7 @@
                 <a href="silent-knight-8ah-5820xl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 9ah gel f2 replaces silent knight sk-2(e) control panel - 6 pack">
             <a href="silent-knight-9ah-f2-sk2.html"><img src="https://i.ebayimg.com/images/g/MDMAAeSwxr1op2Bg/s-l225.jpg" alt="Mighty Max 12V 9AH GEL F2 Replaces Silent Knight SK-2(E) Control Panel - 6 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-9ah-f2-sk2.html">Mighty Max 12V 9AH GEL F2 Replaces Silent Knight SK-2(E) Control Panel - 6 Pack</a></div>
@@ -513,7 +586,7 @@
                 <a href="silent-knight-9ah-f2-sk2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 9ah gel f2 replaces silent knight sk-4(e) control panel - 6 pack">
             <a href="silent-knight-9ah-f2-sk4.html"><img src="https://i.ebayimg.com/images/g/hBkAAeSwvoNop2EZ/s-l225.jpg" alt="Mighty Max 12V 9AH GEL F2 Replaces Silent Knight SK-4(E) Control Panel - 6 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-9ah-f2-sk4.html">Mighty Max 12V 9AH GEL F2 Replaces Silent Knight SK-4(E) Control Panel - 6 Pack</a></div>
@@ -521,7 +594,7 @@
                 <a href="silent-knight-9ah-f2-sk4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 9ah gel f2 replaces silent knight sk-5208 control panel - 6 pack">
             <a href="silent-knight-9ah-f2-sk5208.html"><img src="https://i.ebayimg.com/images/g/qrQAAeSw5-Fop2NA/s-l225.jpg" alt="Mighty Max 12V 9AH GEL F2 Replaces Silent Knight SK-5208 Control Panel - 6 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-9ah-f2-sk5208.html">Mighty Max 12V 9AH GEL F2 Replaces Silent Knight SK-5208 Control Panel - 6 Pack</a></div>
@@ -529,7 +602,7 @@
                 <a href="silent-knight-9ah-f2-sk5208.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight evs-125w (for parts only) can only in box!!">
             <a href="silent-knight-evs.html"><img src="https://i.ebayimg.com/images/g/n8sAAeSw33FonP6m/s-l225.jpg" alt="Silent Knight EVS-125W (For Parts Only) Can Only in Box!! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-evs.html">Silent Knight EVS-125W (For Parts Only) Can Only in Box!!</a></div>
@@ -537,7 +610,7 @@
                 <a href="silent-knight-evs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight idp-monitor farenhyt monitor module">
             <a href="silent-knight-generic-parts.html"><img src="https://i.ebayimg.com/images/g/LDoAAOSw5Almsmwg/s-l225.jpg" alt="SILENT KNIGHT IDP-MONITOR FARENHYT Monitor Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-generic-parts.html">SILENT KNIGHT IDP-MONITOR FARENHYT Monitor Module</a></div>
@@ -545,7 +618,7 @@
                 <a href="silent-knight-generic-parts.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell farenhyt silent knight idp-beam projected beam smoke detector ifp fire">
             <a href="silent-knight-ifp.html"><img src="https://i.ebayimg.com/images/g/PCMAAOSwc8FlYm0R/s-l225.jpg" alt="Honeywell Farenhyt Silent Knight IDP-BEAM Projected Beam Smoke Detector IFP fire - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-ifp.html">Honeywell Farenhyt Silent Knight IDP-BEAM Projected Beam Smoke Detector IFP fire</a></div>
@@ -553,7 +626,7 @@
                 <a href="silent-knight-ifp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight ifp-1000 board rev. 8.9 ( for parts ) missing key">
             <a href="silent-knight-ifp1000.html"><img src="https://i.ebayimg.com/images/g/4tcAAeSwoX9ojoNy/s-l225.jpg" alt="Honeywell Silent Knight IFP-1000 Board REV. 8.9 ( For Parts ) Missing Key - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-ifp1000.html">Honeywell Silent Knight IFP-1000 Board REV. 8.9 ( For Parts ) Missing Key</a></div>
@@ -561,7 +634,7 @@
                 <a href="silent-knight-ifp1000.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight ifp-2000 farenhyt facp control board, no front panel parts">
             <a href="silent-knight-ifp2000.html"><img src="https://i.ebayimg.com/images/g/RNoAAeSwCeJo97Wp/s-l225.jpg" alt="Silent Knight IFP-2000 Farenhyt FACP Control Board, No Front Panel Parts - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-ifp2000.html">Silent Knight IFP-2000 Farenhyt FACP Control Board, No Front Panel Parts</a></div>
@@ -569,7 +642,7 @@
                 <a href="silent-knight-ifp2000.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight ifp300ecs sub assembly for parts or repair">
             <a href="silent-knight-ifp300ecs.html"><img src="https://i.ebayimg.com/images/g/ov8AAeSwdBxpWt2g/s-l225.jpg" alt="Silent Knight IFP300ECS Sub Assembly For Parts Or Repair - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-ifp300ecs.html">Silent Knight IFP300ECS Sub Assembly For Parts Or Repair</a></div>
@@ -577,7 +650,7 @@
                 <a href="silent-knight-ifp300ecs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight ifp-75 for parts or repair ">
             <a href="silent-knight-ifp75.html"><img src="https://i.ebayimg.com/images/g/I~kAAOSw2I5nNGwM/s-l225.jpg" alt="Silent Knight IFP-75 For Parts Or Repair  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-ifp75.html">Silent Knight IFP-75 For Parts Or Repair </a></div>
@@ -585,7 +658,7 @@
                 <a href="silent-knight-ifp75.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station key to reset single action ps-satk.">
             <a href="silent-knight-key.html"><img src="https://i.ebayimg.com/images/g/-v0AAOSwJw9iI63o/s-l225.jpg" alt="Silent Knight Pull Station Key To Reset Single Action PS-SATK. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-key.html">Silent Knight Pull Station Key To Reset Single Action PS-SATK.</a></div>
@@ -593,7 +666,7 @@
                 <a href="silent-knight-key.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight idp-relay module l01-0028-004 fire alarm control new open box">
             <a href="silent-knight-l01.html"><img src="https://i.ebayimg.com/images/g/xBgAAeSwCmlpI7cn/s-l225.jpg" alt="Silent Knight IDP-Relay Module L01-0028-004 Fire Alarm Control New Open Box - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-l01.html">Silent Knight IDP-Relay Module L01-0028-004 Fire Alarm Control New Open Box</a></div>
@@ -601,7 +674,7 @@
                 <a href="silent-knight-l01.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight ra-1000r remote annunciator fire alarm">
             <a href="silent-knight-ra1000r.html"><img src="https://i.ebayimg.com/images/g/E9kAAeSwLLdpWo8Z/s-l225.jpg" alt="Silent Knight RA-1000R Remote Annunciator Fire Alarm - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-ra1000r.html">Silent Knight RA-1000R Remote Annunciator Fire Alarm</a></div>
@@ -609,7 +682,7 @@
                 <a href="silent-knight-ra1000r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="ra-2000 farenhyt honeywell annunciator silent knight ra2000 parts or repair ">
             <a href="silent-knight-ra2000.html"><img src="https://i.ebayimg.com/images/g/S5sAAeSw9LpoJA~L/s-l225.jpg" alt="RA-2000 Farenhyt Honeywell Annunciator Silent Knight RA2000 Parts or Repair  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-ra2000.html">RA-2000 Farenhyt Honeywell Annunciator Silent Knight RA2000 Parts or Repair </a></div>
@@ -617,7 +690,7 @@
                 <a href="silent-knight-ra2000.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fire alarm rps-1000 nac panel honeywell rps1000 parts or repair">
             <a href="silent-knight-rps1000.html"><img src="https://i.ebayimg.com/images/g/hQ0AAOSw6r1lzAty/s-l225.jpg" alt="Silent Knight Fire Alarm RPS-1000 NAC Panel Honeywell Rps1000 PARTS or REPAIR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-rps1000.html">Silent Knight Fire Alarm RPS-1000 NAC Panel Honeywell Rps1000 PARTS or REPAIR</a></div>
@@ -625,7 +698,7 @@
                 <a href="silent-knight-rps1000.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="misc fire alarm parts lot rts151, kidde, silent knight, amseco, switches">
             <a href="silent-knight-rts151.html"><img src="https://i.ebayimg.com/images/g/PV0AAeSwvthpCmSY/s-l225.jpg" alt="Misc fire alarm parts Lot RTS151, kidde, silent knight, amseco, switches - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-rts151.html">Misc fire alarm parts Lot RTS151, kidde, silent knight, amseco, switches</a></div>
@@ -633,7 +706,7 @@
                 <a href="silent-knight-rts151.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sd500-ps addressable fire alarm pull station - used">
             <a href="silent-knight-sd500.html"><img src="https://i.ebayimg.com/images/g/r3YAAeSwc4dpYZ5K/s-l225.jpg" alt="Silent Knight SD500-PS Addressable Fire Alarm Pull Station - USED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sd500.html">Silent Knight SD500-PS Addressable Fire Alarm Pull Station - USED</a></div>
@@ -641,7 +714,7 @@
                 <a href="silent-knight-sd500.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sd505-adhr intelligent duct smoke detector pcb board only 205835g">
             <a href="silent-knight-sd505-205835g.html"><img src="https://i.ebayimg.com/images/g/JhEAAeSwkldo4Z1h/s-l225.jpg" alt="Silent Knight SD505-ADHR Intelligent Duct Smoke Detector PCB Board only 205835G - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sd505-205835g.html">Silent Knight SD505-ADHR Intelligent Duct Smoke Detector PCB Board only 205835G</a></div>
@@ -649,7 +722,7 @@
                 <a href="silent-knight-sd505-205835g.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sd505-6ab smoke detector base - new">
             <a href="silent-knight-sd505-6ab.html"><img src="https://i.ebayimg.com/images/g/L80AAOSwVthl~G4d/s-l225.jpg" alt="Silent Knight SD505-6AB Smoke Detector Base - NEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sd505-6ab.html">Silent Knight SD505-6AB Smoke Detector Base - NEW</a></div>
@@ -657,7 +730,7 @@
                 <a href="silent-knight-sd505-6ab.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight addressable duct smoke detector (sd505-duct) sd505-aps included">
             <a href="silent-knight-sd505.html"><img src="https://i.ebayimg.com/images/g/Ec4AAeSwA1BpRu87/s-l225.jpg" alt="Silent Knight Addressable Duct Smoke Detector (SD505-DUCT) SD505-APS Included - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sd505.html">Silent Knight Addressable Duct Smoke Detector (SD505-DUCT) SD505-APS Included</a></div>
@@ -665,7 +738,7 @@
                 <a href="silent-knight-sd505.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fire alarm panel addressable notification module sk-control slc">
             <a href="silent-knight-sk-slc.html"><img src="https://i.ebayimg.com/images/g/UfAAAOSwknJjuL10/s-l225.jpg" alt="Silent Knight Fire Alarm Panel Addressable Notification Module SK-Control SLC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk-slc.html">Silent Knight Fire Alarm Panel Addressable Notification Module SK-Control SLC</a></div>
@@ -673,7 +746,7 @@
                 <a href="silent-knight-sk-slc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="brand-new honeywell silent knight mini monitor module| model: sk-minimon">
             <a href="silent-knight-sk.html"><img src="https://i.ebayimg.com/images/g/4zQAAOSwNn9mzswx/s-l225.jpg" alt="Brand-New Honeywell Silent Knight Mini Monitor Module| Model: SK-MINIMON - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk.html">Brand-New Honeywell Silent Knight Mini Monitor Module| Model: SK-MINIMON</a></div>
@@ -681,7 +754,7 @@
                 <a href="silent-knight-sk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight addressable input monitor module sk-monitor">
             <a href="silent-knight-sk1-1.html"><img src="https://i.ebayimg.com/images/g/mMUAAOSw0wJmi9UB/s-l225.jpg" alt="Honeywell Silent Knight Addressable Input Monitor Module SK-MONITOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk1-1.html">Honeywell Silent Knight Addressable Input Monitor Module SK-MONITOR</a></div>
@@ -689,7 +762,7 @@
                 <a href="silent-knight-sk1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-monitor module (used)">
             <a href="silent-knight-sk10-1.html"><img src="https://i.ebayimg.com/images/g/DNsAAeSwQ3tn~-90/s-l225.jpg" alt="HONEYWELL SILENT KNIGHT SK-MONITOR MODULE (USED) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk10-1.html">HONEYWELL SILENT KNIGHT SK-MONITOR MODULE (USED)</a></div>
@@ -697,7 +770,7 @@
                 <a href="silent-knight-sk10-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-control module control">
             <a href="silent-knight-sk11-1.html"><img src="https://i.ebayimg.com/images/g/6YcAAOSwFutnla-D/s-l225.jpg" alt="Silent Knight SK-CONTROL Module Control - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk11-1.html">Silent Knight SK-CONTROL Module Control</a></div>
@@ -705,7 +778,7 @@
                 <a href="silent-knight-sk11-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-minimon mini monitor module -fire alarm">
             <a href="silent-knight-sk12-1.html"><img src="https://i.ebayimg.com/images/g/CMcAAeSwhC9pUZ0t/s-l225.jpg" alt="Silent Knight SK-MINIMON Mini Monitor Module -fire alarm - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk12-1.html">Silent Knight SK-MINIMON Mini Monitor Module -fire alarm</a></div>
@@ -713,7 +786,7 @@
                 <a href="silent-knight-sk12-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-control module-free shipping-">
             <a href="silent-knight-sk13-1.html"><img src="https://i.ebayimg.com/images/g/a5AAAOSwiAJjslY~/s-l225.jpg" alt="Honeywell Silent Knight SK-CONTROL Module-FREE SHIPPING- - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk13-1.html">Honeywell Silent Knight SK-CONTROL Module-FREE SHIPPING-</a></div>
@@ -721,7 +794,7 @@
                 <a href="silent-knight-sk13-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight by honeywell addressable relay module fire alarm control sk-relay">
             <a href="silent-knight-sk14-1.html"><img src="https://i.ebayimg.com/images/g/Wi4AAOSwtChi5Y~v/s-l225.jpg" alt="Silent Knight by Honeywell Addressable Relay Module Fire Alarm Control SK-Relay - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk14-1.html">Silent Knight by Honeywell Addressable Relay Module Fire Alarm Control SK-Relay</a></div>
@@ -729,7 +802,7 @@
                 <a href="silent-knight-sk14-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-control addressable supervised control module, nib!">
             <a href="silent-knight-sk15-1.html"><img src="https://i.ebayimg.com/images/g/GH4AAOSwPo1jlmR7/s-l225.jpg" alt="SILENT KNIGHT SK-CONTROL ADDRESSABLE SUPERVISED CONTROL MODULE, NIB! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk15-1.html">SILENT KNIGHT SK-CONTROL ADDRESSABLE SUPERVISED CONTROL MODULE, NIB!</a></div>
@@ -737,7 +810,7 @@
                 <a href="silent-knight-sk15-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-control supervised control module">
             <a href="silent-knight-sk16-1.html"><img src="https://i.ebayimg.com/images/g/VQEAAeSwgxVoNe4e/s-l225.jpg" alt="Silent Knight SK-CONTROL Supervised Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk16-1.html">Silent Knight SK-CONTROL Supervised Control Module</a></div>
@@ -745,7 +818,7 @@
                 <a href="silent-knight-sk16-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-control supervised output control module.">
             <a href="silent-knight-sk17-1.html"><img src="https://i.ebayimg.com/images/g/dOsAAeSwdaVoF6x6/s-l225.jpg" alt="Silent Knight SK-Control Supervised Output Control Module. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk17-1.html">Silent Knight SK-Control Supervised Output Control Module.</a></div>
@@ -753,7 +826,7 @@
                 <a href="silent-knight-sk17-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-control addressable notification module">
             <a href="silent-knight-sk18-1.html"><img src="https://i.ebayimg.com/images/g/UpoAAeSwhIpo0a1X/s-l225.jpg" alt="Honeywell Silent Knight SK-CONTROL Addressable Notification Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk18-1.html">Honeywell Silent Knight SK-CONTROL Addressable Notification Module</a></div>
@@ -761,7 +834,7 @@
                 <a href="silent-knight-sk18-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-control module">
             <a href="silent-knight-sk19-1.html"><img src="https://i.ebayimg.com/images/g/C8EAAeSwDJhpHzM7/s-l225.jpg" alt="Honeywell Silent Knight SK-Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk19-1.html">Honeywell Silent Knight SK-Control Module</a></div>
@@ -769,7 +842,7 @@
                 <a href="silent-knight-sk19-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new-silent knight sk-minimon mini monitor module">
             <a href="silent-knight-sk2-1.html"><img src="https://i.ebayimg.com/images/g/97sAAeSwg-ZpSzqJ/s-l225.jpg" alt="New-Silent Knight SK-MINIMON MINI MONITOR MODULE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk2-1.html">New-Silent Knight SK-MINIMON MINI MONITOR MODULE</a></div>
@@ -777,7 +850,7 @@
                 <a href="silent-knight-sk2-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-control addressable control module - white cover - new open box">
             <a href="silent-knight-sk20-1.html"><img src="https://i.ebayimg.com/images/g/N08AAeSwHPJpE6y7/s-l225.jpg" alt="SILENT KNIGHT SK-CONTROL ADDRESSABLE CONTROL MODULE - WHITE COVER - NEW OPEN BOX - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk20-1.html">SILENT KNIGHT SK-CONTROL ADDRESSABLE CONTROL MODULE - WHITE COVER - NEW OPEN BOX</a></div>
@@ -785,7 +858,7 @@
                 <a href="silent-knight-sk20-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="sk-heat silent knight heat detector "ivory" 200 available">
             <a href="silent-knight-sk200-1.html"><img src="https://i.ebayimg.com/images/g/GhIAAeSw72Ror3AU/s-l225.jpg" alt="SK-HEAT SILENT KNIGHT HEAT DETECTOR "IVORY" 200 available - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk200-1.html">SK-HEAT SILENT KNIGHT HEAT DETECTOR "IVORY" 200 available</a></div>
@@ -793,7 +866,7 @@
                 <a href="silent-knight-sk200-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-control fire alarm control module">
             <a href="silent-knight-sk21-1.html"><img src="https://i.ebayimg.com/images/g/TowAAeSwrT1oqp-H/s-l225.jpg" alt="Silent Knight SK-CONTROL Fire Alarm Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk21-1.html">Silent Knight SK-CONTROL Fire Alarm Control Module</a></div>
@@ -801,7 +874,7 @@
                 <a href="silent-knight-sk21-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-control intelligent notification module">
             <a href="silent-knight-sk22-1.html"><img src="https://i.ebayimg.com/images/g/l-8AAeSwuAtoKA6r/s-l225.jpg" alt="SILENT KNIGHT SK-CONTROL Intelligent Notification Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk22-1.html">SILENT KNIGHT SK-CONTROL Intelligent Notification Module</a></div>
@@ -809,7 +882,7 @@
                 <a href="silent-knight-sk22-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk relay !!!price is per each!!!">
             <a href="silent-knight-sk23-1.html"><img src="https://i.ebayimg.com/images/g/GH4AAOSwACFkLJT1/s-l225.jpg" alt="Silent knight SK relay !!!price is per each!!! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk23-1.html">Silent knight SK relay !!!price is per each!!!</a></div>
@@ -817,7 +890,7 @@
                 <a href="silent-knight-sk23-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-relay fire alarm relay module with cover - brand new">
             <a href="silent-knight-sk24-1.html"><img src="https://i.ebayimg.com/images/g/PXMAAeSwS~Zoh6ZI/s-l225.jpg" alt="Honeywell Silent Knight SK-RELAY Fire Alarm Relay Module with Cover - BRAND NEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk24-1.html">Honeywell Silent Knight SK-RELAY Fire Alarm Relay Module with Cover - BRAND NEW</a></div>
@@ -825,7 +898,7 @@
                 <a href="silent-knight-sk24-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-relay">
             <a href="silent-knight-sk25-1.html"><img src="https://i.ebayimg.com/images/g/5vgAAOSwzC9lJdkv/s-l225.jpg" alt="Silent Knight SK-Relay - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk25-1.html">Silent Knight SK-Relay</a></div>
@@ -833,7 +906,7 @@
                 <a href="silent-knight-sk25-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-relay module">
             <a href="silent-knight-sk26-1.html"><img src="https://i.ebayimg.com/images/g/JaIAAeSwmU9o1dW8/s-l225.jpg" alt="Honeywell Silent Knight SK-RELAY Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk26-1.html">Honeywell Silent Knight SK-RELAY Module</a></div>
@@ -841,7 +914,7 @@
                 <a href="silent-knight-sk26-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-relay addressable relay module">
             <a href="silent-knight-sk27-1.html"><img src="https://i.ebayimg.com/images/g/uoMAAOSwKztkUqYr/s-l225.jpg" alt="Silent Knight SK-RELAY Addressable Relay Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk27-1.html">Silent Knight SK-RELAY Addressable Relay Module</a></div>
@@ -849,7 +922,7 @@
                 <a href="silent-knight-sk27-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-relay addressable relay module for silent knight fire panels">
             <a href="silent-knight-sk28-1.html"><img src="https://i.ebayimg.com/images/g/~3YAAOSwEO1lqW-I/s-l225.jpg" alt="Silent Knight SK-RELAY Addressable Relay Module for Silent Knight fire panels - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk28-1.html">Silent Knight SK-RELAY Addressable Relay Module for Silent Knight fire panels</a></div>
@@ -857,7 +930,7 @@
                 <a href="silent-knight-sk28-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-relay - grey -relay module - same day shipping">
             <a href="silent-knight-sk29-1.html"><img src="https://i.ebayimg.com/images/g/EFkAAeSw32xo17cs/s-l225.jpg" alt="Silent Knight SK-RELAY - GREY -Relay Module - SAME DAY SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk29-1.html">Silent Knight SK-RELAY - GREY -Relay Module - SAME DAY SHIPPING</a></div>
@@ -865,7 +938,7 @@
                 <a href="silent-knight-sk29-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-minimon addressable mini monitor module - brand new">
             <a href="silent-knight-sk3-1.html"><img src="https://i.ebayimg.com/images/g/ZaMAAeSw~x9oWZAr/s-l225.jpg" alt="SILENT KNIGHT SK-MINIMON ADDRESSABLE MINI MONITOR MODULE - BRAND NEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk3-1.html">SILENT KNIGHT SK-MINIMON ADDRESSABLE MINI MONITOR MODULE - BRAND NEW</a></div>
@@ -873,7 +946,7 @@
                 <a href="silent-knight-sk3-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-photo-w smoke detector">
             <a href="silent-knight-sk30-1.html"><img src="https://i.ebayimg.com/images/g/kPkAAeSwjHpozbYI/s-l225.jpg" alt="Honeywell Silent Knight SK-PHOTO-W Smoke detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk30-1.html">Honeywell Silent Knight SK-PHOTO-W Smoke detector</a></div>
@@ -881,7 +954,7 @@
                 <a href="silent-knight-sk30-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-relay fire alarm module new sealed 3074">
             <a href="silent-knight-sk3074-1.html"><img src="https://i.ebayimg.com/images/g/JeEAAeSwDv9pWBN-/s-l225.jpg" alt="Honeywell Silent Knight SK-RELAY Fire Alarm Module New Sealed 3074 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk3074-1.html">Honeywell Silent Knight SK-RELAY Fire Alarm Module New Sealed 3074</a></div>
@@ -889,7 +962,7 @@
                 <a href="silent-knight-sk3074-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-pull-sa pull station single action">
             <a href="silent-knight-sk31-1.html"><img src="https://i.ebayimg.com/images/g/~a0AAeSwRhJozbQv/s-l225.jpg" alt="Honeywell Silent Knight SK-PULL-SA Pull Station Single Action - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk31-1.html">Honeywell Silent Knight SK-PULL-SA Pull Station Single Action</a></div>
@@ -897,7 +970,7 @@
                 <a href="silent-knight-sk31-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new silent knight sk-duct addressable duct detector, nib,">
             <a href="silent-knight-sk32-1.html"><img src="https://i.ebayimg.com/images/g/py4AAOSwOeFjeBFZ/s-l225.jpg" alt="New Silent Knight SK-DUCT addressable duct detector, NIB, - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk32-1.html">New Silent Knight SK-DUCT addressable duct detector, NIB,</a></div>
@@ -905,7 +978,7 @@
                 <a href="silent-knight-sk32-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="duct detector, addressable, w/ photoelectric head, silent knight #sk-duct-w">
             <a href="silent-knight-sk33-1.html"><img src="https://i.ebayimg.com/images/g/OM0AAOSwWNNjYFKD/s-l225.jpg" alt="Duct Detector, Addressable, W/ Photoelectric Head, Silent Knight #SK-DUCT-W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk33-1.html">Duct Detector, Addressable, W/ Photoelectric Head, Silent Knight #SK-DUCT-W</a></div>
@@ -913,7 +986,7 @@
                 <a href="silent-knight-sk33-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="duct detector, addressable, w/ photoelectric head, silent knight #sk-duct-w, nib">
             <a href="silent-knight-sk34-1.html"><img src="https://i.ebayimg.com/images/g/vc0AAOSw4YpjuiVW/s-l225.jpg" alt="Duct Detector, Addressable, W/ Photoelectric Head, Silent Knight #SK-DUCT-W, NIB - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk34-1.html">Duct Detector, Addressable, W/ Photoelectric Head, Silent Knight #SK-DUCT-W, NIB</a></div>
@@ -921,7 +994,7 @@
                 <a href="silent-knight-sk34-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-duct-w intelligent non-relay duct smoke detector">
             <a href="silent-knight-sk35-1.html"><img src="https://i.ebayimg.com/images/g/IhAAAeSwWhto4s5Q/s-l225.jpg" alt="Honeywell Silent Knight SK-DUCT-W Intelligent Non-Relay Duct Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk35-1.html">Honeywell Silent Knight SK-DUCT-W Intelligent Non-Relay Duct Smoke Detector</a></div>
@@ -929,7 +1002,7 @@
                 <a href="silent-knight-sk35-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight innovair sk-duct intelligent none-relay duct smoke detector new">
             <a href="silent-knight-sk36-1.html"><img src="https://i.ebayimg.com/images/g/bMsAAOSwNvxmo-y-/s-l225.jpg" alt="Silent Knight Innovair SK-DUCT Intelligent None-Relay Duct Smoke Detector NEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk36-1.html">Silent Knight Innovair SK-DUCT Intelligent None-Relay Duct Smoke Detector NEW</a></div>
@@ -937,7 +1010,7 @@
                 <a href="silent-knight-sk36-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-duct addressable photoelectric duct detector">
             <a href="silent-knight-sk37-1.html"><img src="https://i.ebayimg.com/images/g/JGYAAeSwa5tooqD4/s-l225.jpg" alt="Silent Knight SK-DUCT Addressable Photoelectric Duct Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk37-1.html">Silent Knight SK-DUCT Addressable Photoelectric Duct Detector</a></div>
@@ -945,7 +1018,7 @@
                 <a href="silent-knight-sk37-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-duct-w addressable duct smoke detector">
             <a href="silent-knight-sk38-1.html"><img src="https://i.ebayimg.com/images/g/tDcAAeSwu5RpTxue/s-l225.jpg" alt="Honeywell Silent Knight SK-DUCT-W Addressable Duct Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk38-1.html">Honeywell Silent Knight SK-DUCT-W Addressable Duct Smoke Detector</a></div>
@@ -953,7 +1026,7 @@
                 <a href="silent-knight-sk38-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight by honeywell sk-duct  intelligent none-relay duct smoke detector">
             <a href="silent-knight-sk39-1.html"><img src="https://i.ebayimg.com/images/g/B38AAeSw5QFo4ghV/s-l225.jpg" alt="Silent Knight By Honeywell SK-DUCT  Intelligent None-Relay Duct Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk39-1.html">Silent Knight By Honeywell SK-DUCT  Intelligent None-Relay Duct Smoke Detector</a></div>
@@ -961,7 +1034,7 @@
                 <a href="silent-knight-sk39-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-4 fire alarm panel front door shroud cover parts">
             <a href="silent-knight-sk4-2.html"><img src="https://i.ebayimg.com/images/g/ZEMAAeSwddVodczq/s-l225.jpg" alt="Silent Knight SK-4 Fire Alarm Panel Front Door Shroud Cover Parts - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk4-2.html">Silent Knight SK-4 Fire Alarm Panel Front Door Shroud Cover Parts</a></div>
@@ -969,7 +1042,7 @@
                 <a href="silent-knight-sk4-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-minimon mini monitor module nib!">
             <a href="silent-knight-sk4-3.html"><img src="https://i.ebayimg.com/images/g/N5oAAOSw8EtkoYFB/s-l225.jpg" alt="Silent Knight SK-MINIMON Mini Monitor Module NIB! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk4-3.html">Silent Knight SK-MINIMON Mini Monitor Module NIB!</a></div>
@@ -977,7 +1050,7 @@
                 <a href="silent-knight-sk4-3.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-4 fire alarm control panel (no board)">
             <a href="silent-knight-sk4.html"><img src="https://i.ebayimg.com/images/g/e~8AAOSw8~ZmoZah/s-l225.jpg" alt="Silent Knight SK-4 Fire Alarm Control Panel (No Board) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk4.html">Silent Knight SK-4 Fire Alarm Control Panel (No Board)</a></div>
@@ -985,7 +1058,7 @@
                 <a href="silent-knight-sk4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-duct remote test capable duct smoke detector ivory new 2 avail.">
             <a href="silent-knight-sk40-1.html"><img src="https://i.ebayimg.com/images/g/W0UAAeSwYCVpLIgl/s-l225.jpg" alt="SILENT KNIGHT SK-DUCT REMOTE TEST CAPABLE DUCT SMOKE DETECTOR IVORY NEW 2 AVAIL. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk40-1.html">SILENT KNIGHT SK-DUCT REMOTE TEST CAPABLE DUCT SMOKE DETECTOR IVORY NEW 2 AVAIL.</a></div>
@@ -993,7 +1066,7 @@
                 <a href="silent-knight-sk40-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-duct-w intelligent non-relay duct smoke detector - brand new ">
             <a href="silent-knight-sk41-1.html"><img src="https://i.ebayimg.com/images/g/mn4AAeSwB9lpM1j8/s-l225.jpg" alt="SILENT KNIGHT SK-DUCT-W INTELLIGENT NON-RELAY DUCT SMOKE DETECTOR - BRAND NEW  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk41-1.html">SILENT KNIGHT SK-DUCT-W INTELLIGENT NON-RELAY DUCT SMOKE DETECTOR - BRAND NEW </a></div>
@@ -1001,7 +1074,7 @@
                 <a href="silent-knight-sk41-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-pull-da fire alarm pull station">
             <a href="silent-knight-sk42-1.html"><img src="https://i.ebayimg.com/images/g/E4UAAeSwQlNowgci/s-l225.jpg" alt="Honeywell Silent Knight SK-PULL-DA Fire Alarm Pull Station - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk42-1.html">Honeywell Silent Knight SK-PULL-DA Fire Alarm Pull Station</a></div>
@@ -1009,7 +1082,7 @@
                 <a href="silent-knight-sk42-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-pull-sa pull station - no key - same day shipping">
             <a href="silent-knight-sk43-1.html"><img src="https://i.ebayimg.com/images/g/OAcAAeSwr7hpCi~m/s-l225.jpg" alt="Honeywell Silent Knight SK-PULL-SA Pull Station - NO KEY - SAME DAY SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk43-1.html">Honeywell Silent Knight SK-PULL-SA Pull Station - NO KEY - SAME DAY SHIPPING</a></div>
@@ -1017,7 +1090,7 @@
                 <a href="silent-knight-sk43-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-pull-da dual action pull station">
             <a href="silent-knight-sk44-1.html"><img src="https://i.ebayimg.com/images/g/e64AAOSwf45m~teL/s-l225.jpg" alt="Silent Knight SK-PULL-DA Dual Action Pull Station - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk44-1.html">Silent Knight SK-PULL-DA Dual Action Pull Station</a></div>
@@ -1025,7 +1098,7 @@
                 <a href="silent-knight-sk44-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-heat-w fixed temperature heat detector">
             <a href="silent-knight-sk45-1.html"><img src="https://i.ebayimg.com/images/g/2ewAAeSwNhNo1a0C/s-l225.jpg" alt="Silent Knight SK-HEAT-W Fixed Temperature Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk45-1.html">Silent Knight SK-HEAT-W Fixed Temperature Heat Detector</a></div>
@@ -1033,7 +1106,7 @@
                 <a href="silent-knight-sk45-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-heat-ror-w heat rate of rise detector">
             <a href="silent-knight-sk46-1.html"><img src="https://i.ebayimg.com/images/g/8SEAAeSwJR5oqirt/s-l225.jpg" alt="Honeywell Silent Knight SK-HEAT-ROR-W Heat Rate of Rise Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk46-1.html">Honeywell Silent Knight SK-HEAT-ROR-W Heat Rate of Rise Detector</a></div>
@@ -1041,7 +1114,7 @@
                 <a href="silent-knight-sk46-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-heat-ror-w heat detector, free shipping">
             <a href="silent-knight-sk47-1.html"><img src="https://i.ebayimg.com/images/g/4iEAAeSwhFhpZe9M/s-l225.jpg" alt="Silent Knight SK-HEAT-ROR-W Heat Detector, FREE SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk47-1.html">Silent Knight SK-HEAT-ROR-W Heat Detector, FREE SHIPPING</a></div>
@@ -1049,7 +1122,7 @@
                 <a href="silent-knight-sk47-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-heat-w addressable heat detector with base.">
             <a href="silent-knight-sk48-1.html"><img src="https://i.ebayimg.com/images/g/6tYAAeSwbc5pLpUy/s-l225.jpg" alt="Silent Knight SK-HEAT-W Addressable Heat Detector With Base. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk48-1.html">Silent Knight SK-HEAT-W Addressable Heat Detector With Base.</a></div>
@@ -1057,7 +1130,7 @@
                 <a href="silent-knight-sk48-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell/silent knight sk-heat heat detector new">
             <a href="silent-knight-sk49-1.html"><img src="https://i.ebayimg.com/images/g/bEoAAeSw5ttpYHN2/s-l225.jpg" alt="Honeywell/Silent Knight SK-HEAT Heat Detector NEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk49-1.html">Honeywell/Silent Knight SK-HEAT Heat Detector NEW</a></div>
@@ -1065,7 +1138,7 @@
                 <a href="silent-knight-sk49-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-monitor addressable monitor module">
             <a href="silent-knight-sk5-1.html"><img src="https://i.ebayimg.com/images/g/KTcAAeSwVdtowgXo/s-l225.jpg" alt="SILENT KNIGHT SK-MONITOR ADDRESSABLE MONITOR MODULE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk5-1.html">SILENT KNIGHT SK-MONITOR ADDRESSABLE MONITOR MODULE</a></div>
@@ -1073,7 +1146,7 @@
                 <a href="silent-knight-sk5-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell/silent knight sk-heat-ror-low-profile heat detector new (sealed)">
             <a href="silent-knight-sk50-1.html"><img src="https://i.ebayimg.com/images/g/K4EAAeSwkQ1o-J9s/s-l225.jpg" alt="Honeywell/Silent Knight SK-HEAT-ROR-Low-Profile Heat Detector NEW (Sealed) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk50-1.html">Honeywell/Silent Knight SK-HEAT-ROR-Low-Profile Heat Detector NEW (Sealed)</a></div>
@@ -1081,7 +1154,7 @@
                 <a href="silent-knight-sk50-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-heat-w series addressable heat detectors ">
             <a href="silent-knight-sk51-1.html"><img src="https://i.ebayimg.com/images/g/giYAAOSwBllnIW0N/s-l225.jpg" alt="Honeywell Silent Knight SK-HEAT-W Series Addressable Heat Detectors  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk51-1.html">Honeywell Silent Knight SK-HEAT-W Series Addressable Heat Detectors </a></div>
@@ -1089,7 +1162,7 @@
                 <a href="silent-knight-sk51-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell sk-heat-w silent knight low-profile addressable heat detector">
             <a href="silent-knight-sk52-1.html"><img src="https://i.ebayimg.com/images/g/ODIAAeSw4GxpOZ5M/s-l225.jpg" alt="Honeywell SK-Heat-W Silent Knight Low-Profile Addressable Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk52-1.html">Honeywell SK-Heat-W Silent Knight Low-Profile Addressable Heat Detector</a></div>
@@ -1097,7 +1170,7 @@
                 <a href="silent-knight-sk52-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-5208 (parts only)">
             <a href="silent-knight-sk5208.html"><img src="https://i.ebayimg.com/images/g/eOQAAeSwnRtpEos1/s-l225.jpg" alt="Silent Knight SK-5208 (Parts Only) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk5208.html">Silent Knight SK-5208 (Parts Only)</a></div>
@@ -1105,7 +1178,7 @@
                 <a href="silent-knight-sk5208.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-heat-w addressable heat detector">
             <a href="silent-knight-sk53-1.html"><img src="https://i.ebayimg.com/images/g/1ZwAAeSw1z9oh8Me/s-l225.jpg" alt="Silent Knight SK-HEAT-W Addressable Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk53-1.html">Silent Knight SK-HEAT-W Addressable Heat Detector</a></div>
@@ -1113,7 +1186,7 @@
                 <a href="silent-knight-sk53-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-heat-w addressable heat plug-in thermal detector honeywell ">
             <a href="silent-knight-sk54-1.html"><img src="https://i.ebayimg.com/images/g/K~UAAeSwiWlorN8r/s-l225.jpg" alt="Silent Knight SK-HEAT-W Addressable Heat plug-in thermal Detector Honeywell  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk54-1.html">Silent Knight SK-HEAT-W Addressable Heat plug-in thermal Detector Honeywell </a></div>
@@ -1121,7 +1194,7 @@
                 <a href="silent-knight-sk54-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-5495 distributed power module with strobe control and keys">
             <a href="silent-knight-sk5495.html"><img src="https://i.ebayimg.com/images/g/ob4AAeSwsYppIzLn/s-l225.jpg" alt="Silent Knight SK-5495 Distributed Power Module WITH Strobe Control and Keys - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk5495.html">Silent Knight SK-5495 Distributed Power Module WITH Strobe Control and Keys</a></div>
@@ -1129,7 +1202,7 @@
                 <a href="silent-knight-sk5495.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new honeywell silent knight low profile addressable heat detector sk-heat-w">
             <a href="silent-knight-sk55-1.html"><img src="https://i.ebayimg.com/images/g/ArcAAeSwmUdpRsV8/s-l225.jpg" alt="NEW Honeywell Silent Knight Low Profile Addressable Heat Detector SK-HEAT-W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk55-1.html">NEW Honeywell Silent Knight Low Profile Addressable Heat Detector SK-HEAT-W</a></div>
@@ -1137,7 +1210,7 @@
                 <a href="silent-knight-sk55-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new honeywell silent knight low profile addressable smoke detector sk-photo-w">
             <a href="silent-knight-sk56-1.html"><img src="https://i.ebayimg.com/images/g/Jx4AAeSwTYBpRsQ~/s-l225.jpg" alt="NEW Honeywell Silent Knight Low Profile Addressable Smoke Detector SK-PHOTO-W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk56-1.html">NEW Honeywell Silent Knight Low Profile Addressable Smoke Detector SK-PHOTO-W</a></div>
@@ -1145,7 +1218,7 @@
                 <a href="silent-knight-sk56-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight #hfs-d, addressable duct detector for use with the sk #5600 panel">
             <a href="silent-knight-sk5600.html"><img src="https://i.ebayimg.com/images/g/WcgAAOSwXbBnBZbI/s-l225.jpg" alt="Silent Knight #HFS-D, Addressable Duct Detector for use with the SK #5600 panel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk5600.html">Silent Knight #HFS-D, Addressable Duct Detector for use with the SK #5600 panel</a></div>
@@ -1153,7 +1226,7 @@
                 <a href="silent-knight-sk5600.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-photo-w white smoke detector no box or base included">
             <a href="silent-knight-sk57-1.html"><img src="https://i.ebayimg.com/images/g/ASYAAeSwxZxpOmN0/s-l225.jpg" alt="Honeywell Silent Knight SK-PHOTO-W White Smoke Detector NO box or base included - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk57-1.html">Honeywell Silent Knight SK-PHOTO-W White Smoke Detector NO box or base included</a></div>
@@ -1161,7 +1234,7 @@
                 <a href="silent-knight-sk57-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell sk-photo-r-w silent knight new open box smoke detector ">
             <a href="silent-knight-sk58-1.html"><img src="https://i.ebayimg.com/images/g/ZYEAAeSwlklpVWHg/s-l225.jpg" alt="Honeywell SK-PHOTO-R-W SILENT KNIGHT New Open Box Smoke Detector  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk58-1.html">Honeywell SK-PHOTO-R-W SILENT KNIGHT New Open Box Smoke Detector </a></div>
@@ -1169,7 +1242,7 @@
                 <a href="silent-knight-sk58-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-5808 (sk5808) enclosure can only - for parts -">
             <a href="silent-knight-sk5808.html"><img src="https://i.ebayimg.com/images/g/oGIAAOSwVQhkANBi/s-l225.jpg" alt="Silent Knight SK-5808 (SK5808) Enclosure Can ONLY - FOR PARTS - - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk5808.html">Silent Knight SK-5808 (SK5808) Enclosure Can ONLY - FOR PARTS -</a></div>
@@ -1177,7 +1250,7 @@
                 <a href="silent-knight-sk5808.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk5860 remote annunciator with key & surface mount trim ring">
             <a href="silent-knight-sk5860.html"><img src="https://i.ebayimg.com/images/g/XgUAAeSwuutpXWub/s-l225.jpg" alt="Silent Knight SK5860 Remote Annunciator With Key & Surface Mount Trim Ring - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk5860.html">Silent Knight SK5860 Remote Annunciator With Key & Surface Mount Trim Ring</a></div>
@@ -1185,7 +1258,7 @@
                 <a href="silent-knight-sk5860.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-duct-w duct detector - no smoke - same day shipping">
             <a href="silent-knight-sk59-1.html"><img src="https://i.ebayimg.com/images/g/PSwAAeSwaZtovHa6/s-l225.jpg" alt="Silent Knight SK-DUCT-W Duct Detector - No Smoke - SAME DAY SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk59-1.html">Silent Knight SK-DUCT-W Duct Detector - No Smoke - SAME DAY SHIPPING</a></div>
@@ -1193,7 +1266,7 @@
                 <a href="silent-knight-sk59-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell sk-monitor silent knight series addressable input monitor module">
             <a href="silent-knight-sk6-1.html"><img src="https://i.ebayimg.com/images/g/~BAAAeSwnR1oeXCL/s-l225.jpg" alt="Honeywell SK-MONITOR Silent Knight Series Addressable Input Monitor Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk6-1.html">Honeywell SK-MONITOR Silent Knight Series Addressable Input Monitor Module</a></div>
@@ -1201,7 +1274,7 @@
                 <a href="silent-knight-sk6-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk photo addressable photoelectric smoke detector (sk-photo)">
             <a href="silent-knight-sk60-1.html"><img src="https://i.ebayimg.com/images/g/WYoAAeSw5-ZpReYI/s-l225.jpg" alt="Silent Knight SK Photo Addressable Photoelectric Smoke Detector (SK-PHOTO) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk60-1.html">Silent Knight SK Photo Addressable Photoelectric Smoke Detector (SK-PHOTO)</a></div>
@@ -1209,7 +1282,7 @@
                 <a href="silent-knight-sk60-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="no batteries! honeywell silent knight sk-photo white smoke detector ships free">
             <a href="silent-knight-sk61-1.html"><img src="https://i.ebayimg.com/images/g/t7oAAeSw61JpVDsZ/s-l225.jpg" alt="NO BATTERIES! Honeywell Silent Knight SK-PHOTO White Smoke Detector Ships FREE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk61-1.html">NO BATTERIES! Honeywell Silent Knight SK-PHOTO White Smoke Detector Ships FREE</a></div>
@@ -1217,7 +1290,7 @@
                 <a href="silent-knight-sk61-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-photo-w addressable smoke detector">
             <a href="silent-knight-sk62-1.html"><img src="https://i.ebayimg.com/images/g/cm0AAeSwfsZpX2rG/s-l225.jpg" alt="Silent Knight SK-PHOTO-W Addressable Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk62-1.html">Silent Knight SK-PHOTO-W Addressable Smoke Detector</a></div>
@@ -1225,7 +1298,7 @@
                 <a href="silent-knight-sk62-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="sk-photo-r-w silent knight addressable smoke detector">
             <a href="silent-knight-sk63-1.html"><img src="https://i.ebayimg.com/images/g/DukAAeSwsYppKHfw/s-l225.jpg" alt="SK-PHOTO-R-W SILENT KNIGHT Addressable Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk63-1.html">SK-PHOTO-R-W SILENT KNIGHT Addressable Smoke Detector</a></div>
@@ -1233,7 +1306,7 @@
                 <a href="silent-knight-sk63-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-e ske-series evac panel for parts or repair">
             <a href="silent-knight-sk64-1.html"><img src="https://i.ebayimg.com/images/g/XoIAAOSwyoll8G9E/s-l225.jpg" alt="Silent Knight SK-E SKE-SERIES Evac Panel For Parts Or Repair - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk64-1.html">Silent Knight SK-E SKE-SERIES Evac Panel For Parts Or Repair</a></div>
@@ -1241,7 +1314,7 @@
                 <a href="silent-knight-sk64-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk6808 fire alarm panel for parts only non working *read*">
             <a href="silent-knight-sk6808.html"><img src="https://i.ebayimg.com/images/g/~MEAAeSwuTRpGSrT/s-l225.jpg" alt="Silent Knight SK6808 Fire Alarm Panel For Parts Only Non Working *Read* - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk6808.html">Silent Knight SK6808 Fire Alarm Panel For Parts Only Non Working *Read*</a></div>
@@ -1249,7 +1322,7 @@
                 <a href="silent-knight-sk6808.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell silent knight sk-6820 read description for parts only ">
             <a href="silent-knight-sk6820.html"><img src="https://i.ebayimg.com/images/g/SBMAAOSwTpRnHmCm/s-l225.jpg" alt="Honeywell Silent Knight SK-6820 Read Description For Parts Only  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk6820.html">Honeywell Silent Knight SK-6820 Read Description For Parts Only </a></div>
@@ -1257,7 +1330,7 @@
                 <a href="silent-knight-sk6820.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-minimon addressable mini monitor module- new- free shipping ">
             <a href="silent-knight-sk7-1.html"><img src="https://i.ebayimg.com/images/g/nxgAAeSwJmtpRFbU/s-l225.jpg" alt="Silent Knight SK-MINIMON Addressable Mini Monitor Module- New- Free Shipping  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk7-1.html">Silent Knight SK-MINIMON Addressable Mini Monitor Module- New- Free Shipping </a></div>
@@ -1265,7 +1338,7 @@
                 <a href="silent-knight-sk7-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-minimon mini monitor module.">
             <a href="silent-knight-sk8-1.html"><img src="https://i.ebayimg.com/images/g/~h8AAeSwPMtpPy9X/s-l225.jpg" alt="Silent Knight SK-MINIMON Mini Monitor Module. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk8-1.html">Silent Knight SK-MINIMON Mini Monitor Module.</a></div>
@@ -1273,7 +1346,7 @@
                 <a href="silent-knight-sk8-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-monitor-2 addressable monitor module please review">
             <a href="silent-knight-sk9-1.html"><img src="https://i.ebayimg.com/images/g/IocAAeSwmnNpUZo1/s-l225.jpg" alt="Silent Knight SK-Monitor-2 Addressable Monitor Module PLEASE REVIEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-sk9-1.html">Silent Knight SK-Monitor-2 Addressable Monitor Module PLEASE REVIEW</a></div>
@@ -1281,7 +1354,7 @@
                 <a href="silent-knight-sk9-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new honeywell silent knight sk-relay addressable relay module l01-0763-001">
             <a href="silent-knight-skl01-0763-1.html"><img src="https://i.ebayimg.com/images/g/CscAAeSw2zNo7hOR/s-l225.jpg" alt="New Honeywell Silent Knight SK-RELAY Addressable Relay Module L01-0763-001 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-skl01-0763-1.html">New Honeywell Silent Knight SK-RELAY Addressable Relay Module L01-0763-001</a></div>
@@ -1289,7 +1362,7 @@
                 <a href="silent-knight-skl01-0763-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight sk-rza4 annunciator remote">
             <a href="silent-knight-skrza4.html"><img src="https://i.ebayimg.com/images/g/AXIAAeSwEZho7GkL/s-l225.jpg" alt="Silent Knight SK-RZA4 Annunciator Remote - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="silent-knight-skrza4.html">Silent Knight SK-RZA4 Annunciator Remote</a></div>
@@ -1297,7 +1370,7 @@
                 <a href="silent-knight-skrza4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight gate operator control board sk-control-6">
             <a href="sk-control-6.html"><img src="https://cdn.firepartshub.com/images/sk-control6.webp" alt="Silent Knight Gate Operator Control Board SK-CONTROL-6 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-control-6.html">Silent Knight Gate Operator Control Board SK-CONTROL-6</a></div>
@@ -1305,7 +1378,7 @@
                 <a href="sk-control-6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight alarm control panel notification module sk-control">
             <a href="sk-control.html"><img src="https://i.ebayimg.com/images/g/UfAAAOSwknJjuL10/s-l225.jpg" alt="Silent Knight Alarm Control Panel Notification Module SK-CONTROL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-control.html">Silent Knight Alarm Control Panel Notification Module SK-CONTROL</a></div>
@@ -1313,7 +1386,7 @@
                 <a href="sk-control.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight smoke detector sk-duct-w">
             <a href="sk-duct-w.html"><img src="https://cdn.firepartshub.com/images/sk-skductw.webp" alt="Silent Knight Smoke Detector SK-DUCT-W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-duct-w.html">Silent Knight Smoke Detector SK-DUCT-W</a></div>
@@ -1321,7 +1394,7 @@
                 <a href="sk-duct-w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fiber module sk-fml">
             <a href="sk-fml.html"><img src="https://cdn.firepartshub.com/images/sk-skfml.webp" alt="Silent Knight Fiber Module SK-FML - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-fml.html">Silent Knight Fiber Module SK-FML</a></div>
@@ -1329,7 +1402,7 @@
                 <a href="sk-fml.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fiber module sk-fsl">
             <a href="sk-fsl.html"><img src="https://cdn.firepartshub.com/images/sk-skfsl.webp" alt="Silent Knight Fiber Module SK-FSL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-fsl.html">Silent Knight Fiber Module SK-FSL</a></div>
@@ -1337,7 +1410,7 @@
                 <a href="sk-fsl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fixed temperature heat detector sk-heat-ht-w">
             <a href="sk-heat-ht-w.html"><img src="https://cdn.firepartshub.com/images/sk-heathtw.webp" alt="Silent Knight Fixed Temperature Heat Detector SK-HEAT-HT-W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-heat-ht-w.html">Silent Knight Fixed Temperature Heat Detector SK-HEAT-HT-W</a></div>
@@ -1345,7 +1418,7 @@
                 <a href="sk-heat-ht-w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight fixed temperature heat detector sk-heat-w">
             <a href="sk-heat-w.html"><img src="https://cdn.firepartshub.com/images/sk-heatw.webp" alt="Silent Knight Fixed Temperature Heat Detector SK-HEAT-W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-heat-w.html">Silent Knight Fixed Temperature Heat Detector SK-HEAT-W</a></div>
@@ -1353,7 +1426,7 @@
                 <a href="sk-heat-w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight isolator module sk-iso">
             <a href="sk-iso.html"><img src="https://cdn.firepartshub.com/images/sk-iso.webp" alt="Silent Knight Isolator Module SK-ISO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-iso.html">Silent Knight Isolator Module SK-ISO</a></div>
@@ -1361,7 +1434,7 @@
                 <a href="sk-iso.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight alarm control panel monitor module sk-minimon">
             <a href="sk-minimon.html"><img src="https://cdn.firepartshub.com/images/sk-minimon.webp" alt="Silent Knight Alarm Control Panel Monitor Module SK-MINIMON - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-minimon.html">Silent Knight Alarm Control Panel Monitor Module SK-MINIMON</a></div>
@@ -1369,7 +1442,7 @@
                 <a href="sk-minimon.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight alarm control panel monitor module sk-mon-10">
             <a href="sk-mon-10.html"><img src="https://cdn.firepartshub.com/images/sk-mon10.webp" alt="Silent Knight Alarm Control Panel Monitor Module SK-MON-10 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-mon-10.html">Silent Knight Alarm Control Panel Monitor Module SK-MON-10</a></div>
@@ -1377,7 +1450,7 @@
                 <a href="sk-mon-10.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight addressable monitor module sk-monitor-2">
             <a href="sk-monitor-2.html"><img src="https://cdn.firepartshub.com/images/sk-monitor2.webp" alt="Silent Knight Addressable Monitor Module SK-MONITOR-2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-monitor-2.html">Silent Knight Addressable Monitor Module SK-MONITOR-2</a></div>
@@ -1385,7 +1458,7 @@
                 <a href="sk-monitor-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight addressable input module sk-monitor">
             <a href="sk-monitor.html"><img src="https://cdn.firepartshub.com/images/sk-monitor.webp" alt="Silent Knight Addressable Input Module SK-MONITOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-monitor.html">Silent Knight Addressable Input Module SK-MONITOR</a></div>
@@ -1393,7 +1466,7 @@
                 <a href="sk-monitor.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight installation kit sk-nic-kit">
             <a href="sk-nic-kit.html"><img src="https://i.ebayimg.com/images/g/eRgAAeSwQKxpxcNp/s-l225.jpg" alt="Silent Knight Installation Kit SK-NIC-KIT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-nic-kit.html">Silent Knight Installation Kit SK-NIC-KIT</a></div>
@@ -1401,7 +1474,7 @@
                 <a href="sk-nic-kit.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight network interface card sk-nic">
             <a href="sk-nic.html"><img src="https://cdn.firepartshub.com/images/sk-sknic.webp" alt="Silent Knight Network Interface Card SK-NIC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-nic.html">Silent Knight Network Interface Card SK-NIC</a></div>
@@ -1409,7 +1482,7 @@
                 <a href="sk-nic.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight smoke detector sk-photo-r-w">
             <a href="sk-photo-r-w.html"><img src="https://cdn.firepartshub.com/images/sk-photorw.webp" alt="Silent Knight Smoke Detector SK-PHOTO-R-W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-photo-r-w.html">Silent Knight Smoke Detector SK-PHOTO-R-W</a></div>
@@ -1417,7 +1490,7 @@
                 <a href="sk-photo-r-w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight smoke detector sk-photo-w">
             <a href="sk-photo-w.html"><img src="https://cdn.firepartshub.com/images/sk-photow.webp" alt="Silent Knight Smoke Detector SK-PHOTO-W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-photo-w.html">Silent Knight Smoke Detector SK-PHOTO-W</a></div>
@@ -1425,7 +1498,7 @@
                 <a href="sk-photo-w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station sk-pull-da">
             <a href="sk-pull-da.html"><img src="https://cdn.firepartshub.com/images/sk-pullda.webp" alt="Silent Knight Pull Station SK-PULL-DA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-pull-da.html">Silent Knight Pull Station SK-PULL-DA</a></div>
@@ -1433,7 +1506,7 @@
                 <a href="sk-pull-da.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station sk-pull-sa">
             <a href="sk-pull-sa.html"><img src="https://cdn.firepartshub.com/images/sk-pullsa.webp" alt="Silent Knight Pull Station SK-PULL-SA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-pull-sa.html">Silent Knight Pull Station SK-PULL-SA</a></div>
@@ -1441,7 +1514,7 @@
                 <a href="sk-pull-sa.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight relay module sk-relay">
             <a href="sk-relay.html"><img src="https://cdn.firepartshub.com/images/sk-relay.webp" alt="Silent Knight Relay Module SK-RELAY - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-relay.html">Silent Knight Relay Module SK-RELAY</a></div>
@@ -1449,7 +1522,7 @@
                 <a href="sk-relay.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight zone interface module sk-zone">
             <a href="sk-zone.html"><img src="https://cdn.firepartshub.com/images/sk-zone.webp" alt="Silent Knight Zone Interface Module SK-ZONE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sk-zone.html">Silent Knight Zone Interface Module SK-ZONE</a></div>
@@ -1457,7 +1530,7 @@
                 <a href="sk-zone.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight voice evacuation system ske-450">
             <a href="ske-450.html"><img src="https://cdn.firepartshub.com/images/sk-ske450.webp" alt="Silent Knight Voice Evacuation System SKE-450 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ske-450.html">Silent Knight Voice Evacuation System SKE-450</a></div>
@@ -1465,7 +1538,7 @@
                 <a href="ske-450.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight voice evacuation system ske-450zn6">
             <a href="ske-450zn6.html"><img src="https://cdn.firepartshub.com/images/sk-ske450zn6.webp" alt="Silent Knight Voice Evacuation System SKE-450ZN6 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ske-450zn6.html">Silent Knight Voice Evacuation System SKE-450ZN6</a></div>
@@ -1473,7 +1546,7 @@
                 <a href="ske-450zn6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight signal splitter ske-zn6">
             <a href="ske-zn6.html"><img src="https://cdn.firepartshub.com/images/sk-skezn6.webp" alt="Silent Knight Signal Splitter SKE-ZN6 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ske-zn6.html">Silent Knight Signal Splitter SKE-ZN6</a></div>
@@ -1481,7 +1554,7 @@
                 <a href="ske-zn6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight alarm control panel monitor module wsk-monitor">
             <a href="wsk-monitor.html"><img src="https://cdn.firepartshub.com/images/sk-wskmonito.webp" alt="Silent Knight Alarm Control Panel Monitor Module WSK-MONITOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="wsk-monitor.html">Silent Knight Alarm Control Panel Monitor Module WSK-MONITOR</a></div>
@@ -1489,7 +1562,7 @@
                 <a href="wsk-monitor.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="silent knight pull station wsk-pull-da">
             <a href="wsk-pull-da.html"><img src="https://cdn.firepartshub.com/images/sk-wskpullda.webp" alt="Silent Knight Pull Station WSK-PULL-DA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="wsk-pull-da.html">Silent Knight Pull Station WSK-PULL-DA</a></div>
@@ -1516,6 +1589,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Silent Knight";
+    var CAMPAIGN_ID = "5339136270";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID + 
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

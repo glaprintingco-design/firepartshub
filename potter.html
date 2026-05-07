@@ -139,6 +139,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #d32f2f;
+            box-shadow: 0 2px 10px rgba(211,47,47,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #fff8f8;
+            border: 1px solid #f5c6c6;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { background: #b71c1c; }
+    </style>
 </head>
 <body>
     
@@ -157,11 +212,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Potter</span></p>
-        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:30px;">Potter Parts Catalog</h1>
-        <p class="lead">Browsing 160 verified items available for facility management.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Potter</span></p>
+        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:20px;">Potter Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 160 verified items. Search by part number or name:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Potter part number (e.g. 1029030)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Potter part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter retard switch assembly 1029030">
             <a href="1029030.html"><img src="https://cdn.firepartshub.com/images/pl-1029030.webp" alt="Potter Retard Switch Assembly 1029030 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="1029030.html">Potter Retard Switch Assembly 1029030</a></div>
@@ -169,7 +242,7 @@
                 <a href="1029030.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter 1340415">
             <a href="1340415.html"><img src="https://cdn.firepartshub.com/images/pl-1340415.webp" alt="Potter 1340415 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="1340415.html">Potter 1340415</a></div>
@@ -177,7 +250,7 @@
                 <a href="1340415.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter switch 3001000">
             <a href="3001000.html"><img src="https://cdn.firepartshub.com/images/pl-3001000.webp" alt="Potter Switch 3001000 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="3001000.html">Potter Switch 3001000</a></div>
@@ -185,7 +258,7 @@
                 <a href="3001000.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fire alarm control panel 3992752">
             <a href="3992752.html"><img src="https://cdn.firepartshub.com/images/pl-afc50.webp" alt="Potter Fire Alarm Control Panel 3992752 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="3992752.html">Potter Fire Alarm Control Panel 3992752</a></div>
@@ -193,7 +266,7 @@
                 <a href="3992752.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter 4890061">
             <a href="4890061.html"><img src="https://cdn.firepartshub.com/images/pl-4890061.webp" alt="Potter 4890061 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="4890061.html">Potter 4890061</a></div>
@@ -201,7 +274,7 @@
                 <a href="4890061.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter flow switch 9000005/ifs-wp-1">
             <a href="9000005-ifs-wp-1.html"><img src="https://cdn.firepartshub.com/images/pl-ifswp1.webp" alt="Potter Flow Switch 9000005/IFS-WP-1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="9000005-ifs-wp-1.html">Potter Flow Switch 9000005/IFS-WP-1</a></div>
@@ -209,7 +282,7 @@
                 <a href="9000005-ifs-wp-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter synchronization control module avsm-r">
             <a href="avsm-r.html"><img src="https://cdn.firepartshub.com/images/pl-avsmr.webp" alt="Potter Synchronization Control Module AVSM-R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="avsm-r.html">Potter Synchronization Control Module AVSM-R</a></div>
@@ -217,7 +290,7 @@
                 <a href="avsm-r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fixed temperature heat detector cf-135-mp">
             <a href="cf-135-mp.html"><img src="https://cdn.firepartshub.com/images/pl-cf135mp.webp" alt="Potter Fixed Temperature Heat Detector CF-135-MP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cf-135-mp.html">Potter Fixed Temperature Heat Detector CF-135-MP</a></div>
@@ -225,7 +298,7 @@
                 <a href="cf-135-mp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter cf-135cw">
             <a href="cf-135cw.html"><img src="https://cdn.firepartshub.com/images/pl-cf135cw.webp" alt="Potter CF-135CW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cf-135cw.html">Potter CF-135CW</a></div>
@@ -233,7 +306,7 @@
                 <a href="cf-135cw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter horn/strobe chs-24br-wp">
             <a href="chs-24br-wp.html"><img src="https://i.ebayimg.com/images/g/xFIAAOSwKWRn7v5A/s-l225.jpg" alt="Potter Horn/Strobe CHS-24BR-WP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="chs-24br-wp.html">Potter Horn/Strobe CHS-24BR-WP</a></div>
@@ -241,7 +314,7 @@
                 <a href="chs-24br-wp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter horn strobe chs-24bw">
             <a href="chs-24bw.html"><img src="https://i.ebayimg.com/images/g/7qkAAOSwpSRoG682/s-l225.jpg" alt="Potter Horn Strobe CHS-24BW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="chs-24bw.html">Potter Horn Strobe CHS-24BW</a></div>
@@ -249,7 +322,7 @@
                 <a href="chs-24bw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter security strobe light cs-24r">
             <a href="cs-24r.html"><img src="https://cdn.firepartshub.com/images/pl-cs24r.webp" alt="Potter Security Strobe Light CS-24R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cs-24r.html">Potter Security Strobe Light CS-24R</a></div>
@@ -257,7 +330,7 @@
                 <a href="cs-24r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter security strobe light cs-24wbw">
             <a href="cs-24wbw.html"><img src="https://cdn.firepartshub.com/images/pl-4890103.webp" alt="Potter Security Strobe Light CS-24WBW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cs-24wbw.html">Potter Security Strobe Light CS-24WBW</a></div>
@@ -265,7 +338,7 @@
                 <a href="cs-24wbw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter dps-50">
             <a href="dps-50.html"><img src="https://cdn.firepartshub.com/images/pl-dps50.webp" alt="Potter DPS-50 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="dps-50.html">Potter DPS-50</a></div>
@@ -273,7 +346,7 @@
                 <a href="dps-50.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter mass notification, voice evacuation amplifier module evx-100e">
             <a href="evx-100e.html"><img src="https://cdn.firepartshub.com/images/ev-evx100e.webp" alt="Potter Mass Notification, Voice Evacuation Amplifier Module EVX-100E - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="evx-100e.html">Potter Mass Notification, Voice Evacuation Amplifier Module EVX-100E</a></div>
@@ -281,7 +354,7 @@
                 <a href="evx-100e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter horn strobe hs-24wr-wp">
             <a href="hs-24wr-wp.html"><img src="https://cdn.firepartshub.com/images/pl-hs24wrwp.webp" alt="Potter Horn Strobe HS-24WR-WP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hs-24wr-wp.html">Potter Horn Strobe HS-24WR-WP</a></div>
@@ -289,7 +362,7 @@
                 <a href="hs-24wr-wp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter horn strobe hs-24wr">
             <a href="hs-24wr.html"><img src="https://i.ebayimg.com/images/g/Gw8AAOSw9HRmUZJu/s-l225.jpg" alt="Potter Horn Strobe HS-24WR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hs-24wr.html">Potter Horn Strobe HS-24WR</a></div>
@@ -297,7 +370,7 @@
                 <a href="hs-24wr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter horn strobe hs-24ww-wp">
             <a href="hs-24ww-wp.html"><img src="https://cdn.firepartshub.com/images/pl-hs24wwwp.webp" alt="Potter Horn Strobe HS-24WW-WP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hs-24ww-wp.html">Potter Horn Strobe HS-24WW-WP</a></div>
@@ -305,7 +378,7 @@
                 <a href="hs-24ww-wp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter horn strobe hs-24ww">
             <a href="hs-24ww.html"><img src="https://cdn.firepartshub.com/images/pl-hs24ww.webp" alt="Potter Horn Strobe HS-24WW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hs-24ww.html">Potter Horn Strobe HS-24WW</a></div>
@@ -313,7 +386,7 @@
                 <a href="hs-24ww.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter lfh-24r">
             <a href="lfh-24r.html"><img src="https://cdn.firepartshub.com/images/pl-lfh24r.webp" alt="Potter LFH-24R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lfh-24r.html">Potter LFH-24R</a></div>
@@ -321,7 +394,7 @@
                 <a href="lfh-24r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter low frequency lfh-24w">
             <a href="lfh-24w.html"><img src="https://i.ebayimg.com/images/g/kRwAAeSwOcBpI28A/s-l225.jpg" alt="Potter Low Frequency LFH-24W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lfh-24w.html">Potter Low Frequency LFH-24W</a></div>
@@ -329,7 +402,7 @@
                 <a href="lfh-24w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter horn strobe lfhs-177w">
             <a href="lfhs-177w.html"><img src="https://i.ebayimg.com/images/g/Nq4AAeSwvbhnx10z/s-l225.jpg" alt="Potter Horn Strobe LFHS-177W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lfhs-177w.html">Potter Horn Strobe LFHS-177W</a></div>
@@ -337,7 +410,7 @@
                 <a href="lfhs-177w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter horn mht-1224r">
             <a href="mht-1224r.html"><img src="https://i.ebayimg.com/images/g/zicAAOSwHYFnBWqY/s-l225.jpg" alt="Potter Horn MHT-1224R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mht-1224r.html">Potter Horn MHT-1224R</a></div>
@@ -345,7 +418,7 @@
                 <a href="mht-1224r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pressure supervisory switch osysu-1">
             <a href="osysu-1.html"><img src="https://cdn.firepartshub.com/images/pl-osysu1.webp" alt="Potter Pressure Supervisory Switch OSYSU-1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="osysu-1.html">Potter Pressure Supervisory Switch OSYSU-1</a></div>
@@ -353,7 +426,7 @@
                 <a href="osysu-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pressure supervisory switch osysu-2">
             <a href="osysu-2.html"><img src="https://cdn.firepartshub.com/images/pl-osysu2.webp" alt="Potter Pressure Supervisory Switch OSYSU-2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="osysu-2.html">Potter Pressure Supervisory Switch OSYSU-2</a></div>
@@ -361,7 +434,7 @@
                 <a href="osysu-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pad 100-sm">
             <a href="pad-100-sm.html"><img src="https://cdn.firepartshub.com/images/pl-pad100sm.webp" alt="Potter PAD 100-SM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad-100-sm.html">Potter PAD 100-SM</a></div>
@@ -369,7 +442,7 @@
                 <a href="pad-100-sm.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter smoke detector pad100-cd">
             <a href="pad100-cd.html"><img src="https://cdn.firepartshub.com/images/pl-pad100cd.webp" alt="Potter Smoke Detector PAD100-CD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad100-cd.html">Potter Smoke Detector PAD100-CD</a></div>
@@ -377,7 +450,7 @@
                 <a href="pad100-cd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter led module pad100-led">
             <a href="pad100-led.html"><img src="https://cdn.firepartshub.com/images/pl-pad100led.webp" alt="Potter LED Module PAD100-LED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad100-led.html">Potter LED Module PAD100-LED</a></div>
@@ -385,7 +458,7 @@
                 <a href="pad100-led.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter alarm control panel monitor module pad100-mim">
             <a href="pad100-mim.html"><img src="https://cdn.firepartshub.com/images/pl-pad100mim.webp" alt="Potter Alarm Control Panel Monitor Module PAD100-MIM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad100-mim.html">Potter Alarm Control Panel Monitor Module PAD100-MIM</a></div>
@@ -393,7 +466,7 @@
                 <a href="pad100-mim.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter notification appliance circuit pad100-nac">
             <a href="pad100-nac.html"><img src="https://i.ebayimg.com/images/g/ggEAAeSwwiVoXxN3/s-l225.jpg" alt="Potter Notification Appliance Circuit PAD100-NAC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad100-nac.html">Potter Notification Appliance Circuit PAD100-NAC</a></div>
@@ -401,7 +474,7 @@
                 <a href="pad100-nac.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter addressable input module pad100-sim">
             <a href="pad100-sim.html"><img src="https://cdn.firepartshub.com/images/pl-pad100sim.webp" alt="Potter Addressable Input Module PAD100-SIM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad100-sim.html">Potter Addressable Input Module PAD100-SIM</a></div>
@@ -409,7 +482,7 @@
                 <a href="pad100-sim.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter smoke detector pad200-ductr">
             <a href="pad200-ductr.html"><img src="https://cdn.firepartshub.com/images/pl-pad200duc.webp" alt="Potter Smoke Detector PAD200-DUCTR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad200-ductr.html">Potter Smoke Detector PAD200-DUCTR</a></div>
@@ -417,7 +490,7 @@
                 <a href="pad200-ductr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter smoke detector pad200-pd">
             <a href="pad200-pd.html"><img src="https://cdn.firepartshub.com/images/pl-pad200pd.webp" alt="Potter Smoke Detector PAD200-PD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad200-pd.html">Potter Smoke Detector PAD200-PD</a></div>
@@ -425,7 +498,7 @@
                 <a href="pad200-pd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter gas detector, smoke detector pad300-dd">
             <a href="pad300-dd.html"><img src="https://cdn.firepartshub.com/images/pl-pad300dd.webp" alt="Potter Gas Detector, Smoke Detector PAD300-DD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad300-dd.html">Potter Gas Detector, Smoke Detector PAD300-DD</a></div>
@@ -433,7 +506,7 @@
                 <a href="pad300-dd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter smoke detector pad300-duct">
             <a href="pad300-duct.html"><img src="https://cdn.firepartshub.com/images/pl-pad30duct.webp" alt="Potter Smoke Detector PAD300-DUCT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad300-duct.html">Potter Smoke Detector PAD300-DUCT</a></div>
@@ -441,7 +514,7 @@
                 <a href="pad300-duct.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter gas detector, smoke detector pad300-hd">
             <a href="pad300-hd.html"><img src="https://cdn.firepartshub.com/images/pl-pad300hd.webp" alt="Potter Gas Detector, Smoke Detector PAD300-HD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad300-hd.html">Potter Gas Detector, Smoke Detector PAD300-HD</a></div>
@@ -449,7 +522,7 @@
                 <a href="pad300-hd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pad300-im">
             <a href="pad300-im.html"><img src="https://cdn.firepartshub.com/images/pl-pad300im.webp" alt="Potter PAD300-IM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad300-im.html">Potter PAD300-IM</a></div>
@@ -457,7 +530,7 @@
                 <a href="pad300-im.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter smoke detector pad300-pd">
             <a href="pad300-pd.html"><img src="https://cdn.firepartshub.com/images/pl-pad300pd.webp" alt="Potter Smoke Detector PAD300-PD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pad300-pd.html">Potter Smoke Detector PAD300-PD</a></div>
@@ -465,7 +538,7 @@
                 <a href="pad300-pd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter control switch pcvs-2">
             <a href="pcvs-2.html"><img src="https://cdn.firepartshub.com/images/pl-pcvs2.webp" alt="Potter Control Switch PCVS-2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pcvs-2.html">Potter Control Switch PCVS-2</a></div>
@@ -473,7 +546,7 @@
                 <a href="pcvs-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pfc-4410g3">
             <a href="pfc-4410g3.html"><img src="https://cdn.firepartshub.com/images/pl-pfc4410g3.webp" alt="Potter PFC-4410G3 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pfc-4410g3.html">Potter PFC-4410G3</a></div>
@@ -481,7 +554,7 @@
                 <a href="pfc-4410g3.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fire alarm control panel pfc-5004e">
             <a href="pfc-5004e.html"><img src="https://cdn.firepartshub.com/images/pl-pfc5004e.webp" alt="Potter Fire Alarm Control Panel PFC-5004E - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pfc-5004e.html">Potter Fire Alarm Control Panel PFC-5004E</a></div>
@@ -489,7 +562,7 @@
                 <a href="pfc-5004e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fire alarm control panel pfc-6006">
             <a href="pfc-6006.html"><img src="https://cdn.firepartshub.com/images/pl-pfc6006.webp" alt="Potter Fire Alarm Control Panel PFC-6006 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pfc-6006.html">Potter Fire Alarm Control Panel PFC-6006</a></div>
@@ -497,7 +570,7 @@
                 <a href="pfc-6006.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 4 potter brumfield odc-5 dc modules, control: 5vdc, output: 60vdc 3a">
             <a href="potter-10-1.html"><img src="https://i.ebayimg.com/images/g/ZGgAAOSwaxpnp5km/s-l225.jpg" alt="Lot of 4 Potter Brumfield ODC-5 DC Modules, Control: 5VDC, Output: 60VDC 3A - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-10-1.html">Lot of 4 Potter Brumfield ODC-5 DC Modules, Control: 5VDC, Output: 60VDC 3A</a></div>
@@ -505,7 +578,7 @@
                 <a href="potter-10-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter dsd-p duct smoke detector">
             <a href="potter-10-2.html"><img src="https://i.ebayimg.com/images/g/bVoAAOSwfp9nmDiu/s-l225.jpg" alt="Potter DSD-P Duct Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-10-2.html">Potter DSD-P Duct Smoke Detector</a></div>
@@ -513,7 +586,7 @@
                 <a href="potter-10-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="5pc potter brumfield opto relay idc-5 & iac-5 new">
             <a href="potter-11-1.html"><img src="https://i.ebayimg.com/images/g/w1QAAOSwXJhnrmr6/s-l225.jpg" alt="5pc Potter Brumfield OPTO Relay IDC-5 & IAC-5 NEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-11-1.html">5pc Potter Brumfield OPTO Relay IDC-5 & IAC-5 NEW</a></div>
@@ -521,7 +594,7 @@
                 <a href="potter-11-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter lfhs-110w 110cd low frequency horn/strobe, white">
             <a href="potter-110cd.html"><img src="https://i.ebayimg.com/images/g/QxQAAeSwjjFpG4Ce/s-l225.jpg" alt="Potter LFHS-110W 110CD Low Frequency Horn/Strobe, White - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-110cd.html">Potter LFHS-110W 110CD Low Frequency Horn/Strobe, White</a></div>
@@ -529,7 +602,7 @@
                 <a href="potter-110cd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 3 potter & brumfield krpa-11an-120 control relays 120 vac 50/60 hz 3a998">
             <a href="potter-11an-120-3a998.html"><img src="https://i.ebayimg.com/images/g/-DEAAeSwj4dpQJvA/s-l225.jpg" alt="Lot of 3 Potter & Brumfield KRPA-11AN-120 Control Relays 120 VAC 50/60 Hz 3A998 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-11an-120-3a998.html">Lot of 3 Potter & Brumfield KRPA-11AN-120 Control Relays 120 VAC 50/60 Hz 3A998</a></div>
@@ -537,7 +610,7 @@
                 <a href="potter-11an-120-3a998.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 5 potter & brumfield krpa-11an-120 control relays 120 vac 50/60 hz f/s">
             <a href="potter-11an.html"><img src="https://i.ebayimg.com/images/g/UxMAAeSwHmJpQu-c/s-l225.jpg" alt="Lot of 5 Potter & Brumfield KRPA-11AN-120 Control Relays 120 VAC 50/60 Hz F/S - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-11an.html">Lot of 5 Potter & Brumfield KRPA-11AN-120 Control Relays 120 VAC 50/60 Hz F/S</a></div>
@@ -545,7 +618,7 @@
                 <a href="potter-11an.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield krpa-11ay-240 relay lot of 2 unmp">
             <a href="potter-11ay.html"><img src="https://i.ebayimg.com/images/g/mKAAAOSwTDBktAL8/s-l225.jpg" alt="POTTER & BRUMFIELD KRPA-11AY-240 RELAY LOT OF 2 UNMP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-11ay.html">POTTER & BRUMFIELD KRPA-11AY-240 RELAY LOT OF 2 UNMP</a></div>
@@ -553,7 +626,7 @@
                 <a href="potter-11ay.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 2 potter & brumfield time delay relay krpa-11dg-24 [rc 5-6]">
             <a href="potter-11dg.html"><img src="https://i.ebayimg.com/images/g/Yq0AAOSwuclnO1gd/s-l225.jpg" alt="Lot of 2 Potter & Brumfield Time Delay Relay KRPA-11DG-24 [RC 5-6] - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-11dg.html">Lot of 2 Potter & Brumfield Time Delay Relay KRPA-11DG-24 [RC 5-6]</a></div>
@@ -561,7 +634,7 @@
                 <a href="potter-11dg.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fire alarm pba 12010 10" 120vac part# 1810024">
             <a href="potter-12010-10-1810024.html"><img src="https://i.ebayimg.com/images/g/bv8AAeSwc2Vn5zMu/s-l225.jpg" alt="POTTER FIRE ALARM PBA 12010 10" 120VAC Part# 1810024 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-12010-10-1810024.html">POTTER FIRE ALARM PBA 12010 10" 120VAC Part# 1810024</a></div>
@@ -569,7 +642,7 @@
                 <a href="potter-12010-10-1810024.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fire alarm pba 12010 10" 120vac part# 1810024">
             <a href="potter-12010.html"><img src="https://i.ebayimg.com/images/g/bv8AAeSwc2Vn5zMu/s-l225.jpg" alt="POTTER FIRE ALARM PBA 12010 10" 120VAC Part# 1810024 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-12010.html">POTTER FIRE ALARM PBA 12010 10" 120VAC Part# 1810024</a></div>
@@ -577,7 +650,7 @@
                 <a href="potter-12010.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fire sprinkler notification  horn strobe appliance">
             <a href="potter-13-1.html"><img src="https://i.ebayimg.com/images/g/SNUAAeSwd5NpEk2i/s-l225.jpg" alt="Potter Fire Sprinkler Notification  Horn Strobe Appliance - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-13-1.html">Potter Fire Sprinkler Notification  Horn Strobe Appliance</a></div>
@@ -585,7 +658,7 @@
                 <a href="potter-13-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot 13x potter & brumfield iac-5e i/o relay modules 10-36vac/dc control [4*q-20]">
             <a href="potter-13x-5e.html"><img src="https://i.ebayimg.com/images/g/~LgAAOSwRFpkCRqw/s-l225.jpg" alt="lot 13x potter & brumfield iac-5e i/o relay modules 10-36Vac/dc control [4*Q-20] - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-13x-5e.html">lot 13x potter & brumfield iac-5e i/o relay modules 10-36Vac/dc control [4*Q-20]</a></div>
@@ -593,7 +666,7 @@
                 <a href="potter-13x-5e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new potter cs-24w gentex alarm signal ceiling strobe / white with mounting plate">
             <a href="potter-14-1.html"><img src="https://i.ebayimg.com/images/g/JkUAAOSwMCZoPeYm/s-l225.jpg" alt="NEW Potter CS-24W Gentex Alarm Signal Ceiling Strobe / White with Mounting Plate - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-14-1.html">NEW Potter CS-24W Gentex Alarm Signal Ceiling Strobe / White with Mounting Plate</a></div>
@@ -601,7 +674,7 @@
                 <a href="potter-14-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield kup-14a35-120 relay w/ cuttler-hammer d5pa2">
             <a href="potter-14a35-120-d5pa2.html"><img src="https://i.ebayimg.com/images/g/LeMAAOSwg0hmIXAu/s-l225.jpg" alt="Potter & Brumfield KUP-14A35-120 Relay w/ Cuttler-Hammer D5PA2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-14a35-120-d5pa2.html">Potter & Brumfield KUP-14A35-120 Relay w/ Cuttler-Hammer D5PA2</a></div>
@@ -609,7 +682,7 @@
                 <a href="potter-14a35-120-d5pa2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield relay kup-14a35-120 relay 600vac with sr3b-05 socket">
             <a href="potter-14a35-120-sr3b.html"><img src="https://i.ebayimg.com/images/g/S50AAeSw6KNn~9ZE/s-l225.jpg" alt="Potter & Brumfield Relay KUP-14A35-120 Relay 600VAC With SR3B-05 Socket - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-14a35-120-sr3b.html">Potter & Brumfield Relay KUP-14A35-120 Relay 600VAC With SR3B-05 Socket</a></div>
@@ -617,7 +690,7 @@
                 <a href="potter-14a35-120-sr3b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 3 - potter & brumfield relay time delay krpa-14dg-24 [rc 7-2]">
             <a href="potter-14dg.html"><img src="https://i.ebayimg.com/images/g/llcAAOSwyqVnO2cs/s-l225.jpg" alt="Lot of 3 - Potter & Brumfield Relay Time Delay KRPA-14DG-24 [RC 7-2] - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-14dg.html">Lot of 3 - Potter & Brumfield Relay Time Delay KRPA-14DG-24 [RC 7-2]</a></div>
@@ -625,7 +698,7 @@
                 <a href="potter-14dg.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter cs-24w - new ceiling strobe">
             <a href="potter-15-1.html"><img src="https://i.ebayimg.com/images/g/rKcAAeSwr6ZoxJ3g/s-l225.jpg" alt="POTTER CS-24W - NEW Ceiling Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-15-1.html">POTTER CS-24W - NEW Ceiling Strobe</a></div>
@@ -633,7 +706,7 @@
                 <a href="potter-15-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter aps-sa single action pull station - new - free shipping ">
             <a href="potter-16-1.html"><img src="https://i.ebayimg.com/images/g/uv8AAeSwV41pEia8/s-l225.jpg" alt="Potter APS-SA Single Action Pull Station - NEW - FREE SHIPPING  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-16-1.html">Potter APS-SA Single Action Pull Station - NEW - FREE SHIPPING </a></div>
@@ -641,7 +714,7 @@
                 <a href="potter-16-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fha fixed tempature heat detector used">
             <a href="potter-17-1.html"><img src="https://i.ebayimg.com/images/g/VxQAAOSwj6hndDl3/s-l225.jpg" alt="Potter FHA Fixed tempature heat detector used - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-17-1.html">Potter FHA Fixed tempature heat detector used</a></div>
@@ -649,7 +722,7 @@
                 <a href="potter-17-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter nohmi rha addressable rate of rise / fixed heat detector (new)">
             <a href="potter-18-1.html"><img src="https://i.ebayimg.com/images/g/YhsAAeSw2KdpGJov/s-l225.jpg" alt="Potter Nohmi RHA Addressable Rate of Rise / Fixed Heat Detector (NEW) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-18-1.html">Potter Nohmi RHA Addressable Rate of Rise / Fixed Heat Detector (NEW)</a></div>
@@ -657,7 +730,7 @@
                 <a href="potter-18-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 18ah sla replaces potter pfc-4410rc control panel +12v solarpanel">
             <a href="potter-18ah-4410rc.html"><img src="https://i.ebayimg.com/images/g/HcsAAeSw5udpA3-G/s-l225.jpg" alt="Mighty Max 12V 18Ah SLA Replaces Potter PFC-4410RC Control Panel +12V SolarPanel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-18ah-4410rc.html">Mighty Max 12V 18Ah SLA Replaces Potter PFC-4410RC Control Panel +12V SolarPanel</a></div>
@@ -665,7 +738,7 @@
                 <a href="potter-18ah-4410rc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter rha rate of rise heat detector">
             <a href="potter-19-1.html"><img src="https://i.ebayimg.com/images/g/QXgAAeSwWUdo0wsj/s-l225.jpg" alt="Potter RHA Rate of Rise Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-19-1.html">Potter RHA Rate of Rise Heat Detector</a></div>
@@ -673,7 +746,7 @@
                 <a href="potter-19-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter weatherproof fire alarm manual pull station & backbox rms-1t-wp ~ nib">
             <a href="potter-1t.html"><img src="https://i.ebayimg.com/images/g/U1kAAeSwC8hof90k/s-l225.jpg" alt="Potter Weatherproof Fire Alarm Manual Pull Station & Backbox RMS-1T-WP ~ NIB - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-1t.html">Potter Weatherproof Fire Alarm Manual Pull Station & Backbox RMS-1T-WP ~ NIB</a></div>
@@ -681,7 +754,7 @@
                 <a href="potter-1t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter rha  rate of rise tempature heat detector">
             <a href="potter-20-1.html"><img src="https://i.ebayimg.com/images/g/UlUAAOSwrBZndDm9/s-l225.jpg" alt="Potter RHA  RATE OF RISE tempature heat detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-20-1.html">Potter RHA  RATE OF RISE tempature heat detector</a></div>
@@ -689,7 +762,7 @@
                 <a href="potter-20-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pad 200-duct / duct detector (ul 7th edition) + detector head">
             <a href="potter-200-7th.html"><img src="https://i.ebayimg.com/images/g/y-QAAOSwonZkYsNL/s-l225.jpg" alt="POTTER PAD 200-DUCT / DUCT Detector (Ul 7th Edition) + Detector Head - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-200-7th.html">POTTER PAD 200-DUCT / DUCT Detector (Ul 7th Edition) + Detector Head</a></div>
@@ -697,7 +770,7 @@
                 <a href="potter-200-7th.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new potter cps-24 photoelectric smoke detector free shipping !!!">
             <a href="potter-21-1.html"><img src="https://i.ebayimg.com/images/g/ZtUAAOSwyk9l-gEx/s-l225.jpg" alt="NEW POTTER CPS-24 Photoelectric Smoke Detector FREE SHIPPING !!! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-21-1.html">NEW POTTER CPS-24 Photoelectric Smoke Detector FREE SHIPPING !!!</a></div>
@@ -705,7 +778,7 @@
                 <a href="potter-21-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter ipa-60 fire alarm control panel main board powers on for parts-read">
             <a href="potter-22-1.html"><img src="https://i.ebayimg.com/images/g/TkcAAOSw-ZxoGoBo/s-l225.jpg" alt="Potter IPA-60 Fire Alarm Control Panel Main Board powers on for parts-Read - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-22-1.html">Potter IPA-60 Fire Alarm Control Panel Main Board powers on for parts-Read</a></div>
@@ -713,7 +786,7 @@
                 <a href="potter-22-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter brumfield ssrt-240a25 solid-state control relay - new no box">
             <a href="potter-240a25.html"><img src="https://i.ebayimg.com/images/g/35oAAOSw5XVnUEgu/s-l225.jpg" alt="POTTER BRUMFIELD SSRT-240A25 SOLID-STATE CONTROL RELAY - NEW NO BOX - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-240a25.html">POTTER BRUMFIELD SSRT-240A25 SOLID-STATE CONTROL RELAY - NEW NO BOX</a></div>
@@ -721,7 +794,7 @@
                 <a href="potter-240a25.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter electric spkstr-24wlpr low profile wall speaker/strobe *free shipping*">
             <a href="potter-24wlpr.html"><img src="https://i.ebayimg.com/images/g/PQ8AAOSwBHloVXSZ/s-l225.jpg" alt="Potter Electric SPKSTR-24WLPR Low Profile Wall Speaker/Strobe *FREE SHIPPING* - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-24wlpr.html">Potter Electric SPKSTR-24WLPR Low Profile Wall Speaker/Strobe *FREE SHIPPING*</a></div>
@@ -729,7 +802,7 @@
                 <a href="potter-24wlpr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="(new) potter hs-24wr-wp - horn/strobe red weather proof">
             <a href="potter-24wr.html"><img src="https://i.ebayimg.com/images/g/C3YAAeSwWhto4FQm/s-l225.jpg" alt="(NEW) POTTER HS-24WR-WP - Horn/strobe Red Weather Proof - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-24wr.html">(NEW) POTTER HS-24WR-WP - Horn/strobe Red Weather Proof</a></div>
@@ -737,7 +810,7 @@
                 <a href="potter-24wr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="hs-24ww potter electric signal horn-strobe wall selectable white">
             <a href="potter-24ww.html"><img src="https://i.ebayimg.com/images/g/EhIAAOSw0k9oEWfT/s-l225.jpg" alt="HS-24WW Potter Electric Signal Horn-Strobe Wall Selectable White - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-24ww.html">HS-24WW Potter Electric Signal Horn-Strobe Wall Selectable White</a></div>
@@ -745,7 +818,7 @@
                 <a href="potter-24ww.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 2 potter & brumfield 27e894 socket w/ khau-17d11-24 relay 24vdc, 240vac">
             <a href="potter-27e894-17d11.html"><img src="https://i.ebayimg.com/images/g/30UAAOSwnWRinpNR/s-l225.jpg" alt="Lot of 2 Potter & Brumfield 27E894 Socket w/ KHAU-17D11-24 Relay 24VDC, 240VAC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-27e894-17d11.html">Lot of 2 Potter & Brumfield 27E894 Socket w/ KHAU-17D11-24 Relay 24VDC, 240VAC</a></div>
@@ -753,7 +826,7 @@
                 <a href="potter-27e894-17d11.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter signal - indoor manual fire alarm pull station rms-2t ~ new old stock">
             <a href="potter-2t.html"><img src="https://i.ebayimg.com/images/g/SDAAAOSwBx1oRmuu/s-l225.jpg" alt="Potter Signal - Indoor Manual Fire Alarm Pull Station RMS-2T ~ New Old Stock - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-2t.html">Potter Signal - Indoor Manual Fire Alarm Pull Station RMS-2T ~ New Old Stock</a></div>
@@ -761,7 +834,7 @@
                 <a href="potter-2t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="thermotech 302-135 135°f all weather heat detector vertical mount 1430475 potter">
             <a href="potter-302.html"><img src="https://i.ebayimg.com/images/g/R5kAAOSwJTFnm7y~/s-l225.jpg" alt="Thermotech 302-135 135°F All Weather Heat Detector Vertical Mount 1430475 Potter - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-302.html">Thermotech 302-135 135°F All Weather Heat Detector Vertical Mount 1430475 Potter</a></div>
@@ -769,7 +842,7 @@
                 <a href="potter-302.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield cdb-38-70015 time delay relay 1.8-180sec 10a 240vac">
             <a href="potter-38-70015-180sec.html"><img src="https://i.ebayimg.com/images/g/WW8AAOSwrwtmu5lv/s-l225.jpg" alt="POTTER & BRUMFIELD CDB-38-70015 TIME DELAY RELAY 1.8-180SEC 10A 240VAC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-38-70015-180sec.html">POTTER & BRUMFIELD CDB-38-70015 TIME DELAY RELAY 1.8-180SEC 10A 240VAC</a></div>
@@ -777,7 +850,7 @@
                 <a href="potter-38-70015-180sec.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter 3992735 pad100-hd heat detector *choose by date code*">
             <a href="potter-3992735-pad100.html"><img src="https://i.ebayimg.com/images/g/q7kAAOSwHUtmBcWl/s-l225.jpg" alt="Potter 3992735 PAD100-HD Heat Detector *Choose by Date Code* - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-3992735-pad100.html">Potter 3992735 PAD100-HD Heat Detector *Choose by Date Code*</a></div>
@@ -785,7 +858,7 @@
                 <a href="potter-3992735-pad100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="12v 5ah sla battery replacement potter pfc-5008 fire alarm control panel- 2pack">
             <a href="potter-5ah-5008-2pack.html"><img src="https://i.ebayimg.com/images/g/JtcAAOSw-F5gRuj3/s-l225.jpg" alt="12V 5AH SLA Battery Replacement Potter PFC-5008 Fire Alarm Control Panel- 2PACK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-5ah-5008-2pack.html">12V 5AH SLA Battery Replacement Potter PFC-5008 Fire Alarm Control Panel- 2PACK</a></div>
@@ -793,7 +866,7 @@
                 <a href="potter-5ah-5008-2pack.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="upg 12v 5ah f1 replaces potter electric pfc-3002t control panel + 12v solarpanel">
             <a href="potter-5ah-f1-3002t.html"><img src="https://i.ebayimg.com/images/g/wdkAAeSwoMNo-lJG/s-l225.jpg" alt="UPG 12V 5AH F1 Replaces Potter Electric PFC-3002T Control Panel + 12V SolarPanel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-5ah-f1-3002t.html">UPG 12V 5AH F1 Replaces Potter Electric PFC-3002T Control Panel + 12V SolarPanel</a></div>
@@ -801,7 +874,7 @@
                 <a href="potter-5ah-f1-3002t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="12v 5ah sla battery replacement potter pfc-5008 fire alarm control panel 2 pack">
             <a href="potter-5ah.html"><img src="https://i.ebayimg.com/images/g/JtcAAOSw-F5gRuj3/s-l225.jpg" alt="12V 5AH SLA Battery Replacement Potter PFC-5008 Fire Alarm Control Panel 2 PACK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-5ah.html">12V 5AH SLA Battery Replacement Potter PFC-5008 Fire Alarm Control Panel 2 PACK</a></div>
@@ -809,7 +882,7 @@
                 <a href="potter-5ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 3 - potter&brumfield time delay relay krpa-5dg-24 [rc 5-6]">
             <a href="potter-5dg.html"><img src="https://i.ebayimg.com/images/g/byMAAOSwnMdnO1Sc/s-l225.jpg" alt="Lot of 3 - Potter&Brumfield Time Delay Relay KRPA-5DG-24 [RC 5-6] - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-5dg.html">Lot of 3 - Potter&Brumfield Time Delay Relay KRPA-5DG-24 [RC 5-6]</a></div>
@@ -817,7 +890,7 @@
                 <a href="potter-5dg.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="relay  12vdc, potter & brumfield kuhp-5dt1-12">
             <a href="potter-5dt1.html"><img src="https://i.ebayimg.com/images/g/9GsAAOSw~U9l0NWe/s-l225.jpg" alt="Relay  12VDC, Potter & Brumfield KUHP-5DT1-12 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-5dt1.html">Relay  12VDC, Potter & Brumfield KUHP-5DT1-12</a></div>
@@ -825,7 +898,7 @@
                 <a href="potter-5dt1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter amseco rms-6t conventional pull station, single action, dpdt">
             <a href="potter-6t.html"><img src="https://i.ebayimg.com/images/g/pLoAAOSw7ONnQ5cU/s-l225.jpg" alt="Potter Amseco RMS-6T Conventional Pull Station, Single Action, DPDT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-6t.html">Potter Amseco RMS-6T Conventional Pull Station, Single Action, DPDT</a></div>
@@ -833,7 +906,7 @@
                 <a href="potter-6t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 7ah gel f1 replaces potter pfc6800 fire control panel - 4 pack">
             <a href="potter-7ah-f1-pfc6800.html"><img src="https://i.ebayimg.com/images/g/S-EAAeSwGFxop10Z/s-l225.jpg" alt="Mighty Max 12V 7AH GEL F1 Replaces Potter PFC6800 Fire Control Panel - 4 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-7ah-f1-pfc6800.html">Mighty Max 12V 7AH GEL F1 Replaces Potter PFC6800 Fire Control Panel - 4 Pack</a></div>
@@ -841,7 +914,7 @@
                 <a href="potter-7ah-f1-pfc6800.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 7ah gel f1 replaces potter pfc-6075(r) fire control panel - 2pack">
             <a href="potter-7ah-f1.html"><img src="https://i.ebayimg.com/images/g/i3MAAeSwRutop2PA/s-l225.jpg" alt="Mighty Max 12V 7AH GEL F1 Replaces Potter PFC-6075(R) Fire Control Panel - 2Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-7ah-f1.html">Mighty Max 12V 7AH GEL F1 Replaces Potter PFC-6075(R) Fire Control Panel - 2Pack</a></div>
@@ -849,7 +922,7 @@
                 <a href="potter-7ah-f1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 7ah f2 sla replaces potter pfc-6200 control panel +12v solarpanel">
             <a href="potter-7ah-f2.html"><img src="https://i.ebayimg.com/images/g/L-8AAeSwUjZpVYb1/s-l225.jpg" alt="Mighty Max 12V 7AH F2 SLA Replaces Potter PFC-6200 Control Panel +12V SolarPanel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-7ah-f2.html">Mighty Max 12V 7AH F2 SLA Replaces Potter PFC-6200 Control Panel +12V SolarPanel</a></div>
@@ -857,7 +930,7 @@
                 <a href="potter-7ah-f2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 9ah gel f2 replaces potter pfc-6075(r) control panel - 2 pack">
             <a href="potter-9ah-f2.html"><img src="https://i.ebayimg.com/images/g/EbsAAeSwBpxop2AY/s-l225.jpg" alt="Mighty Max 12V 9AH GEL F2 Replaces Potter PFC-6075(R) Control Panel - 2 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-9ah-f2.html">Mighty Max 12V 9AH GEL F2 Replaces Potter PFC-6075(R) Control Panel - 2 Pack</a></div>
@@ -865,7 +938,7 @@
                 <a href="potter-9ah-f2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter ash24-153075 fire alarm horn strobe select-a-horn-strobe ">
             <a href="potter-ash24.html"><img src="https://i.ebayimg.com/images/g/l9oAAOSwW1Jnj~QP/s-l225.jpg" alt="Potter ASH24-153075 Fire Alarm Horn Strobe Select-A-Horn-Strobe  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-ash24.html">Potter ASH24-153075 Fire Alarm Horn Strobe Select-A-Horn-Strobe </a></div>
@@ -873,7 +946,7 @@
                 <a href="potter-ash24.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="horn/strobe, 24 vdc, plain, white housing, amber lens, potter #chs-24aw">
             <a href="potter-chs24aw.html"><img src="https://i.ebayimg.com/images/g/VE8AAOSwbYNhz0ke/s-l225.jpg" alt="Horn/Strobe, 24 VDC, Plain, White Housing, Amber Lens, Potter #CHS-24AW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-chs24aw.html">Horn/Strobe, 24 VDC, Plain, White Housing, Amber Lens, Potter #CHS-24AW</a></div>
@@ -881,7 +954,7 @@
                 <a href="potter-chs24aw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fire detetection devices cr135w cr-135-w heat detector white">
             <a href="potter-cr135w.html"><img src="https://i.ebayimg.com/images/g/i~sAAOSwk~7YX/s-l225.jpg" alt="POTTER FIRE DETETECTION DEVICES CR135W CR-135-W HEAT DETECTOR WHITE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-cr135w.html">POTTER FIRE DETETECTION DEVICES CR135W CR-135-W HEAT DETECTOR WHITE</a></div>
@@ -889,7 +962,7 @@
                 <a href="potter-cr135w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="amseco potter outdoor horn strobe 24vdc cshb24-rr outdoor red wall horn-strobe">
             <a href="potter-cshb24.html"><img src="https://i.ebayimg.com/images/g/FL0AAeSwPUlo1Age/s-l225.jpg" alt="Amseco Potter Outdoor Horn Strobe 24VDC CSHB24-RR Outdoor Red Wall Horn-Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-cshb24.html">Amseco Potter Outdoor Horn Strobe 24VDC CSHB24-RR Outdoor Red Wall Horn-Strobe</a></div>
@@ -897,7 +970,7 @@
                 <a href="potter-cshb24.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield pneumatic control box enclosure panel with treadlite pedal">
             <a href="potter-enclosure.html"><img src="https://i.ebayimg.com/images/g/QJUAAOSw3v1j2Xjh/s-l225.jpg" alt="Potter & Brumfield Pneumatic Control Box Enclosure Panel with Treadlite Pedal - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-enclosure.html">Potter & Brumfield Pneumatic Control Box Enclosure Panel with Treadlite Pedal</a></div>
@@ -905,7 +978,7 @@
                 <a href="potter-enclosure.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter remote annunciator">
             <a href="potter-generic-parts.html"><img src="https://i.ebayimg.com/images/g/t1wAAOSwQB1iaHLS/s-l225.jpg" alt="Potter Remote Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-generic-parts.html">Potter Remote Annunciator</a></div>
@@ -913,7 +986,7 @@
                 <a href="potter-generic-parts.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield iac5 120vac">
             <a href="potter-iac5.html"><img src="https://i.ebayimg.com/images/g/jfgAAeSwxXlodksn/s-l225.jpg" alt="Potter & BRUMFIELD IAC5 120VAC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-iac5.html">Potter & BRUMFIELD IAC5 120VAC</a></div>
@@ -921,7 +994,7 @@
                 <a href="potter-iac5.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new tyco/potter & brumfield v23134-j1055-x845 relay 12vdc 70a (a2-3a)">
             <a href="potter-j1055-x845-a2.html"><img src="https://i.ebayimg.com/images/g/2tEAAeSwgcVpRCxJ/s-l225.jpg" alt="NEW Tyco/Potter & Brumfield V23134-J1055-X845 Relay 12Vdc 70A (A2-3A) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-j1055-x845-a2.html">NEW Tyco/Potter & Brumfield V23134-J1055-X845 Relay 12Vdc 70A (A2-3A)</a></div>
@@ -929,7 +1002,7 @@
                 <a href="potter-j1055-x845-a2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield khu17d11 24vdc #109l110">
             <a href="potter-khu17d11-109l110.html"><img src="https://i.ebayimg.com/images/g/ldoAAOSw0mZlgH~4/s-l225.jpg" alt="Potter & Brumfield KHU17D11 24VDC #109L110 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-khu17d11-109l110.html">Potter & Brumfield KHU17D11 24VDC #109L110</a></div>
@@ -937,7 +1010,7 @@
                 <a href="potter-khu17d11-109l110.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter nohmi lcd-ra lcd remote annunciator">
             <a href="potter-lcd-ra.html"><img src="https://i.ebayimg.com/images/g/ZIgAAeSwB6ZoR4Bi/s-l225.jpg" alt="Potter Nohmi LCD-RA LCD Remote Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-lcd-ra.html">Potter Nohmi LCD-RA LCD Remote Annunciator</a></div>
@@ -945,7 +1018,7 @@
                 <a href="potter-lcd-ra.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter electric signal p32-1t-lp-kl pull station dual action key reset">
             <a href="potter-p32-1t.html"><img src="https://i.ebayimg.com/images/g/QgkAAeSwPh9o0StS/s-l225.jpg" alt="Potter Electric Signal P32-1T-LP-KL Pull Station Dual Action Key Reset - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-p32-1t.html">Potter Electric Signal P32-1T-LP-KL Pull Station Dual Action Key Reset</a></div>
@@ -953,7 +1026,7 @@
                 <a href="potter-p32-1t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter p32-tkd conventional fire alarm pull station ">
             <a href="potter-p32.html"><img src="https://i.ebayimg.com/images/g/gWQAAOSwOABnZM~F/s-l225.jpg" alt="Potter P32-TKD Conventional Fire Alarm Pull Station  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-p32.html">Potter P32-TKD Conventional Fire Alarm Pull Station </a></div>
@@ -961,7 +1034,7 @@
                 <a href="potter-p32.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pad100-oroi slc module fire alarm part">
             <a href="potter-pad100-slc.html"><img src="https://i.ebayimg.com/images/g/fBwAAeSwjXFo7cAx/s-l225.jpg" alt="POTTER PAD100-OROI SLC MODULE FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-pad100-slc.html">POTTER PAD100-OROI SLC MODULE FIRE ALARM PART</a></div>
@@ -969,7 +1042,7 @@
                 <a href="potter-pad100-slc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pad100-mim micro input monitor module - brand new - 60 available ">
             <a href="potter-pad100.html"><img src="https://i.ebayimg.com/images/g/Q5EAAeSwpoZo6neV/s-l225.jpg" alt="POTTER PAD100-MIM MICRO INPUT MONITOR MODULE - BRAND NEW - 60 AVAILABLE  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-pad100.html">POTTER PAD100-MIM MICRO INPUT MONITOR MODULE - BRAND NEW - 60 AVAILABLE </a></div>
@@ -977,7 +1050,7 @@
                 <a href="potter-pad100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pad200-duct addressable duct smoke detector - brand new - 3 available ">
             <a href="potter-pad200.html"><img src="https://i.ebayimg.com/images/g/FW4AAeSwWlVpMLDe/s-l225.jpg" alt="POTTER PAD200-DUCT ADDRESSABLE DUCT SMOKE DETECTOR - BRAND NEW - 3 AVAILABLE  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-pad200.html">POTTER PAD200-DUCT ADDRESSABLE DUCT SMOKE DETECTOR - BRAND NEW - 3 AVAILABLE </a></div>
@@ -985,7 +1058,7 @@
                 <a href="potter-pad200.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pad300-pcd - photo/carbon monoxide detector">
             <a href="potter-pad300.html"><img src="https://i.ebayimg.com/images/g/oN0AAOSw6vFlBI3j/s-l225.jpg" alt="POTTER PAD300-PCD - Photo/Carbon Monoxide Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-pad300.html">POTTER PAD300-PCD - Photo/Carbon Monoxide Detector</a></div>
@@ -993,7 +1066,7 @@
                 <a href="potter-pad300.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield amf pr5ayo 25a 120vac 25a relay">
             <a href="potter-pr5ayo.html"><img src="https://i.ebayimg.com/images/g/RzwAAeSw2FBpPfoU/s-l225.jpg" alt="Potter & Brumfield AMF PR5AYO 25A 120VAC 25A Relay - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-pr5ayo.html">Potter & Brumfield AMF PR5AYO 25A 120VAC 25A Relay</a></div>
@@ -1001,7 +1074,7 @@
                 <a href="potter-pr5ayo.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield,prd11dy0-110,general purpose relay 25a 110vdc">
             <a href="potter-prd11dy0.html"><img src="https://i.ebayimg.com/images/g/S~YAAOSw1d9ly6v-/s-l225.jpg" alt="Potter & Brumfield,PRD11DY0-110,General Purpose Relay 25A 110VDC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-prd11dy0.html">Potter & Brumfield,PRD11DY0-110,General Purpose Relay 25A 110VDC</a></div>
@@ -1009,7 +1082,7 @@
                 <a href="potter-prd11dy0.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield prd3dy0 power relay 110vdc 1hp 600vac">
             <a href="potter-prd3dy0-1hp.html"><img src="https://i.ebayimg.com/images/g/O28AAOSwn0llfLN8/s-l225.jpg" alt="POTTER & BRUMFIELD PRD3DY0 POWER RELAY 110VDC 1HP 600VAC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-prd3dy0-1hp.html">POTTER & BRUMFIELD PRD3DY0 POWER RELAY 110VDC 1HP 600VAC</a></div>
@@ -1017,7 +1090,7 @@
                 <a href="potter-prd3dy0-1hp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter electric signal ra-6500 annunciator 160 char lcd remote only listed with">
             <a href="potter-ra6500-160-lcd.html"><img src="https://i.ebayimg.com/images/g/nhsAAOSwVzJm5lYc/s-l225.jpg" alt="Potter Electric Signal RA-6500 Annunciator 160 Char LCD Remote Only LISTED WITH - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-ra6500-160-lcd.html">Potter Electric Signal RA-6500 Annunciator 160 Char LCD Remote Only LISTED WITH</a></div>
@@ -1025,7 +1098,7 @@
                 <a href="potter-ra6500-160-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter ra-6500 160-character lcd remote annunciator - same day shipping (sealed)">
             <a href="potter-ra6500-160-lcd1-1.html"><img src="https://i.ebayimg.com/images/g/--kAAOSwN6Rn7vtp/s-l225.jpg" alt="Potter RA-6500 160-Character LCD Remote Annunciator - Same Day Shipping (SEALED) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-ra6500-160-lcd1-1.html">Potter RA-6500 160-Character LCD Remote Annunciator - Same Day Shipping (SEALED)</a></div>
@@ -1033,7 +1106,7 @@
                 <a href="potter-ra6500-160-lcd1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter ra-6500 160 character lcd red remote annunciator certified part">
             <a href="potter-ra6500-160-lcd2-1.html"><img src="https://i.ebayimg.com/images/g/2qgAAOSw6Qxl-wEC/s-l225.jpg" alt="POTTER RA-6500 160 Character LCD Red Remote Annunciator Certified Part - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-ra6500-160-lcd2-1.html">POTTER RA-6500 160 Character LCD Red Remote Annunciator Certified Part</a></div>
@@ -1041,7 +1114,7 @@
                 <a href="potter-ra6500-160-lcd2-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter remote annunciator ra 6500 r">
             <a href="potter-ra6500.html"><img src="https://i.ebayimg.com/images/g/SSUAAOSw1y9i4bs7/s-l225.jpg" alt="POTTER REMOTE ANNUNCIATOR RA 6500 R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-ra6500.html">POTTER REMOTE ANNUNCIATOR RA 6500 R</a></div>
@@ -1049,7 +1122,7 @@
                 <a href="potter-ra6500.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter ra-6500r lcd remote annunciator releasing red enclosure. loc bin 126">
             <a href="potter-ra6500r-lcd126-1.html"><img src="https://i.ebayimg.com/images/g/x2wAAeSwatVpWBxR/s-l225.jpg" alt="POTTER RA-6500R LCD REMOTE ANNUNCIATOR RELEASING RED ENCLOSURE. LOC BIN 126 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-ra6500r-lcd126-1.html">POTTER RA-6500R LCD REMOTE ANNUNCIATOR RELEASING RED ENCLOSURE. LOC BIN 126</a></div>
@@ -1057,7 +1130,7 @@
                 <a href="potter-ra6500r-lcd126-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="sfh47-75110, potter amseco, select-a-strobe, fire alarm speaker, strobe">
             <a href="potter-sfh47.html"><img src="https://i.ebayimg.com/images/g/~6cAAOSwvflZVZar/s-l225.jpg" alt="SFH47-75110, Potter amseco, SELECT-A-STROBE, Fire alarm Speaker, Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-sfh47.html">SFH47-75110, Potter amseco, SELECT-A-STROBE, Fire alarm Speaker, Strobe</a></div>
@@ -1065,7 +1138,7 @@
                 <a href="potter-sfh47.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="amseco potter outdoor horn strobe 24vdc shb24-75c outdoor gray wall horn-strobe">
             <a href="potter-shb24-75c.html"><img src="https://i.ebayimg.com/images/g/mCEAAOSwsatnr2-r/s-l225.jpg" alt="Amseco Potter Outdoor Horn Strobe 24VDC SHB24-75C Outdoor Gray Wall Horn-strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-shb24-75c.html">Amseco Potter Outdoor Horn Strobe 24VDC SHB24-75C Outdoor Gray Wall Horn-strobe</a></div>
@@ -1073,7 +1146,7 @@
                 <a href="potter-shb24-75c.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter amseco sl-401 red strobe lens dome fixture 12vdc, 115ma rainproof (g98)">
             <a href="potter-sl401-g98.html"><img src="https://i.ebayimg.com/images/g/yUkAAOSw5BJhnoex/s-l225.jpg" alt="Potter Amseco SL-401 Red Strobe Lens Dome Fixture 12VDC, 115mA Rainproof (G98) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-sl401-g98.html">Potter Amseco SL-401 Red Strobe Lens Dome Fixture 12VDC, 115mA Rainproof (G98)</a></div>
@@ -1081,7 +1154,7 @@
                 <a href="potter-sl401-g98.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="amseco/potter sl-401 & seco-larm sl-126-a24q strobe lights lot of 16">
             <a href="potter-sl401-sl126-a24q.html"><img src="https://i.ebayimg.com/images/g/jYgAAeSwyA5o-mYI/s-l225.jpg" alt="Amseco/Potter SL-401 & Seco-Larm SL-126-A24Q Strobe Lights Lot of 16 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-sl401-sl126-a24q.html">Amseco/Potter SL-401 & Seco-Larm SL-126-A24Q Strobe Lights Lot of 16</a></div>
@@ -1089,7 +1162,7 @@
                 <a href="potter-sl401-sl126-a24q.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter sl-401b 12vdc strobe blue lens">
             <a href="potter-sl401b.html"><img src="https://i.ebayimg.com/images/g/GUUAAeSwJBpoy61b/s-l225.jpg" alt="Potter SL-401B 12VDC Strobe Blue Lens - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-sl401b.html">Potter SL-401B 12VDC Strobe Blue Lens</a></div>
@@ -1097,7 +1170,7 @@
                 <a href="potter-sl401b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter & brumfield t7cs5d-24 relay 24v unmp">
             <a href="potter-t7cs5d.html"><img src="https://i.ebayimg.com/images/g/iFsAAeSwakNoox8H/s-l225.jpg" alt="POTTER & BRUMFIELD T7CS5D-24 RELAY 24V UNMP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-t7cs5d.html">POTTER & BRUMFIELD T7CS5D-24 RELAY 24V UNMP</a></div>
@@ -1105,7 +1178,7 @@
                 <a href="potter-t7cs5d.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter #ts8-dp, smoke detector head only, photoelectric.">
             <a href="potter-ts8.html"><img src="https://i.ebayimg.com/images/g/j3AAAeSwwTBpWBem/s-l225.jpg" alt="Potter #TS8-DP, Smoke Detector Head Only, Photoelectric. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-ts8.html">Potter #TS8-DP, Smoke Detector Head Only, Photoelectric.</a></div>
@@ -1113,7 +1186,7 @@
                 <a href="potter-ts8.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="upg ub1250mp2309-12v 5ah battery for potter pfc-5008 fire alarm control panel - ">
             <a href="potter-ub1250mp2309-5ah.html"><img src="https://i.ebayimg.com/images/g/VAMAAeSwgnlnr21O/s-l225.jpg" alt="UPG UB1250MP2309-12V 5Ah Battery for Potter PFC-5008 Fire Alarm Control Panel -  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="potter-ub1250mp2309-5ah.html">UPG UB1250MP2309-12V 5Ah Battery for Potter PFC-5008 Fire Alarm Control Panel - </a></div>
@@ -1121,7 +1194,7 @@
                 <a href="potter-ub1250mp2309-5ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter waterflow switch ps10-1">
             <a href="ps10-1.html"><img src="https://cdn.firepartshub.com/images/pl-ps101.webp" alt="Potter Waterflow Switch PS10-1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps10-1.html">Potter Waterflow Switch PS10-1</a></div>
@@ -1129,7 +1202,7 @@
                 <a href="ps10-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter waterflow switch ps10-2">
             <a href="ps10-2.html"><img src="https://cdn.firepartshub.com/images/pl-ps102.webp" alt="Potter Waterflow Switch PS10-2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps10-2.html">Potter Waterflow Switch PS10-2</a></div>
@@ -1137,7 +1210,7 @@
                 <a href="ps10-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter supervisory switch ps120-2">
             <a href="ps120-2.html"><img src="https://cdn.firepartshub.com/images/pl-ps1202.webp" alt="Potter Supervisory Switch PS120-2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps120-2.html">Potter Supervisory Switch PS120-2</a></div>
@@ -1145,7 +1218,7 @@
                 <a href="ps120-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pressure switch ps40-1">
             <a href="ps40-1.html"><img src="https://cdn.firepartshub.com/images/pl-ps401.webp" alt="Potter Pressure Switch PS40-1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps40-1.html">Potter Pressure Switch PS40-1</a></div>
@@ -1153,7 +1226,7 @@
                 <a href="ps40-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pressure switch ps40-2">
             <a href="ps40-2.html"><img src="https://cdn.firepartshub.com/images/pl-ps402.webp" alt="Potter Pressure Switch PS40-2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ps40-2.html">Potter Pressure Switch PS40-2</a></div>
@@ -1161,7 +1234,7 @@
                 <a href="ps40-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter sprinkler supervisory switch pts-c">
             <a href="pts-c.html"><img src="https://cdn.firepartshub.com/images/pl-ptsc.webp" alt="Potter Sprinkler Supervisory Switch PTS-C - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pts-c.html">Potter Sprinkler Supervisory Switch PTS-C</a></div>
@@ -1169,7 +1242,7 @@
                 <a href="pts-c.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter rcds-pm1">
             <a href="rcds-pm1.html"><img src="https://cdn.firepartshub.com/images/pl-rcdspm1.webp" alt="Potter RCDS-PM1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="rcds-pm1.html">Potter RCDS-PM1</a></div>
@@ -1177,7 +1250,7 @@
                 <a href="rcds-pm1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter rms-1t-lp">
             <a href="rms-1t-lp.html"><img src="https://cdn.firepartshub.com/images/pl-10046151.webp" alt="Potter RMS-1T-LP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="rms-1t-lp.html">Potter RMS-1T-LP</a></div>
@@ -1185,7 +1258,7 @@
                 <a href="rms-1t-lp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter pull station rms-1t-wp-lp">
             <a href="rms-1t-wp-lp.html"><img src="https://cdn.firepartshub.com/images/pl-1000403.webp" alt="Potter Pull Station RMS-1T-WP-LP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="rms-1t-wp-lp.html">Potter Pull Station RMS-1T-WP-LP</a></div>
@@ -1193,7 +1266,7 @@
                 <a href="rms-1t-wp-lp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter rms-1t-wp">
             <a href="rms-1t-wp.html"><img src="https://i.ebayimg.com/images/g/G0EAAeSw3zlpUaYf/s-l225.jpg" alt="Potter RMS-1T-WP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="rms-1t-wp.html">Potter RMS-1T-WP</a></div>
@@ -1201,7 +1274,7 @@
                 <a href="rms-1t-wp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter horn strobe s-24wr-wp">
             <a href="s-24wr-wp.html"><img src="https://i.ebayimg.com/images/g/awoAAOSwR6FlX9hm/s-l225.jpg" alt="Potter Horn Strobe S-24WR-WP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="s-24wr-wp.html">Potter Horn Strobe S-24WR-WP</a></div>
@@ -1209,7 +1282,7 @@
                 <a href="s-24wr-wp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter security strobe light s-24wr">
             <a href="s-24wr.html"><img src="https://cdn.firepartshub.com/images/pl-s24wr.webp" alt="Potter Security Strobe Light S-24WR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="s-24wr.html">Potter Security Strobe Light S-24WR</a></div>
@@ -1217,7 +1290,7 @@
                 <a href="s-24wr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter security strobe light s-24ww-wp">
             <a href="s-24ww-wp.html"><img src="https://cdn.firepartshub.com/images/pl-s24wwwp.webp" alt="Potter Security Strobe Light S-24WW-WP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="s-24ww-wp.html">Potter Security Strobe Light S-24WW-WP</a></div>
@@ -1225,7 +1298,7 @@
                 <a href="s-24ww-wp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter security strobe light s-24ww">
             <a href="s-24ww.html"><img src="https://cdn.firepartshub.com/images/pl-4890011.webp" alt="Potter Security Strobe Light S-24WW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="s-24ww.html">Potter Security Strobe Light S-24WW</a></div>
@@ -1233,7 +1306,7 @@
                 <a href="s-24ww.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter sash-120">
             <a href="sash-120.html"><img src="https://cdn.firepartshub.com/images/pl-sash120.webp" alt="Potter SASH-120 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sash-120.html">Potter SASH-120</a></div>
@@ -1241,7 +1314,7 @@
                 <a href="sash-120.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fire amplifier sca-2525">
             <a href="sca-2525.html"><img src="https://cdn.firepartshub.com/images/pl-sca2525.webp" alt="Potter Fire Amplifier SCA-2525 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sca-2525.html">Potter Fire Amplifier SCA-2525</a></div>
@@ -1249,7 +1322,7 @@
                 <a href="sca-2525.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter speaker strobe shx-52sb blue">
             <a href="shx-52sb-blue.html"><img src="https://cdn.firepartshub.com/images/as-shx52sb.webp" alt="Potter Speaker Strobe SHX-52SB BLUE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="shx-52sb-blue.html">Potter Speaker Strobe SHX-52SB BLUE</a></div>
@@ -1257,7 +1330,7 @@
                 <a href="shx-52sb-blue.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter strobe lighting shx-52sr red">
             <a href="shx-52sr-red.html"><img src="https://cdn.firepartshub.com/images/as-shx52sr.webp" alt="Potter Strobe Lighting SHX-52SR RED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="shx-52sr-red.html">Potter Strobe Lighting SHX-52SR RED</a></div>
@@ -1265,7 +1338,7 @@
                 <a href="shx-52sr-red.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter security strobe light sl-5ar (red lens color)">
             <a href="sl-5ar--red-lens-color.html"><img src="https://cdn.firepartshub.com/images/as-sl5ar.webp" alt="Potter Security Strobe Light SL-5AR (RED LENS COLOR) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sl-5ar--red-lens-color.html">Potter Security Strobe Light SL-5AR (RED LENS COLOR)</a></div>
@@ -1273,7 +1346,7 @@
                 <a href="sl-5ar--red-lens-color.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter slc loop expander slce-127">
             <a href="slce-127.html"><img src="https://cdn.firepartshub.com/images/pl-slce127.webp" alt="Potter SLC Loop Expander SLCE-127 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="slce-127.html">Potter SLC Loop Expander SLCE-127</a></div>
@@ -1281,7 +1354,7 @@
                 <a href="slce-127.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter speaker strobe spkstr-24wlpr">
             <a href="spkstr-24wlpr.html"><img src="https://i.ebayimg.com/images/g/PQ8AAOSwBHloVXSZ/s-l225.jpg" alt="Potter Speaker Strobe SPKSTR-24WLPR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spkstr-24wlpr.html">Potter Speaker Strobe SPKSTR-24WLPR</a></div>
@@ -1289,7 +1362,7 @@
                 <a href="spkstr-24wlpr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter fire alarm communicator ud-2000">
             <a href="ud-2000.html"><img src="https://cdn.firepartshub.com/images/pl-ud2000.webp" alt="Potter Fire Alarm Communicator UD-2000 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ud-2000.html">Potter Fire Alarm Communicator UD-2000</a></div>
@@ -1297,7 +1370,7 @@
                 <a href="ud-2000.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter alarm communicator transmitter, dialer module udact-9100">
             <a href="udact-9100.html"><img src="https://cdn.firepartshub.com/images/pl-3992500.webp" alt="Potter Alarm Communicator Transmitter, Dialer Module UDACT-9100 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="udact-9100.html">Potter Alarm Communicator Transmitter, Dialer Module UDACT-9100</a></div>
@@ -1305,7 +1378,7 @@
                 <a href="udact-9100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter alarm switch vsg-2">
             <a href="vsg-2.html"><img src="https://cdn.firepartshub.com/images/pl-vsg2.webp" alt="Potter Alarm Switch VSG-2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsg-2.html">Potter Alarm Switch VSG-2</a></div>
@@ -1313,7 +1386,7 @@
                 <a href="vsg-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter vsg-4">
             <a href="vsg-4.html"><img src="https://cdn.firepartshub.com/images/pl-vsg4.webp" alt="Potter VSG-4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsg-4.html">Potter VSG-4</a></div>
@@ -1321,7 +1394,7 @@
                 <a href="vsg-4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter sprinkler flow switch vsr-2.5">
             <a href="vsr-2-5.html"><img src="https://cdn.firepartshub.com/images/pl-vsr25.webp" alt="Potter Sprinkler Flow Switch VSR-2.5 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-2-5.html">Potter Sprinkler Flow Switch VSR-2.5</a></div>
@@ -1329,7 +1402,7 @@
                 <a href="vsr-2-5.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter waterflow switch vsr-2">
             <a href="vsr-2.html"><img src="https://cdn.firepartshub.com/images/pl-vsr2.webp" alt="Potter Waterflow Switch VSR-2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-2.html">Potter Waterflow Switch VSR-2</a></div>
@@ -1337,7 +1410,7 @@
                 <a href="vsr-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter waterflow switch vsr-3">
             <a href="vsr-3.html"><img src="https://cdn.firepartshub.com/images/pl-vsr3.webp" alt="Potter Waterflow Switch VSR-3 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-3.html">Potter Waterflow Switch VSR-3</a></div>
@@ -1345,7 +1418,7 @@
                 <a href="vsr-3.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter sprinkler flow switch vsr-4">
             <a href="vsr-4.html"><img src="https://cdn.firepartshub.com/images/pl-vsr4.webp" alt="Potter Sprinkler Flow Switch VSR-4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-4.html">Potter Sprinkler Flow Switch VSR-4</a></div>
@@ -1353,7 +1426,7 @@
                 <a href="vsr-4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter waterflow switch vsr-6">
             <a href="vsr-6.html"><img src="https://cdn.firepartshub.com/images/pl-vsr6.webp" alt="Potter Waterflow Switch VSR-6 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-6.html">Potter Waterflow Switch VSR-6</a></div>
@@ -1361,7 +1434,7 @@
                 <a href="vsr-6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter waterflow switch vsr-8">
             <a href="vsr-8.html"><img src="https://cdn.firepartshub.com/images/pl-vsr8.webp" alt="Potter Waterflow Switch VSR-8 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-8.html">Potter Waterflow Switch VSR-8</a></div>
@@ -1369,7 +1442,7 @@
                 <a href="vsr-8.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter flow switch vsr-f-ex-4">
             <a href="vsr-f-ex-4.html"><img src="https://cdn.firepartshub.com/images/pl-vsrfex4.webp" alt="Potter Flow Switch VSR-F-EX-4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-f-ex-4.html">Potter Flow Switch VSR-F-EX-4</a></div>
@@ -1377,7 +1450,7 @@
                 <a href="vsr-f-ex-4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter vsr-fe2-4">
             <a href="vsr-fe2-4.html"><img src="https://cdn.firepartshub.com/images/pl-vsrfe24.webp" alt="Potter VSR-FE2-4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-fe2-4.html">Potter VSR-FE2-4</a></div>
@@ -1385,7 +1458,7 @@
                 <a href="vsr-fe2-4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter waterflow switch vsr-s">
             <a href="vsr-s.html"><img src="https://cdn.firepartshub.com/images/pl-vsrs.webp" alt="Potter Waterflow Switch VSR-S - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-s.html">Potter Waterflow Switch VSR-S</a></div>
@@ -1393,7 +1466,7 @@
                 <a href="vsr-s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter waterflow switch vsr-sg">
             <a href="vsr-sg.html"><img src="https://cdn.firepartshub.com/images/pl-1144460.webp" alt="Potter Waterflow Switch VSR-SG - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr-sg.html">Potter Waterflow Switch VSR-SG</a></div>
@@ -1401,7 +1474,7 @@
                 <a href="vsr-sg.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter waterflow switch vsr3.5">
             <a href="vsr3-5.html"><img src="https://cdn.firepartshub.com/images/pl-vsr35.webp" alt="Potter Waterflow Switch VSR3.5 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vsr3-5.html">Potter Waterflow Switch VSR3.5</a></div>
@@ -1409,7 +1482,7 @@
                 <a href="vsr3-5.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter water level switch wls">
             <a href="wls.html"><img src="https://cdn.firepartshub.com/images/pl-1010117.webp" alt="Potter Water Level Switch WLS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="wls.html">Potter Water Level Switch WLS</a></div>
@@ -1417,7 +1490,7 @@
                 <a href="wls.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter wr">
             <a href="wr.html"><img src="https://cdn.firepartshub.com/images/pl-wr.webp" alt="Potter WR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="wr.html">Potter WR</a></div>
@@ -1425,7 +1498,7 @@
                 <a href="wr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter wss">
             <a href="wss.html"><img src="https://cdn.firepartshub.com/images/pl-wss.webp" alt="Potter WSS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="wss.html">Potter WSS</a></div>
@@ -1433,7 +1506,7 @@
                 <a href="wss.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="potter zone adder module za-42">
             <a href="za-42.html"><img src="https://cdn.firepartshub.com/images/pl-za42.webp" alt="Potter Zone Adder Module ZA-42 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="za-42.html">Potter Zone Adder Module ZA-42</a></div>
@@ -1460,6 +1533,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Potter";
+    var CAMPAIGN_ID = "5339136270";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID + 
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

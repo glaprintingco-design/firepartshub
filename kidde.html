@@ -139,6 +139,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #d32f2f;
+            box-shadow: 0 2px 10px rgba(211,47,47,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #fff8f8;
+            border: 1px solid #f5c6c6;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { background: #b71c1c; }
+    </style>
 </head>
 <body>
     
@@ -157,11 +212,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Kidde</span></p>
-        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:30px;">Kidde Parts Catalog</h1>
-        <p class="lead">Browsing 116 verified items available for facility management.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Kidde</span></p>
+        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:20px;">Kidde Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 116 verified items. Search by part number or name:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Kidde part number (e.g. 102SIGMT-G1)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Kidde part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde security strobe light 102sigmt-g1">
             <a href="102sigmt-g1.html"><img src="https://cdn.firepartshub.com/images/ed-102sigmtg.webp" alt="Kidde Security Strobe Light 102SIGMT-G1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="102sigmt-g1.html">Kidde Security Strobe Light 102SIGMT-G1</a></div>
@@ -169,7 +242,7 @@
                 <a href="102sigmt-g1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde 12-a27021-000-05-0t">
             <a href="12-a27021-000-05-0t.html"><img src="https://i.ebayimg.com/images/g/BncAAeSwQWppA63j/s-l225.jpg" alt="Kidde 12-A27021-000-05-0T - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="12-a27021-000-05-0t.html">Kidde 12-A27021-000-05-0T</a></div>
@@ -177,7 +250,7 @@
                 <a href="12-a27021-000-05-0t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde 12-e27120-000-04-0t">
             <a href="12-e27120-000-04-0t.html"><img src="https://cdn.firepartshub.com/images/fn-12e271204.webp" alt="Kidde 12-E27120-000-04-0T - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="12-e27120-000-04-0t.html">Kidde 12-E27120-000-04-0T</a></div>
@@ -185,7 +258,7 @@
                 <a href="12-e27120-000-04-0t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde 12-h27121-000-09-0t">
             <a href="12-h27121-000-09-0t.html"><img src="https://i.ebayimg.com/images/g/btIAAOSwygVnaEKt/s-l225.jpg" alt="Kidde 12-H27121-000-09-0T - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="12-h27121-000-09-0t.html">Kidde 12-H27121-000-09-0T</a></div>
@@ -193,7 +266,7 @@
                 <a href="12-h27121-000-09-0t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde temperature sensor 12-h28021-005-0t">
             <a href="12-h28021-005-0t.html"><img src="https://i.ebayimg.com/images/g/xMEAAeSwMploeCBB/s-l225.jpg" alt="Kidde Temperature Sensor 12-H28021-005-0T - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="12-h28021-005-0t.html">Kidde Temperature Sensor 12-H28021-005-0T</a></div>
@@ -201,7 +274,7 @@
                 <a href="12-h28021-005-0t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde security strobe light 125xbrmr120ab">
             <a href="125xbrmr120ab.html"><img src="https://i.ebayimg.com/images/g/xjsAAOSwboBjTayU/s-l225.jpg" alt="Kidde Security Strobe Light 125XBRMR120AB - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="125xbrmr120ab.html">Kidde Security Strobe Light 125XBRMR120AB</a></div>
@@ -209,7 +282,7 @@
                 <a href="125xbrmr120ab.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 20sa10-v">
             <a href="20sa10-v.html"><img src="https://cdn.firepartshub.com/images/3k-21033154.webp" alt="Kidde Smoke Detector 20SA10-V - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="20sa10-v.html">Kidde Smoke Detector 20SA10-V</a></div>
@@ -217,7 +290,7 @@
                 <a href="20sa10-v.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 20sa10">
             <a href="20sa10.html"><img src="https://cdn.firepartshub.com/images/3k-20sa10.webp" alt="Kidde Smoke Detector 20SA10 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="20sa10.html">Kidde Smoke Detector 20SA10</a></div>
@@ -225,7 +298,7 @@
                 <a href="20sa10.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 20sar">
             <a href="20sar.html"><img src="https://cdn.firepartshub.com/images/3k-20sar.webp" alt="Kidde Smoke Detector 20SAR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="20sar.html">Kidde Smoke Detector 20SAR</a></div>
@@ -233,7 +306,7 @@
                 <a href="20sar.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 20sd10">
             <a href="20sd10.html"><img src="https://cdn.firepartshub.com/images/3k-20sd10.webp" alt="Kidde Smoke Detector 20SD10 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="20sd10.html">Kidde Smoke Detector 20SD10</a></div>
@@ -241,7 +314,7 @@
                 <a href="20sd10.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 20sdr">
             <a href="20sdr.html"><img src="https://i.ebayimg.com/images/g/IIcAAeSwVZdpqK5s/s-l225.jpg" alt="Kidde Smoke Detector 20SDR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="20sdr.html">Kidde Smoke Detector 20SDR</a></div>
@@ -249,7 +322,7 @@
                 <a href="20sdr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide monitor 21009942">
             <a href="21009942.html"><img src="https://i.ebayimg.com/images/g/gxgAAeSwF95ppiFt/s-l225.jpg" alt="Kidde Carbon Monoxide Monitor 21009942 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21009942.html">Kidde Carbon Monoxide Monitor 21009942</a></div>
@@ -257,7 +330,7 @@
                 <a href="21009942.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm 2101-0073">
             <a href="2101-0073.html"><img src="https://i.ebayimg.com/images/g/nSYAAeSw2dxpbzm9/s-l225.jpg" alt="Kidde Carbon Monoxide Alarm 2101-0073 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="2101-0073.html">Kidde Carbon Monoxide Alarm 2101-0073</a></div>
@@ -265,7 +338,7 @@
                 <a href="2101-0073.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm 21025772">
             <a href="21025772.html"><img src="https://i.ebayimg.com/images/g/rEwAAOSwRydlemS6/s-l225.jpg" alt="Kidde Carbon Monoxide Alarm 21025772 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21025772.html">Kidde Carbon Monoxide Alarm 21025772</a></div>
@@ -273,7 +346,7 @@
                 <a href="21025772.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm 21026350">
             <a href="21026350.html"><img src="https://i.ebayimg.com/images/g/sXwAAOSwyJZmpwHj/s-l225.jpg" alt="Kidde Carbon Monoxide Alarm 21026350 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21026350.html">Kidde Carbon Monoxide Alarm 21026350</a></div>
@@ -281,7 +354,7 @@
                 <a href="21026350.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm 21026365">
             <a href="21026365.html"><img src="https://via.placeholder.com/400x400?text=No+Image+Available" alt="Kidde Carbon Monoxide Alarm 21026365 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21026365.html">Kidde Carbon Monoxide Alarm 21026365</a></div>
@@ -289,7 +362,7 @@
                 <a href="21026365.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm 21026458">
             <a href="21026458.html"><img src="https://i.ebayimg.com/images/g/HqUAAeSwF9hpbqEb/s-l225.jpg" alt="Kidde Carbon Monoxide Alarm 21026458 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21026458.html">Kidde Carbon Monoxide Alarm 21026458</a></div>
@@ -297,7 +370,7 @@
                 <a href="21026458.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm 21031211">
             <a href="21031211.html"><img src="https://i.ebayimg.com/images/g/J-kAAOSwWnBnQkzX/s-l225.jpg" alt="Kidde Carbon Monoxide Alarm 21031211 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21031211.html">Kidde Carbon Monoxide Alarm 21031211</a></div>
@@ -305,7 +378,7 @@
                 <a href="21031211.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 21031428">
             <a href="21031428.html"><img src="https://i.ebayimg.com/images/g/1vAAAeSwFVlph13N/s-l225.jpg" alt="Kidde Smoke Detector 21031428 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21031428.html">Kidde Smoke Detector 21031428</a></div>
@@ -313,7 +386,7 @@
                 <a href="21031428.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 21031466">
             <a href="21031466.html"><img src="https://i.ebayimg.com/images/g/t58AAeSw0WxpyUzw/s-l225.jpg" alt="Kidde Smoke Detector 21031466 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21031466.html">Kidde Smoke Detector 21031466</a></div>
@@ -321,7 +394,7 @@
                 <a href="21031466.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 21031482">
             <a href="21031482.html"><img src="https://cdn.firepartshub.com/images/3k-21031482.webp" alt="Kidde Smoke Detector 21031482 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21031482.html">Kidde Smoke Detector 21031482</a></div>
@@ -329,7 +402,7 @@
                 <a href="21031482.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 21032064">
             <a href="21032064.html"><img src="https://i.ebayimg.com/images/g/x0UAAeSw5bVoyy0m/s-l225.jpg" alt="Kidde Smoke Detector 21032064 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21032064.html">Kidde Smoke Detector 21032064</a></div>
@@ -337,7 +410,7 @@
                 <a href="21032064.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 21033081">
             <a href="21033081.html"><img src="https://cdn.firepartshub.com/images/3k-21033081.webp" alt="Kidde Smoke Detector 21033081 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="21033081.html">Kidde Smoke Detector 21033081</a></div>
@@ -345,7 +418,7 @@
                 <a href="21033081.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde 248mda24ad">
             <a href="248mda24ad.html"><img src="https://i.ebayimg.com/images/g/qmIAAeSw1nlpjN0G/s-l225.jpg" alt="Kidde 248MDA24AD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="248mda24ad.html">Kidde 248MDA24AD</a></div>
@@ -353,7 +426,7 @@
                 <a href="248mda24ad.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde temperature sensor 27020-1">
             <a href="27020-1.html"><img src="https://cdn.firepartshub.com/images/fn-270201.webp" alt="Kidde Temperature Sensor 27020-1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="27020-1.html">Kidde Temperature Sensor 27020-1</a></div>
@@ -361,7 +434,7 @@
                 <a href="27020-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde temperature sensor 27021-0">
             <a href="27021-0.html"><img src="https://i.ebayimg.com/images/g/1LgAAeSwtLtpxT43/s-l225.jpg" alt="Kidde Temperature Sensor 27021-0 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="27021-0.html">Kidde Temperature Sensor 27021-0</a></div>
@@ -369,7 +442,7 @@
                 <a href="27021-0.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde 27121-0-190">
             <a href="27121-0-190.html"><img src="https://cdn.firepartshub.com/images/fn-m27121019.webp" alt="Kidde 27121-0-190 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="27121-0-190.html">Kidde 27121-0-190</a></div>
@@ -377,7 +450,7 @@
                 <a href="27121-0-190.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde temperature sensor 27121-0">
             <a href="27121-0.html"><img src="https://cdn.firepartshub.com/images/fn-12e27040t.webp" alt="Kidde Temperature Sensor 27121-0 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="27121-0.html">Kidde Temperature Sensor 27121-0</a></div>
@@ -385,7 +458,7 @@
                 <a href="27121-0.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde 27121-20">
             <a href="27121-20.html"><img src="https://cdn.firepartshub.com/images/fn-271212.webp" alt="Kidde 27121-20 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="27121-20.html">Kidde 27121-20</a></div>
@@ -393,7 +466,7 @@
                 <a href="27121-20.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector 28021-5">
             <a href="28021-5.html"><img src="https://i.ebayimg.com/images/g/edIAAOSwmY1jnN5H/s-l225.jpg" alt="Kidde Smoke Detector 28021-5 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="28021-5.html">Kidde Smoke Detector 28021-5</a></div>
@@ -401,7 +474,7 @@
                 <a href="28021-5.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde alarm bell 439d-10aw">
             <a href="439d-10aw.html"><img src="https://i.ebayimg.com/images/g/BhsAAOSwo6doFO-I/s-l225.jpg" alt="Kidde Alarm Bell 439D-10AW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="439d-10aw.html">Kidde Alarm Bell 439D-10AW</a></div>
@@ -409,7 +482,7 @@
                 <a href="439d-10aw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde alarm bell 439d-8aw-r">
             <a href="439d-8aw-r.html"><img src="https://i.ebayimg.com/images/g/wWoAAOSwFT1luucG/s-l225.jpg" alt="Kidde Alarm Bell 439D-8AW-R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="439d-8aw-r.html">Kidde Alarm Bell 439D-8AW-R</a></div>
@@ -417,7 +490,7 @@
                 <a href="439d-8aw-r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde security strobe light 4ms-7aw">
             <a href="4ms-7aw.html"><img src="https://cdn.firepartshub.com/images/ed-4ms7aw.webp" alt="Kidde Security Strobe Light 4MS-7AW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="4ms-7aw.html">Kidde Security Strobe Light 4MS-7AW</a></div>
@@ -425,7 +498,7 @@
                 <a href="4ms-7aw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde horn strobe 6536g-g5">
             <a href="6536g-g5.html"><img src="https://cdn.firepartshub.com/images/ed-6536gg5.webp" alt="Kidde Horn Strobe 6536G-G5 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="6536g-g5.html">Kidde Horn Strobe 6536G-G5</a></div>
@@ -433,7 +506,7 @@
                 <a href="6536g-g5.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde remote telephone 6830-ny-f4">
             <a href="6830-ny-f4.html"><img src="https://cdn.firepartshub.com/images/ed-6830nyf4.webp" alt="Kidde Remote Telephone 6830-NY-F4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="6830-ny-f4.html">Kidde Remote Telephone 6830-NY-F4</a></div>
@@ -441,7 +514,7 @@
                 <a href="6830-ny-f4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde horn 870p-g5">
             <a href="870p-g5.html"><img src="https://cdn.firepartshub.com/images/ed-870pg5.webp" alt="Kidde Horn 870P-G5 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="870p-g5.html">Kidde Horn 870P-G5</a></div>
@@ -449,7 +522,7 @@
                 <a href="870p-g5.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke/carbon monoxide alarm 900-0113-02">
             <a href="900-0113-02.html"><img src="https://i.ebayimg.com/images/g/yW0AAeSwCoRpzBcq/s-l225.jpg" alt="Kidde Smoke/Carbon Monoxide Alarm 900-0113-02 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="900-0113-02.html">Kidde Smoke/Carbon Monoxide Alarm 900-0113-02</a></div>
@@ -457,7 +530,7 @@
                 <a href="900-0113-02.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde audio channel selector module achs">
             <a href="achs.html"><img src="https://cdn.firepartshub.com/images/ed-achs.webp" alt="Kidde Audio Channel Selector Module ACHS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="achs.html">Kidde Audio Channel Selector Module ACHS</a></div>
@@ -465,7 +538,7 @@
                 <a href="achs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm c3010d">
             <a href="c3010d.html"><img src="https://cdn.firepartshub.com/images/3k-21010075.webp" alt="Kidde Carbon Monoxide Alarm C3010D - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="c3010d.html">Kidde Carbon Monoxide Alarm C3010D</a></div>
@@ -473,7 +546,7 @@
                 <a href="c3010d.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde horn eg1f-p">
             <a href="eg1f-p.html"><img src="https://cdn.firepartshub.com/images/ed-eg1fp.webp" alt="Kidde Horn EG1F-P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="eg1f-p.html">Kidde Horn EG1F-P</a></div>
@@ -481,7 +554,7 @@
                 <a href="eg1f-p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde synchronization module eg1m-rm">
             <a href="eg1m-rm.html"><img src="https://cdn.firepartshub.com/images/ed-eg1mrm.webp" alt="Kidde Synchronization Module EG1M-RM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="eg1m-rm.html">Kidde Synchronization Module EG1M-RM</a></div>
@@ -489,7 +562,7 @@
                 <a href="eg1m-rm.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde horn eg1r-p">
             <a href="eg1r-p.html"><img src="https://i.ebayimg.com/images/g/-RUAAeSwy4ZpmyfC/s-l225.jpg" alt="Kidde Horn EG1R-P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="eg1r-p.html">Kidde Horn EG1R-P</a></div>
@@ -497,7 +570,7 @@
                 <a href="eg1r-p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde security strobe light eg1vrn">
             <a href="eg1vrn.html"><img src="https://cdn.firepartshub.com/images/ed-eg1vrn.webp" alt="Kidde Security Strobe Light EG1VRN - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="eg1vrn.html">Kidde Security Strobe Light EG1VRN</a></div>
@@ -505,7 +578,7 @@
                 <a href="eg1vrn.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde speaker strobe eg4srf">
             <a href="eg4srf.html"><img src="https://cdn.firepartshub.com/images/ed-eg4srf.webp" alt="Kidde Speaker Strobe EG4SRF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="eg4srf.html">Kidde Speaker Strobe EG4SRF</a></div>
@@ -513,7 +586,7 @@
                 <a href="eg4srf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde speaker strobe eg4svrf">
             <a href="eg4svrf.html"><img src="https://cdn.firepartshub.com/images/ed-eg4svrf.webp" alt="Kidde Speaker Strobe EG4SVRF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="eg4svrf.html">Kidde Speaker Strobe EG4SVRF</a></div>
@@ -521,7 +594,7 @@
                 <a href="eg4svrf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde cover eg4svwf-cvr">
             <a href="eg4svwf-cvr.html"><img src="https://i.ebayimg.com/images/g/JMYAAOSwfihoSOzu/s-l225.jpg" alt="Kidde Cover EG4SVWF-CVR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="eg4svwf-cvr.html">Kidde Cover EG4SVWF-CVR</a></div>
@@ -529,7 +602,7 @@
                 <a href="eg4svwf-cvr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde speaker strobe eg4svwf">
             <a href="eg4svwf.html"><img src="https://cdn.firepartshub.com/images/ed-eg4svwf.webp" alt="Kidde Speaker Strobe EG4SVWF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="eg4svwf.html">Kidde Speaker Strobe EG4SVWF</a></div>
@@ -537,7 +610,7 @@
                 <a href="eg4svwf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde speaker strobe eg4swf">
             <a href="eg4swf.html"><img src="https://cdn.firepartshub.com/images/ed-eg4swf.webp" alt="Kidde Speaker Strobe EG4SWF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="eg4swf.html">Kidde Speaker Strobe EG4SWF</a></div>
@@ -545,7 +618,7 @@
                 <a href="eg4swf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde horn strobe egcavwf">
             <a href="egcavwf.html"><img src="https://i.ebayimg.com/images/g/8gQAAeSwngNpadGJ/s-l225.jpg" alt="Kidde Horn Strobe EGCAVWF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="egcavwf.html">Kidde Horn Strobe EGCAVWF</a></div>
@@ -553,7 +626,7 @@
                 <a href="egcavwf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde horn strobe egcf-hdvmh">
             <a href="egcf-hdvmh.html"><img src="https://cdn.firepartshub.com/images/ed-egcfhdvmh.webp" alt="Kidde Horn Strobe EGCF-HDVMH - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="egcf-hdvmh.html">Kidde Horn Strobe EGCF-HDVMH</a></div>
@@ -561,7 +634,7 @@
                 <a href="egcf-hdvmh.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde security strobe light egcf-vmh">
             <a href="egcf-vmh.html"><img src="https://cdn.firepartshub.com/images/ed-egcfvmh.webp" alt="Kidde Security Strobe Light EGCF-VMH - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="egcf-vmh.html">Kidde Security Strobe Light EGCF-VMH</a></div>
@@ -569,7 +642,7 @@
                 <a href="egcf-vmh.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde security strobe light egcvhwf">
             <a href="egcvhwf.html"><img src="https://cdn.firepartshub.com/images/ed-egcvhwf.webp" alt="Kidde Security Strobe Light EGCVHWF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="egcvhwf.html">Kidde Security Strobe Light EGCVHWF</a></div>
@@ -577,7 +650,7 @@
                 <a href="egcvhwf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde speaker strobe ewgavrf">
             <a href="ewgavrf.html"><img src="https://cdn.firepartshub.com/images/ed-ewgavrf.webp" alt="Kidde Speaker Strobe EWGAVRF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ewgavrf.html">Kidde Speaker Strobe EWGAVRF</a></div>
@@ -585,7 +658,7 @@
                 <a href="ewgavrf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde ewgsvmwf">
             <a href="ewgsvmwf.html"><img src="https://cdn.firepartshub.com/images/ed-ewgsvmwf.webp" alt="Kidde EWGSVMWF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ewgsvmwf.html">Kidde EWGSVMWF</a></div>
@@ -593,7 +666,7 @@
                 <a href="ewgsvmwf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fire alarm control panel fx-10rd">
             <a href="fx-10rd.html"><img src="https://cdn.firepartshub.com/images/ed-fx10rd.webp" alt="Kidde Fire Alarm Control Panel FX-10RD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-10rd.html">Kidde Fire Alarm Control Panel FX-10RD</a></div>
@@ -601,7 +674,7 @@
                 <a href="fx-10rd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde pull station fx-278">
             <a href="fx-278.html"><img src="https://cdn.firepartshub.com/images/ed-fx278.webp" alt="Kidde Pull Station FX-278 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-278.html">Kidde Pull Station FX-278</a></div>
@@ -609,7 +682,7 @@
                 <a href="fx-278.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde analog class a-b two-wire module fx-2wire">
             <a href="fx-2wire.html"><img src="https://cdn.firepartshub.com/images/ed-fx2wire.webp" alt="Kidde Analog Class A-B Two-Wire Module FX-2WIRE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-2wire.html">Kidde Analog Class A-B Two-Wire Module FX-2WIRE</a></div>
@@ -617,7 +690,7 @@
                 <a href="fx-2wire.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fire alarm control panel fx-5r">
             <a href="fx-5r.html"><img src="https://cdn.firepartshub.com/images/ed-fx5r.webp" alt="Kidde Fire Alarm Control Panel FX-5R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-5r.html">Kidde Fire Alarm Control Panel FX-5R</a></div>
@@ -625,7 +698,7 @@
                 <a href="fx-5r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fire alarm control panel fx-5rd">
             <a href="fx-5rd.html"><img src="https://cdn.firepartshub.com/images/ed-fx5rd.webp" alt="Kidde Fire Alarm Control Panel FX-5RD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-5rd.html">Kidde Fire Alarm Control Panel FX-5RD</a></div>
@@ -633,7 +706,7 @@
                 <a href="fx-5rd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fire alarm control panel fx-64r">
             <a href="fx-64r.html"><img src="https://cdn.firepartshub.com/images/ed-fx64r.webp" alt="Kidde Fire Alarm Control Panel FX-64R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-64r.html">Kidde Fire Alarm Control Panel FX-64R</a></div>
@@ -641,7 +714,7 @@
                 <a href="fx-64r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde addressable input module fx-idc1a">
             <a href="fx-idc1a.html"><img src="https://i.ebayimg.com/images/g/XlYAAeSw-2Fn4bro/s-l225.jpg" alt="Kidde Addressable Input Module FX-IDC1A - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-idc1a.html">Kidde Addressable Input Module FX-IDC1A</a></div>
@@ -649,7 +722,7 @@
                 <a href="fx-idc1a.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde addressable input module fx-idc1b">
             <a href="fx-idc1b.html"><img src="https://cdn.firepartshub.com/images/ed-fxidc1b.webp" alt="Kidde Addressable Input Module FX-IDC1B - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-idc1b.html">Kidde Addressable Input Module FX-IDC1B</a></div>
@@ -657,7 +730,7 @@
                 <a href="fx-idc1b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde addressable input module fx-idc2b">
             <a href="fx-idc2b.html"><img src="https://cdn.firepartshub.com/images/ed-fxidc2b.webp" alt="Kidde Addressable Input Module FX-IDC2B - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-idc2b.html">Kidde Addressable Input Module FX-IDC2B</a></div>
@@ -665,7 +738,7 @@
                 <a href="fx-idc2b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde isolator module fx-iso">
             <a href="fx-iso.html"><img src="https://cdn.firepartshub.com/images/ed-fxiso.webp" alt="Kidde Isolator Module FX-ISO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-iso.html">Kidde Isolator Module FX-ISO</a></div>
@@ -673,7 +746,7 @@
                 <a href="fx-iso.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde alarm control panel notification module fx-nac">
             <a href="fx-nac.html"><img src="https://cdn.firepartshub.com/images/ed-fxnac.webp" alt="Kidde Alarm Control Panel Notification Module FX-NAC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-nac.html">Kidde Alarm Control Panel Notification Module FX-NAC</a></div>
@@ -681,7 +754,7 @@
                 <a href="fx-nac.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde relay module fx-rly">
             <a href="fx-rly.html"><img src="https://cdn.firepartshub.com/images/ed-fxrly.webp" alt="Kidde Relay Module FX-RLY - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fx-rly.html">Kidde Relay Module FX-RLY</a></div>
@@ -689,7 +762,7 @@
                 <a href="fx-rly.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde speaker strobe gchfwa-s7vmch">
             <a href="gchfwa-s7vmch.html"><img src="https://i.ebayimg.com/images/g/TgUAAeSwO5ZpqJvA/s-l225.jpg" alt="Kidde Speaker Strobe GCHFWA-S7VMCH - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gchfwa-s7vmch.html">Kidde Speaker Strobe GCHFWA-S7VMCH</a></div>
@@ -697,7 +770,7 @@
                 <a href="gchfwa-s7vmch.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde speaker strobe gchfwf-s7vmch">
             <a href="gchfwf-s7vmch.html"><img src="https://cdn.firepartshub.com/images/ed-gchfwfs7v.webp" alt="Kidde Speaker Strobe GCHFWF-S7VMCH - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gchfwf-s7vmch.html">Kidde Speaker Strobe GCHFWF-S7VMCH</a></div>
@@ -705,7 +778,7 @@
                 <a href="gchfwf-s7vmch.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde alarm control panel expansion module gsa-cc1">
             <a href="gsa-cc1.html"><img src="https://cdn.firepartshub.com/images/ed-gsacc1.webp" alt="Kidde Alarm Control Panel Expansion Module GSA-CC1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-cc1.html">Kidde Alarm Control Panel Expansion Module GSA-CC1</a></div>
@@ -713,7 +786,7 @@
                 <a href="gsa-cc1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde strobe synchronization module gsa-cc1s">
             <a href="gsa-cc1s.html"><img src="https://cdn.firepartshub.com/images/ed-gsacc1s.webp" alt="Kidde Strobe Synchronization Module GSA-CC1S - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-cc1s.html">Kidde Strobe Synchronization Module GSA-CC1S</a></div>
@@ -721,7 +794,7 @@
                 <a href="gsa-cc1s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde alarm control panel expansion module gsa-cc2">
             <a href="gsa-cc2.html"><img src="https://cdn.firepartshub.com/images/ed-gsacc2.webp" alt="Kidde Alarm Control Panel Expansion Module GSA-CC2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-cc2.html">Kidde Alarm Control Panel Expansion Module GSA-CC2</a></div>
@@ -729,7 +802,7 @@
                 <a href="gsa-cc2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde relay gsa-cr">
             <a href="gsa-cr.html"><img src="https://cdn.firepartshub.com/images/ed-gsacr.webp" alt="Kidde Relay GSA-CR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-cr.html">Kidde Relay GSA-CR</a></div>
@@ -737,7 +810,7 @@
                 <a href="gsa-cr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde input module gsa-ct1">
             <a href="gsa-ct1.html"><img src="https://cdn.firepartshub.com/images/ed-gsact1.webp" alt="Kidde Input Module GSA-CT1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-ct1.html">Kidde Input Module GSA-CT1</a></div>
@@ -745,7 +818,7 @@
                 <a href="gsa-ct1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde input module gsa-ct2">
             <a href="gsa-ct2.html"><img src="https://i.ebayimg.com/images/g/5d0AAeSwRGVpStCb/s-l225.jpg" alt="Kidde Input Module GSA-CT2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-ct2.html">Kidde Input Module GSA-CT2</a></div>
@@ -753,7 +826,7 @@
                 <a href="gsa-ct2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde pull station gsa-m270p">
             <a href="gsa-m270p.html"><img src="https://i.ebayimg.com/images/g/BSkAAeSwA95pFfzY/s-l225.jpg" alt="Kidde Pull Station GSA-M270P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-m270p.html">Kidde Pull Station GSA-M270P</a></div>
@@ -761,7 +834,7 @@
                 <a href="gsa-m270p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde pull station gsa-m278">
             <a href="gsa-m278.html"><img src="https://cdn.firepartshub.com/images/ed-gsam278.webp" alt="Kidde Pull Station GSA-M278 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-m278.html">Kidde Pull Station GSA-M278</a></div>
@@ -769,7 +842,7 @@
                 <a href="gsa-m278.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde input module gsa-mcc1">
             <a href="gsa-mcc1.html"><img src="https://cdn.firepartshub.com/images/ed-gsamcc1.webp" alt="Kidde Input Module GSA-MCC1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-mcc1.html">Kidde Input Module GSA-MCC1</a></div>
@@ -777,7 +850,7 @@
                 <a href="gsa-mcc1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde output module gsa-mcc1s">
             <a href="gsa-mcc1s.html"><img src="https://cdn.firepartshub.com/images/ed-gsamcc1s.webp" alt="Kidde Output Module GSA-MCC1S - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-mcc1s.html">Kidde Output Module GSA-MCC1S</a></div>
@@ -785,7 +858,7 @@
                 <a href="gsa-mcc1s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde input module gsa-mcc2">
             <a href="gsa-mcc2.html"><img src="https://cdn.firepartshub.com/images/ed-gsamcc2.webp" alt="Kidde Input Module GSA-MCC2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-mcc2.html">Kidde Input Module GSA-MCC2</a></div>
@@ -793,7 +866,7 @@
                 <a href="gsa-mcc2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde relay module gsa-mcr">
             <a href="gsa-mcr.html"><img src="https://cdn.firepartshub.com/images/ed-gsamcr.webp" alt="Kidde Relay Module GSA-MCR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-mcr.html">Kidde Relay Module GSA-MCR</a></div>
@@ -801,7 +874,7 @@
                 <a href="gsa-mcr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde input module gsa-mct2">
             <a href="gsa-mct2.html"><img src="https://cdn.firepartshub.com/images/ed-gsamct2.webp" alt="Kidde Input Module GSA-MCT2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-mct2.html">Kidde Input Module GSA-MCT2</a></div>
@@ -809,7 +882,7 @@
                 <a href="gsa-mct2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde monitor module gsa-rm1">
             <a href="gsa-rm1.html"><img src="https://cdn.firepartshub.com/images/ed-gsarm1.webp" alt="Kidde Monitor Module GSA-RM1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-rm1.html">Kidde Monitor Module GSA-RM1</a></div>
@@ -817,7 +890,7 @@
                 <a href="gsa-rm1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde duct smoke detector gsa-sd">
             <a href="gsa-sd.html"><img src="https://cdn.firepartshub.com/images/ed-gsasd.webp" alt="Kidde Duct Smoke Detector GSA-SD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-sd.html">Kidde Duct Smoke Detector GSA-SD</a></div>
@@ -825,7 +898,7 @@
                 <a href="gsa-sd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde tamper module, water flow module gsa-wtm">
             <a href="gsa-wtm.html"><img src="https://cdn.firepartshub.com/images/ed-gsawtm.webp" alt="Kidde Tamper Module, Water Flow Module GSA-WTM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="gsa-wtm.html">Kidde Tamper Module, Water Flow Module GSA-WTM</a></div>
@@ -833,7 +906,7 @@
                 <a href="gsa-wtm.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde temperature and humidity sensor hd135f">
             <a href="hd135f.html"><img src="https://cdn.firepartshub.com/images/3k-hd135f.webp" alt="Kidde Temperature and Humidity Sensor HD135F - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hd135f.html">Kidde Temperature and Humidity Sensor HD135F</a></div>
@@ -841,7 +914,7 @@
                 <a href="hd135f.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector i9010">
             <a href="i9010.html"><img src="https://cdn.firepartshub.com/images/3k-21008697.webp" alt="Kidde Smoke Detector i9010 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="i9010.html">Kidde Smoke Detector i9010</a></div>
@@ -849,7 +922,7 @@
                 <a href="i9010.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector i9050">
             <a href="i9050.html"><img src="https://cdn.firepartshub.com/images/3k-0915e.webp" alt="Kidde Smoke Detector I9050 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="i9050.html">Kidde Smoke Detector I9050</a></div>
@@ -857,7 +930,7 @@
                 <a href="i9050.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde horn strobe int-7atw">
             <a href="int-7atw.html"><img src="https://cdn.firepartshub.com/images/ed-int7atw.webp" alt="Kidde Horn Strobe INT-7ATW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="int-7atw.html">Kidde Horn Strobe INT-7ATW</a></div>
@@ -865,7 +938,7 @@
                 <a href="int-7atw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde pull station k-270-dpo">
             <a href="k-270-dpo.html"><img src="https://i.ebayimg.com/images/g/IqYAAeSw245o2nwd/s-l225.jpg" alt="Kidde Pull Station K-270-DPO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="k-270-dpo.html">Kidde Pull Station K-270-DPO</a></div>
@@ -873,7 +946,7 @@
                 <a href="k-270-dpo.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde pull station k-270-spo">
             <a href="k-270-spo.html"><img src="https://i.ebayimg.com/images/g/gFgAAOSwwghnIUpg/s-l225.jpg" alt="Kidde Pull Station K-270-SPO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="k-270-spo.html">Kidde Pull Station K-270-SPO</a></div>
@@ -881,7 +954,7 @@
                 <a href="k-270-spo.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde pull station k-270a-spo">
             <a href="k-270a-spo.html"><img src="https://cdn.firepartshub.com/images/ed-k270aspo.webp" alt="Kidde Pull Station K-270A-SPO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="k-270a-spo.html">Kidde Pull Station K-270A-SPO</a></div>
@@ -889,7 +962,7 @@
                 <a href="k-270a-spo.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde pull station k-278b-1120">
             <a href="k-278b-1120.html"><img src="https://i.ebayimg.com/images/g/QFoAAeSwNtNok6vL/s-l225.jpg" alt="Kidde Pull Station K-278B-1120 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="k-278b-1120.html">Kidde Pull Station K-278B-1120</a></div>
@@ -897,7 +970,7 @@
                 <a href="k-278b-1120.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde pull station k-279b-1120">
             <a href="k-279b-1120.html"><img src="https://cdn.firepartshub.com/images/ed-k279b1120.webp" alt="Kidde Pull Station K-279B-1120 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="k-279b-1120.html">Kidde Pull Station K-279B-1120</a></div>
@@ -905,7 +978,7 @@
                 <a href="k-279b-1120.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde duct smoke detector ki-ddos">
             <a href="ki-ddos.html"><img src="https://cdn.firepartshub.com/images/ed-kiddos.webp" alt="Kidde Duct Smoke Detector KI-DDOS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ki-ddos.html">Kidde Duct Smoke Detector KI-DDOS</a></div>
@@ -913,7 +986,7 @@
                 <a href="ki-ddos.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fixed temperature heat detector ki-hfd">
             <a href="ki-hfd.html"><img src="https://i.ebayimg.com/images/g/7fIAAOSwFd1mbfZ2/s-l225.jpg" alt="Kidde Fixed Temperature Heat Detector KI-HFD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ki-hfd.html">Kidde Fixed Temperature Heat Detector KI-HFD</a></div>
@@ -921,7 +994,7 @@
                 <a href="ki-hfd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector ki-osd">
             <a href="ki-osd.html"><img src="https://cdn.firepartshub.com/images/ed-kiosd.webp" alt="Kidde Smoke Detector KI-OSD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ki-osd.html">Kidde Smoke Detector KI-OSD</a></div>
@@ -929,7 +1002,7 @@
                 <a href="ki-osd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fenwel 872442 head discharge co2 carbon dioxide brass fire alarm part">
             <a href="kidde-872442-co2.html"><img src="https://i.ebayimg.com/images/g/qCQAAeSwPkZpDRP0/s-l225.jpg" alt="Kidde Fenwel 872442 Head Discharge CO2 Carbon Dioxide Brass Fire Alarm Part - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kidde-872442-co2.html">Kidde Fenwel 872442 Head Discharge CO2 Carbon Dioxide Brass Fire Alarm Part</a></div>
@@ -937,7 +1010,7 @@
                 <a href="kidde-872442-co2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fenwel 967082 line discharge indicator brass part for co2 fire alarm buy">
             <a href="kidde-967082-co2.html"><img src="https://i.ebayimg.com/images/g/Be4AAOSw2bpm0ERn/s-l225.jpg" alt="Kidde Fenwel 967082 Line Discharge Indicator Brass Part For CO2 Fire Alarm Buy - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kidde-967082-co2.html">Kidde Fenwel 967082 Line Discharge Indicator Brass Part For CO2 Fire Alarm Buy</a></div>
@@ -945,7 +1018,7 @@
                 <a href="kidde-967082-co2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde commercial horn strobe led series white fire eg1avwf new!">
             <a href="kidde-eg1avwf.html"><img src="https://i.ebayimg.com/images/g/BlgAAeSwZPZowxRe/s-l225.jpg" alt="Kidde Commercial Horn Strobe LED Series White Fire EG1AVWF New! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kidde-eg1avwf.html">Kidde Commercial Horn Strobe LED Series White Fire EG1AVWF New!</a></div>
@@ -953,7 +1026,7 @@
                 <a href="kidde-eg1avwf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde eg1vrf compact wall strobe">
             <a href="kidde-eg1vrf.html"><img src="https://i.ebayimg.com/images/g/ae0AAOSwZ9xoD9-o/s-l225.jpg" alt="Kidde EG1VRF Compact Wall Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kidde-eg1vrf.html">Kidde EG1VRF Compact Wall Strobe</a></div>
@@ -961,7 +1034,7 @@
                 <a href="kidde-eg1vrf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde vs4-rd red fire alarm enclosure back part only clean nice fast shipping  ">
             <a href="kidde-vs4.html"><img src="https://i.ebayimg.com/images/g/xIcAAeSwxfNpzD8S/s-l225.jpg" alt="Kidde VS4-RD Red Fire Alarm ENCLOSURE Back PART ONLY CLEAN NICE FAST SHIPPING   - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kidde-vs4.html">Kidde VS4-RD Red Fire Alarm ENCLOSURE Back PART ONLY CLEAN NICE FAST SHIPPING  </a></div>
@@ -969,7 +1042,7 @@
                 <a href="kidde-vs4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fixed temperature heat detector kir-hd">
             <a href="kir-hd.html"><img src="https://cdn.firepartshub.com/images/ed-kirhd.webp" alt="Kidde Fixed Temperature Heat Detector KIR-HD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kir-hd.html">Kidde Fixed Temperature Heat Detector KIR-HD</a></div>
@@ -977,7 +1050,7 @@
                 <a href="kir-hd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm kn-cob-b-lpm">
             <a href="kn-cob-b-lpm.html"><img src="https://cdn.firepartshub.com/images/3k-21025778.webp" alt="Kidde Carbon Monoxide Alarm KN-COB-B-LPM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kn-cob-b-lpm.html">Kidde Carbon Monoxide Alarm KN-COB-B-LPM</a></div>
@@ -985,7 +1058,7 @@
                 <a href="kn-cob-b-lpm.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm kn-cob-dp2">
             <a href="kn-cob-dp2.html"><img src="https://cdn.firepartshub.com/images/3k-21025759.webp" alt="Kidde Carbon Monoxide Alarm KN-COB-DP2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kn-cob-dp2.html">Kidde Carbon Monoxide Alarm KN-COB-DP2</a></div>
@@ -993,7 +1066,7 @@
                 <a href="kn-cob-dp2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm kn-cob-ic">
             <a href="kn-cob-ic.html"><img src="https://cdn.firepartshub.com/images/3k-21006406.webp" alt="Kidde Carbon Monoxide Alarm KN-COB-IC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kn-cob-ic.html">Kidde Carbon Monoxide Alarm KN-COB-IC</a></div>
@@ -1001,7 +1074,7 @@
                 <a href="kn-cob-ic.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm kn-coeg-3">
             <a href="kn-coeg-3.html"><img src="https://cdn.firepartshub.com/images/3k-900011302.webp" alt="Kidde Carbon Monoxide Alarm KN-COEG-3 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kn-coeg-3.html">Kidde Carbon Monoxide Alarm KN-COEG-3</a></div>
@@ -1009,7 +1082,7 @@
                 <a href="kn-coeg-3.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm kn-cop-ic">
             <a href="kn-cop-ic.html"><img src="https://cdn.firepartshub.com/images/3k-21006407.webp" alt="Kidde Carbon Monoxide Alarm KN-COP-IC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kn-cop-ic.html">Kidde Carbon Monoxide Alarm KN-COP-IC</a></div>
@@ -1017,7 +1090,7 @@
                 <a href="kn-cop-ic.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde carbon monoxide alarm with digital display kn-copp-3 (900-0100-01)">
             <a href="kn-copp-3--900-0100-01.html"><img src="https://via.placeholder.com/400x400?text=No+Image+Available" alt="Kidde Carbon Monoxide Alarm with Digital Display KN-COPP-3 (900-0100-01) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kn-copp-3--900-0100-01.html">Kidde Carbon Monoxide Alarm with Digital Display KN-COPP-3 (900-0100-01)</a></div>
@@ -1025,7 +1098,7 @@
                 <a href="kn-copp-3--900-0100-01.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde smoke detector kn-copp-3">
             <a href="kn-copp-3.html"><img src="https://cdn.firepartshub.com/images/3k-900007601.webp" alt="Kidde Smoke Detector KN-COPP-3 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kn-copp-3.html">Kidde Smoke Detector KN-COPP-3</a></div>
@@ -1033,7 +1106,7 @@
                 <a href="kn-copp-3.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde lens kit lkc-1">
             <a href="lkc-1.html"><img src="https://i.ebayimg.com/images/g/O~kAAeSwvwppw-WO/s-l225.jpg" alt="Kidde Lens Kit LKC-1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lkc-1.html">Kidde Lens Kit LKC-1</a></div>
@@ -1041,7 +1114,7 @@
                 <a href="lkc-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fire extinguisher pro 20 mp">
             <a href="pro-20-mp.html"><img src="https://i.ebayimg.com/images/g/RcIAAOSwBahVGLrJ/s-l225.jpg" alt="Kidde Fire Extinguisher Pro 20 MP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pro-20-mp.html">Kidde Fire Extinguisher Pro 20 MP</a></div>
@@ -1049,7 +1122,7 @@
                 <a href="pro-20-mp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde transceiver smxlo2">
             <a href="smxlo2.html"><img src="https://i.ebayimg.com/images/g/dgIAAOSwbERmyMe-/s-l225.jpg" alt="Kidde Transceiver SMXLO2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="smxlo2.html">Kidde Transceiver SMXLO2</a></div>
@@ -1057,7 +1130,7 @@
                 <a href="smxlo2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde ethernet card vm-eth2">
             <a href="vm-eth2.html"><img src="https://cdn.firepartshub.com/images/ed-vmeth2.webp" alt="Kidde Ethernet Card VM-ETH2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vm-eth2.html">Kidde Ethernet Card VM-ETH2</a></div>
@@ -1065,7 +1138,7 @@
                 <a href="vm-eth2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde facp fiber module vm-nocf">
             <a href="vm-nocf.html"><img src="https://cdn.firepartshub.com/images/ed-vmnocf.webp" alt="Kidde FACP Fiber Module VM-NOCF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vm-nocf.html">Kidde FACP Fiber Module VM-NOCF</a></div>
@@ -1073,7 +1146,7 @@
                 <a href="vm-nocf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde loop expansion module vm-slcxb">
             <a href="vm-slcxb.html"><img src="https://cdn.firepartshub.com/images/ed-vmslcxb.webp" alt="Kidde Loop Expansion Module VM-SLCXB - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vm-slcxb.html">Kidde Loop Expansion Module VM-SLCXB</a></div>
@@ -1081,7 +1154,7 @@
                 <a href="vm-slcxb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="kidde fire alarm control panel vs4">
             <a href="vs4.html"><img src="https://cdn.firepartshub.com/images/ed-vs4rd.webp" alt="Kidde Fire Alarm Control Panel VS4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="vs4.html">Kidde Fire Alarm Control Panel VS4</a></div>
@@ -1108,6 +1181,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Kidde";
+    var CAMPAIGN_ID = "5339136270";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID + 
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

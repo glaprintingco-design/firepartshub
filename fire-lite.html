@@ -139,6 +139,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #d32f2f;
+            box-shadow: 0 2px 10px rgba(211,47,47,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #fff8f8;
+            border: 1px solid #f5c6c6;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { background: #b71c1c; }
+    </style>
 </head>
 <body>
     
@@ -157,11 +212,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Fire-Lite</span></p>
-        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:30px;">Fire-Lite Parts Catalog</h1>
-        <p class="lead">Browsing 123 verified items available for facility management.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Fire-Lite</span></p>
+        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:20px;">Fire-Lite Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 123 verified items. Search by part number or name:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Fire-Lite part number (e.g. 302-EPM-135)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Fire-Lite part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite temperature sensor 302-epm-135">
             <a href="302-epm-135.html"><img src="https://cdn.firepartshub.com/images/fl-302epm135.webp" alt="Fire-Lite Temperature Sensor 302-EPM-135 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="302-epm-135.html">Fire-Lite Temperature Sensor 302-EPM-135</a></div>
@@ -169,7 +242,7 @@
                 <a href="302-epm-135.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control/communicator 411">
             <a href="411.html"><img src="https://cdn.firepartshub.com/images/fl-411.webp" alt="Fire-Lite Fire Alarm Control/Communicator 411 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="411.html">Fire-Lite Fire Alarm Control/Communicator 411</a></div>
@@ -177,7 +250,7 @@
                 <a href="411.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control/communicator 411ud">
             <a href="411ud.html"><img src="https://cdn.firepartshub.com/images/fl-411ud.webp" alt="Fire-Lite Fire Alarm Control/Communicator 411UD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="411ud.html">Fire-Lite Fire Alarm Control/Communicator 411UD</a></div>
@@ -185,7 +258,7 @@
                 <a href="411ud.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control/communicator 411udac">
             <a href="411udac.html"><img src="https://cdn.firepartshub.com/images/fl-411udac.webp" alt="Fire-Lite Fire Alarm Control/Communicator 411UDAC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="411udac.html">Fire-Lite Fire Alarm Control/Communicator 411UDAC</a></div>
@@ -193,7 +266,7 @@
                 <a href="411udac.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite annunciator driver module 4xlmf">
             <a href="4xlmf.html"><img src="https://cdn.firepartshub.com/images/fl-4xlmf.webp" alt="Fire-Lite Annunciator Driver Module 4XLMF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="4xlmf.html">Fire-Lite Annunciator Driver Module 4XLMF</a></div>
@@ -201,7 +274,7 @@
                 <a href="4xlmf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite hardware kit 50133288-001">
             <a href="50133288-001.html"><img src="https://i.ebayimg.com/images/g/M7QAAOSw6r5io3Yh/s-l225.jpg" alt="Fire-Lite Hardware Kit 50133288-001 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="50133288-001.html">Fire-Lite Hardware Kit 50133288-001</a></div>
@@ -209,7 +282,7 @@
                 <a href="50133288-001.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite battery cord 75203">
             <a href="75203.html"><img src="https://i.ebayimg.com/images/g/I7wAAeSwcUpprwrU/s-l225.jpg" alt="Fire-Lite Battery Cord 75203 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="75203.html">Fire-Lite Battery Cord 75203</a></div>
@@ -217,7 +290,7 @@
                 <a href="75203.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite battery cord 75287">
             <a href="75287.html"><img src="https://i.ebayimg.com/images/g/p8AAAOSwaB5XqjC6/s-l225.jpg" alt="Fire-Lite Battery Cord 75287 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="75287.html">Fire-Lite Battery Cord 75287</a></div>
@@ -225,7 +298,7 @@
                 <a href="75287.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite communication module ann-lc">
             <a href="ann-lc.html"><img src="https://cdn.firepartshub.com/images/fl-annlc.webp" alt="Fire-Lite Communication Module ANN-LC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ann-lc.html">Fire-Lite Communication Module ANN-LC</a></div>
@@ -233,7 +306,7 @@
                 <a href="ann-lc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite relay module ann-rly">
             <a href="ann-rly.html"><img src="https://cdn.firepartshub.com/images/fl-annrly.webp" alt="Fire-Lite Relay Module ANN-RLY - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ann-rly.html">Fire-Lite Relay Module ANN-RLY</a></div>
@@ -241,7 +314,7 @@
                 <a href="ann-rly.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12">
             <a href="bg-12.html"><img src="https://i.ebayimg.com/images/g/frAAAeSwqcRpN1bM/s-l225.jpg" alt="Fire-Lite Pull Station BG-12 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12.html">Fire-Lite Pull Station BG-12</a></div>
@@ -249,7 +322,7 @@
                 <a href="bg-12.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12la">
             <a href="bg-12la.html"><img src="https://cdn.firepartshub.com/images/fl-bg12la.webp" alt="Fire-Lite Pull Station BG-12LA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12la.html">Fire-Lite Pull Station BG-12LA</a></div>
@@ -257,7 +330,7 @@
                 <a href="bg-12la.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12lao">
             <a href="bg-12lao.html"><img src="https://cdn.firepartshub.com/images/fl-bg12lao.webp" alt="Fire-Lite Pull Station BG-12LAO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12lao.html">Fire-Lite Pull Station BG-12LAO</a></div>
@@ -265,7 +338,7 @@
                 <a href="bg-12lao.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12lo">
             <a href="bg-12lo.html"><img src="https://cdn.firepartshub.com/images/fl-bg12lo.webp" alt="Fire-Lite Pull Station BG-12LO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12lo.html">Fire-Lite Pull Station BG-12LO</a></div>
@@ -273,7 +346,7 @@
                 <a href="bg-12lo.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12lob">
             <a href="bg-12lob.html"><img src="https://cdn.firepartshub.com/images/fl-bg12lob.webp" alt="Fire-Lite Pull Station BG-12LOB - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12lob.html">Fire-Lite Pull Station BG-12LOB</a></div>
@@ -281,7 +354,7 @@
                 <a href="bg-12lob.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12lr">
             <a href="bg-12lr.html"><img src="https://cdn.firepartshub.com/images/fl-bg12lr.webp" alt="Fire-Lite Pull Station BG-12LR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12lr.html">Fire-Lite Pull Station BG-12LR</a></div>
@@ -289,7 +362,7 @@
                 <a href="bg-12lr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12lra">
             <a href="bg-12lra.html"><img src="https://cdn.firepartshub.com/images/fl-bg12lra.webp" alt="Fire-Lite Pull Station BG-12LRA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12lra.html">Fire-Lite Pull Station BG-12LRA</a></div>
@@ -297,7 +370,7 @@
                 <a href="bg-12lra.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12lsp">
             <a href="bg-12lsp.html"><img src="https://i.ebayimg.com/images/g/66UAAOSwbt5oL20X/s-l225.jpg" alt="Fire-Lite Pull Station BG-12LSP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12lsp.html">Fire-Lite Pull Station BG-12LSP</a></div>
@@ -305,7 +378,7 @@
                 <a href="bg-12lsp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12lx">
             <a href="bg-12lx.html"><img src="https://cdn.firepartshub.com/images/fl-bg12lx.webp" alt="Fire-Lite Pull Station BG-12LX - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12lx.html">Fire-Lite Pull Station BG-12LX</a></div>
@@ -313,7 +386,7 @@
                 <a href="bg-12lx.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12lxsp">
             <a href="bg-12lxsp.html"><img src="https://i.ebayimg.com/images/g/y3EAAeSwEeNp1yyt/s-l225.jpg" alt="Fire-Lite Pull Station BG-12LXSP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12lxsp.html">Fire-Lite Pull Station BG-12LXSP</a></div>
@@ -321,7 +394,7 @@
                 <a href="bg-12lxsp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station bg-12sl">
             <a href="bg-12sl.html"><img src="https://cdn.firepartshub.com/images/fl-bg12sl.webp" alt="Fire-Lite Pull Station BG-12SL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="bg-12sl.html">Fire-Lite Pull Station BG-12SL</a></div>
@@ -329,7 +402,7 @@
                 <a href="bg-12sl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite annunciator module cac-4">
             <a href="cac-4.html"><img src="https://i.ebayimg.com/images/g/S4cAAeSwSltpt3aT/s-l225.jpg" alt="Fire-Lite Annunciator Module CAC-4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cac-4.html">Fire-Lite Annunciator Module CAC-4</a></div>
@@ -337,7 +410,7 @@
                 <a href="cac-4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite converter module cac-5x">
             <a href="cac-5x.html"><img src="https://cdn.firepartshub.com/images/fl-cac5x.webp" alt="Fire-Lite Converter Module CAC-5X - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cac-5x.html">Fire-Lite Converter Module CAC-5X</a></div>
@@ -345,7 +418,7 @@
                 <a href="cac-5x.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite two-input/two-output module cdrm-300">
             <a href="cdrm-300.html"><img src="https://cdn.firepartshub.com/images/fl-cdrm300.webp" alt="Fire-Lite Two-input/Two-output Module CDRM-300 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cdrm-300.html">Fire-Lite Two-input/Two-output Module CDRM-300</a></div>
@@ -353,7 +426,7 @@
                 <a href="cdrm-300.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite six supervised control module cmf-300-6">
             <a href="cmf-300-6.html"><img src="https://cdn.firepartshub.com/images/fl-cmf3006.webp" alt="Fire-Lite Six Supervised Control Module CMF-300-6 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cmf-300-6.html">Fire-Lite Six Supervised Control Module CMF-300-6</a></div>
@@ -361,7 +434,7 @@
                 <a href="cmf-300-6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite supervised control module cmf-300">
             <a href="cmf-300.html"><img src="https://cdn.firepartshub.com/images/fl-cmf300.webp" alt="Fire-Lite Supervised Control Module CMF-300 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cmf-300.html">Fire-Lite Supervised Control Module CMF-300</a></div>
@@ -369,7 +442,7 @@
                 <a href="cmf-300.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite addressable relay control module crf-300">
             <a href="crf-300.html"><img src="https://cdn.firepartshub.com/images/fl-crf300.webp" alt="Fire-Lite Addressable Relay Control Module CRF-300 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="crf-300.html">Fire-Lite Addressable Relay Control Module CRF-300</a></div>
@@ -377,7 +450,7 @@
                 <a href="crf-300.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite smoke detector d365pl">
             <a href="d365pl.html"><img src="https://cdn.firepartshub.com/images/fl-d365pl.webp" alt="Fire-Lite Smoke Detector D365PL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="d365pl.html">Fire-Lite Smoke Detector D365PL</a></div>
@@ -385,7 +458,7 @@
                 <a href="d365pl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite standalone communicator/transmitter dact-ud2">
             <a href="dact-ud2.html"><img src="https://cdn.firepartshub.com/images/fl-dactud2.webp" alt="Fire-Lite Standalone Communicator/Transmitter DACT-UD2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="dact-ud2.html">Fire-Lite Standalone Communicator/Transmitter DACT-UD2</a></div>
@@ -393,7 +466,7 @@
                 <a href="dact-ud2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite smoke detector cover dnr">
             <a href="dnr.html"><img src="https://cdn.firepartshub.com/images/fl-dnr.webp" alt="Fire-Lite Smoke Detector Cover DNR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="dnr.html">Fire-Lite Smoke Detector Cover DNR</a></div>
@@ -401,7 +474,7 @@
                 <a href="dnr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite smoke detector cover dnrw">
             <a href="dnrw.html"><img src="https://cdn.firepartshub.com/images/fl-dnrw.webp" alt="Fire-Lite Smoke Detector Cover DNRW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="dnrw.html">Fire-Lite Smoke Detector Cover DNRW</a></div>
@@ -409,7 +482,7 @@
                 <a href="dnrw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite flange panel dp-9692">
             <a href="dp-9692.html"><img src="https://i.ebayimg.com/images/g/onoAAOSwYZVkXr0K/s-l225.jpg" alt="Fire-Lite Flange Panel DP-9692 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="dp-9692.html">Fire-Lite Flange Panel DP-9692</a></div>
@@ -417,7 +490,7 @@
                 <a href="dp-9692.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite flange panel dp-ms2/4">
             <a href="dp-ms2-4.html"><img src="https://i.ebayimg.com/images/g/uUAAAeSwWERpo3iB/s-l225.jpg" alt="Fire-Lite Flange Panel DP-MS2/4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="dp-ms2-4.html">Fire-Lite Flange Panel DP-MS2/4</a></div>
@@ -425,7 +498,7 @@
                 <a href="dp-ms2-4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire amplifier ecc-125da">
             <a href="ecc-125da.html"><img src="https://cdn.firepartshub.com/images/fl-ecc125da.webp" alt="Fire-Lite Fire Amplifier ECC-125DA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-125da.html">Fire-Lite Fire Amplifier ECC-125DA</a></div>
@@ -433,7 +506,7 @@
                 <a href="ecc-125da.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite voice evacuation system ecc-50/100">
             <a href="ecc-50-100.html"><img src="https://cdn.firepartshub.com/images/fl-ecc50100.webp" alt="Fire-Lite Voice Evacuation System ECC-50/100 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-50-100.html">Fire-Lite Voice Evacuation System ECC-50/100</a></div>
@@ -441,7 +514,7 @@
                 <a href="ecc-50-100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire amplifier ecc-50bda">
             <a href="ecc-50bda.html"><img src="https://cdn.firepartshub.com/images/fl-ecc50bda.webp" alt="Fire-Lite Fire Amplifier ECC-50BDA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-50bda.html">Fire-Lite Fire Amplifier ECC-50BDA</a></div>
@@ -449,7 +522,7 @@
                 <a href="ecc-50bda.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire amplifier ecc-50da">
             <a href="ecc-50da.html"><img src="https://cdn.firepartshub.com/images/fl-ecc50da.webp" alt="Fire-Lite Fire Amplifier ECC-50DA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-50da.html">Fire-Lite Fire Amplifier ECC-50DA</a></div>
@@ -457,7 +530,7 @@
                 <a href="ecc-50da.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire amplifier ecc-50w-70v">
             <a href="ecc-50w-70v.html"><img src="https://cdn.firepartshub.com/images/fl-ecc50w70v.webp" alt="Fire-Lite Fire Amplifier ECC-50W-70V - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-50w-70v.html">Fire-Lite Fire Amplifier ECC-50W-70V</a></div>
@@ -465,7 +538,7 @@
                 <a href="ecc-50w-70v.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire amplifier ecc-50wbu">
             <a href="ecc-50wbu.html"><img src="https://cdn.firepartshub.com/images/fl-ecc50wbu.webp" alt="Fire-Lite Fire Amplifier ECC-50WBU - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-50wbu.html">Fire-Lite Fire Amplifier ECC-50WBU</a></div>
@@ -473,7 +546,7 @@
                 <a href="ecc-50wbu.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite audio zone expander module ecc-ce4">
             <a href="ecc-ce4.html"><img src="https://cdn.firepartshub.com/images/fl-eccce4.webp" alt="Fire-Lite Audio Zone Expander Module ECC-CE4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-ce4.html">Fire-Lite Audio Zone Expander Module ECC-CE4</a></div>
@@ -481,7 +554,7 @@
                 <a href="ecc-ce4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite voice evacuation system expander module ecc-ce6">
             <a href="ecc-ce6.html"><img src="https://cdn.firepartshub.com/images/fl-eccce6.webp" alt="Fire-Lite Voice Evacuation System Expander Module ECC-CE6 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-ce6.html">Fire-Lite Voice Evacuation System Expander Module ECC-CE6</a></div>
@@ -489,7 +562,7 @@
                 <a href="ecc-ce6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite firefighter telephone ecc-fft">
             <a href="ecc-fft.html"><img src="https://cdn.firepartshub.com/images/fl-eccfft.webp" alt="Fire-Lite Firefighter Telephone ECC-FFT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-fft.html">Fire-Lite Firefighter Telephone ECC-FFT</a></div>
@@ -497,7 +570,7 @@
                 <a href="ecc-fft.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite transformer conversion module ecc-xrm-70v">
             <a href="ecc-xrm-70v.html"><img src="https://cdn.firepartshub.com/images/fl-eccxrm70v.webp" alt="Fire-Lite Transformer Conversion Module ECC-XRM-70V - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ecc-xrm-70v.html">Fire-Lite Transformer Conversion Module ECC-XRM-70V</a></div>
@@ -505,7 +578,7 @@
                 <a href="ecc-xrm-70v.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control panel es-1000x">
             <a href="es-1000x.html"><img src="https://cdn.firepartshub.com/images/fl-es1000x.webp" alt="Fire-Lite Fire Alarm Control Panel ES-1000X - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="es-1000x.html">Fire-Lite Fire Alarm Control Panel ES-1000X</a></div>
@@ -513,7 +586,7 @@
                 <a href="es-1000x.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control/communicator es-200x">
             <a href="es-200x.html"><img src="https://cdn.firepartshub.com/images/fl-es200x.webp" alt="Fire-Lite Fire Alarm Control/Communicator ES-200X - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="es-200x.html">Fire-Lite Fire Alarm Control/Communicator ES-200X</a></div>
@@ -521,7 +594,7 @@
                 <a href="es-200x.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control/communicator es-50x">
             <a href="es-50x.html"><img src="https://cdn.firepartshub.com/images/fl-es50x.webp" alt="Fire-Lite Fire Alarm Control/Communicator ES-50X - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="es-50x.html">Fire-Lite Fire Alarm Control/Communicator ES-50X</a></div>
@@ -529,7 +602,7 @@
                 <a href="es-50x.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite handset fhs-f">
             <a href="fhs-f.html"><img src="https://i.ebayimg.com/images/g/r4UAAeSwH0Bpa3L2/s-l225.jpg" alt="Fire-Lite Handset FHS-F - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fhs-f.html">Fire-Lite Handset FHS-F</a></div>
@@ -537,7 +610,7 @@
                 <a href="fhs-f.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite part #05258 fire alarm panel enclosure only *read desc*">
             <a href="fire-lite-05258.html"><img src="https://i.ebayimg.com/images/g/OW8AAeSwlONpzR3r/s-l225.jpg" alt="Fire-Lite Part #05258 Fire Alarm Panel Enclosure Only *READ DESC* - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-05258.html">Fire-Lite Part #05258 Fire Alarm Panel Enclosure Only *READ DESC*</a></div>
@@ -545,7 +618,7 @@
                 <a href="fire-lite-05258.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite xrm-24b fire alarm control panel power tranformer (new in box)">
             <a href="fire-lite-24b.html"><img src="https://i.ebayimg.com/images/g/6aAAAeSwztNpTvik/s-l225.jpg" alt="Fire-Lite XRM-24B Fire Alarm Control Panel Power Tranformer (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-24b.html">Fire-Lite XRM-24B Fire Alarm Control Panel Power Tranformer (NEW IN BOX)</a></div>
@@ -553,7 +626,7 @@
                 <a href="fire-lite-24b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell fire-lite relay control module cmf-300, l01-0418-001,">
             <a href="fire-lite-300-l01.html"><img src="https://i.ebayimg.com/images/g/-xAAAeSwC2hop0OW/s-l225.jpg" alt="Honeywell Fire-Lite Relay Control Module CMF-300, L01-0418-001, - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-300-l01.html">Honeywell Fire-Lite Relay Control Module CMF-300, L01-0418-001,</a></div>
@@ -561,7 +634,7 @@
                 <a href="fire-lite-300-l01.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite 400tar fire alarm control panel transformers (new in box)">
             <a href="fire-lite-400tar.html"><img src="https://i.ebayimg.com/images/g/rAQAAeSwptlpTvgs/s-l225.jpg" alt="Fire-Lite 400TAR Fire Alarm Control Panel Transformers (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-400tar.html">Fire-Lite 400TAR Fire Alarm Control Panel Transformers (NEW IN BOX)</a></div>
@@ -569,7 +642,7 @@
                 <a href="fire-lite-400tar.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite 4024zr 24 volt zone relay module for ms4024 fire alarm">
             <a href="fire-lite-4024zr-ms4024.html"><img src="https://i.ebayimg.com/images/g/KooAAOSw3xJVfkiZ/s-l225.jpg" alt="Fire-Lite 4024ZR 24 volt Zone Relay Module For MS4024 Fire alarm - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-4024zr-ms4024.html">Fire-Lite 4024ZR 24 volt Zone Relay Module For MS4024 Fire alarm</a></div>
@@ -577,7 +650,7 @@
                 <a href="fire-lite-4024zr-ms4024.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite 411udac fire watch alarm communicator replacement board certified part">
             <a href="fire-lite-411udac.html"><img src="https://i.ebayimg.com/images/g/XcgAAeSwc3tn2uE8/s-l225.jpg" alt="Fire-Lite 411UDAC Fire Watch Alarm Communicator Replacement Board Certified Part - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-411udac.html">Fire-Lite 411UDAC Fire Watch Alarm Communicator Replacement Board Certified Part</a></div>
@@ -585,7 +658,7 @@
                 <a href="fire-lite-411udac.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite nac-rem notification and relay expander module. 5210-ud fire alarm.">
             <a href="fire-lite-5210-ud.html"><img src="https://i.ebayimg.com/images/g/y0gAAeSw2FBpMMrR/s-l225.jpg" alt="FIRE-LITE NAC-REM NOTIFICATION AND RELAY EXPANDER MODULE. 5210-UD FIRE ALARM. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-5210-ud.html">FIRE-LITE NAC-REM NOTIFICATION AND RELAY EXPANDER MODULE. 5210-UD FIRE ALARM.</a></div>
@@ -593,7 +666,7 @@
                 <a href="fire-lite-5210-ud.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new fire-lite rm-5f 5 zone form c relay card module nib!">
             <a href="fire-lite-5f.html"><img src="https://i.ebayimg.com/images/g/EEoAAOSw89Bke5Sj/s-l225.jpg" alt="NEW FIRE-LITE RM-5F 5 ZONE FORM C RELAY CARD MODULE NIB! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-5f.html">NEW FIRE-LITE RM-5F 5 ZONE FORM C RELAY CARD MODULE NIB!</a></div>
@@ -601,7 +674,7 @@
                 <a href="fire-lite-5f.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ad355 intelligent heat detector usa stock">
             <a href="fire-lite-ad355.html"><img src="https://i.ebayimg.com/images/g/InYAAOSw5CloWO7v/s-l225.jpg" alt="Fire-lite AD355 Intelligent Heat Detector USA STOCK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ad355.html">Fire-lite AD355 Intelligent Heat Detector USA STOCK</a></div>
@@ -609,7 +682,7 @@
                 <a href="fire-lite-ad355.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ann80 80 character remote lcd serial annunciator - red. new!">
             <a href="fire-lite-ann80-lcd.html"><img src="https://i.ebayimg.com/images/g/0BYAAOSw5XpiqkpQ/s-l225.jpg" alt="Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator - Red. NEW! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ann80-lcd.html">Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator - Red. NEW!</a></div>
@@ -617,7 +690,7 @@
                 <a href="fire-lite-ann80-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="brand new fire-lite ann80 80 character remote lcd serial annunciator - red ">
             <a href="fire-lite-ann80-lcd1-1.html"><img src="https://i.ebayimg.com/images/g/LpYAAeSwcw5pCTt3/s-l225.jpg" alt="Brand New Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator - Red  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ann80-lcd1-1.html">Brand New Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator - Red </a></div>
@@ -625,7 +698,7 @@
                 <a href="fire-lite-ann80-lcd1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ann80 80 character remote lcd serial annunciator">
             <a href="fire-lite-ann80-lcd2-1.html"><img src="https://i.ebayimg.com/images/g/6KQAAeSw44BobruD/s-l225.jpg" alt="Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ann80-lcd2-1.html">Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator</a></div>
@@ -633,7 +706,7 @@
                 <a href="fire-lite-ann80-lcd2-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ann80 80 character remote lcd serial annunciator - red">
             <a href="fire-lite-ann80-lcd3-1.html"><img src="https://i.ebayimg.com/images/g/-FAAAOSwR9BfdHcC/s-l225.jpg" alt="Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator - Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ann80-lcd3-1.html">Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator - Red</a></div>
@@ -641,7 +714,7 @@
                 <a href="fire-lite-ann80-lcd3-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ann80 80 character remote lcd serial annunciator - white. used! works.">
             <a href="fire-lite-ann80-lcd4-1.html"><img src="https://i.ebayimg.com/images/g/EdYAAOSw-q1j6xwp/s-l225.jpg" alt="Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator - White. USED! Works. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ann80-lcd4-1.html">Fire-Lite ANN80 80 Character Remote LCD Serial Annunciator - White. USED! Works.</a></div>
@@ -649,7 +722,7 @@
                 <a href="fire-lite-ann80-lcd4-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite beam355 beam detector">
             <a href="fire-lite-beam355.html"><img src="https://i.ebayimg.com/images/g/-50AAeSwIaBpZbhy/s-l225.jpg" alt="Fire-Lite BEAM355 Beam Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-beam355.html">Fire-Lite BEAM355 Beam Detector</a></div>
@@ -657,7 +730,7 @@
                 <a href="fire-lite-beam355.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite beam355s fire alarm projected beam smoke detector">
             <a href="fire-lite-beam355s.html"><img src="https://i.ebayimg.com/images/g/sf8AAeSwmwNpTvgx/s-l225.jpg" alt="Fire-Lite BEAM355S Fire Alarm Projected Beam Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-beam355s.html">Fire-Lite BEAM355S Fire Alarm Projected Beam Smoke Detector</a></div>
@@ -665,7 +738,7 @@
                 <a href="fire-lite-beam355s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="(2) fire-lite bg-12l fire alarm pull station used">
             <a href="fire-lite-bg12l.html"><img src="https://i.ebayimg.com/images/g/CIQAAeSw4-RpSC5m/s-l225.jpg" alt="(2) Fire-Lite BG-12L Fire Alarm Pull Station USED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-bg12l.html">(2) Fire-Lite BG-12L Fire Alarm Pull Station USED</a></div>
@@ -673,7 +746,7 @@
                 <a href="fire-lite-bg12l.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite bg-12sl fire alarm pull station used">
             <a href="fire-lite-bg12sl.html"><img src="https://i.ebayimg.com/images/g/AxYAAeSwbNFpN1UV/s-l225.jpg" alt="Fire-Lite BG-12SL Fire Alarm Pull Station USED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-bg12sl.html">Fire-Lite BG-12SL Fire Alarm Pull Station USED</a></div>
@@ -681,7 +754,7 @@
                 <a href="fire-lite-bg12sl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell fire-lite c304 control module">
             <a href="fire-lite-c304.html"><img src="https://i.ebayimg.com/images/g/JgYAAOSwCBJoNLp9/s-l225.jpg" alt="Honeywell Fire-Lite C304 Control module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-c304.html">Honeywell Fire-Lite C304 Control module</a></div>
@@ -689,7 +762,7 @@
                 <a href="fire-lite-c304.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite alarms by honeywell d355pl non-relay duct smoke detector ">
             <a href="fire-lite-d355pl.html"><img src="https://i.ebayimg.com/images/g/A~4AAeSwPF5pWxlp/s-l225.jpg" alt="Fire-Lite Alarms by Honeywell D355PL Non-Relay Duct Smoke Detector  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-d355pl.html">Fire-Lite Alarms by Honeywell D355PL Non-Relay Duct Smoke Detector </a></div>
@@ -697,7 +770,7 @@
                 <a href="fire-lite-d355pl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite mounting enclosure for control module, monitor module">
             <a href="fire-lite-enclosure.html"><img src="https://i.ebayimg.com/images/g/P8cAAOSwd31oVE1E/s-l225.jpg" alt="Fire-Lite Mounting Enclosure for Control Module, Monitor Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-enclosure.html">Fire-Lite Mounting Enclosure for Control Module, Monitor Module</a></div>
@@ -705,7 +778,7 @@
                 <a href="fire-lite-enclosure.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fcps-24fspca power supply board parts">
             <a href="fire-lite-fcps24fspca.html"><img src="https://i.ebayimg.com/images/g/NFUAAOSw6p9nDHG0/s-l225.jpg" alt="Fire-Lite FCPS-24FSPCA Power Supply Board Parts - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-fcps24fspca.html">Fire-Lite FCPS-24FSPCA Power Supply Board Parts</a></div>
@@ -713,7 +786,7 @@
                 <a href="fire-lite-fcps24fspca.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="for parts - fire-lite fcps-24pcb rev e power supply/charger">
             <a href="fire-lite-fcps24pcb.html"><img src="https://i.ebayimg.com/images/g/b3gAAeSw0kppJ3m~/s-l225.jpg" alt="For Parts - Fire-Lite FCPS-24PCB Rev E Power Supply/Charger - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-fcps24pcb.html">For Parts - Fire-Lite FCPS-24PCB Rev E Power Supply/Charger</a></div>
@@ -721,7 +794,7 @@
                 <a href="fire-lite-fcps24pcb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite/honeywell | model:osi-ri-fl | lr projected beam smoke imaging detector">
             <a href="fire-lite-fl.html"><img src="https://i.ebayimg.com/images/g/GRUAAeSw4y5pJdQE/s-l225.jpg" alt="Fire-Lite/Honeywell | Model:OSI-RI-FL | LR Projected Beam Smoke Imaging Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-fl.html">Fire-Lite/Honeywell | Model:OSI-RI-FL | LR Projected Beam Smoke Imaging Detector</a></div>
@@ -729,7 +802,7 @@
                 <a href="fire-lite-fl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite osi-ri-fl beam detector">
             <a href="fire-lite-fl1-1.html"><img src="https://i.ebayimg.com/images/g/xWIAAeSwlb1pZdHz/s-l225.jpg" alt="Fire-Lite OSI-RI-FL Beam Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-fl1-1.html">Fire-Lite OSI-RI-FL Beam Detector</a></div>
@@ -737,7 +810,7 @@
                 <a href="fire-lite-fl1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell fire-lite alarms osi-ri-fl reflective beam single-ended smoke detector">
             <a href="fire-lite-fl2-1.html"><img src="https://i.ebayimg.com/images/g/j7kAAOSwd69oTH7E/s-l225.jpg" alt="Honeywell Fire-Lite Alarms OSI-RI-FL Reflective Beam Single-Ended Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-fl2-1.html">Honeywell Fire-Lite Alarms OSI-RI-FL Reflective Beam Single-Ended Smoke Detector</a></div>
@@ -745,7 +818,7 @@
                 <a href="fire-lite-fl2-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="osi-ri-fl | fire-lite intelligent beam smoke detector, reflector-type, 16–328">
             <a href="fire-lite-fl328-1.html"><img src="https://i.ebayimg.com/images/g/1QQAAeSwITNpMqDZ/s-l225.jpg" alt="OSI-RI-FL | Fire-Lite Intelligent Beam Smoke Detector, Reflector-Type, 16–328 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-fl328-1.html">OSI-RI-FL | Fire-Lite Intelligent Beam Smoke Detector, Reflector-Type, 16–328</a></div>
@@ -753,7 +826,7 @@
                 <a href="fire-lite-fl328-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell fire-lite h350r heat detector head">
             <a href="fire-lite-h350r.html"><img src="https://i.ebayimg.com/images/g/TGAAAOSwYoFjEPxn/s-l225.jpg" alt="Honeywell Fire-Lite H350R Heat Detector Head - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-h350r.html">Honeywell Fire-Lite H350R Heat Detector Head</a></div>
@@ -761,7 +834,7 @@
                 <a href="fire-lite-h350r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell fire-lite h355 low profile addressable smoke & heat detector">
             <a href="fire-lite-h355.html"><img src="https://i.ebayimg.com/images/g/DQcAAeSw8axpI1RY/s-l225.jpg" alt="Honeywell Fire-Lite H355 Low Profile Addressable Smoke & Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-h355.html">Honeywell Fire-Lite H355 Low Profile Addressable Smoke & Heat Detector</a></div>
@@ -769,7 +842,7 @@
                 <a href="fire-lite-h355.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite h355ht 190 f high temperatrue heat detector">
             <a href="fire-lite-h355ht.html"><img src="https://i.ebayimg.com/images/g/ES4AAeSwsGFpUxw2/s-l225.jpg" alt="Fire-lite H355HT 190 F HIGH TEMPERATRUE HEAT DETECTOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-h355ht.html">Fire-lite H355HT 190 F HIGH TEMPERATRUE HEAT DETECTOR</a></div>
@@ -777,7 +850,7 @@
                 <a href="fire-lite-h355ht.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite h365 low-profile addressable heat detector new (open box)">
             <a href="fire-lite-h365.html"><img src="https://i.ebayimg.com/images/g/j48AAOSw3khoG859/s-l225.jpg" alt="Fire-Lite H365 Low-Profile Addressable Heat Detector NEW (Open Box) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-h365.html">Fire-Lite H365 Low-Profile Addressable Heat Detector NEW (Open Box)</a></div>
@@ -785,7 +858,7 @@
                 <a href="fire-lite-h365.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="ann-80-w | fire-lite 80-character lcd annunciator, white, remote fire alarm dis">
             <a href="fire-lite-lcd.html"><img src="https://i.ebayimg.com/images/g/rZwAAeSw27JpMqDO/s-l225.jpg" alt="ANN-80-W | Fire-Lite 80-Character LCD Annunciator, White, Remote Fire Alarm Dis - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-lcd.html">ANN-80-W | Fire-Lite 80-Character LCD Annunciator, White, Remote Fire Alarm Dis</a></div>
@@ -793,7 +866,7 @@
                 <a href="fire-lite-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ann-80 80 character remote lcd serial annunciator (new)">
             <a href="fire-lite-lcd1-1.html"><img src="https://i.ebayimg.com/images/g/3D4AAOSwN6xkikpb/s-l225.jpg" alt="Fire-Lite ANN-80 80 Character Remote LCD Serial Annunciator (NEW) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-lcd1-1.html">Fire-Lite ANN-80 80 Character Remote LCD Serial Annunciator (NEW)</a></div>
@@ -801,7 +874,7 @@
                 <a href="fire-lite-lcd1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="repair service for fire-lite lcd-40 lcd40 remote annunciator 6mon warranty">
             <a href="fire-lite-lcd40-6mon.html"><img src="https://i.ebayimg.com/images/g/bk4AAOSwTqZnk9Oj/s-l225.jpg" alt="Repair Service For Fire-Lite LCD-40 LCD40 Remote Annunciator 6Mon Warranty - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-lcd40-6mon.html">Repair Service For Fire-Lite LCD-40 LCD40 Remote Annunciator 6Mon Warranty</a></div>
@@ -809,7 +882,7 @@
                 <a href="fire-lite-lcd40-6mon.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite lcd 41d2 remote annunciator">
             <a href="fire-lite-lcd41d2.html"><img src="https://i.ebayimg.com/images/g/QaYAAeSwCMlpZBy7/s-l225.jpg" alt="Fire-Lite LCD 41D2 Remote Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-lcd41d2.html">Fire-Lite LCD 41D2 Remote Annunciator</a></div>
@@ -817,7 +890,7 @@
                 <a href="fire-lite-lcd41d2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="repair service for fire-lite lcd-80 lcd80 lcd-80-f remote annunciator 6mon warr">
             <a href="fire-lite-lcd80-6mon.html"><img src="https://i.ebayimg.com/images/g/lykAAOSw6qdnk9Q1/s-l225.jpg" alt="Repair Service For Fire-Lite LCD-80 LCD80 LCD-80-F Remote Annunciator 6Mon Warr - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-lcd80-6mon.html">Repair Service For Fire-Lite LCD-80 LCD80 LCD-80-F Remote Annunciator 6Mon Warr</a></div>
@@ -825,7 +898,7 @@
                 <a href="fire-lite-lcd80-6mon.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite lcd-80f remote fire annunciator new (open box)">
             <a href="fire-lite-lcd80f.html"><img src="https://i.ebayimg.com/images/g/VCQAAOSwBD5lggTu/s-l225.jpg" alt="Fire-Lite LCD-80F Remote Fire Annunciator NEW (Open Box) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-lcd80f.html">Fire-Lite LCD-80F Remote Fire Annunciator NEW (Open Box)</a></div>
@@ -833,7 +906,7 @@
                 <a href="fire-lite-lcd80f.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="used fire-lite m300 monitor module issue ah-1723 free shipping">
             <a href="fire-lite-m300.html"><img src="https://i.ebayimg.com/images/g/fw8AAOSwQ5tfyFAY/s-l225.jpg" alt="USED FIRE-LITE M300 MONITOR MODULE ISSUE AH-1723 FREE SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-m300.html">USED FIRE-LITE M300 MONITOR MODULE ISSUE AH-1723 FREE SHIPPING</a></div>
@@ -841,7 +914,7 @@
                 <a href="fire-lite-m300.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ms-10ud-7 10-zone fire alarm system replacement parts">
             <a href="fire-lite-ms10ud.html"><img src="https://i.ebayimg.com/images/g/fq8AAeSw4edo86wx/s-l225.jpg" alt="Fire-Lite MS-10UD-7 10-Zone Fire Alarm System Replacement Parts - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ms10ud.html">Fire-Lite MS-10UD-7 10-Zone Fire Alarm System Replacement Parts</a></div>
@@ -849,7 +922,7 @@
                 <a href="fire-lite-ms10ud.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ms4000-40xxmb fire alarm control panel untested parts only">
             <a href="fire-lite-ms4000-40xxmb.html"><img src="https://i.ebayimg.com/images/g/V-UAAOSwhq1lPZNe/s-l225.jpg" alt="Fire-Lite MS4000-40XXMB Fire Alarm Control Panel Untested Parts Only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ms4000-40xxmb.html">Fire-Lite MS4000-40XXMB Fire Alarm Control Panel Untested Parts Only</a></div>
@@ -857,7 +930,7 @@
                 <a href="fire-lite-ms4000-40xxmb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="firelite fire-lite ms-9200ud not fully tested for parts/repair board only">
             <a href="fire-lite-ms9200ud.html"><img src="https://i.ebayimg.com/images/g/2pkAAOSwhABm2gwh/s-l225.jpg" alt="Firelite Fire-lite MS-9200UD Not fully tested for parts/repair board only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ms9200ud.html">Firelite Fire-lite MS-9200UD Not fully tested for parts/repair board only</a></div>
@@ -865,7 +938,7 @@
                 <a href="fire-lite-ms9200ud.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ms-9200udls fire alarm board rev b untested- for parts/repair">
             <a href="fire-lite-ms9200udls.html"><img src="https://i.ebayimg.com/images/g/V54AAeSwSHtpIjHp/s-l225.jpg" alt="Fire-Lite MS-9200UDLS Fire Alarm Board Rev B Untested- for parts/repair - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ms9200udls.html">Fire-Lite MS-9200UDLS Fire Alarm Board Rev B Untested- for parts/repair</a></div>
@@ -873,7 +946,7 @@
                 <a href="fire-lite-ms9200udls.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite alarms sd355 low profile smoke and heat detector">
             <a href="fire-lite-sd355.html"><img src="https://i.ebayimg.com/images/g/UV8AAOSwPCFoLipX/s-l225.jpg" alt="Fire-Lite Alarms SD355 Low Profile Smoke and Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-sd355.html">Fire-Lite Alarms SD355 Low Profile Smoke and Heat Detector</a></div>
@@ -881,7 +954,7 @@
                 <a href="fire-lite-sd355.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite sd355r photoelectric smoke detector w/ remote test - used">
             <a href="fire-lite-sd355r.html"><img src="https://i.ebayimg.com/images/g/91EAAeSwE6dpJGsj/s-l225.jpg" alt="Fire-Lite SD355R Photoelectric Smoke Detector w/ Remote Test - USED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-sd355r.html">Fire-Lite SD355R Photoelectric Smoke Detector w/ Remote Test - USED</a></div>
@@ -889,7 +962,7 @@
                 <a href="fire-lite-sd355r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="sd355t fire-lite wireless photoelectric smoke detectors fast shipping">
             <a href="fire-lite-sd355t.html"><img src="https://i.ebayimg.com/images/g/k-IAAeSw2KdpHAOd/s-l225.jpg" alt="SD355T Fire-Lite Wireless Photoelectric Smoke Detectors fast shipping - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-sd355t.html">SD355T Fire-Lite Wireless Photoelectric Smoke Detectors fast shipping</a></div>
@@ -897,7 +970,7 @@
                 <a href="fire-lite-sd355t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite sd365 addressable photoelectric smoke detector head">
             <a href="fire-lite-sd365.html"><img src="https://i.ebayimg.com/images/g/DccAAeSwRuZpXrDl/s-l225.jpg" alt="Fire-Lite SD365 Addressable Photoelectric Smoke Detector Head - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-sd365.html">Fire-Lite SD365 Addressable Photoelectric Smoke Detector Head</a></div>
@@ -905,7 +978,7 @@
                 <a href="fire-lite-sd365.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite by honeywell duct detector sd365r white">
             <a href="fire-lite-sd365r.html"><img src="https://i.ebayimg.com/images/g/uiIAAOSwk4lmcFMb/s-l225.jpg" alt="Fire-Lite by Honeywell Duct Detector SD365R White - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-sd365r.html">Fire-Lite by Honeywell Duct Detector SD365R White</a></div>
@@ -913,7 +986,7 @@
                 <a href="fire-lite-sd365r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite phone connector fpj-f">
             <a href="fpj-f.html"><img src="https://cdn.firepartshub.com/images/fl-fpjf.webp" alt="Fire-Lite Phone Connector FPJ-F - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fpj-f.html">Fire-Lite Phone Connector FPJ-F</a></div>
@@ -921,7 +994,7 @@
                 <a href="fpj-f.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite temperature sensor h365">
             <a href="h365.html"><img src="https://cdn.firepartshub.com/images/fl-h365.webp" alt="Fire-Lite Temperature Sensor H365 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="h365.html">Fire-Lite Temperature Sensor H365</a></div>
@@ -929,7 +1002,7 @@
                 <a href="h365.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite temperature sensor h365ht-iv">
             <a href="h365ht-iv.html"><img src="https://cdn.firepartshub.com/images/fl-h365htiv.webp" alt="Fire-Lite Temperature Sensor H365HT-IV - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="h365ht-iv.html">Fire-Lite Temperature Sensor H365HT-IV</a></div>
@@ -937,7 +1010,7 @@
                 <a href="h365ht-iv.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite temperature sensor h365ht">
             <a href="h365ht.html"><img src="https://cdn.firepartshub.com/images/fl-h365ht.webp" alt="Fire-Lite Temperature Sensor H365HT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="h365ht.html">Fire-Lite Temperature Sensor H365HT</a></div>
@@ -945,7 +1018,7 @@
                 <a href="h365ht.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite temperature sensor h365r-iv">
             <a href="h365r-iv.html"><img src="https://cdn.firepartshub.com/images/fl-h365riv.webp" alt="Fire-Lite Temperature Sensor H365R-IV - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="h365r-iv.html">Fire-Lite Temperature Sensor H365R-IV</a></div>
@@ -953,7 +1026,7 @@
                 <a href="h365r-iv.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite temperature sensor h365r">
             <a href="h365r.html"><img src="https://cdn.firepartshub.com/images/fl-h365r.webp" alt="Fire-Lite Temperature Sensor H365R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="h365r.html">Fire-Lite Temperature Sensor H365R</a></div>
@@ -961,7 +1034,7 @@
                 <a href="h365r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite isolator module i300">
             <a href="i300.html"><img src="https://cdn.firepartshub.com/images/fl-i300.webp" alt="Fire-Lite Isolator Module I300 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="i300.html">Fire-Lite Isolator Module I300</a></div>
@@ -969,7 +1042,7 @@
                 <a href="i300.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite addressable monitor module mdf-300">
             <a href="mdf-300.html"><img src="https://cdn.firepartshub.com/images/fl-mdf300.webp" alt="Fire-Lite Addressable Monitor Module MDF-300 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mdf-300.html">Fire-Lite Addressable Monitor Module MDF-300</a></div>
@@ -977,7 +1050,7 @@
                 <a href="mdf-300.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite input monitor module mmf-300-10">
             <a href="mmf-300-10.html"><img src="https://cdn.firepartshub.com/images/fl-mmf30010.webp" alt="Fire-Lite Input Monitor Module MMF-300-10 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mmf-300-10.html">Fire-Lite Input Monitor Module MMF-300-10</a></div>
@@ -985,7 +1058,7 @@
                 <a href="mmf-300-10.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite input monitor module mmf-300">
             <a href="mmf-300.html"><img src="https://cdn.firepartshub.com/images/fl-mmf300.webp" alt="Fire-Lite Input Monitor Module MMF-300 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mmf-300.html">Fire-Lite Input Monitor Module MMF-300</a></div>
@@ -993,7 +1066,7 @@
                 <a href="mmf-300.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite alarm control panel monitor module mmf-301">
             <a href="mmf-301.html"><img src="https://cdn.firepartshub.com/images/fl-mmf301.webp" alt="Fire-Lite Alarm Control Panel Monitor Module MMF-301 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mmf-301.html">Fire-Lite Alarm Control Panel Monitor Module MMF-301</a></div>
@@ -1001,7 +1074,7 @@
                 <a href="mmf-301.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite addressable monitor module mmf-302">
             <a href="mmf-302.html"><img src="https://cdn.firepartshub.com/images/fl-mmf302.webp" alt="Fire-Lite Addressable Monitor Module MMF-302 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mmf-302.html">Fire-Lite Addressable Monitor Module MMF-302</a></div>
@@ -1009,7 +1082,7 @@
                 <a href="mmf-302.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control panel mrp-2001">
             <a href="mrp-2001.html"><img src="https://cdn.firepartshub.com/images/fl-mrp2001.webp" alt="Fire-Lite Fire Alarm Control Panel MRP-2001 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mrp-2001.html">Fire-Lite Fire Alarm Control Panel MRP-2001</a></div>
@@ -1017,7 +1090,7 @@
                 <a href="mrp-2001.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control/communicator ms-10ud-7">
             <a href="ms-10ud-7.html"><img src="https://cdn.firepartshub.com/images/fl-ms10ud7.webp" alt="Fire-Lite Fire Alarm Control/Communicator MS-10UD-7 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ms-10ud-7.html">Fire-Lite Fire Alarm Control/Communicator MS-10UD-7</a></div>
@@ -1025,7 +1098,7 @@
                 <a href="ms-10ud-7.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control panel ms-4">
             <a href="ms-4.html"><img src="https://cdn.firepartshub.com/images/fl-ms4.webp" alt="Fire-Lite Fire Alarm Control Panel MS-4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ms-4.html">Fire-Lite Fire Alarm Control Panel MS-4</a></div>
@@ -1033,7 +1106,7 @@
                 <a href="ms-4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control panel ms-5ud-3">
             <a href="ms-5ud-3.html"><img src="https://cdn.firepartshub.com/images/fl-ms5ud3.webp" alt="Fire-Lite Fire Alarm Control Panel MS-5UD-3 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ms-5ud-3.html">Fire-Lite Fire Alarm Control Panel MS-5UD-3</a></div>
@@ -1041,7 +1114,7 @@
                 <a href="ms-5ud-3.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite beam smoke detector osi-ri-fl">
             <a href="osi-ri-fl.html"><img src="https://cdn.firepartshub.com/images/fl-osirifl.webp" alt="Fire-Lite Beam Smoke Detector OSI-RI-FL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="osi-ri-fl.html">Fire-Lite Beam Smoke Detector OSI-RI-FL</a></div>
@@ -1049,7 +1122,7 @@
                 <a href="osi-ri-fl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite programming keypad pro-411">
             <a href="pro-411.html"><img src="https://cdn.firepartshub.com/images/fl-pro411.webp" alt="Fire-Lite Programming Keypad PRO-411 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pro-411.html">Fire-Lite Programming Keypad PRO-411</a></div>
@@ -1057,7 +1130,7 @@
                 <a href="pro-411.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control panel power extender pwrmod24">
             <a href="pwrmod24.html"><img src="https://cdn.firepartshub.com/images/fl-pwrmod24.webp" alt="Fire-Lite Fire Alarm Control Panel Power Extender PWRMOD24 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pwrmod24.html">Fire-Lite Fire Alarm Control Panel Power Extender PWRMOD24</a></div>
@@ -1065,7 +1138,7 @@
                 <a href="pwrmod24.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite smoke detector sd365-iv">
             <a href="sd365-iv.html"><img src="https://cdn.firepartshub.com/images/fl-sd365iv.webp" alt="Fire-Lite Smoke Detector SD365-IV - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sd365-iv.html">Fire-Lite Smoke Detector SD365-IV</a></div>
@@ -1073,7 +1146,7 @@
                 <a href="sd365-iv.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite smoke detector sd365">
             <a href="sd365.html"><img src="https://cdn.firepartshub.com/images/fl-sd365.webp" alt="Fire-Lite Smoke Detector SD365 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sd365.html">Fire-Lite Smoke Detector SD365</a></div>
@@ -1081,7 +1154,7 @@
                 <a href="sd365.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite fire alarm control panel slc-2ls">
             <a href="slc-2ls.html"><img src="https://cdn.firepartshub.com/images/fl-slc2ls.webp" alt="Fire-Lite Fire Alarm Control Panel SLC-2LS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="slc-2ls.html">Fire-Lite Fire Alarm Control Panel SLC-2LS</a></div>
@@ -1089,7 +1162,7 @@
                 <a href="slc-2ls.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite bg-10 pull station & system sensor 5601p heat detector">
             <a href="system-sensor-bg10-5601p.html"><img src="https://i.ebayimg.com/images/g/Id0AAeSw2FBpMZcW/s-l225.jpg" alt="Fire-Lite BG-10 Pull Station & System Sensor 5601P Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-bg10-5601p.html">Fire-Lite BG-10 Pull Station & System Sensor 5601P Heat Detector</a></div>
@@ -1097,7 +1170,7 @@
                 <a href="system-sensor-bg10-5601p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station/manual call point w-bg12">
             <a href="w-bg12.html"><img src="https://cdn.firepartshub.com/images/fl-wbg12lx.webp" alt="Fire-Lite Pull Station/Manual Call Point W-BG12 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="w-bg12.html">Fire-Lite Pull Station/Manual Call Point W-BG12</a></div>
@@ -1105,7 +1178,7 @@
                 <a href="w-bg12.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite facp wireless display driver w-dis-d">
             <a href="w-dis-d.html"><img src="https://cdn.firepartshub.com/images/fl-wdisd.webp" alt="Fire-Lite FACP Wireless Display Driver W-DIS-D - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="w-dis-d.html">Fire-Lite FACP Wireless Display Driver W-DIS-D</a></div>
@@ -1113,7 +1186,7 @@
                 <a href="w-dis-d.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite temperature and humidity sensor w-h355">
             <a href="w-h355.html"><img src="https://i.ebayimg.com/images/g/82UAAeSw5A9puvmV/s-l225.jpg" alt="Fire-Lite Temperature and Humidity Sensor W-H355 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="w-h355.html">Fire-Lite Temperature and Humidity Sensor W-H355</a></div>
@@ -1121,7 +1194,7 @@
                 <a href="w-h355.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite input monitor module w-mmf">
             <a href="w-mmf.html"><img src="https://cdn.firepartshub.com/images/fl-wmmf.webp" alt="Fire-Lite Input Monitor Module W-MMF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="w-mmf.html">Fire-Lite Input Monitor Module W-MMF</a></div>
@@ -1129,7 +1202,7 @@
                 <a href="w-mmf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite control communication module w-usb">
             <a href="w-usb.html"><img src="https://cdn.firepartshub.com/images/fl-wusb.webp" alt="Fire-Lite Control Communication Module W-USB - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="w-usb.html">Fire-Lite Control Communication Module W-USB</a></div>
@@ -1137,7 +1210,7 @@
                 <a href="w-usb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite pull station xal-53">
             <a href="xal-53.html"><img src="https://cdn.firepartshub.com/images/fl-xal53.webp" alt="Fire-Lite Pull Station XAL-53 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="xal-53.html">Fire-Lite Pull Station XAL-53</a></div>
@@ -1164,6 +1237,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Fire-Lite";
+    var CAMPAIGN_ID = "5339136270";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID + 
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

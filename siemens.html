@@ -139,6 +139,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #d32f2f;
+            box-shadow: 0 2px 10px rgba(211,47,47,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #fff8f8;
+            border: 1px solid #f5c6c6;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { background: #b71c1c; }
+    </style>
 </head>
 <body>
     
@@ -157,11 +212,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Siemens</span></p>
-        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:30px;">Siemens Parts Catalog</h1>
-        <p class="lead">Browsing 160 verified items available for facility management.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Siemens</span></p>
+        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:20px;">Siemens Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 160 verified items. Search by part number or name:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Siemens part number (e.g. UNTESTED!)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Siemens part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fsd901-u3 cerberus system fire alarm remote annunciator untested!">
             <a href="cerberus-fsd901-u3.html"><img src="https://i.ebayimg.com/images/g/3gEAAeSw~x9oTeDL/s-l225.jpg" alt="Siemens FSD901-U3 Cerberus System Fire Alarm Remote Annunciator UNTESTED! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cerberus-fsd901-u3.html">Siemens FSD901-U3 Cerberus System Fire Alarm Remote Annunciator UNTESTED!</a></div>
@@ -169,7 +242,7 @@
                 <a href="cerberus-fsd901-u3.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens cerberus ps-31 system 3 power supply fire alarm part">
             <a href="cerberus-generic-parts.html"><img src="https://i.ebayimg.com/images/g/Mo8AAOSwvjVe4VLg/s-l225.jpg" alt="SIEMENS CERBERUS PS-31 SYSTEM 3 POWER SUPPLY FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cerberus-generic-parts.html">SIEMENS CERBERUS PS-31 SYSTEM 3 POWER SUPPLY FIRE ALARM PART</a></div>
@@ -177,7 +250,7 @@
                 <a href="cerberus-generic-parts.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 2 siemens ms-501 pull stations fire alarm handle cerberus free shipping">
             <a href="cerberus-ms501.html"><img src="https://i.ebayimg.com/images/g/h88AAeSwiK9pU--6/s-l225.jpg" alt="Lot of 2 SIEMENS MS-501 Pull Stations Fire Alarm Handle Cerberus Free Shipping - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cerberus-ms501.html">Lot of 2 SIEMENS MS-501 Pull Stations Fire Alarm Handle Cerberus Free Shipping</a></div>
@@ -185,7 +258,7 @@
                 <a href="cerberus-ms501.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens pyrotronics dt-135cs 6-125 vac / 5 a, self-restoring heat detector. new!">
             <a href="pyrotronics-135cs.html"><img src="https://i.ebayimg.com/images/g/u8EAAeSwuOtov1Mx/s-l225.jpg" alt="Siemens Pyrotronics DT-135CS 6-125 VAC / 5 A, Self-Restoring Heat Detector. New! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-135cs.html">Siemens Pyrotronics DT-135CS 6-125 VAC / 5 A, Self-Restoring Heat Detector. New!</a></div>
@@ -193,7 +266,7 @@
                 <a href="pyrotronics-135cs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens cerberus pyrotronics dt-200cs thermal detector part #500-017586">
             <a href="pyrotronics-200cs.html"><img src="https://i.ebayimg.com/images/g/EsIAAOSwz5Rnt1wH/s-l225.jpg" alt="Siemens Cerberus Pyrotronics DT-200CS Thermal Detector Part #500-017586 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-200cs.html">Siemens Cerberus Pyrotronics DT-200CS Thermal Detector Part #500-017586</a></div>
@@ -201,7 +274,7 @@
                 <a href="pyrotronics-200cs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="cerberus pyrotronics siemens fire protection heat detector dt-200r / 500-019615">
             <a href="pyrotronics-200r.html"><img src="https://i.ebayimg.com/images/g/WsMAAOSwhpFn31C~/s-l225.jpg" alt="Cerberus Pyrotronics Siemens Fire Protection Heat Detector DT-200R / 500-019615 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-200r.html">Cerberus Pyrotronics Siemens Fire Protection Heat Detector DT-200R / 500-019615</a></div>
@@ -209,7 +282,7 @@
                 <a href="pyrotronics-200r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="pyrotronics cerberus siemens da-302 duct detector cover 500-084537 fire alarm">
             <a href="pyrotronics-302.html"><img src="https://i.ebayimg.com/images/g/IokAAOSwbkReojuE/s-l225.jpg" alt="PYROTRONICS CERBERUS SIEMENS DA-302 DUCT DETECTOR COVER 500-084537 FIRE ALARM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-302.html">PYROTRONICS CERBERUS SIEMENS DA-302 DUCT DETECTOR COVER 500-084537 FIRE ALARM</a></div>
@@ -217,7 +290,7 @@
                 <a href="pyrotronics-302.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens cerberus pyrotronics ps-5n7 network interface board fire alarm part ">
             <a href="pyrotronics-5n7.html"><img src="https://i.ebayimg.com/images/g/wS8AAOSwDvBhzZ~M/s-l225.jpg" alt="siemens cerberus pyrotronics ps-5n7 network interface board fire alarm part  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-5n7.html">siemens cerberus pyrotronics ps-5n7 network interface board fire alarm part </a></div>
@@ -225,7 +298,7 @@
                 <a href="pyrotronics-5n7.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens cerberus pyrotronics zct-8b part number: 500-891183 mxl mxlv *free ship*">
             <a href="pyrotronics-8b.html"><img src="https://i.ebayimg.com/images/g/5qgAAOSw2XFUg1-I/s-l225.jpg" alt="SIEMENS CERBERUS PYROTRONICS ZCT-8B Part Number: 500-891183 MXL MXLV *Free Ship* - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-8b.html">SIEMENS CERBERUS PYROTRONICS ZCT-8B Part Number: 500-891183 MXL MXLV *Free Ship*</a></div>
@@ -233,7 +306,7 @@
                 <a href="pyrotronics-8b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens pyrotronics fdootc441 detector combo smoke heat carbon monoxide fire co">
             <a href="pyrotronics-fdootc441.html"><img src="https://i.ebayimg.com/images/g/kmYAAeSw6-lpAjj9/s-l225.jpg" alt="Siemens Pyrotronics FDOOTC441 Detector Combo Smoke Heat Carbon Monoxide Fire CO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-fdootc441.html">Siemens Pyrotronics FDOOTC441 Detector Combo Smoke Heat Carbon Monoxide Fire CO</a></div>
@@ -241,7 +314,7 @@
                 <a href="pyrotronics-fdootc441.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens cerberus pyrotronics dt-11 fire alarm heat detector">
             <a href="pyrotronics-generic-parts.html"><img src="https://i.ebayimg.com/images/g/AqQAAOSww-FoUdZq/s-l225.jpg" alt="SIEMENS CERBERUS PYROTRONICS DT-11 Fire Alarm Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-generic-parts.html">SIEMENS CERBERUS PYROTRONICS DT-11 Fire Alarm Heat Detector</a></div>
@@ -249,7 +322,7 @@
                 <a href="pyrotronics-generic-parts.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens cerberus pyrotronics mc-s17-s, horn strobe red, 1 pc">
             <a href="pyrotronics-mcs17.html"><img src="https://i.ebayimg.com/images/g/-vsAAOSw2PBm9zS-/s-l225.jpg" alt="Siemens Cerberus Pyrotronics MC-S17-S, Horn Strobe Red, 1 pc - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-mcs17.html">Siemens Cerberus Pyrotronics MC-S17-S, Horn Strobe Red, 1 pc</a></div>
@@ -257,7 +330,7 @@
                 <a href="pyrotronics-mcs17.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="cerberus pyrotronics/siemens ms-157 manual pull station vg condition">
             <a href="pyrotronics-ms157.html"><img src="https://i.ebayimg.com/images/g/~PkAAeSwQBdolVTe/s-l225.jpg" alt="Cerberus Pyrotronics/Siemens MS-157 Manual Pull Station VG Condition - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-ms157.html">Cerberus Pyrotronics/Siemens MS-157 Manual Pull Station VG Condition</a></div>
@@ -265,7 +338,7 @@
                 <a href="pyrotronics-ms157.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens pyrotronics zc2-8b-25 zone control card module">
             <a href="pyrotronics-zc2-8b.html"><img src="https://i.ebayimg.com/images/g/HOEAAOSwzUxj6EU7/s-l225.jpg" alt="Siemens Pyrotronics ZC2-8B-25 Zone Control Card Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics-zc2-8b.html">Siemens Pyrotronics ZC2-8B-25 Zone Control Card Module</a></div>
@@ -273,7 +346,7 @@
                 <a href="pyrotronics-zc2-8b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens pyrotronics 544803 fire alarm horn strobe red wallmount">
             <a href="pyrotronics.html"><img src="https://i.ebayimg.com/images/g/eFcAAOSwEhpoAply/s-l225.jpg" alt="Siemens Pyrotronics 544803 Fire Alarm Horn Strobe Red Wallmount - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pyrotronics.html">Siemens Pyrotronics 544803 Fire Alarm Horn Strobe Red Wallmount</a></div>
@@ -281,7 +354,7 @@
                 <a href="pyrotronics.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens msi-10b/ 20b double action manual fire pull station, lot of 2">
             <a href="siemens-10b-20b.html"><img src="https://i.ebayimg.com/images/g/LCUAAeSwg5ppUq0r/s-l225.jpg" alt="SIEMENS MSI-10B/ 20B DOUBLE ACTION MANUAL FIRE PULL STATION, LOT OF 2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-10b-20b.html">SIEMENS MSI-10B/ 20B DOUBLE ACTION MANUAL FIRE PULL STATION, LOT OF 2</a></div>
@@ -289,7 +362,7 @@
                 <a href="siemens-10b-20b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens msi-10b mxl mxl-iq fire alarm pull station *tested">
             <a href="siemens-10b.html"><img src="https://i.ebayimg.com/images/g/I1YAAOSwUNhkOZce/s-l225.jpg" alt="Siemens MSI-10B MXL MXL-IQ Fire Alarm Pull Station *Tested - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-10b.html">Siemens MSI-10B MXL MXL-IQ Fire Alarm Pull Station *Tested</a></div>
@@ -297,7 +370,7 @@
                 <a href="siemens-10b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens db-11 -11e -11c smoke detector base fire protection replacement parts">
             <a href="siemens-11e-11c.html"><img src="https://i.ebayimg.com/images/g/ayIAAOSw3mxkFM68/s-l225.jpg" alt="Siemens DB-11 -11E -11C Smoke Detector Base Fire Protection Replacement Parts - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-11e-11c.html">Siemens DB-11 -11E -11C Smoke Detector Base Fire Protection Replacement Parts</a></div>
@@ -305,7 +378,7 @@
                 <a href="siemens-11e-11c.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 12ah gel f2 battery replaces siemens fc2020 fire control panel">
             <a href="siemens-12ah-f2-fc2020.html"><img src="https://i.ebayimg.com/images/g/g34AAeSwxeVop3Yu/s-l225.jpg" alt="Mighty Max 12V 12AH GEL F2 Battery Replaces Siemens FC2020 Fire Control Panel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-12ah-f2-fc2020.html">Mighty Max 12V 12AH GEL F2 Battery Replaces Siemens FC2020 Fire Control Panel</a></div>
@@ -313,7 +386,7 @@
                 <a href="siemens-12ah-f2-fc2020.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens  rcc-1f remote annunciator backcan & door, board, & controller">
             <a href="siemens-1f.html"><img src="https://i.ebayimg.com/images/g/pm8AAeSwkd9odF-3/s-l225.jpg" alt="SIEMENS  RCC-1F Remote Annunciator Backcan & Door, Board, & Controller - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-1f.html">SIEMENS  RCC-1F Remote Annunciator Backcan & Door, Board, & Controller</a></div>
@@ -321,7 +394,7 @@
                 <a href="siemens-1f.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fire alarm 11433006, fire alarms system part 231-1030, model 11433006">
             <a href="siemens-231-1030.html"><img src="https://i.ebayimg.com/images/g/O2gAAeSwmUtpqMUi/s-l225.jpg" alt="Siemens Fire Alarm 11433006, Fire Alarms System Part 231-1030, Model 11433006 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-231-1030.html">Siemens Fire Alarm 11433006, Fire Alarms System Part 231-1030, Model 11433006</a></div>
@@ -329,7 +402,7 @@
                 <a href="siemens-231-1030.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens ald-2i analog loop driver fire alarm part mxl mxlv system">
             <a href="siemens-2i.html"><img src="https://i.ebayimg.com/images/g/5oQAAOSw-FVe-K-g/s-l225.jpg" alt="SIEMENS ALD-2I ANALOG LOOP DRIVER FIRE ALARM PART MXL MXLV SYSTEM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-2i.html">SIEMENS ALD-2I ANALOG LOOP DRIVER FIRE ALARM PART MXL MXLV SYSTEM</a></div>
@@ -337,7 +410,7 @@
                 <a href="siemens-2i.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens hms-2s intelligent pull station">
             <a href="siemens-2s.html"><img src="https://i.ebayimg.com/images/g/kIoAAOSwmctlibSD/s-l225.jpg" alt="SIEMENS HMS-2S INTELLIGENT PULL STATION - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-2s.html">SIEMENS HMS-2S INTELLIGENT PULL STATION</a></div>
@@ -345,7 +418,7 @@
                 <a href="siemens-2s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens mxl mps-6 power supply 315-090334 fire alarm part">
             <a href="siemens-315-090334.html"><img src="https://i.ebayimg.com/images/g/AkEAAOSw3uleVZEk/s-l225.jpg" alt="SIEMENS MXL MPS-6 POWER SUPPLY 315-090334 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-315-090334.html">SIEMENS MXL MPS-6 POWER SUPPLY 315-090334 FIRE ALARM PART</a></div>
@@ -353,7 +426,7 @@
                 <a href="siemens-315-090334.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens x-ray multix part pn 3774507 d290 e2  x2127 ">
             <a href="siemens-3774507-d290-e2.html"><img src="https://i.ebayimg.com/images/g/LLAAAOSwn8tg1Pbp/s-l225.jpg" alt="Siemens X-Ray Multix part PN 3774507 D290 E2  X2127  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3774507-d290-e2.html">Siemens X-Ray Multix part PN 3774507 D290 E2  X2127 </a></div>
@@ -361,7 +434,7 @@
                 <a href="siemens-3774507-d290-e2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3rf2920-0ga16 sirius sc monitoring module din rail ">
             <a href="siemens-3rf2920-0ga16.html"><img src="https://i.ebayimg.com/images/g/sZMAAOSw3v1jxtEt/s-l225.jpg" alt="Siemens 3RF2920-0GA16 Sirius SC monitoring module Din rail  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3rf2920-0ga16.html">Siemens 3RF2920-0GA16 Sirius SC monitoring module Din rail </a></div>
@@ -369,7 +442,7 @@
                 <a href="siemens-3rf2920-0ga16.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3rh1140-1bb40 40e control relay 3rh11401bb40 plc module dc 24v #">
             <a href="siemens-3rh1140-1bb40-40e.html"><img src="https://i.ebayimg.com/images/g/3wgAAOSwNotgta09/s-l225.jpg" alt="SIEMENS 3RH1140-1BB40 40E Control Relay 3RH11401BB40 PLC Module DC 24V # - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3rh1140-1bb40-40e.html">SIEMENS 3RH1140-1BB40 40E Control Relay 3RH11401BB40 PLC Module DC 24V #</a></div>
@@ -377,7 +450,7 @@
                 <a href="siemens-3rh1140-1bb40-40e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3rk2200-0ce02-0aa2 as-interface control module 4 di ">
             <a href="siemens-3rk2200-0ce02-0aa2.html"><img src="https://i.ebayimg.com/images/g/bZAAAOSwTDhkfyHE/s-l225.jpg" alt="Siemens 3RK2200-0CE02-0AA2 AS-Interface Control Module 4 DI  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3rk2200-0ce02-0aa2.html">Siemens 3RK2200-0CE02-0AA2 AS-Interface Control Module 4 DI </a></div>
@@ -385,7 +458,7 @@
                 <a href="siemens-3rk2200-0ce02-0aa2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3rp1020-1aq30 solid state relay">
             <a href="siemens-3rp1020-1aq30.html"><img src="https://i.ebayimg.com/images/g/RRkAAOSwrf5ksWuX/s-l225.jpg" alt="Siemens 3RP1020-1AQ30 Solid State Relay - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3rp1020-1aq30.html">Siemens 3RP1020-1AQ30 Solid State Relay</a></div>
@@ -393,7 +466,7 @@
                 <a href="siemens-3rp1020-1aq30.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="3rt1017-1bb41 siemens contactor w/ 3rt1916-1bb00">
             <a href="siemens-3rt1017-1bb41-3rt1916.html"><img src="https://i.ebayimg.com/images/g/3VsAAOSwNSxU3lVj/s-l225.jpg" alt="3RT1017-1BB41 Siemens Contactor W/ 3RT1916-1BB00 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3rt1017-1bb41-3rt1916.html">3RT1017-1BB41 Siemens Contactor W/ 3RT1916-1BB00</a></div>
@@ -401,7 +474,7 @@
                 <a href="siemens-3rt1017-1bb41-3rt1916.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="3rt1017-1bb42 siemens contactor w/ 3rt1916-1bb00">
             <a href="siemens-3rt1017-1bb42-3rt1916.html"><img src="https://i.ebayimg.com/images/g/sdgAAOSwBLlU3lNZ/s-l225.jpg" alt="3RT1017-1BB42 Siemens Contactor W/ 3RT1916-1BB00 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3rt1017-1bb42-3rt1916.html">3RT1017-1BB42 Siemens Contactor W/ 3RT1916-1BB00</a></div>
@@ -409,7 +482,7 @@
                 <a href="siemens-3rt1017-1bb42-3rt1916.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3ru1116-1dc1 overload relay 2.5-3.2 amp a 690v 3ru11161dc1 nib new">
             <a href="siemens-3ru1116-1dc1-3ru11161dc1.html"><img src="https://i.ebayimg.com/images/g/QfMAAOSw-ttcZhR~/s-l225.jpg" alt="Siemens 3RU1116-1DC1 Overload Relay 2.5-3.2 amp a 690v 3RU11161DC1 Nib New - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3ru1116-1dc1-3ru11161dc1.html">Siemens 3RU1116-1DC1 Overload Relay 2.5-3.2 amp a 690v 3RU11161DC1 Nib New</a></div>
@@ -417,7 +490,7 @@
                 <a href="siemens-3ru1116-1dc1-3ru11161dc1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens, siguard, 3tk2821-1cb30, safety relay (sp94)">
             <a href="siemens-3tk2821-1cb30-sp94.html"><img src="https://i.ebayimg.com/images/g/h9UAAOSwZJxlpUV8/s-l225.jpg" alt="SIEMENS, SIGUARD, 3TK2821-1CB30, SAFETY RELAY (SP94) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3tk2821-1cb30-sp94.html">SIEMENS, SIGUARD, 3TK2821-1CB30, SAFETY RELAY (SP94)</a></div>
@@ -425,7 +498,7 @@
                 <a href="siemens-3tk2821-1cb30-sp94.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens siguard safety relay 3tk2824-1bb40 3tk28241bb40 250v 6a 6 amp a">
             <a href="siemens-3tk2824-1bb40-3tk28241bb40.html"><img src="https://i.ebayimg.com/images/g/9p4AAOSwhYtlowes/s-l225.jpg" alt="SIEMENS SIGUARD SAFETY RELAY 3TK2824-1BB40 3TK28241BB40 250V 6A 6 AMP A - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3tk2824-1bb40-3tk28241bb40.html">SIEMENS SIGUARD SAFETY RELAY 3TK2824-1BB40 3TK28241BB40 250V 6A 6 AMP A</a></div>
@@ -433,7 +506,7 @@
                 <a href="siemens-3tk2824-1bb40-3tk28241bb40.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3tk2830-2cb30 *e04*  24v ac/dc sirius safety relay">
             <a href="siemens-3tk2830-2cb30-e04.html"><img src="https://i.ebayimg.com/images/g/4ZMAAeSwpFxo7mSn/s-l225.jpg" alt="Siemens 3TK2830-2CB30 *E04*  24V AC/DC Sirius Safety Relay - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3tk2830-2cb30-e04.html">Siemens 3TK2830-2CB30 *E04*  24V AC/DC Sirius Safety Relay</a></div>
@@ -441,7 +514,7 @@
                 <a href="siemens-3tk2830-2cb30-e04.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3tx7113-5ff13 plug in relay 16a 120vac 11 pin base 3tx7144-1e4 15a 300v">
             <a href="siemens-3tx7113-5ff13-3tx7144.html"><img src="https://i.ebayimg.com/images/g/qGsAAOSwm49kQYsI/s-l225.jpg" alt="Siemens 3TX7113-5FF13 Plug In Relay 16A 120VAC 11 PIN Base 3TX7144-1E4 15A 300V - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3tx7113-5ff13-3tx7144.html">Siemens 3TX7113-5FF13 Plug In Relay 16A 120VAC 11 PIN Base 3TX7144-1E4 15A 300V</a></div>
@@ -449,7 +522,7 @@
                 <a href="siemens-3tx7113-5ff13-3tx7144.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3tx7144-4e7 industrial controls spdt panel/din rail socket">
             <a href="siemens-3tx7144-4e7.html"><img src="https://i.ebayimg.com/images/g/jJ8AAeSwUBppE-Xg/s-l225.jpg" alt="SIEMENS 3TX7144-4E7 Industrial Controls SPDT Panel/Din Rail Socket - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3tx7144-4e7.html">SIEMENS 3TX7144-4E7 Industrial Controls SPDT Panel/Din Rail Socket</a></div>
@@ -457,7 +530,7 @@
                 <a href="siemens-3tx7144-4e7.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3ua4101-0g overcurrent relays 1.0-1.5amp">
             <a href="siemens-3ua4101-0g.html"><img src="https://i.ebayimg.com/images/g/pGAAAOSwD0NdLK6F/s-l225.jpg" alt="SIEMENS 3UA4101-0G OVERCURRENT RELAYS 1.0-1.5AMP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3ua4101-0g.html">SIEMENS 3UA4101-0G OVERCURRENT RELAYS 1.0-1.5AMP</a></div>
@@ -465,7 +538,7 @@
                 <a href="siemens-3ua4101-0g.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 3ua4101-0u overcurrent relay 14-18a">
             <a href="siemens-3ua4101-0u.html"><img src="https://i.ebayimg.com/images/g/~ycAAOSwrxFdLK5y/s-l225.jpg" alt="SIEMENS 3UA4101-0U OVERCURRENT RELAY 14-18A - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3ua4101-0u.html">SIEMENS 3UA4101-0U OVERCURRENT RELAY 14-18A</a></div>
@@ -473,7 +546,7 @@
                 <a href="siemens-3ua4101-0u.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="1pcs siemens thermal relay 3us5040-1j 3us5 040-1j 6.3-10a new">
             <a href="siemens-3us5040-1j-3us5.html"><img src="https://i.ebayimg.com/images/g/K3kAAOSwK2RkYuQ5/s-l225.jpg" alt="1PCS Siemens thermal relay 3US5040-1J 3US5 040-1J 6.3-10A New - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-3us5040-1j-3us5.html">1PCS Siemens thermal relay 3US5040-1J 3US5 040-1J 6.3-10A New</a></div>
@@ -481,7 +554,7 @@
                 <a href="siemens-3us5040-1j-3us5.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday fire alarm part zn-1/401310 d/b style dual zone module">
             <a href="siemens-401310.html"><img src="https://i.ebayimg.com/images/g/8IMAAOSwP3xjPtWr/s-l225.jpg" alt="Siemens FARADAY FIRE ALARM PART ZN-1/401310 D/B STYLE DUAL ZONE MODULE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-401310.html">Siemens FARADAY FIRE ALARM PART ZN-1/401310 D/B STYLE DUAL ZONE MODULE</a></div>
@@ -489,7 +562,7 @@
                 <a href="siemens-401310.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday fire alarm part zn-3/401312 d/b style dual zone module w/cutoff">
             <a href="siemens-401312.html"><img src="https://i.ebayimg.com/images/g/hOsAAOSwdkxh2EhU/s-l225.jpg" alt="Siemens FARADAY FIRE ALARM PART ZN-3/401312 D/B STYLE DUAL ZONE MODULE W/CUTOFF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-401312.html">Siemens FARADAY FIRE ALARM PART ZN-3/401312 D/B STYLE DUAL ZONE MODULE W/CUTOFF</a></div>
@@ -497,7 +570,7 @@
                 <a href="siemens-401312.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday fire alarm part ar-3/401318 y dual aux. relay driver module">
             <a href="siemens-401318.html"><img src="https://i.ebayimg.com/images/g/OG0AAOSwjtZjPtWl/s-l225.jpg" alt="Siemens FARADAY FIRE ALARM PART AR-3/401318 Y DUAL AUX. RELAY DRIVER MODULE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-401318.html">Siemens FARADAY FIRE ALARM PART AR-3/401318 Y DUAL AUX. RELAY DRIVER MODULE</a></div>
@@ -505,7 +578,7 @@
                 <a href="siemens-401318.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday 444787 fire alarm part">
             <a href="siemens-444787.html"><img src="https://i.ebayimg.com/images/g/4hEAAMXQ9cpRGESH/s-l225.jpg" alt="Siemens FARADAY 444787 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-444787.html">Siemens FARADAY 444787 FIRE ALARM PART</a></div>
@@ -513,7 +586,7 @@
                 <a href="siemens-444787.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday 444835 fire alarm part">
             <a href="siemens-444835.html"><img src="https://i.ebayimg.com/images/g/tYIAAMXQjq5RAQwF/s-l225.jpg" alt="Siemens FARADAY 444835 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-444835.html">Siemens FARADAY 444835 FIRE ALARM PART</a></div>
@@ -521,7 +594,7 @@
                 <a href="siemens-444835.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday 445087 fire alarm part ci-1/401340">
             <a href="siemens-445087-401340.html"><img src="https://i.ebayimg.com/images/g/rOUAAMXQgJRRAVS4/s-l225.jpg" alt="Siemens FARADAY 445087 FIRE ALARM PART CI-1/401340 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-445087-401340.html">Siemens FARADAY 445087 FIRE ALARM PART CI-1/401340</a></div>
@@ -529,7 +602,7 @@
                 <a href="siemens-445087-401340.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday 445088  fire alarm part">
             <a href="siemens-445088.html"><img src="https://i.ebayimg.com/images/g/NbsAAMXQU6tRARC7/s-l225.jpg" alt="Siemens FARADAY 445088  FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-445088.html">Siemens FARADAY 445088  FIRE ALARM PART</a></div>
@@ -537,7 +610,7 @@
                 <a href="siemens-445088.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday 445147 fire alarm part">
             <a href="siemens-445147.html"><img src="https://i.ebayimg.com/images/g/QvMAAOxymiVRAZLd/s-l225.jpg" alt="Siemens FARADAY 445147 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-445147.html">Siemens FARADAY 445147 FIRE ALARM PART</a></div>
@@ -545,7 +618,7 @@
                 <a href="siemens-445147.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday 445148 fire alarm part">
             <a href="siemens-445148.html"><img src="https://i.ebayimg.com/images/g/HW4AAMXQnYJRASq0/s-l225.jpg" alt="Siemens FARADAY 445148 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-445148.html">Siemens FARADAY 445148 FIRE ALARM PART</a></div>
@@ -553,7 +626,7 @@
                 <a href="siemens-445148.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens faraday 445882 fire alarm part">
             <a href="siemens-445882.html"><img src="https://i.ebayimg.com/images/g/zY4AAOxyuPtRAb6s/s-l225.jpg" alt="Siemens FARADAY 445882 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-445882.html">Siemens FARADAY 445882 FIRE ALARM PART</a></div>
@@ -561,7 +634,7 @@
                 <a href="siemens-445882.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="🤪 siemens sirius sc load monitoring module 7.5 amp 48-460 vac 3rf2920-0fa08">
             <a href="siemens-460-3rf2920-0fa08.html"><img src="https://i.ebayimg.com/images/g/ePsAAeSwANhpW6Nn/s-l225.jpg" alt="🤪 SIEMENS SIRIUS SC LOAD MONITORING MODULE 7.5 AMP 48-460 VAC 3RF2920-0FA08 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-460-3rf2920-0fa08.html">🤪 SIEMENS SIRIUS SC LOAD MONITORING MODULE 7.5 AMP 48-460 VAC 3RF2920-0FA08</a></div>
@@ -569,7 +642,7 @@
                 <a href="siemens-460-3rf2920-0fa08.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fcm-6 6 fan control module board 500-033140 fcm6 fire alarm">
             <a href="siemens-500-033140-fcm6.html"><img src="https://i.ebayimg.com/images/g/yGgAAOSwZz9ncDQa/s-l225.jpg" alt="Siemens FCM-6 6 Fan Control Module Board 500-033140 FCM6 Fire Alarm - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-500-033140-fcm6.html">Siemens FCM-6 6 Fan Control Module Board 500-033140 FCM6 Fire Alarm</a></div>
@@ -577,7 +650,7 @@
                 <a href="siemens-500-033140-fcm6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 500-636166 red horn/strobe alarm zh-mc-cw">
             <a href="siemens-500-636166-mc.html"><img src="https://i.ebayimg.com/images/g/0G4AAeSwGwhop33u/s-l225.jpg" alt="SIEMENS 500-636166 RED HORN/STROBE ALARM ZH-MC-CW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-500-636166-mc.html">SIEMENS 500-636166 RED HORN/STROBE ALARM ZH-MC-CW</a></div>
@@ -585,7 +658,7 @@
                 <a href="siemens-500-636166-mc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 500-636169 zr-mc-r strobe multi- candela wall red-new">
             <a href="siemens-500-636169-zr.html"><img src="https://i.ebayimg.com/images/g/nGQAAeSwknxolXOM/s-l225.jpg" alt="SIEMENS 500-636169 ZR-MC-R STROBE MULTI- CANDELA WALL RED-NEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-500-636169-zr.html">SIEMENS 500-636169 ZR-MC-R STROBE MULTI- CANDELA WALL RED-NEW</a></div>
@@ -593,7 +666,7 @@
                 <a href="siemens-500-636169-zr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 500-636170 zr-mc-w white strobe">
             <a href="siemens-500-636170-zr.html"><img src="https://i.ebayimg.com/images/g/AgsAAeSwIN9or9m5/s-l225.jpg" alt="Siemens 500-636170 ZR-MC-W White Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-500-636170-zr.html">Siemens 500-636170 ZR-MC-W White Strobe</a></div>
@@ -601,7 +674,7 @@
                 <a href="siemens-500-636170-zr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 500-636171 red multi-candela strobe horn fire alarm zr-mc-r">
             <a href="siemens-500-636171-zr.html"><img src="https://i.ebayimg.com/images/g/KDIAAeSwb99pXXO6/s-l225.jpg" alt="Siemens 500-636171 Red Multi-Candela Strobe Horn Fire Alarm ZR-MC-R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-500-636171-zr.html">Siemens 500-636171 Red Multi-Candela Strobe Horn Fire Alarm ZR-MC-R</a></div>
@@ -609,7 +682,7 @@
                 <a href="siemens-500-636171-zr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens part #500-636173c part zr-mc-cr-b new 107223  strobe multi-candela ceili">
             <a href="siemens-500-636173c-zr.html"><img src="https://i.ebayimg.com/images/g/SYAAAOSwUYhhqtG4/s-l225.jpg" alt="Siemens Part #500-636173C part ZR-MC-CR-B new 107223  Strobe Multi-candela Ceili - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-500-636173c-zr.html">Siemens Part #500-636173C part ZR-MC-CR-B new 107223  Strobe Multi-candela Ceili</a></div>
@@ -617,7 +690,7 @@
                 <a href="siemens-500-636173c-zr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens part number 500-649852bg model cpy-vsk4">
             <a href="siemens-500-649852bg-vsk4.html"><img src="https://i.ebayimg.com/images/g/eBEAAOSwoH9mEDSq/s-l225.jpg" alt="Siemens Part number 500-649852BG Model CPY-VSK4 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-500-649852bg-vsk4.html">Siemens Part number 500-649852BG Model CPY-VSK4</a></div>
@@ -625,7 +698,7 @@
                 <a href="siemens-500-649852bg-vsk4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens part number 500-697962bg model cpy-vsk2.5">
             <a href="siemens-500-697962bg-vsk2.html"><img src="https://i.ebayimg.com/images/g/WfkAAOSwV7tmEDyT/s-l225.jpg" alt="Siemens Part number 500-697962BG Model CPY-VSK2.5 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-500-697962bg-vsk2.html">Siemens Part number 500-697962BG Model CPY-VSK2.5</a></div>
@@ -633,7 +706,7 @@
                 <a href="siemens-500-697962bg-vsk2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens mom-2 card cage module for mxl system 2 slots 500-892766 fire alarm part">
             <a href="siemens-500-892766.html"><img src="https://i.ebayimg.com/images/g/zAUAAOSwVpRetzp6/s-l225.jpg" alt="Siemens MOM-2 Card Cage Module for MXL System 2 Slots 500-892766 fire alarm part - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-500-892766.html">Siemens MOM-2 Card Cage Module for MXL System 2 Slots 500-892766 fire alarm part</a></div>
@@ -641,7 +714,7 @@
                 <a href="siemens-500-892766.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens part numbers s 54329 - f 22-a2 fire alarm">
             <a href="siemens-54329-a2.html"><img src="https://i.ebayimg.com/images/g/1P0AAOSwhmBm8XvU/s-l225.jpg" alt="siemens part numbers s 54329 - f 22-A2 fire alarm - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-54329-a2.html">siemens part numbers s 54329 - f 22-A2 fire alarm</a></div>
@@ -649,7 +722,7 @@
                 <a href="siemens-54329-a2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens dlc device loop card fire alarm part 580-034885-1 (10 available)">
             <a href="siemens-580-034885.html"><img src="https://i.ebayimg.com/images/g/5V4AAeSwLCZo7pvM/s-l225.jpg" alt="SIEMENS DLC DEVICE LOOP CARD FIRE ALARM PART 580-034885-1 (10 AVAILABLE) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-580-034885.html">SIEMENS DLC DEVICE LOOP CARD FIRE ALARM PART 580-034885-1 (10 AVAILABLE)</a></div>
@@ -657,7 +730,7 @@
                 <a href="siemens-580-034885.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 6 siemens u-mcs-w strobe white p/n 580-199386 fire alarm part">
             <a href="siemens-580-199386.html"><img src="https://i.ebayimg.com/images/g/wqUAAeSwPttpA6ZE/s-l225.jpg" alt="Lot Of 6 SIEMENS U-MCS-W STROBE WHITE P/N 580-199386 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-580-199386.html">Lot Of 6 SIEMENS U-MCS-W STROBE WHITE P/N 580-199386 FIRE ALARM PART</a></div>
@@ -665,7 +738,7 @@
                 <a href="siemens-580-199386.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens remote annunciator. mkb-3, ann-1, & ps-5n7 -free shipping-">
             <a href="siemens-5n7.html"><img src="https://i.ebayimg.com/images/g/SSQAAOSwkIBm2iLn/s-l225.jpg" alt="SIEMENS Remote Annunciator. MKB-3, ANN-1, & PS-5N7 -FREE Shipping- - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-5n7.html">SIEMENS Remote Annunciator. MKB-3, ANN-1, & PS-5N7 -FREE Shipping-</a></div>
@@ -673,7 +746,7 @@
                 <a href="siemens-5n7.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 5tg0400-1gm delta geo methane gas leak detector ip42 230v 2va">
             <a href="siemens-5tg0400-1gm-ip42.html"><img src="https://i.ebayimg.com/images/g/mowAAeSwfaloiZzA/s-l225.jpg" alt="Siemens 5TG0400-1GM Delta Geo Methane Gas Leak Detector IP42 230V 2VA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-5tg0400-1gm-ip42.html">Siemens 5TG0400-1GM Delta Geo Methane Gas Leak Detector IP42 230V 2VA</a></div>
@@ -681,7 +754,7 @@
                 <a href="siemens-5tg0400-1gm-ip42.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens id-60i fire alarm ionization smoke detector + db-3s base">
             <a href="siemens-60i-3s.html"><img src="https://i.ebayimg.com/images/g/-qwAAeSwGfBpWntH/s-l225.jpg" alt="Siemens ID-60I Fire Alarm Ionization Smoke Detector + DB-3S Base - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-60i-3s.html">Siemens ID-60I Fire Alarm Ionization Smoke Detector + DB-3S Base</a></div>
@@ -689,7 +762,7 @@
                 <a href="siemens-60i-3s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens 6es5313-3aa12 6es5 313-3aa12 simatic s5 313 monitoring module ">
             <a href="siemens-6es5313-3aa12-6es5.html"><img src="https://i.ebayimg.com/images/g/9loAAOSw~gxZuI6J/s-l225.jpg" alt="New Siemens 6ES5313-3AA12 6ES5 313-3AA12 SIMATIC S5 313 Monitoring Module  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-6es5313-3aa12-6es5.html">New Siemens 6ES5313-3AA12 6ES5 313-3AA12 SIMATIC S5 313 Monitoring Module </a></div>
@@ -697,7 +770,7 @@
                 <a href="siemens-6es5313-3aa12-6es5.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 6se7090-0xx84-0ka0 motion control adb adaption board module">
             <a href="siemens-6se7090-0xx84-0ka0.html"><img src="https://i.ebayimg.com/images/g/g1UAAOSwqoBlrIIU/s-l225.jpg" alt="Siemens 6SE7090-0XX84-0KA0 Motion Control ADB Adaption Board Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-6se7090-0xx84-0ka0.html">Siemens 6SE7090-0XX84-0KA0 Motion Control ADB Adaption Board Module</a></div>
@@ -705,7 +778,7 @@
                 <a href="siemens-6se7090-0xx84-0ka0.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens dryer user interface control board part# 713992-08 9000 375 793">
             <a href="siemens-713992.html"><img src="https://i.ebayimg.com/images/g/VwEAAOSwojJmmdIO/s-l225.jpg" alt="Siemens Dryer User Interface Control Board part# 713992-08 9000 375 793 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-713992.html">Siemens Dryer User Interface Control Board part# 713992-08 9000 375 793</a></div>
@@ -713,7 +786,7 @@
                 <a href="siemens-713992.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 7pu5220-1aj20 time relay 0,6-6s. ">
             <a href="siemens-7pu5220-1aj20-6s.html"><img src="https://i.ebayimg.com/images/g/0BcAAOSw3PVkMbGe/s-l225.jpg" alt="SIEMENS 7PU5220-1AJ20 Time Relay 0,6-6s.  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-7pu5220-1aj20-6s.html">SIEMENS 7PU5220-1AJ20 Time Relay 0,6-6s. </a></div>
@@ -721,7 +794,7 @@
                 <a href="siemens-7pu5220-1aj20-6s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens x-ray multix part  8697484  d902 signal matching board">
             <a href="siemens-8697484-d902.html"><img src="https://i.ebayimg.com/images/g/ihMAAOSwe2lg1PKn/s-l225.jpg" alt="Siemens X-Ray Multix part  8697484  D902 Signal Matching Board - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-8697484-d902.html">Siemens X-Ray Multix part  8697484  D902 Signal Matching Board</a></div>
@@ -729,7 +802,7 @@
                 <a href="siemens-8697484-d902.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens zct-8b 8 zone control card for mxlv fire alarm part 500-891183">
             <a href="siemens-8b-500-891183.html"><img src="https://i.ebayimg.com/images/g/uQAAAOSwA3ldCUNO/s-l225.jpg" alt="NEW SIEMENS ZCT-8B 8 ZONE CONTROL CARD FOR MXLV FIRE ALARM PART 500-891183 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-8b-500-891183.html">NEW SIEMENS ZCT-8B 8 ZONE CONTROL CARD FOR MXLV FIRE ALARM PART 500-891183</a></div>
@@ -737,7 +810,7 @@
                 <a href="siemens-8b-500-891183.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens zct-8b fire alarm 8 zone class b control mxlv panel">
             <a href="siemens-8b.html"><img src="https://i.ebayimg.com/images/g/UvAAAeSwAjNpZnFT/s-l225.jpg" alt="Siemens ZCT-8B Fire Alarm 8 Zone Class B Control MXLV Panel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-8b.html">Siemens ZCT-8B Fire Alarm 8 Zone Class B Control MXLV Panel</a></div>
@@ -745,7 +818,7 @@
                 <a href="siemens-8b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens u-mhu-mcs-w nnb horn strobe see pictures #a55">
             <a href="siemens-a55.html"><img src="https://i.ebayimg.com/images/g/s6gAAOSwCP5n-mza/s-l225.jpg" alt="Siemens U-MHU-MCS-W NNB Horn Strobe See Pictures #A55 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-a55.html">Siemens U-MHU-MCS-W NNB Horn Strobe See Pictures #A55</a></div>
@@ -753,7 +826,7 @@
                 <a href="siemens-a55.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="1pc a5e00317637 siemens drive control panel tested used">
             <a href="siemens-a5e00317637.html"><img src="https://i.ebayimg.com/images/g/e48AAeSwL75pPNQX/s-l225.jpg" alt="1PC A5E00317637 Siemens Drive Control Panel Tested Used - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-a5e00317637.html">1PC A5E00317637 Siemens Drive Control Panel Tested Used</a></div>
@@ -761,7 +834,7 @@
                 <a href="siemens-a5e00317637.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens a5e03323254 control panel board ulc0056">
             <a href="siemens-a5e03323254-ulc0056.html"><img src="https://i.ebayimg.com/images/g/eo4AAOSwupVeDLIQ/s-l225.jpg" alt="Siemens A5E03323254 Control Panel Board ULC0056 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-a5e03323254-ulc0056.html">Siemens A5E03323254 Control Panel Board ULC0056</a></div>
@@ -769,7 +842,7 @@
                 <a href="siemens-a5e03323254-ulc0056.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens ad2-p hvac duct detector housing w/hfp-11 detector large quantity">
             <a href="siemens-ad2.html"><img src="https://i.ebayimg.com/images/g/FdIAAeSwpoZo5-ai/s-l225.jpg" alt="SIEMENS AD2-P HVAC DUCT DETECTOR HOUSING W/HFP-11 DETECTOR LARGE QUANTITY - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-ad2.html">SIEMENS AD2-P HVAC DUCT DETECTOR HOUSING W/HFP-11 DETECTOR LARGE QUANTITY</a></div>
@@ -777,7 +850,7 @@
                 <a href="siemens-ad2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens v23154 relay c0702-b704">
             <a href="siemens-c0702-b704.html"><img src="https://i.ebayimg.com/images/g/FaYAAeSwe2RoAQO4/s-l225.jpg" alt="Siemens V23154 Relay C0702-B704 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-c0702-b704.html">Siemens V23154 Relay C0702-B704</a></div>
@@ -785,7 +858,7 @@
                 <a href="siemens-c0702-b704.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="used digital display panel for siemens mkb-4 fire alarm system, for parts only">
             <a href="siemens-display.html"><img src="https://i.ebayimg.com/images/g/8q4AAOSwIANd8CRX/s-l225.jpg" alt="Used Digital Display Panel for Siemens MKB-4 Fire Alarm System, for Parts Only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-display.html">Used Digital Display Panel for Siemens MKB-4 Fire Alarm System, for Parts Only</a></div>
@@ -793,7 +866,7 @@
                 <a href="siemens-display.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens epg55222 dishwasher control board touch display panel az122062 | nr2226">
             <a href="siemens-epg55222-az122062-nr2226.html"><img src="https://i.ebayimg.com/images/g/eNAAAeSwfUdoB1Er/s-l225.jpg" alt="Siemens EPG55222 Dishwasher Control Board Touch Display Panel AZ122062 | NR2226 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-epg55222-az122062-nr2226.html">Siemens EPG55222 Dishwasher Control Board Touch Display Panel AZ122062 | NR2226</a></div>
@@ -801,7 +874,7 @@
                 <a href="siemens-epg55222-az122062-nr2226.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens epg55222 dishwasher control board touch display panel az124403 | wm265">
             <a href="siemens-epg55222-az124403-wm265.html"><img src="https://i.ebayimg.com/images/g/ap0AAeSwEWJoE89q/s-l225.jpg" alt="Siemens EPG55222 Dishwasher Control Board Touch Display Panel AZ124403 | Wm265 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-epg55222-az124403-wm265.html">Siemens EPG55222 Dishwasher Control Board Touch Display Panel AZ124403 | Wm265</a></div>
@@ -809,7 +882,7 @@
                 <a href="siemens-epg55222-az124403-wm265.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fci2016-u1 periphery board 252-pt fire alarm module - for parts/repair”">
             <a href="siemens-fci2016-u1.html"><img src="https://i.ebayimg.com/images/g/MyAAAeSw9ktpDz5r/s-l225.jpg" alt="Siemens FCI2016-U1 Periphery Board 252-Pt Fire Alarm Module - For Parts/Repair” - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fci2016-u1.html">Siemens FCI2016-U1 Periphery Board 252-Pt Fire Alarm Module - For Parts/Repair”</a></div>
@@ -817,7 +890,7 @@
                 <a href="siemens-fci2016-u1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fdbz492-hr duct smoke detector housing with op921 smoke detector head">
             <a href="siemens-fdbz492-op921.html"><img src="https://i.ebayimg.com/images/g/0dYAAeSwjfBpROXd/s-l225.jpg" alt="Siemens FDBZ492-HR Duct Smoke Detector Housing with OP921 Smoke Detector Head - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdbz492-op921.html">Siemens FDBZ492-HR Duct Smoke Detector Housing with OP921 Smoke Detector Head</a></div>
@@ -825,7 +898,7 @@
                 <a href="siemens-fdbz492-op921.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens / duct smoke detector / fdbz492 / s54319-b22-a1">
             <a href="siemens-fdbz492-s54319-b22.html"><img src="https://i.ebayimg.com/images/g/7O8AAeSwH9ZpPSWM/s-l225.jpg" alt="Siemens / Duct Smoke Detector / FDBZ492 / S54319-B22-A1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdbz492-s54319-b22.html">Siemens / Duct Smoke Detector / FDBZ492 / S54319-B22-A1</a></div>
@@ -833,7 +906,7 @@
                 <a href="siemens-fdbz492-s54319-b22.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens / duct smoke detector / fdbz492-hr / s54319-b23-a1">
             <a href="siemens-fdbz492-s54319-b23.html"><img src="https://i.ebayimg.com/images/g/khEAAOSwMN9oIwL8/s-l225.jpg" alt="Siemens / Duct Smoke Detector / FDBZ492-HR / S54319-B23-A1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdbz492-s54319-b23.html">Siemens / Duct Smoke Detector / FDBZ492-HR / S54319-B23-A1</a></div>
@@ -841,7 +914,7 @@
                 <a href="siemens-fdbz492-s54319-b23.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fdbz492-pr duct smoke detector s54319-b25-a1 new in box">
             <a href="siemens-fdbz492-s54319-b25.html"><img src="https://i.ebayimg.com/images/g/hyAAAOSwIgxnUbQi/s-l225.jpg" alt="SIEMENS FDBZ492-PR DUCT SMOKE DETECTOR S54319-B25-A1 NEW IN BOX - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdbz492-s54319-b25.html">SIEMENS FDBZ492-PR DUCT SMOKE DETECTOR S54319-B25-A1 NEW IN BOX</a></div>
@@ -849,7 +922,7 @@
                 <a href="siemens-fdbz492-s54319-b25.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fdbz492-hr duct smoke detector housing only">
             <a href="siemens-fdbz492.html"><img src="https://i.ebayimg.com/images/g/HZsAAeSwPSVpVFUe/s-l225.jpg" alt="Siemens FDBZ492-HR Duct Smoke Detector Housing ONLY - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdbz492.html">Siemens FDBZ492-HR Duct Smoke Detector Housing ONLY</a></div>
@@ -857,7 +930,7 @@
                 <a href="siemens-fdbz492.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens fdl241-9-cn beam smoke detector+base">
             <a href="siemens-fdl241.html"><img src="https://i.ebayimg.com/images/g/hysAAeSwO7xpJqb5/s-l225.jpg" alt="New Siemens FDL241-9-CN Beam smoke detector+base - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdl241.html">New Siemens FDL241-9-CN Beam smoke detector+base</a></div>
@@ -865,7 +938,7 @@
                 <a href="siemens-fdl241.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="1pc new siemens fdlb291 linear beam smoke detector base shipping by dhl/fedex">
             <a href="siemens-fdlb291.html"><img src="https://i.ebayimg.com/images/g/184AAOSwgvBn2jJU/s-l225.jpg" alt="1PC NEW Siemens FDLB291 Linear beam smoke detector base Shipping by DHL/FedEX - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdlb291.html">1PC NEW Siemens FDLB291 Linear beam smoke detector base Shipping by DHL/FedEX</a></div>
@@ -873,7 +946,7 @@
                 <a href="siemens-fdlb291.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens multi-criteria fire heat carbon monoxide co detector  fdootc441">
             <a href="siemens-fdootc441.html"><img src="https://i.ebayimg.com/images/g/d1wAAeSwiTFnzkPu/s-l225.jpg" alt="Siemens Multi-Criteria Fire Heat Carbon Monoxide CO Detector  FDOOTC441 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdootc441.html">Siemens Multi-Criteria Fire Heat Carbon Monoxide CO Detector  FDOOTC441</a></div>
@@ -881,7 +954,7 @@
                 <a href="siemens-fdootc441.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 2 siemens fdot421 fire alarm photoelectric smoke heat detector head">
             <a href="siemens-fdot421.html"><img src="https://i.ebayimg.com/images/g/FZQAAOSwySdmO8xY/s-l225.jpg" alt="Lot Of 2 Siemens FDOT421 Fire Alarm Photoelectric Smoke Heat Detector Head - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdot421.html">Lot Of 2 Siemens FDOT421 Fire Alarm Photoelectric Smoke Heat Detector Head</a></div>
@@ -889,7 +962,7 @@
                 <a href="siemens-fdot421.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens fdt421 s54320-f5-a1 desigo fire alarm thermal heat detector head">
             <a href="siemens-fdt421-s54320-f5.html"><img src="https://i.ebayimg.com/images/g/1gcAAOSwWvNk-Qf2/s-l225.jpg" alt="New Siemens FDT421 S54320-F5-A1 Desigo Fire Alarm Thermal Heat Detector Head - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fdt421-s54320-f5.html">New Siemens FDT421 S54320-F5-A1 Desigo Fire Alarm Thermal Heat Detector Head</a></div>
@@ -897,7 +970,7 @@
                 <a href="siemens-fdt421-s54320-f5.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fp2011-u1 power supply 170w part 500-450222 fire alarm ">
             <a href="siemens-fp2011-u1-500.html"><img src="https://i.ebayimg.com/images/g/bxAAAeSwt2to7rKk/s-l225.jpg" alt="Siemens FP2011-U1 Power Supply 170W Part 500-450222 fire alarm  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fp2011-u1-500.html">Siemens FP2011-U1 Power Supply 170W Part 500-450222 fire alarm </a></div>
@@ -905,7 +978,7 @@
                 <a href="siemens-fp2011-u1-500.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fp2011-u1 power supply (170 w) part number 500-450222 (fp2011)">
             <a href="siemens-fp2011-u1.html"><img src="https://i.ebayimg.com/images/g/m0QAAeSwdC9pRJ4a/s-l225.jpg" alt="Siemens FP2011-U1 Power Supply (170 W) Part Number 500-450222 (FP2011) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fp2011-u1.html">Siemens FP2011-U1 Power Supply (170 W) Part Number 500-450222 (FP2011)</a></div>
@@ -913,7 +986,7 @@
                 <a href="siemens-fp2011-u1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fs-db2 fire seeker alarm control display board alarm part circuit board ">
             <a href="siemens-fsdb2.html"><img src="https://i.ebayimg.com/images/g/GnYAAOSw-Vdhd4Cv/s-l225.jpg" alt="Siemens FS-DB2 Fire Seeker Alarm Control Display Board alarm part circuit board  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fsdb2.html">Siemens FS-DB2 Fire Seeker Alarm Control Display Board alarm part circuit board </a></div>
@@ -921,7 +994,7 @@
                 <a href="siemens-fsdb2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens fs-rd-r "red" remote annunciator for fs-100 / fs250 fireseeker">
             <a href="siemens-fsfs100-fs250-1.html"><img src="https://i.ebayimg.com/images/g/RAoAAOSwC5VjrkRd/s-l225.jpg" alt="NEW SIEMENS FS-RD-R "RED" REMOTE ANNUNCIATOR FOR FS-100 / FS250 FIRESEEKER - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fsfs100-fs250-1.html">NEW SIEMENS FS-RD-R "RED" REMOTE ANNUNCIATOR FOR FS-100 / FS250 FIRESEEKER</a></div>
@@ -929,7 +1002,7 @@
                 <a href="siemens-fsfs100-fs250-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fs-rd2/-r, remote lcd annunciator, surface blackbox, 500-699638">
             <a href="siemens-fsrd2-lcd500-1.html"><img src="https://i.ebayimg.com/images/g/fYQAAeSwNcVn-A5s/s-l225.jpg" alt="Siemens FS-RD2/-R, Remote LCD Annunciator, Surface Blackbox, 500-699638 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fsrd2-lcd500-1.html">Siemens FS-RD2/-R, Remote LCD Annunciator, Surface Blackbox, 500-699638</a></div>
@@ -937,7 +1010,7 @@
                 <a href="siemens-fsrd2-lcd500-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fs-rd3 remote lcd annunciator (black) fire alarm">
             <a href="siemens-fsrd3-lcd.html"><img src="https://i.ebayimg.com/images/g/MTgAAOSw8y5iHxvs/s-l225.jpg" alt="Siemens FS-RD3 Remote LCD Annunciator (Black) Fire Alarm - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fsrd3-lcd.html">Siemens FS-RD3 Remote LCD Annunciator (Black) Fire Alarm</a></div>
@@ -945,7 +1018,7 @@
                 <a href="siemens-fsrd3-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fs-uk2 500-649925 rev 7.06.10 fire alarm system module industry kit part">
             <a href="siemens-fsuk2-500-649925.html"><img src="https://i.ebayimg.com/images/g/CPYAAOSwgCZgtbXy/s-l225.jpg" alt="Siemens FS-UK2 500-649925 rev 7.06.10 fire alarm system module Industry kit part - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-fsuk2-500-649925.html">Siemens FS-UK2 500-649925 rev 7.06.10 fire alarm system module Industry kit part</a></div>
@@ -953,7 +1026,7 @@
                 <a href="siemens-fsuk2-500-649925.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens ft205-u2 desigo remote alarm annunciator keypad">
             <a href="siemens-ft205-u2.html"><img src="https://i.ebayimg.com/images/g/faUAAOSwX-Jj5ZAH/s-l225.jpg" alt="SIEMENS FT205-U2 DESIGO REMOTE ALARM ANNUNCIATOR KEYPAD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-ft205-u2.html">SIEMENS FT205-U2 DESIGO REMOTE ALARM ANNUNCIATOR KEYPAD</a></div>
@@ -961,7 +1034,7 @@
                 <a href="siemens-ft205-u2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens led-4. remote annunciator">
             <a href="siemens-generic-parts.html"><img src="https://i.ebayimg.com/images/g/91EAAeSwh45pZd5y/s-l225.jpg" alt="Siemens LED-4. Remote Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-generic-parts.html">Siemens LED-4. Remote Annunciator</a></div>
@@ -969,7 +1042,7 @@
                 <a href="siemens-generic-parts.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="hfp-11 siemens fire alarm smoke heat detector hfp11">
             <a href="siemens-hfp11.html"><img src="https://i.ebayimg.com/images/g/I7UAAeSwfNxo5fKG/s-l225.jpg" alt="HFP-11 SIEMENS FIRE ALARM SMOKE HEAT DETECTOR HFP11 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-hfp11.html">HFP-11 SIEMENS FIRE ALARM SMOKE HEAT DETECTOR HFP11</a></div>
@@ -977,7 +1050,7 @@
                 <a href="siemens-hfp11.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens quantumspeed hlk4555 button field control panel">
             <a href="siemens-hlk4555.html"><img src="https://i.ebayimg.com/images/g/igsAAOSwsm1Z2io4/s-l225.jpg" alt="Siemens QuantumSpeed HLK4555 Button Field Control Panel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-hlk4555.html">Siemens QuantumSpeed HLK4555 Button Field Control Panel</a></div>
@@ -985,7 +1058,7 @@
                 <a href="siemens-hlk4555.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens quantumspeed hlk4565 control panel buttons #2 #kz-3661">
             <a href="siemens-hlk4565.html"><img src="https://i.ebayimg.com/images/g/xn0AAOSw3utY6iGz/s-l225.jpg" alt="Siemens Quantumspeed Hlk4565 Control Panel Buttons #2 #Kz-3661 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-hlk4565.html">Siemens Quantumspeed Hlk4565 Control Panel Buttons #2 #Kz-3661</a></div>
@@ -993,7 +1066,7 @@
                 <a href="siemens-hlk4565.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens msm-k-wp metal mfs-key-weathpf fire alarm pull station">
             <a href="siemens-key.html"><img src="https://i.ebayimg.com/images/g/e78AAeSwr4po7b22/s-l225.jpg" alt="SIEMENS MSM-K-WP METAL MFS-KEY-WEATHPF FIRE ALARM PULL STATION - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-key.html">SIEMENS MSM-K-WP METAL MFS-KEY-WEATHPF FIRE ALARM PULL STATION</a></div>
@@ -1001,7 +1074,7 @@
                 <a href="siemens-key.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens s-lp70-s17s speaker strobe, free shipping">
             <a href="siemens-lp70-s17s.html"><img src="https://i.ebayimg.com/images/g/RTYAAOSw7a9j2AGy/s-l225.jpg" alt="SIEMENS S-LP70-S17S SPEAKER STROBE, FREE SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-lp70-s17s.html">SIEMENS S-LP70-S17S SPEAKER STROBE, FREE SHIPPING</a></div>
@@ -1009,7 +1082,7 @@
                 <a href="siemens-lp70-s17s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens mth-mc-w horn strobe">
             <a href="siemens-mc.html"><img src="https://i.ebayimg.com/images/g/LHwAAOSwfohm3fsu/s-l225.jpg" alt="Siemens MTH-MC-W Horn Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-mc.html">Siemens MTH-MC-W Horn Strobe</a></div>
@@ -1017,7 +1090,7 @@
                 <a href="siemens-mc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens zh-mc-r red wall mount horn strobe w mount 6 available">
             <a href="siemens-mc1-1.html"><img src="https://i.ebayimg.com/images/g/7eMAAeSwG~ZpBPgc/s-l225.jpg" alt="SIEMENS ZH-MC-R RED WALL MOUNT HORN STROBE W MOUNT 6 AVAILABLE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-mc1-1.html">SIEMENS ZH-MC-R RED WALL MOUNT HORN STROBE W MOUNT 6 AVAILABLE</a></div>
@@ -1025,7 +1098,7 @@
                 <a href="siemens-mc1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens se-mc-cw white fire alarm speaker/strobe">
             <a href="siemens-mc2-1.html"><img src="https://i.ebayimg.com/images/g/f9sAAeSwrepoUZA6/s-l225.jpg" alt="Siemens SE-MC-CW White Fire Alarm Speaker/Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-mc2-1.html">Siemens SE-MC-CW White Fire Alarm Speaker/Strobe</a></div>
@@ -1033,7 +1106,7 @@
                 <a href="siemens-mc2-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens se-mc-w - strobe - speaker - white">
             <a href="siemens-mc3-1.html"><img src="https://i.ebayimg.com/images/g/ut4AAOSwp2tlgJHk/s-l225.jpg" alt="Siemens SE-MC-W - Strobe - Speaker - White - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-mc3-1.html">Siemens SE-MC-W - Strobe - Speaker - White</a></div>
@@ -1041,7 +1114,7 @@
                 <a href="siemens-mc3-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens sef-mc-cw speaker strobe new old stock (missing parts)">
             <a href="siemens-mc4-1.html"><img src="https://i.ebayimg.com/images/g/z20AAOSwKutiSGfU/s-l225.jpg" alt="SIEMENS SEF-MC-CW SPEAKER STROBE New Old Stock (Missing Parts) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-mc4-1.html">SIEMENS SEF-MC-CW SPEAKER STROBE New Old Stock (Missing Parts)</a></div>
@@ -1049,7 +1122,7 @@
                 <a href="siemens-mc4-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens fire alarm horn strobe sef-mc-w  (500-636038)">
             <a href="siemens-mc500-636038-2.html"><img src="https://i.ebayimg.com/images/g/k64AAeSwjX9nxy8J/s-l225.jpg" alt="Siemens Fire Alarm Horn Strobe SEF-MC-W  (500-636038) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-mc500-636038-2.html">Siemens Fire Alarm Horn Strobe SEF-MC-W  (500-636038)</a></div>
@@ -1057,7 +1130,7 @@
                 <a href="siemens-mc500-636038-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens sef-mc-w 500-636038 fire alarm speaker strobe wall white (new in box)">
             <a href="siemens-mc500-636038.html"><img src="https://i.ebayimg.com/images/g/r4sAAeSw9VppTviW/s-l225.jpg" alt="Siemens SEF-MC-W 500-636038 Fire Alarm Speaker Strobe Wall White (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-mc500-636038.html">Siemens SEF-MC-W 500-636038 Fire Alarm Speaker Strobe Wall White (NEW IN BOX)</a></div>
@@ -1065,7 +1138,7 @@
                 <a href="siemens-mc500-636038.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens seh-mc-cw s54360-f9-a2 fire alarm speaker strobe white (new in box)">
             <a href="siemens-mcs54360-f9-1.html"><img src="https://i.ebayimg.com/images/g/CzcAAeSwPq9pTvpG/s-l225.jpg" alt="Siemens SEH-MC-CW S54360-F9-A2 Fire Alarm Speaker Strobe White (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-mcs54360-f9-1.html">Siemens SEH-MC-CW S54360-F9-A2 Fire Alarm Speaker Strobe White (NEW IN BOX)</a></div>
@@ -1073,7 +1146,7 @@
                 <a href="siemens-mcs54360-f9-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens pad-3 motherboard panel auxiliary power supply cabinet for parts only">
             <a href="siemens-motherboard.html"><img src="https://i.ebayimg.com/images/g/eDQAAeSwtFRpHJpV/s-l225.jpg" alt="SIEMENS PAD-3 MOTHERBOARD PANEL AUXILIARY POWER SUPPLY CABINET For Parts Only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-motherboard.html">SIEMENS PAD-3 MOTHERBOARD PANEL AUXILIARY POWER SUPPLY CABINET For Parts Only</a></div>
@@ -1081,7 +1154,7 @@
                 <a href="siemens-motherboard.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens ms-151 500-688458 fire alarm pull station free shipping !!!">
             <a href="siemens-ms151.html"><img src="https://i.ebayimg.com/images/g/ArAAAOSwiUBmJA0S/s-l225.jpg" alt="New Siemens MS-151 500-688458 Fire Alarm Pull Station FREE SHIPPING !!! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-ms151.html">New Siemens MS-151 500-688458 Fire Alarm Pull Station FREE SHIPPING !!!</a></div>
@@ -1089,7 +1162,7 @@
                 <a href="siemens-ms151.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens ms-501 pull station">
             <a href="siemens-ms501.html"><img src="https://i.ebayimg.com/images/g/RTUAAeSwRyxpRe05/s-l225.jpg" alt="SIEMENS MS-501 PULL STATION - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-ms501.html">SIEMENS MS-501 PULL STATION</a></div>
@@ -1097,7 +1170,7 @@
                 <a href="siemens-ms501.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new 2pc siemens oh121 multi-conventional photo smoke/ thermal detector">
             <a href="siemens-oh121.html"><img src="https://i.ebayimg.com/images/g/6K4AAOSwJRxoUJ5h/s-l225.jpg" alt="New 2PC Siemens OH121 Multi-Conventional Photo Smoke/ Thermal Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-oh121.html">New 2PC Siemens OH121 Multi-Conventional Photo Smoke/ Thermal Detector</a></div>
@@ -1105,7 +1178,7 @@
                 <a href="siemens-oh121.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens oh921 s54320-f6-a2 smoke detector - dpu tested - free programming!">
             <a href="siemens-oh921-s54320-f6.html"><img src="https://i.ebayimg.com/images/g/xYMAAeSwjsNpTvpj/s-l225.jpg" alt="Siemens OH921 S54320-F6-A2 Smoke Detector - DPU Tested - Free Programming! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-oh921-s54320-f6.html">Siemens OH921 S54320-F6-A2 Smoke Detector - DPU Tested - Free Programming!</a></div>
@@ -1113,7 +1186,7 @@
                 <a href="siemens-oh921-s54320-f6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens op121 photoelectric smoke detector fire alarm fast shipping..">
             <a href="siemens-op121.html"><img src="https://i.ebayimg.com/images/g/~98AAeSw9qppHqds/s-l225.jpg" alt="NEW SIEMENS OP121 PHOTOELECTRIC SMOKE DETECTOR FIRE ALARM FAST SHIPPING.. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-op121.html">NEW SIEMENS OP121 PHOTOELECTRIC SMOKE DETECTOR FIRE ALARM FAST SHIPPING..</a></div>
@@ -1121,7 +1194,7 @@
                 <a href="siemens-op121.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens op720 optical smoke detector fire alarm">
             <a href="siemens-op720.html"><img src="https://i.ebayimg.com/images/g/XAoAAeSwVNZo3j8t/s-l225.jpg" alt="Siemens OP720 optical smoke detector FIRE ALARM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-op720.html">Siemens OP720 optical smoke detector FIRE ALARM</a></div>
@@ -1129,7 +1202,7 @@
                 <a href="siemens-op720.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens op921 smoke detector optical sensor bsce part number  100923245 (new)">
             <a href="siemens-op921.html"><img src="https://i.ebayimg.com/images/g/UtYAAeSwkAhorUu3/s-l225.jpg" alt="Siemens OP921 Smoke Detector Optical Sensor BSCE Part Number  100923245 (New) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-op921.html">Siemens OP921 Smoke Detector Optical Sensor BSCE Part Number  100923245 (New)</a></div>
@@ -1137,7 +1210,7 @@
                 <a href="siemens-op921.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens 4387530001 gs p60-01 atex gas detector">
             <a href="siemens-p60.html"><img src="https://i.ebayimg.com/images/g/SwsAAeSw4-xpDLym/s-l225.jpg" alt="Siemens 4387530001 gs p60-01 ATEX Gas Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-p60.html">Siemens 4387530001 gs p60-01 ATEX Gas Detector</a></div>
@@ -1145,7 +1218,7 @@
                 <a href="siemens-p60.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 2 siemens slspsw alarm wall speaker, p85583-001 for parts">
             <a href="siemens-p85583.html"><img src="https://i.ebayimg.com/images/g/lwsAAOSwmaxnj-RH/s-l225.jpg" alt="Lot of 2 Siemens SLSPSW Alarm Wall Speaker, P85583-001 FOR PARTS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-p85583.html">Lot of 2 Siemens SLSPSW Alarm Wall Speaker, P85583-001 FOR PARTS</a></div>
@@ -1153,7 +1226,7 @@
                 <a href="siemens-p85583.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens landis & gyr termination module part no. ptm6.2q250 free shipping">
             <a href="siemens-ptm6-2q250.html"><img src="https://i.ebayimg.com/images/g/IYMAAOSwDVpiqOK2/s-l225.jpg" alt="NEW Siemens Landis & GYR Termination Module Part No. PTM6.2Q250 FREE SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-ptm6-2q250.html">NEW Siemens Landis & GYR Termination Module Part No. PTM6.2Q250 FREE SHIPPING</a></div>
@@ -1161,7 +1234,7 @@
                 <a href="siemens-ptm6-2q250.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens rhvps12 ns new surplus">
             <a href="siemens-rhvps12.html"><img src="https://i.ebayimg.com/images/g/unoAAeSwhC9pTyW1/s-l225.jpg" alt="SIEMENS RHVPS12 NS NEW SURPLUS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-rhvps12.html">SIEMENS RHVPS12 NS NEW SURPLUS</a></div>
@@ -1169,7 +1242,7 @@
                 <a href="siemens-rhvps12.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens u-mhst-s17s fire alarm horn strobe wall red">
             <a href="siemens-s17s.html"><img src="https://i.ebayimg.com/images/g/BpoAAeSwFRZpTvq9/s-l225.jpg" alt="Siemens U-MHST-S17S Fire Alarm Horn Strobe Wall Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s17s.html">Siemens U-MHST-S17S Fire Alarm Horn Strobe Wall Red</a></div>
@@ -1177,7 +1250,7 @@
                 <a href="siemens-s17s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title=" siemens s54301-z95-a1  set-cmc-w--alert white wall mount  clear  strobe parts">
             <a href="siemens-s54301-z95-a1.html"><img src="https://i.ebayimg.com/images/g/MkMAAOSwacJjCBPC/s-l225.jpg" alt=" Siemens S54301-Z95-A1  SET-CMC-W--ALERT White Wall Mount  clear  Strobe PARTS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54301-z95-a1.html"> Siemens S54301-Z95-A1  SET-CMC-W--ALERT White Wall Mount  clear  Strobe PARTS</a></div>
@@ -1185,7 +1258,7 @@
                 <a href="siemens-s54301-z95-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens s54319-b22-a1 fdbz492 duct smoke detector housing fire alarm, new">
             <a href="siemens-s54319-b22-a1.html"><img src="https://i.ebayimg.com/images/g/SPAAAeSwCiZpYCnP/s-l225.jpg" alt="New Siemens S54319-B22-A1 FDBZ492 Duct Smoke Detector Housing Fire Alarm, New - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54319-b22-a1.html">New Siemens S54319-B22-A1 FDBZ492 Duct Smoke Detector Housing Fire Alarm, New</a></div>
@@ -1193,7 +1266,7 @@
                 <a href="siemens-s54319-b22-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens duct smoke detector housing / s54319-b23-a1">
             <a href="siemens-s54319-b23-a1.html"><img src="https://i.ebayimg.com/images/g/K9MAAOSwls1lMmMo/s-l225.jpg" alt="SIEMENS DUCT SMOKE DETECTOR HOUSING / S54319-B23-A1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54319-b23-a1.html">SIEMENS DUCT SMOKE DETECTOR HOUSING / S54319-B23-A1</a></div>
@@ -1201,7 +1274,7 @@
                 <a href="siemens-s54319-b23-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens s54319-s27-a1 duct detector  - fdbz - rtl : remote">
             <a href="siemens-s54319-s27-a1.html"><img src="https://i.ebayimg.com/images/g/hTUAAeSwK2tobrmy/s-l225.jpg" alt="SIEMENS S54319-S27-A1 DUCT DETECTOR  - FDBZ - RTL : Remote - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54319-s27-a1.html">SIEMENS S54319-S27-A1 DUCT DETECTOR  - FDBZ - RTL : Remote</a></div>
@@ -1209,7 +1282,7 @@
                 <a href="siemens-s54319-s27-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens s54329-a29-a1 sefh-mc-w-blank white speaker strobe 116423 fa">
             <a href="siemens-s54329-a29-a1.html"><img src="https://i.ebayimg.com/images/g/mjsAAOSwsWtl81jl/s-l225.jpg" alt="New Siemens S54329-A29-A1 SEFH-MC-W-BLANK White Speaker Strobe 116423 FA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54329-a29-a1.html">New Siemens S54329-A29-A1 SEFH-MC-W-BLANK White Speaker Strobe 116423 FA</a></div>
@@ -1217,7 +1290,7 @@
                 <a href="siemens-s54329-a29-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="brand new- siemens slhcr-n part# s54329-f12-a1 red">
             <a href="siemens-s54329-f12-a1.html"><img src="https://i.ebayimg.com/images/g/YRkAAeSwALBol32N/s-l225.jpg" alt="Brand New- Siemens SLHCR-N Part# S54329-F12-A1 Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54329-f12-a1.html">Brand New- Siemens SLHCR-N Part# S54329-F12-A1 Red</a></div>
@@ -1225,7 +1298,7 @@
                 <a href="siemens-s54329-f12-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens part# s54329-f146-a1 fire alarm speaker sl2spcw-f">
             <a href="siemens-s54329-f146-a1.html"><img src="https://i.ebayimg.com/images/g/WisAAOSw5JVnP5TU/s-l225.jpg" alt="Siemens Part# S54329-F146-A1 Fire Alarm Speaker SL2SPCW-F - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54329-f146-a1.html">Siemens Part# S54329-F146-A1 Fire Alarm Speaker SL2SPCW-F</a></div>
@@ -1233,7 +1306,7 @@
                 <a href="siemens-s54329-f146-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens part# s54329-f165-a1 fire alarm speaker sl2spcw-f">
             <a href="siemens-s54329-f165-a1.html"><img src="https://i.ebayimg.com/images/g/ewUAAeSwRLto4Y0b/s-l225.jpg" alt="Siemens Part# S54329-F165-A1 Fire Alarm Speaker SL2SPCW-F - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54329-f165-a1.html">Siemens Part# S54329-F165-A1 Fire Alarm Speaker SL2SPCW-F</a></div>
@@ -1241,7 +1314,7 @@
                 <a href="siemens-s54329-f165-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens s54329-f17-a1 slscw-al rev. h strobe ceiling horn fire alarm white">
             <a href="siemens-s54329-f17-a1.html"><img src="https://i.ebayimg.com/images/g/We8AAOSwTTxmPi1a/s-l225.jpg" alt="New Siemens S54329-F17-A1 SLSCW-AL Rev. H Strobe Ceiling Horn Fire Alarm White - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54329-f17-a1.html">New Siemens S54329-F17-A1 SLSCW-AL Rev. H Strobe Ceiling Horn Fire Alarm White</a></div>
@@ -1249,7 +1322,7 @@
                 <a href="siemens-s54329-f17-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens slhswr-f s54329-f22-a1 red fire alarm horn strobe, new open box">
             <a href="siemens-s54329-f22-a1.html"><img src="https://i.ebayimg.com/images/g/3G8AAeSwp1ho79mG/s-l225.jpg" alt="Siemens SLHSWR-F S54329-F22-A1 RED Fire Alarm Horn Strobe, New Open Box - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54329-f22-a1.html">Siemens SLHSWR-F S54329-F22-A1 RED Fire Alarm Horn Strobe, New Open Box</a></div>
@@ -1257,7 +1330,7 @@
                 <a href="siemens-s54329-f22-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens s54329-f25-a1 slswr-f fire alarm wall strobe horn red">
             <a href="siemens-s54329-f25-a1.html"><img src="https://i.ebayimg.com/images/g/i0kAAeSwRf9o1FX0/s-l225.jpg" alt="NEW SIEMENS S54329-F25-A1 SLSWR-F FIRE ALARM WALL STROBE HORN RED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54329-f25-a1.html">NEW SIEMENS S54329-F25-A1 SLSWR-F FIRE ALARM WALL STROBE HORN RED</a></div>
@@ -1265,7 +1338,7 @@
                 <a href="siemens-s54329-f25-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="12 - siemens slspcw-f,  part s54329-f41-a1,  116476,  fire alarms - brand new">
             <a href="siemens-s54329-f41-a1.html"><img src="https://i.ebayimg.com/images/g/HBQAAOSwcB1lUESU/s-l225.jpg" alt="12 - Siemens SLSPCW-F,  Part S54329-F41-A1,  116476,  Fire Alarms - BRAND NEW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54329-f41-a1.html">12 - Siemens SLSPCW-F,  Part S54329-F41-A1,  116476,  Fire Alarms - BRAND NEW</a></div>
@@ -1273,7 +1346,7 @@
                 <a href="siemens-s54329-f41-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens part# s54329-f41-a2 fire alarm speaker red, 116434 slspcr-f">
             <a href="siemens-s54329-f41-a2.html"><img src="https://i.ebayimg.com/images/g/PuMAAOSw3dVn89yQ/s-l225.jpg" alt="Siemens Part# S54329-F41-A2 Fire Alarm Speaker Red, 116434 SLSPCR-F - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54329-f41-a2.html">Siemens Part# S54329-F41-A2 Fire Alarm Speaker Red, 116434 SLSPCR-F</a></div>
@@ -1281,7 +1354,7 @@
                 <a href="siemens-s54329-f41-a2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens sefh-hmc-cw s54360-f3-a1 speaker strobe ceiling white (new in box)">
             <a href="siemens-s54360-f3-a1.html"><img src="https://i.ebayimg.com/images/g/3xkAAeSw4YFpTvnW/s-l225.jpg" alt="Siemens SEFH-HMC-CW S54360-F3-A1 Speaker Strobe Ceiling White (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54360-f3-a1.html">Siemens SEFH-HMC-CW S54360-F3-A1 Speaker Strobe Ceiling White (NEW IN BOX)</a></div>
@@ -1289,7 +1362,7 @@
                 <a href="siemens-s54360-f3-a1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens s54360-f5-a2 high fidelity speaker strobe alarm">
             <a href="siemens-s54360-f5-a2.html"><img src="https://i.ebayimg.com/images/g/hisAAOSwMRNlmflS/s-l225.jpg" alt="Siemens S54360-F5-A2 High Fidelity Speaker Strobe Alarm - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s54360-f5-a2.html">Siemens S54360-F5-A2 High Fidelity Speaker Strobe Alarm</a></div>
@@ -1297,7 +1370,7 @@
                 <a href="siemens-s54360-f5-a2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens u-mhst-s755 red horn strobe sync only">
             <a href="siemens-s755.html"><img src="https://i.ebayimg.com/images/g/5jIAAOSwSXxmnAYZ/s-l225.jpg" alt="Siemens U-MHST-S755 Red Horn Strobe SYNC ONLY - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s755.html">Siemens U-MHST-S755 Red Horn Strobe SYNC ONLY</a></div>
@@ -1305,7 +1378,7 @@
                 <a href="siemens-s755.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens u-mhst-s75s fire alarm horn strobe wall red">
             <a href="siemens-s75s.html"><img src="https://i.ebayimg.com/images/g/IsEAAeSwO3NpTvpL/s-l225.jpg" alt="Siemens U-MHST-S75S Fire Alarm Horn Strobe Wall Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-s75s.html">Siemens U-MHST-S75S Fire Alarm Horn Strobe Wall Red</a></div>
@@ -1313,7 +1386,7 @@
                 <a href="siemens-s75s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens siga-dts-lg  fire alarm duct detector test station landis division">
             <a href="siemens-siga.html"><img src="https://i.ebayimg.com/images/g/chcAAeSwK6Rn3022/s-l225.jpg" alt="SIEMENS SIGA-DTS-LG  Fire Alarm Duct Detector Test Station Landis Division - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-siga.html">SIEMENS SIGA-DTS-LG  Fire Alarm Duct Detector Test Station Landis Division</a></div>
@@ -1321,7 +1394,7 @@
                 <a href="siemens-siga.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens i-sm70-s75s red speaker strobe">
             <a href="siemens-sm70-s75s.html"><img src="https://i.ebayimg.com/images/g/vioAAOSwa79j2ABR/s-l225.jpg" alt="Siemens I-SM70-S75S Red Speaker Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-sm70-s75s.html">Siemens I-SM70-S75S Red Speaker Strobe</a></div>
@@ -1329,7 +1402,7 @@
                 <a href="siemens-sm70-s75s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens tsln3m u new surplus">
             <a href="siemens-tsln3m.html"><img src="https://i.ebayimg.com/images/g/Ez0AAeSwzgdpMbRi/s-l225.jpg" alt="SIEMENS TSLN3M U NEW SURPLUS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-tsln3m.html">SIEMENS TSLN3M U NEW SURPLUS</a></div>
@@ -1337,7 +1410,7 @@
                 <a href="siemens-tsln3m.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens vcc2001-a1 voice cpu card for parts or repair – card fail">
             <a href="siemens-vcc2001-a1-cpu.html"><img src="https://i.ebayimg.com/images/g/Wg4AAeSwSdxpETCh/s-l225.jpg" alt="Siemens VCC2001-A1 Voice CPU Card for Parts or Repair – Card Fail - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-vcc2001-a1-cpu.html">Siemens VCC2001-A1 Voice CPU Card for Parts or Repair – Card Fail</a></div>
@@ -1345,7 +1418,7 @@
                 <a href="siemens-vcc2001-a1-cpu.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens db-x11rs fire alarm smoke detector relay base 500-096125 white">
             <a href="siemens-x11rs.html"><img src="https://i.ebayimg.com/images/g/bpgAAeSwaXxpSbFY/s-l225.jpg" alt="SIEMENS DB-X11RS FIRE ALARM SMOKE DETECTOR RELAY BASE 500-096125 WHITE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-x11rs.html">SIEMENS DB-X11RS FIRE ALARM SMOKE DETECTOR RELAY BASE 500-096125 WHITE</a></div>
@@ -1353,7 +1426,7 @@
                 <a href="siemens-x11rs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens da-x3sr mxl duct detector relay board card for ad-3i and ad3ilp housings">
             <a href="siemens-x3sr-3i-ad3ilp.html"><img src="https://i.ebayimg.com/images/g/nxIAAOSwXRtoNNG-/s-l225.jpg" alt="Siemens DA-X3SR MXL Duct Detector Relay Board Card for AD-3i and AD3iLP Housings - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-x3sr-3i-ad3ilp.html">Siemens DA-X3SR MXL Duct Detector Relay Board Card for AD-3i and AD3iLP Housings</a></div>
@@ -1361,7 +1434,7 @@
                 <a href="siemens-x3sr-3i-ad3ilp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens da-x3sr mxl duct detector relay board">
             <a href="siemens-x3sr.html"><img src="https://i.ebayimg.com/images/g/Jh4AAeSwrido5SfU/s-l225.jpg" alt="Siemens DA-X3SR MXL Duct Detector Relay Board - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-x3sr.html">Siemens DA-X3SR MXL Duct Detector Relay Board</a></div>
@@ -1369,7 +1442,7 @@
                 <a href="siemens-x3sr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens ssd-c xls remote display annunciator panel 500-648733 . new open box">
             <a href="siemens-xls500-648733-1.html"><img src="https://i.ebayimg.com/images/g/d2QAAeSwlPlo7D-~/s-l225.jpg" alt="NEW SIEMENS SSD-C XLS REMOTE DISPLAY ANNUNCIATOR PANEL 500-648733 . New Open Box - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-xls500-648733-1.html">NEW SIEMENS SSD-C XLS REMOTE DISPLAY ANNUNCIATOR PANEL 500-648733 . New Open Box</a></div>
@@ -1377,7 +1450,7 @@
                 <a href="siemens-xls500-648733-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens hfpt-11 heat detector head for xls and fs-250 system ">
             <a href="siemens-xlsfs250-1.html"><img src="https://i.ebayimg.com/images/g/AQgAAOSwqiReiNck/s-l225.jpg" alt="NEW SIEMENS HFPT-11 HEAT DETECTOR HEAD FOR XLS AND FS-250 SYSTEM  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-xlsfs250-1.html">NEW SIEMENS HFPT-11 HEAT DETECTOR HEAD FOR XLS AND FS-250 SYSTEM </a></div>
@@ -1385,7 +1458,7 @@
                 <a href="siemens-xlsfs250-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens zc2-4ab zone control module r-500-893961 fire alarm part">
             <a href="siemens-zc2-4ab-500.html"><img src="https://i.ebayimg.com/images/g/jK0AAOSwxR1d9d2m/s-l225.jpg" alt="NEW SIEMENS ZC2-4AB ZONE CONTROL MODULE R-500-893961 FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-zc2-4ab-500.html">NEW SIEMENS ZC2-4AB ZONE CONTROL MODULE R-500-893961 FIRE ALARM PART</a></div>
@@ -1393,7 +1466,7 @@
                 <a href="siemens-zc2-4ab-500.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens mxl fire alarm part lot (fp-11, mom-4, zc2-4ab, asc-1, omm-1, zct-8b)">
             <a href="siemens-zc2-4ab-8b.html"><img src="https://i.ebayimg.com/images/g/Xv0AAeSwRqto~hMs/s-l225.jpg" alt="Siemens MXL Fire Alarm Part Lot (FP-11, MOM-4, ZC2-4AB, ASC-1, OMM-1, ZCT-8B) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-zc2-4ab-8b.html">Siemens MXL Fire Alarm Part Lot (FP-11, MOM-4, ZC2-4AB, ASC-1, OMM-1, ZCT-8B)</a></div>
@@ -1401,7 +1474,7 @@
                 <a href="siemens-zc2-4ab-8b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens zr-mc-cw fire alarm strobe ceiling white w/ mounting plate">
             <a href="siemens-zr-mc.html"><img src="https://i.ebayimg.com/images/g/HdUAAeSwOA1pTvqi/s-l225.jpg" alt="Siemens ZR-MC-CW Fire Alarm Strobe Ceiling White w/ Mounting Plate - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-zr-mc.html">Siemens ZR-MC-CW Fire Alarm Strobe Ceiling White w/ Mounting Plate</a></div>
@@ -1409,7 +1482,7 @@
                 <a href="siemens-zr-mc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens zr-hmc-cw 106019 500-636176 fire alarm strobe white">
             <a href="siemens-zr106019-500-1.html"><img src="https://i.ebayimg.com/images/g/zZ4AAOSwgVRoNj7d/s-l225.jpg" alt="Siemens ZR-HMC-CW 106019 500-636176 Fire Alarm Strobe White - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-zr106019-500-1.html">Siemens ZR-HMC-CW 106019 500-636176 Fire Alarm Strobe White</a></div>
@@ -1417,7 +1490,7 @@
                 <a href="siemens-zr106019-500-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="siemens zr-mc-w fire alarm strobe wall white w/ mounting plate">
             <a href="siemens-zrmc1.html"><img src="https://i.ebayimg.com/images/g/7AgAAeSwaNlpTvpX/s-l225.jpg" alt="Siemens ZR-MC-W Fire Alarm Strobe Wall White w/ Mounting Plate - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-zrmc1.html">Siemens ZR-MC-W Fire Alarm Strobe Wall White w/ Mounting Plate</a></div>
@@ -1425,7 +1498,7 @@
                 <a href="siemens-zrmc1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new siemens zr-mc-r (500-636169) red strobe (wall mount) no back plate">
             <a href="siemens-zrmc500.html"><img src="https://i.ebayimg.com/images/g/nvIAAOSwh-tk5rVt/s-l225.jpg" alt="NEW Siemens ZR-MC-R (500-636169) Red Strobe (Wall Mount) NO BACK PLATE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-zrmc500.html">NEW Siemens ZR-MC-R (500-636169) Red Strobe (Wall Mount) NO BACK PLATE</a></div>
@@ -1433,7 +1506,7 @@
                 <a href="siemens-zrmc500.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="1pcs siemens zy2n-j dc12v apt relay">
             <a href="siemens-zy2n-dc12v.html"><img src="https://i.ebayimg.com/images/g/IRgAAOSwLytoJBCe/s-l225.jpg" alt="1PCS Siemens ZY2N-J DC12V APT Relay - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="siemens-zy2n-dc12v.html">1PCS Siemens ZY2N-J DC12V APT Relay</a></div>
@@ -1460,6 +1533,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Siemens";
+    var CAMPAIGN_ID = "5339136270";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID + 
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

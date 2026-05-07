@@ -139,6 +139,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #d32f2f;
+            box-shadow: 0 2px 10px rgba(211,47,47,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #fff8f8;
+            border: 1px solid #f5c6c6;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { background: #b71c1c; }
+    </style>
 </head>
 <body>
     
@@ -157,11 +212,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Notifier</span></p>
-        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:30px;">Notifier Parts Catalog</h1>
-        <p class="lead">Browsing 122 verified items available for facility management.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Notifier</span></p>
+        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:20px;">Notifier Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 122 verified items. Search by part number or name:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Notifier part number (e.g. IS*)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Notifier part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="fire-lite ms-5210ud / notifier sfp-1024 replacement board *for parts* *as is*">
             <a href="fire-lite-ms5210ud.html"><img src="https://i.ebayimg.com/images/g/lRoAAeSwMr9o8oC-/s-l225.jpg" alt="Fire-Lite MS-5210UD / Notifier SFP-1024 Replacement Board *For Parts* *AS IS* - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fire-lite-ms5210ud.html">Fire-Lite MS-5210UD / Notifier SFP-1024 Replacement Board *For Parts* *AS IS*</a></div>
@@ -169,7 +242,7 @@
                 <a href="fire-lite-ms5210ud.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 18ah replaces notifier firewarden-50 control panel + 12v panel">
             <a href="firewarden-18ah.html"><img src="https://i.ebayimg.com/images/g/lKUAAeSwKvppA3~C/s-l225.jpg" alt="Mighty Max 12V 18Ah Replaces Notifier FireWarden-50 Control Panel + 12V Panel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="firewarden-18ah.html">Mighty Max 12V 18Ah Replaces Notifier FireWarden-50 Control Panel + 12V Panel</a></div>
@@ -177,7 +250,7 @@
                 <a href="firewarden-18ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier honeywell n-mps-2a firewarden pull station two-stage nfs-320c nfs2">
             <a href="firewarden-nfs-320c-nfs2.html"><img src="https://i.ebayimg.com/images/g/9pEAAOSwf5BmN~Qf/s-l225.jpg" alt="Notifier Honeywell N-MPS-2A FireWarden Pull Station Two-Stage NFS-320C NFS2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="firewarden-nfs-320c-nfs2.html">Notifier Honeywell N-MPS-2A FireWarden Pull Station Two-Stage NFS-320C NFS2</a></div>
@@ -185,7 +258,7 @@
                 <a href="firewarden-nfs-320c-nfs2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier firewarden nfw2-100. for parts or repair  board only">
             <a href="firewarden-nfw2.html"><img src="https://i.ebayimg.com/images/g/zlMAAeSwuWVpI3PS/s-l225.jpg" alt="NOTIFIER FIREWARDEN NFW2-100. For Parts Or Repair  board only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="firewarden-nfw2.html">NOTIFIER FIREWARDEN NFW2-100. For Parts Or Repair  board only</a></div>
@@ -193,7 +266,7 @@
                 <a href="firewarden-nfw2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier by honeywell nc-100r nc-100r fire alarm component type fire alarms">
             <a href="honeywell-100r.html"><img src="https://i.ebayimg.com/images/g/1MAAAeSwjR1pXdJm/s-l225.jpg" alt="Notifier by Honeywell NC-100R NC-100R Fire Alarm Component Type Fire Alarms - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-100r.html">Notifier by Honeywell NC-100R NC-100R Fire Alarm Component Type Fire Alarms</a></div>
@@ -201,7 +274,7 @@
                 <a href="honeywell-100r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="🔥notifier np-200r-iv photoelectric smoke duct detector honeywell "white"">
             <a href="honeywell-200r.html"><img src="https://i.ebayimg.com/images/g/1B8AAOSwl-Fmttst/s-l225.jpg" alt="🔥Notifier NP-200R-IV Photoelectric Smoke Duct Detector Honeywell "WHITE" - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-200r.html">🔥Notifier NP-200R-IV Photoelectric Smoke Duct Detector Honeywell "WHITE"</a></div>
@@ -209,7 +282,7 @@
                 <a href="honeywell-200r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier aem-24at remote  annunciator, honeywell, *new*">
             <a href="honeywell-24at.html"><img src="https://i.ebayimg.com/images/g/lkYAAOSwyvFlF1Vj/s-l225.jpg" alt="Notifier AEM-24AT Remote  Annunciator, Honeywell, *NEW* - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-24at.html">Notifier AEM-24AT Remote  Annunciator, Honeywell, *NEW*</a></div>
@@ -217,7 +290,7 @@
                 <a href="honeywell-24at.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell notifier fcm-1 fire alarm control module idp-control fcm1">
             <a href="honeywell-fcm1.html"><img src="https://i.ebayimg.com/images/g/o4IAAOSwEDde4Uxq/s-l225.jpg" alt="HONEYWELL NOTIFIER FCM-1 FIRE ALARM CONTROL MODULE IDP-CONTROL FCM1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-fcm1.html">HONEYWELL NOTIFIER FCM-1 FIRE ALARM CONTROL MODULE IDP-CONTROL FCM1</a></div>
@@ -225,7 +298,7 @@
                 <a href="honeywell-fcm1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="for parts honeywell fcps-24 notifier power supply fcps-24pcb rev.e #2">
             <a href="honeywell-fcps24-fcps24pcb.html"><img src="https://i.ebayimg.com/images/g/svMAAeSwJdBoljRB/s-l225.jpg" alt="FOR PARTS Honeywell FCPS-24 Notifier Power Supply FCPS-24PCB Rev.E #2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-fcps24-fcps24pcb.html">FOR PARTS Honeywell FCPS-24 Notifier Power Supply FCPS-24PCB Rev.E #2</a></div>
@@ -233,7 +306,7 @@
                 <a href="honeywell-fcps24-fcps24pcb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell notifier fsd-751rp / fsd751rp duct detector">
             <a href="honeywell-fsd751rp.html"><img src="https://i.ebayimg.com/images/g/22AAAeSwFjVoKIkU/s-l225.jpg" alt="HONEYWELL NOTIFIER FSD-751RP / FSD751RP DUCT DETECTOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-fsd751rp.html">HONEYWELL NOTIFIER FSD-751RP / FSD751RP DUCT DETECTOR</a></div>
@@ -241,7 +314,7 @@
                 <a href="honeywell-fsd751rp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="1pcs new pro honeywell notifier fsp-851 photoelectric smoke detector fsp851 ">
             <a href="honeywell-fsp851.html"><img src="https://i.ebayimg.com/images/g/RykAAeSwF69pCXHh/s-l225.jpg" alt="1PCS NEW PRO Honeywell NOTIFIER FSP-851 Photoelectric Smoke Detector FSP851  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-fsp851.html">1PCS NEW PRO Honeywell NOTIFIER FSP-851 Photoelectric Smoke Detector FSP851 </a></div>
@@ -249,7 +322,7 @@
                 <a href="honeywell-fsp851.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fsp-951 notifier heat detector head by honeywell">
             <a href="honeywell-fsp951.html"><img src="https://i.ebayimg.com/images/g/LZIAAeSwC~Fom0l5/s-l225.jpg" alt="FSP-951 NOTIFIER Heat Detector Head By Honeywell - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-fsp951.html">FSP-951 NOTIFIER Heat Detector Head By Honeywell</a></div>
@@ -257,7 +330,7 @@
                 <a href="honeywell-fsp951.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier by honeywell fsp-951ta addressable photoelectric smoke detector">
             <a href="honeywell-fsp951ta.html"><img src="https://i.ebayimg.com/images/g/~DIAAeSwWhhonehY/s-l225.jpg" alt="Notifier by Honeywell FSP-951TA Addressable Photoelectric Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-fsp951ta.html">Notifier by Honeywell FSP-951TA Addressable Photoelectric Smoke Detector</a></div>
@@ -265,7 +338,7 @@
                 <a href="honeywell-fsp951ta.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell notifier fst-951 heat detector & base- new in box- free shipping ">
             <a href="honeywell-fst951.html"><img src="https://i.ebayimg.com/images/g/muEAAeSwiDxowwnL/s-l225.jpg" alt="Honeywell Notifier FST-951 Heat Detector & Base- New In Box- Free Shipping  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-fst951.html">Honeywell Notifier FST-951 Heat Detector & Base- New In Box- Free Shipping </a></div>
@@ -273,7 +346,7 @@
                 <a href="honeywell-fst951.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier by honeywell fst-951ra-iv intelligent thermal heat detector ivory">
             <a href="honeywell-fst951ra.html"><img src="https://i.ebayimg.com/images/g/nGQAAOSwWa9m5JwR/s-l225.jpg" alt="NOTIFIER BY HONEYWELL FST-951RA-IV Intelligent Thermal Heat Detector Ivory - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-fst951ra.html">NOTIFIER BY HONEYWELL FST-951RA-IV Intelligent Thermal Heat Detector Ivory</a></div>
@@ -281,7 +354,7 @@
                 <a href="honeywell-fst951ra.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="🔥brand new🔥 honeywell 80 char lcd remote fire annunciator (notifier n-ann-100)">
             <a href="honeywell-lcd100-2.html"><img src="https://i.ebayimg.com/images/g/JHMAAOSwtuJn1J4g/s-l225.jpg" alt="🔥BRAND NEW🔥 Honeywell 80 Char LCD Remote Fire Annunciator (Notifier N-ANN-100) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-lcd100-2.html">🔥BRAND NEW🔥 Honeywell 80 Char LCD Remote Fire Annunciator (Notifier N-ANN-100)</a></div>
@@ -289,7 +362,7 @@
                 <a href="honeywell-lcd100-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell 80 char lcd remote fire annunciator notifier n-ann-100 new open box ">
             <a href="honeywell-lcd100.html"><img src="https://i.ebayimg.com/images/g/FasAAeSwrTForw-c/s-l225.jpg" alt="Honeywell 80 Char LCD Remote Fire Annunciator Notifier N-ANN-100 New Open Box  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-lcd100.html">Honeywell 80 Char LCD Remote Fire Annunciator Notifier N-ANN-100 New Open Box </a></div>
@@ -297,7 +370,7 @@
                 <a href="honeywell-lcd100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier by honeywell nbg-12lo dual action pull station">
             <a href="honeywell-nbg12lo.html"><img src="https://i.ebayimg.com/images/g/IEQAAOSwwKRkcMnK/s-l225.jpg" alt="Notifier By Honeywell NBG-12LO DUAL ACTION PULL STATION - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-nbg12lo.html">Notifier By Honeywell NBG-12LO DUAL ACTION PULL STATION</a></div>
@@ -305,7 +378,7 @@
                 <a href="honeywell-nbg12lo.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new honeywell nbg-12lr agent release pull station notifier auto pulse & key 222b">
             <a href="honeywell-nbg12lr-222b.html"><img src="https://i.ebayimg.com/images/g/VhsAAeSwlIVpHN60/s-l225.jpg" alt="New Honeywell NBG-12LR Agent Release Pull Station Notifier Auto Pulse & Key 222B - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell-nbg12lr-222b.html">New Honeywell NBG-12LR Agent Release Pull Station Notifier Auto Pulse & Key 222B</a></div>
@@ -313,7 +386,7 @@
                 <a href="honeywell-nbg12lr-222b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell notifier nc-100 addressable control module">
             <a href="honeywell.html"><img src="https://i.ebayimg.com/images/g/tfwAAOSw-fFmmVaj/s-l225.jpg" alt="Honeywell Notifier NC-100 Addressable Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="honeywell.html">Honeywell Notifier NC-100 Addressable Control Module</a></div>
@@ -321,7 +394,7 @@
                 <a href="honeywell.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fcm-1 intelligent control module">
             <a href="notifier-10-1.html"><img src="https://i.ebayimg.com/images/g/6wUAAOSwUl9mrZp5/s-l225.jpg" alt="NOTIFIER FCM-1 Intelligent Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-10-1.html">NOTIFIER FCM-1 Intelligent Control Module</a></div>
@@ -329,7 +402,7 @@
                 <a href="notifier-10-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier icm-4 indicating control module board fire alarm">
             <a href="notifier-10-2.html"><img src="https://i.ebayimg.com/images/g/M0cAAOSwvgdW54uj/s-l225.jpg" alt="NOTIFIER ICM-4 INDICATING CONTROL MODULE BOARD FIRE ALARM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-10-2.html">NOTIFIER ICM-4 INDICATING CONTROL MODULE BOARD FIRE ALARM</a></div>
@@ -337,7 +410,7 @@
                 <a href="notifier-10-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier bgx-101l fire alarm addressable pull station w/ mmx-101 (no key)">
             <a href="notifier-101l.html"><img src="https://i.ebayimg.com/images/g/P4IAAOSwSytlrVb0/s-l225.jpg" alt="Notifier BGX-101L Fire Alarm Addressable Pull Station w/ MMX-101 (No Key) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-101l.html">Notifier BGX-101L Fire Alarm Addressable Pull Station w/ MMX-101 (No Key)</a></div>
@@ -345,7 +418,7 @@
                 <a href="notifier-101l.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier cmx-2 addressable control module">
             <a href="notifier-11-1.html"><img src="https://i.ebayimg.com/images/g/-vsAAOSwO3ZmCYjm/s-l225.jpg" alt="NOTIFIER CMX-2 Addressable Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-11-1.html">NOTIFIER CMX-2 Addressable Control Module</a></div>
@@ -353,7 +426,7 @@
                 <a href="notifier-11-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier xpiq-pse power supply (for parts)">
             <a href="notifier-11-2.html"><img src="https://i.ebayimg.com/images/g/h78AAeSwy7Ro5M2s/s-l225.jpg" alt="Notifier XPIQ-PSE Power Supply (For Parts) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-11-2.html">Notifier XPIQ-PSE Power Supply (For Parts)</a></div>
@@ -361,7 +434,7 @@
                 <a href="notifier-11-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier cmx-1 addressable control module">
             <a href="notifier-13-1.html"><img src="https://i.ebayimg.com/images/g/LzMAAeSwVwxpMsTQ/s-l225.jpg" alt="NOTIFIER CMX-1 Addressable Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-13-1.html">NOTIFIER CMX-1 Addressable Control Module</a></div>
@@ -369,7 +442,7 @@
                 <a href="notifier-13-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier cr-4  control relay module, 4 relays, fire alarm.">
             <a href="notifier-14-1.html"><img src="https://i.ebayimg.com/images/g/S6kAAOSwuMFUigUV/s-l225.jpg" alt="NOTIFIER CR-4  CONTROL RELAY MODULE, 4 RELAYS, FIRE ALARM. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-14-1.html">NOTIFIER CR-4  CONTROL RELAY MODULE, 4 RELAYS, FIRE ALARM.</a></div>
@@ -377,7 +450,7 @@
                 <a href="notifier-14-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier crm-4 fire alarm relay circuit module">
             <a href="notifier-15-1.html"><img src="https://i.ebayimg.com/images/g/wywAAeSwP8lpWnqU/s-l225.jpg" alt="NOTIFIER CRM-4 Fire Alarm Relay Circuit Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-15-1.html">NOTIFIER CRM-4 Fire Alarm Relay Circuit Module</a></div>
@@ -385,7 +458,7 @@
                 <a href="notifier-15-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier  frm-1 addressable control relay module only, no cover">
             <a href="notifier-16-1.html"><img src="https://i.ebayimg.com/images/g/az4AAOSw2qFnFdXH/s-l225.jpg" alt="NOTIFIER  FRM-1 ADDRESSABLE CONTROL RELAY MODULE ONLY, NO COVER - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-16-1.html">NOTIFIER  FRM-1 ADDRESSABLE CONTROL RELAY MODULE ONLY, NO COVER</a></div>
@@ -393,7 +466,7 @@
                 <a href="notifier-16-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier cr-4 fire alarm control relay module (new in box)">
             <a href="notifier-17-1.html"><img src="https://i.ebayimg.com/images/g/E2oAAeSwiLNpTvg7/s-l225.jpg" alt="NOTIFIER CR-4 Fire Alarm Control Relay Module (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-17-1.html">NOTIFIER CR-4 Fire Alarm Control Relay Module (NEW IN BOX)</a></div>
@@ -401,7 +474,7 @@
                 <a href="notifier-17-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier frm-1 addressable relay module">
             <a href="notifier-18-1.html"><img src="https://i.ebayimg.com/images/g/nzEAAeSwBcxof~OI/s-l225.jpg" alt="Notifier FRM-1 Addressable Relay Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-18-1.html">Notifier FRM-1 Addressable Relay Module</a></div>
@@ -409,7 +482,7 @@
                 <a href="notifier-18-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 18ah replaces notifier nfs-320 fire control panel + 12v panel">
             <a href="notifier-18ah-nfs.html"><img src="https://i.ebayimg.com/images/g/D8IAAeSwHv1pA4Bj/s-l225.jpg" alt="Mighty Max 12V 18Ah Replaces Notifier NFS-320 Fire Control Panel + 12V Panel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-18ah-nfs.html">Mighty Max 12V 18Ah Replaces Notifier NFS-320 Fire Control Panel + 12V Panel</a></div>
@@ -417,7 +490,7 @@
                 <a href="notifier-18ah-nfs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 18ah replaces notifier 100-2 control panel + 12v solar panel">
             <a href="notifier-18ah.html"><img src="https://i.ebayimg.com/images/g/oWUAAeSwEQRpA4By/s-l225.jpg" alt="Mighty Max 12V 18Ah Replaces Notifier 100-2 Control Panel + 12V Solar Panel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-18ah.html">Mighty Max 12V 18Ah Replaces Notifier 100-2 Control Panel + 12V Solar Panel</a></div>
@@ -425,7 +498,7 @@
                 <a href="notifier-18ah.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier xpm-8 fire alarm control panel transponder module">
             <a href="notifier-19-1.html"><img src="https://i.ebayimg.com/images/g/WRYAAOSwDsdlk5V3/s-l225.jpg" alt="Notifier XPM-8 Fire Alarm Control Panel Transponder Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-19-1.html">Notifier XPM-8 Fire Alarm Control Panel Transponder Module</a></div>
@@ -433,7 +506,7 @@
                 <a href="notifier-19-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier bng-1f fire alarm pull station (new in box)">
             <a href="notifier-1f.html"><img src="https://i.ebayimg.com/images/g/3vsAAeSwx6NpTvgG/s-l225.jpg" alt="NOTIFIER BNG-1F Fire Alarm Pull Station (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-1f.html">NOTIFIER BNG-1F Fire Alarm Pull Station (NEW IN BOX)</a></div>
@@ -441,7 +514,7 @@
                 <a href="notifier-1f.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier bng-1r red fire alarm pull station">
             <a href="notifier-1r.html"><img src="https://i.ebayimg.com/images/g/YxEAAOSwiMhmmprr/s-l225.jpg" alt="Notifier BNG-1R Red Fire Alarm Pull Station - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-1r.html">Notifier BNG-1R Red Fire Alarm Pull Station</a></div>
@@ -449,7 +522,7 @@
                 <a href="notifier-1r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier parts ">
             <a href="notifier-20-1.html"><img src="https://i.ebayimg.com/images/g/7ksAAeSwjT9pXs1f/s-l225.jpg" alt="Notifier Parts  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-20-1.html">Notifier Parts </a></div>
@@ -457,7 +530,7 @@
                 <a href="notifier-20-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="brand new notifier fsb-200s smoke beam detector single-ended free fast shipping">
             <a href="notifier-200s.html"><img src="https://i.ebayimg.com/images/g/VNMAAOSww39n2Qv9/s-l225.jpg" alt="BRAND NEW NOTIFIER FSB-200S SMOKE BEAM DETECTOR SINGLE-ENDED FREE FAST SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-200s.html">BRAND NEW NOTIFIER FSB-200S SMOKE BEAM DETECTOR SINGLE-ENDED FREE FAST SHIPPING</a></div>
@@ -465,7 +538,7 @@
                 <a href="notifier-200s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier cps-24 power supply - for parts/repair">
             <a href="notifier-21-1.html"><img src="https://i.ebayimg.com/images/g/fY8AAeSwYfpo0KWQ/s-l225.jpg" alt="NOTIFIER CPS-24 Power Supply - FOR PARTS/REPAIR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-21-1.html">NOTIFIER CPS-24 Power Supply - FOR PARTS/REPAIR</a></div>
@@ -473,7 +546,7 @@
                 <a href="notifier-21-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="vintage old couch station call box pull down local fire alarm notifier parts usa">
             <a href="notifier-22-1.html"><img src="https://i.ebayimg.com/images/g/S1kAAOSwNDZmjZFf/s-l225.jpg" alt="Vintage Old Couch Station Call Box Pull Down Local Fire Alarm Notifier Parts USA - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-22-1.html">Vintage Old Couch Station Call Box Pull Down Local Fire Alarm Notifier Parts USA</a></div>
@@ -481,7 +554,7 @@
                 <a href="notifier-22-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier ncm-wpcb rev.h fire alarm sub-assembly smt lead free component">
             <a href="notifier-23-1.html"><img src="https://i.ebayimg.com/images/g/y9kAAOSwlxNj9I0T/s-l225.jpg" alt="Notifier NCM-WPCB REV.H Fire Alarm Sub-Assembly SMT Lead Free Component - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-23-1.html">Notifier NCM-WPCB REV.H Fire Alarm Sub-Assembly SMT Lead Free Component</a></div>
@@ -489,7 +562,7 @@
                 <a href="notifier-23-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier co. board 237-9999 j ass'y 410-1736 d fire alarm part. for 4800 systems">
             <a href="notifier-237-9999-410.html"><img src="https://i.ebayimg.com/images/g/xx8AAOSwBLlVXONf/s-l225.jpg" alt="NOTIFIER CO. BOARD 237-9999 J ASS'Y 410-1736 D Fire Alarm Part. For 4800 Systems - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-237-9999-410.html">NOTIFIER CO. BOARD 237-9999 J ASS'Y 410-1736 D Fire Alarm Part. For 4800 Systems</a></div>
@@ -497,7 +570,7 @@
                 <a href="notifier-237-9999-410.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier co. board 237-9999 j ass'y 410-1736 d fire alarm part. for 4800 systems">
             <a href="notifier-237.html"><img src="https://i.ebayimg.com/images/g/xx8AAOSwBLlVXONf/s-l225.jpg" alt="NOTIFIER CO. BOARD 237-9999 J ASS'Y 410-1736 D Fire Alarm Part. For 4800 Systems - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-237.html">NOTIFIER CO. BOARD 237-9999 J ASS'Y 410-1736 D Fire Alarm Part. For 4800 Systems</a></div>
@@ -505,7 +578,7 @@
                 <a href="notifier-237.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier aem-24at remote  annunciator">
             <a href="notifier-24at.html"><img src="https://i.ebayimg.com/images/g/VtQAAOSw1bdkrDqO/s-l225.jpg" alt="Notifier AEM-24AT Remote  Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-24at.html">Notifier AEM-24AT Remote  Annunciator</a></div>
@@ -513,7 +586,7 @@
                 <a href="notifier-24at.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier amps-24e addressable power supply (for parts)">
             <a href="notifier-24e.html"><img src="https://i.ebayimg.com/images/g/zMcAAeSwWwFo5NRT/s-l225.jpg" alt="NOTIFIER AMPS-24E ADDRESSABLE POWER SUPPLY (FOR PARTS) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-24e.html">NOTIFIER AMPS-24E ADDRESSABLE POWER SUPPLY (FOR PARTS)</a></div>
@@ -521,7 +594,7 @@
                 <a href="notifier-24e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="broken for parts notifier udact-2 universal digital alarm communicator untested">
             <a href="notifier-25-1.html"><img src="https://i.ebayimg.com/images/g/HN4AAOSwDXJjTFIO/s-l225.jpg" alt="BROKEN FOR PARTS Notifier UDACT-2 Universal Digital Alarm Communicator UNTESTED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-25-1.html">BROKEN FOR PARTS Notifier UDACT-2 Universal Digital Alarm Communicator UNTESTED</a></div>
@@ -529,7 +602,7 @@
                 <a href="notifier-25-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier intelligent smoke detector 4.5" ã 4.25" ã 2" fsp-851">
             <a href="notifier-25-fsp851.html"><img src="https://i.ebayimg.com/images/g/OmwAAeSwa5ppPCku/s-l225.jpg" alt="Notifier Intelligent Smoke Detector 4.5" Ã 4.25" Ã 2" FSP-851 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-25-fsp851.html">Notifier Intelligent Smoke Detector 4.5" Ã 4.25" Ã 2" FSP-851</a></div>
@@ -537,7 +610,7 @@
                 <a href="notifier-25-fsp851.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier mps-24a power supply charger board for parts or repair siemens box">
             <a href="notifier-26-1.html"><img src="https://i.ebayimg.com/images/g/AtsAAeSw4UVpEeRP/s-l225.jpg" alt="Notifier MPS-24A Power Supply Charger Board For Parts or Repair Siemens Box - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-26-1.html">Notifier MPS-24A Power Supply Charger Board For Parts or Repair Siemens Box</a></div>
@@ -545,7 +618,7 @@
                 <a href="notifier-26-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new notifier ice-4 indicating circuit expander module fire alarm part">
             <a href="notifier-27-1.html"><img src="https://i.ebayimg.com/images/g/LVAAAOSwcwhVLxpF/s-l225.jpg" alt="NEW NOTIFIER ICE-4 INDICATING CIRCUIT EXPANDER MODULE FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-27-1.html">NEW NOTIFIER ICE-4 INDICATING CIRCUIT EXPANDER MODULE FIRE ALARM PART</a></div>
@@ -553,7 +626,7 @@
                 <a href="notifier-27-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier ice-4 indicating circuit expander module fire alarm part">
             <a href="notifier-28-1.html"><img src="https://i.ebayimg.com/images/g/H40AAOSw2gxY2qAQ/s-l225.jpg" alt="NOTIFIER ICE-4 INDICATING CIRCUIT EXPANDER MODULE FIRE ALARM PART - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-28-1.html">NOTIFIER ICE-4 INDICATING CIRCUIT EXPANDER MODULE FIRE ALARM PART</a></div>
@@ -561,7 +634,7 @@
                 <a href="notifier-28-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="vintage old gamewell station call box pull for fire local alarm notifier parts">
             <a href="notifier-29-1.html"><img src="https://i.ebayimg.com/images/g/Pn4AAOSwnVxmjZBL/s-l225.jpg" alt="Vintage Old Gamewell Station Call Box Pull For Fire Local Alarm Notifier Parts - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-29-1.html">Vintage Old Gamewell Station Call Box Pull For Fire Local Alarm Notifier Parts</a></div>
@@ -569,7 +642,7 @@
                 <a href="notifier-29-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier cr-4l  | fire alarm control relay module four wire form-c |  cr4l">
             <a href="notifier-4l-cr4l.html"><img src="https://i.ebayimg.com/images/g/EWMAAOSwqjNoXXaZ/s-l225.jpg" alt="NOTIFIER CR-4L  | FIRE ALARM CONTROL RELAY MODULE FOUR WIRE FORM-C |  CR4L - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-4l-cr4l.html">NOTIFIER CR-4L  | FIRE ALARM CONTROL RELAY MODULE FOUR WIRE FORM-C |  CR4L</a></div>
@@ -577,7 +650,7 @@
                 <a href="notifier-4l-cr4l.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier crm-4rk fire alarm relay circuit module">
             <a href="notifier-4rk.html"><img src="https://i.ebayimg.com/images/g/r~cAAeSwZH9pWnq3/s-l225.jpg" alt="NOTIFIER CRM-4RK Fire Alarm Relay Circuit Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-4rk.html">NOTIFIER CRM-4RK Fire Alarm Relay Circuit Module</a></div>
@@ -585,7 +658,7 @@
                 <a href="notifier-4rk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier ansul autopulse 4xzm fire alarm zone relay control module 4xzb">
             <a href="notifier-4xzm-4xzb.html"><img src="https://i.ebayimg.com/images/g/FBgAAOSwzrNa4OVU/s-l225.jpg" alt="Notifier Ansul Autopulse 4XZM Fire Alarm Zone Relay Control Module 4XZB - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-4xzm-4xzb.html">Notifier Ansul Autopulse 4XZM Fire Alarm Zone Relay Control Module 4XZB</a></div>
@@ -593,7 +666,7 @@
                 <a href="notifier-4xzm-4xzb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier 4xzm zone relay module">
             <a href="notifier-4xzm.html"><img src="https://i.ebayimg.com/images/g/G6kAAOSwB9lnpJmK/s-l225.jpg" alt="Notifier 4XZM Zone Relay Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-4xzm.html">Notifier 4XZM Zone Relay Module</a></div>
@@ -601,7 +674,7 @@
                 <a href="notifier-4xzm.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier 4zbr 237-9904 e card 410-160-7  fire alarm part. for 4800 systems.">
             <a href="notifier-4zbr-237-9904.html"><img src="https://i.ebayimg.com/images/g/SIIAAeSwAvFpoaST/s-l225.jpg" alt="NOTIFIER 4ZBR 237-9904 E CARD 410-160-7  Fire Alarm Part. For 4800 Systems. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-4zbr-237-9904.html">NOTIFIER 4ZBR 237-9904 E CARD 410-160-7  Fire Alarm Part. For 4800 Systems.</a></div>
@@ -609,7 +682,7 @@
                 <a href="notifier-4zbr-237-9904.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier 4zbr 237-9904 e card 410-160- fire alarm part. for 4800 systems.">
             <a href="notifier-4zbr.html"><img src="https://i.ebayimg.com/images/g/~s8AAOSwHPlWccf7/s-l225.jpg" alt="NOTIFIER 4ZBR 237-9904 E CARD 410-160- Fire Alarm Part. For 4800 Systems. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-4zbr.html">NOTIFIER 4ZBR 237-9904 E CARD 410-160- Fire Alarm Part. For 4800 Systems.</a></div>
@@ -617,7 +690,7 @@
                 <a href="notifier-4zbr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fdx-551r4 heat detector">
             <a href="notifier-551r4.html"><img src="https://i.ebayimg.com/images/g/c0gAAeSwJr9oBsKP/s-l225.jpg" alt="Notifier FDX-551R4 Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-551r4.html">Notifier FDX-551R4 Heat Detector</a></div>
@@ -625,7 +698,7 @@
                 <a href="notifier-551r4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="simplex 556-681 fire alarm trouble notifier card simplex 2001 556-638">
             <a href="notifier-556.html"><img src="https://i.ebayimg.com/images/g/nhAAAOSwMMFbWNUp/s-l225.jpg" alt="SIMPLEX 556-681 FIRE ALARM TROUBLE NOTIFIER CARD SIMPLEX 2001 556-638 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-556.html">SIMPLEX 556-681 FIRE ALARM TROUBLE NOTIFIER CARD SIMPLEX 2001 556-638</a></div>
@@ -633,7 +706,7 @@
                 <a href="notifier-556.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier amps-24 cps-24 ps-610-k2-v2.03 intelligent pwr supply for parts 🚚">
             <a href="notifier-610-k2.html"><img src="https://i.ebayimg.com/images/g/54MAAOSwti5oHRRQ/s-l225.jpg" alt="Notifier AMPS-24 CPS-24 ps-610-k2-v2.03 intelligent pwr supply FOR PARTS 🚚 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-610-k2.html">Notifier AMPS-24 CPS-24 ps-610-k2-v2.03 intelligent pwr supply FOR PARTS 🚚</a></div>
@@ -641,7 +714,7 @@
                 <a href="notifier-610-k2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="nd-751p notifier smoke detector model nd-751p new one in box in stock fast ship">
             <a href="notifier-751p.html"><img src="https://i.ebayimg.com/images/g/tzUAAeSwTfVotUBr/s-l225.jpg" alt="ND-751P Notifier Smoke Detector Model ND-751P New One In Box In Stock Fast Ship - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-751p.html">ND-751P Notifier Smoke Detector Model ND-751P New One In Box In Stock Fast Ship</a></div>
@@ -649,7 +722,7 @@
                 <a href="notifier-751p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fdu-80 remote annunciator lcd, brand new, free rush shipping ">
             <a href="notifier-80-lcd.html"><img src="https://i.ebayimg.com/images/g/Mb4AAOSwqzlmOvb-/s-l225.jpg" alt="Notifier FDU-80 Remote Annunciator LCD, Brand New, Free Rush Shipping  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-80-lcd.html">Notifier FDU-80 Remote Annunciator LCD, Brand New, Free Rush Shipping </a></div>
@@ -657,7 +730,7 @@
                 <a href="notifier-80-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier n-ann-80 annunciator lcd remote mimics the facp display">
             <a href="notifier-80-lcd1-1.html"><img src="https://i.ebayimg.com/images/g/fOsAAeSwwwJo0WOQ/s-l225.jpg" alt="Notifier N-ANN-80 Annunciator LCD Remote Mimics The FACP Display - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-80-lcd1-1.html">Notifier N-ANN-80 Annunciator LCD Remote Mimics The FACP Display</a></div>
@@ -665,7 +738,7 @@
                 <a href="notifier-80-lcd1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier 9200ud-pca fire alarm control board w/ keypad display parts repair">
             <a href="notifier-9200ud.html"><img src="https://i.ebayimg.com/images/g/IwAAAeSwNDppJPej/s-l225.jpg" alt="Notifier 9200UD-PCA Fire Alarm Control Board w/ Keypad Display Parts Repair - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-9200ud.html">Notifier 9200UD-PCA Fire Alarm Control Board w/ Keypad Display Parts Repair</a></div>
@@ -673,7 +746,7 @@
                 <a href="notifier-9200ud.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="*nib* *new* notifier mps-950b fire alarm pull station english/french canadian">
             <a href="notifier-950b.html"><img src="https://i.ebayimg.com/images/g/R-QAAOSwFq5lLgUq/s-l225.jpg" alt="*NIB* *New* Notifier MPS-950B Fire Alarm Pull Station English/French Canadian - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-950b.html">*NIB* *New* Notifier MPS-950B Fire Alarm Pull Station English/French Canadian</a></div>
@@ -681,7 +754,7 @@
                 <a href="notifier-950b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier mps-950kb pull station, free shipping *new*">
             <a href="notifier-950kb.html"><img src="https://i.ebayimg.com/images/g/9dAAAOSwGd9lLgbX/s-l225.jpg" alt="Notifier MPS-950KB Pull Station, FREE SHIPPING *NEW* - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-950kb.html">Notifier MPS-950KB Pull Station, FREE SHIPPING *NEW*</a></div>
@@ -689,7 +762,7 @@
                 <a href="notifier-950kb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 9ah gel f2 replaces notifier nfc-50/100(e) control panel - 6 pack">
             <a href="notifier-9ah-f2.html"><img src="https://i.ebayimg.com/images/g/oMwAAeSwXDhop2Vc/s-l225.jpg" alt="Mighty Max 12V 9AH GEL F2 Replaces Notifier NFC-50/100(E) Control Panel - 6 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-9ah-f2.html">Mighty Max 12V 9AH GEL F2 Replaces Notifier NFC-50/100(E) Control Panel - 6 Pack</a></div>
@@ -697,7 +770,7 @@
                 <a href="notifier-9ah-f2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="for parts notifier afp-200 / afp200 intelligent fire detection and alarm system">
             <a href="notifier-afp-200-afp200.html"><img src="https://i.ebayimg.com/images/g/QEIAAOSw8exmmTut/s-l225.jpg" alt="For Parts NOTIFIER AFP-200 / AFP200 INTELLIGENT FIRE DETECTION AND ALARM SYSTEM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-afp-200-afp200.html">For Parts NOTIFIER AFP-200 / AFP200 INTELLIGENT FIRE DETECTION AND ALARM SYSTEM</a></div>
@@ -705,7 +778,7 @@
                 <a href="notifier-afp-200-afp200.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier afp-200 intelligent fire detection alarm system control panel for parts">
             <a href="notifier-afp.html"><img src="https://i.ebayimg.com/images/g/9ysAAeSwFr9ns5x7/s-l225.jpg" alt="NOTIFIER AFP-200 Intelligent Fire Detection Alarm System Control Panel FOR PARTS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-afp.html">NOTIFIER AFP-200 Intelligent Fire Detection Alarm System Control Panel FOR PARTS</a></div>
@@ -713,7 +786,7 @@
                 <a href="notifier-afp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier dia-1 fire alarm display interface assembly for am2020 for parts/repair">
             <a href="notifier-am2020.html"><img src="https://i.ebayimg.com/images/g/4XUAAOSw8ZFn81Ps/s-l225.jpg" alt="Notifier DIA-1 Fire Alarm Display Interface Assembly for AM2020 FOR PARTS/REPAIR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-am2020.html">Notifier DIA-1 Fire Alarm Display Interface Assembly for AM2020 FOR PARTS/REPAIR</a></div>
@@ -721,7 +794,7 @@
                 <a href="notifier-am2020.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier amps24 addressable power supply fire alarm parts only not working">
             <a href="notifier-amps24.html"><img src="https://i.ebayimg.com/images/g/ivEAAOSwkxdmJEBW/s-l225.jpg" alt="NOTIFIER AMPS24 Addressable Power Supply Fire Alarm PARTS ONLY NOT WORKING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-amps24.html">NOTIFIER AMPS24 Addressable Power Supply Fire Alarm PARTS ONLY NOT WORKING</a></div>
@@ -729,7 +802,7 @@
                 <a href="notifier-amps24.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier not-bg12lx addressable fire alarm pull station w/ key used">
             <a href="notifier-bg12lx.html"><img src="https://i.ebayimg.com/images/g/vbIAAeSwe~lpU2s~/s-l225.jpg" alt="Notifier NOT-BG12LX Addressable Fire Alarm Pull Station w/ Key USED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-bg12lx.html">Notifier NOT-BG12LX Addressable Fire Alarm Pull Station w/ Key USED</a></div>
@@ -737,7 +810,7 @@
                 <a href="notifier-bg12lx.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier chs-6 fire alarm control panel chassis new with open box">
             <a href="notifier-chs6.html"><img src="https://i.ebayimg.com/images/g/OwEAAeSwRqFokmFk/s-l225.jpg" alt="NOTIFIER CHS-6 Fire Alarm Control Panel Chassis NEW WITH OPEN BOX - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-chs6.html">NOTIFIER CHS-6 Fire Alarm Control Panel Chassis NEW WITH OPEN BOX</a></div>
@@ -745,7 +818,7 @@
                 <a href="notifier-chs6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="1pc notifier fire alarm output monitoring module jskm-fci-cm2000 free delivery">
             <a href="notifier-cm2000.html"><img src="https://i.ebayimg.com/images/g/QKsAAeSwtSRouAtJ/s-l225.jpg" alt="1Pc NOTIFIER Fire Alarm Output Monitoring Module JSKM-FCI-CM2000 Free Delivery - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-cm2000.html">1Pc NOTIFIER Fire Alarm Output Monitoring Module JSKM-FCI-CM2000 Free Delivery</a></div>
@@ -753,7 +826,7 @@
                 <a href="notifier-cm2000.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier cpu-400 (for afp-400) fire alarm control panel main board parts">
             <a href="notifier-cpu-400-afp.html"><img src="https://i.ebayimg.com/images/g/Ad4AAeSw6qtpJPBO/s-l225.jpg" alt="NOTIFIER CPU-400 (For AFP-400) FIRE ALARM CONTROL PANEL MAIN BOARD PARTS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-cpu-400-afp.html">NOTIFIER CPU-400 (For AFP-400) FIRE ALARM CONTROL PANEL MAIN BOARD PARTS</a></div>
@@ -761,7 +834,7 @@
                 <a href="notifier-cpu-400-afp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier cpu-2 afp-1010 cpu fire alarm control panel board">
             <a href="notifier-cpu-afp.html"><img src="https://i.ebayimg.com/images/g/PRoAAeSw29doHmlo/s-l225.jpg" alt="Notifier CPU-2 AFP-1010 CPU Fire Alarm Control Panel Board - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-cpu-afp.html">Notifier CPU-2 AFP-1010 CPU Fire Alarm Control Panel Board</a></div>
@@ -769,7 +842,7 @@
                 <a href="notifier-cpu-afp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier cpu2-3030d fire alarm control panel,15877l,cpu2-303pcd rev c,part*96403">
             <a href="notifier-cpu2-3030d-15877l.html"><img src="https://i.ebayimg.com/images/g/arEAAOSw8fNkSztm/s-l225.jpg" alt="Notifier CPU2-3030D Fire Alarm Control panel,15877L,CPU2-303PCD Rev C,Part*96403 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-cpu2-3030d-15877l.html">Notifier CPU2-3030D Fire Alarm Control panel,15877L,CPU2-303PCD Rev C,Part*96403</a></div>
@@ -777,7 +850,7 @@
                 <a href="notifier-cpu2-3030d-15877l.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier parts daa2-5070">
             <a href="notifier-daa2.html"><img src="https://i.ebayimg.com/images/g/A9UAAeSw3zlpUUMw/s-l225.jpg" alt="Notifier Parts DAA2-5070 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-daa2.html">Notifier Parts DAA2-5070</a></div>
@@ -785,7 +858,7 @@
                 <a href="notifier-daa2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier rld fire alarm annunciator remote display (new in box)">
             <a href="notifier-display.html"><img src="https://i.ebayimg.com/images/g/kY4AAeSwuXxpYwR0/s-l225.jpg" alt="NOTIFIER RLD Fire Alarm Annunciator Remote Display (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-display.html">NOTIFIER RLD Fire Alarm Annunciator Remote Display (NEW IN BOX)</a></div>
@@ -793,7 +866,7 @@
                 <a href="notifier-display.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier ldm-e32 fire alarm control panel lamp driver module card">
             <a href="notifier-e32.html"><img src="https://i.ebayimg.com/images/g/H6EAAeSwDJFpTvpj/s-l225.jpg" alt="NOTIFIER LDM-E32 Fire Alarm Control Panel Lamp Driver Module Card - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-e32.html">NOTIFIER LDM-E32 Fire Alarm Control Panel Lamp Driver Module Card</a></div>
@@ -801,7 +874,7 @@
                 <a href="notifier-e32.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier n-ann-led led remote annunciator - gray face/red enclosure - pre-owned">
             <a href="notifier-enclosure.html"><img src="https://i.ebayimg.com/images/g/E0sAAeSwS2xoFjiL/s-l225.jpg" alt="NOTIFIER N-ANN-LED LED REMOTE ANNUNCIATOR - GRAY FACE/RED ENCLOSURE - PRE-OWNED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-enclosure.html">NOTIFIER N-ANN-LED LED REMOTE ANNUNCIATOR - GRAY FACE/RED ENCLOSURE - PRE-OWNED</a></div>
@@ -809,7 +882,7 @@
                 <a href="notifier-enclosure.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fapt-851 smoke automatic fire detector head with integral heat detector">
             <a href="notifier-fapt851.html"><img src="https://i.ebayimg.com/images/g/jbsAAOSwK99kxS3S/s-l225.jpg" alt="NOTIFIER FAPT-851 Smoke Automatic Fire detector Head with Integral Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fapt851.html">NOTIFIER FAPT-851 Smoke Automatic Fire detector Head with Integral Heat Detector</a></div>
@@ -817,7 +890,7 @@
                 <a href="notifier-fapt851.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fcps-24 nac power supply missing parts">
             <a href="notifier-fcps24.html"><img src="https://i.ebayimg.com/images/g/4RcAAeSwhRRofmbg/s-l225.jpg" alt="Notifier Fcps-24 NAC Power Supply MISSING PARTS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fcps24.html">Notifier Fcps-24 NAC Power Supply MISSING PARTS</a></div>
@@ -825,7 +898,7 @@
                 <a href="notifier-fcps24.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new notifier fsl-751 addressable laser smoke detector *p">
             <a href="notifier-fsl751.html"><img src="https://i.ebayimg.com/images/g/NxIAAOSwTK5mWWkF/s-l225.jpg" alt="New Notifier FSL-751 Addressable Laser Smoke Detector *P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fsl751.html">New Notifier FSL-751 Addressable Laser Smoke Detector *P</a></div>
@@ -833,7 +906,7 @@
                 <a href="notifier-fsl751.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fsp-851 new in box notifier smoke detector jty-gd-fsp-851c+b501 fast ship">
             <a href="notifier-fsp851-fsp851c-b501.html"><img src="https://i.ebayimg.com/images/g/TeEAAeSwR3JpMP0I/s-l225.jpg" alt="FSP-851 NEW IN BOX NOTIFIER SMOKE DETECTOR JTY-GD-FSP-851C+B501 Fast Ship - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fsp851-fsp851c-b501.html">FSP-851 NEW IN BOX NOTIFIER SMOKE DETECTOR JTY-GD-FSP-851C+B501 Fast Ship</a></div>
@@ -841,7 +914,7 @@
                 <a href="notifier-fsp851-fsp851c-b501.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="1pc new notifier fsp-851 smoke detector jty-gd-fsp-851c alarm fast shipping">
             <a href="notifier-fsp851-fsp851c.html"><img src="https://i.ebayimg.com/images/g/eMsAAeSwzm5pSK~6/s-l225.jpg" alt="1PC NEW NOTIFIER FSP-851 SMOKE DETECTOR JTY-GD-FSP-851C ALARM FAST SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fsp851-fsp851c.html">1PC NEW NOTIFIER FSP-851 SMOKE DETECTOR JTY-GD-FSP-851C ALARM FAST SHIPPING</a></div>
@@ -849,7 +922,7 @@
                 <a href="notifier-fsp851-fsp851c.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier intelligent smoke detector fsp-851, fsp-851r & fst-951">
             <a href="notifier-fsp851-fsp851r-fst951.html"><img src="https://i.ebayimg.com/images/g/ZgoAAeSwVwxpQF1z/s-l225.jpg" alt="Notifier Intelligent Smoke Detector FSP-851, FSP-851R & FST-951 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fsp851-fsp851r-fst951.html">Notifier Intelligent Smoke Detector FSP-851, FSP-851R & FST-951</a></div>
@@ -857,7 +930,7 @@
                 <a href="notifier-fsp851-fsp851r-fst951.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fsp-851 notifier  smoke detector fsp 851 fire alarm">
             <a href="notifier-fsp851.html"><img src="https://i.ebayimg.com/images/g/t30AAeSw6jRodeTd/s-l225.jpg" alt="FSP-851 NOTIFIER  SMOKE DETECTOR FSP 851 FIRE ALARM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fsp851.html">FSP-851 NOTIFIER  SMOKE DETECTOR FSP 851 FIRE ALARM</a></div>
@@ -865,7 +938,7 @@
                 <a href="notifier-fsp851.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="1pcs new for notifier point photoelectric smoke fire detector  jty-gd-fsp-851c">
             <a href="notifier-fsp851c.html"><img src="https://i.ebayimg.com/images/g/GiwAAOSwbmpjckdB/s-l225.jpg" alt="1PCS NEW FOR Notifier Point Photoelectric Smoke Fire Detector  JTY-GD-FSP-851C - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fsp851c.html">1PCS NEW FOR Notifier Point Photoelectric Smoke Fire Detector  JTY-GD-FSP-851C</a></div>
@@ -873,7 +946,7 @@
                 <a href="notifier-fsp851c.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fsp-951 plug-in photoelectric smoke detector 122°f max. temperature">
             <a href="notifier-fsp951.html"><img src="https://i.ebayimg.com/images/g/5~sAAeSwcLppOlA4/s-l225.jpg" alt="NOTIFIER FSP-951 Plug-In Photoelectric Smoke Detector 122°F Max. Temperature - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fsp951.html">NOTIFIER FSP-951 Plug-In Photoelectric Smoke Detector 122°F Max. Temperature</a></div>
@@ -881,7 +954,7 @@
                 <a href="notifier-fsp951.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier temperature sensing jty-gd-fsp-951g smoke fire detector fsp-951g">
             <a href="notifier-fsp951g.html"><img src="https://i.ebayimg.com/images/g/WwAAAeSwLqJosAYj/s-l225.jpg" alt="Notifier temperature sensing JTY-GD-FSP-951G smoke fire detector FSP-951G - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fsp951g.html">Notifier temperature sensing JTY-GD-FSP-951G smoke fire detector FSP-951G</a></div>
@@ -889,7 +962,7 @@
                 <a href="notifier-fsp951g.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="no box notifier fsp-951r photoelectric smoke detector with remote test capabilit">
             <a href="notifier-fsp951r.html"><img src="https://i.ebayimg.com/images/g/JWkAAeSw1sJoYw2W/s-l225.jpg" alt="No box Notifier FSP-951R Photoelectric Smoke Detector with Remote Test Capabilit - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fsp951r.html">No box Notifier FSP-951R Photoelectric Smoke Detector with Remote Test Capabilit</a></div>
@@ -897,7 +970,7 @@
                 <a href="notifier-fsp951r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new notifier fst-851 heat detector – sealed box, free, world wide fast shipping">
             <a href="notifier-fst851.html"><img src="https://i.ebayimg.com/images/g/M~gAAOSwbglnsGgX/s-l225.jpg" alt="New Notifier FST-851 Heat Detector – Sealed Box, Free, world wide Fast Shipping - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fst851.html">New Notifier FST-851 Heat Detector – Sealed Box, Free, world wide Fast Shipping</a></div>
@@ -905,7 +978,7 @@
                 <a href="notifier-fst851.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fst-851r intelligent heat detector fst851r">
             <a href="notifier-fst851r.html"><img src="https://i.ebayimg.com/images/g/wP0AAeSwIJ9orX-6/s-l225.jpg" alt="Notifier FST-851R Intelligent Heat Detector FST851R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fst851r.html">Notifier FST-851R Intelligent Heat Detector FST851R</a></div>
@@ -913,7 +986,7 @@
                 <a href="notifier-fst851r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fst-951 135° fixed temp heat detector head white fire alarm">
             <a href="notifier-fst951.html"><img src="https://i.ebayimg.com/images/g/uQsAAeSwHb1pC~XP/s-l225.jpg" alt="NOTIFIER FST-951 135° FIXED TEMP HEAT DETECTOR HEAD WHITE FIRE ALARM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fst951.html">NOTIFIER FST-951 135° FIXED TEMP HEAT DETECTOR HEAD WHITE FIRE ALARM</a></div>
@@ -921,7 +994,7 @@
                 <a href="notifier-fst951.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fst-951r 135° fixed temp w/rate of rise heat detector white fire alarm">
             <a href="notifier-fst951r.html"><img src="https://i.ebayimg.com/images/g/yFYAAeSwaDZo4Hs2/s-l225.jpg" alt="NOTIFIER FST-951R 135° FIXED TEMP W/RATE OF RISE HEAT DETECTOR WHITE Fire Alarm - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-fst951r.html">NOTIFIER FST-951R 135° FIXED TEMP W/RATE OF RISE HEAT DETECTOR WHITE Fire Alarm</a></div>
@@ -929,7 +1002,7 @@
                 <a href="notifier-fst951r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier jnca-2 with housing for remote annunciator">
             <a href="notifier-generic-parts.html"><img src="https://i.ebayimg.com/images/g/Q7sAAOSwdENkHOs~/s-l225.jpg" alt="Notifier JNCA-2 with housing for remote annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-generic-parts.html">Notifier JNCA-2 with housing for remote annunciator</a></div>
@@ -937,7 +1010,7 @@
                 <a href="notifier-generic-parts.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier 8 zone input card part number j2-8">
             <a href="notifier-j2.html"><img src="https://i.ebayimg.com/images/g/QCQAAOSwPKNl-ICa/s-l225.jpg" alt="Notifier 8 Zone input card Part number J2-8 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-j2.html">Notifier 8 Zone input card Part number J2-8</a></div>
@@ -945,7 +1018,7 @@
                 <a href="notifier-j2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier kdm-2 kdm2 fire alarm control panel signal system board unit">
             <a href="notifier-kdm2.html"><img src="https://i.ebayimg.com/images/g/SrQAAeSwSTlpLmVV/s-l225.jpg" alt="NOTIFIER KDM-2 KDM2 Fire Alarm Control Panel Signal System Board unit - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-kdm2.html">NOTIFIER KDM-2 KDM2 Fire Alarm Control Panel Signal System Board unit</a></div>
@@ -953,7 +1026,7 @@
                 <a href="notifier-kdm2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier lcd-160 160 character lcd remote display/control annunciator - 2 avail.">
             <a href="notifier-lcd160-160-lcd.html"><img src="https://i.ebayimg.com/images/g/0pMAAeSwYVtodrqg/s-l225.jpg" alt="NOTIFIER LCD-160 160 CHARACTER LCD REMOTE DISPLAY/CONTROL ANNUNCIATOR - 2 AVAIL. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-lcd160-160-lcd.html">NOTIFIER LCD-160 160 CHARACTER LCD REMOTE DISPLAY/CONTROL ANNUNCIATOR - 2 AVAIL.</a></div>
@@ -961,7 +1034,7 @@
                 <a href="notifier-lcd160-160-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier lcd-160 annunciator and remote control - same day shipping (sealed)">
             <a href="notifier-lcd160.html"><img src="https://i.ebayimg.com/images/g/7y0AAeSw2q9op8wa/s-l225.jpg" alt="Notifier LCD-160 Annunciator and Remote Control - Same Day Shipping (SEALED) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-lcd160.html">Notifier LCD-160 Annunciator and Remote Control - Same Day Shipping (SEALED)</a></div>
@@ -969,7 +1042,7 @@
                 <a href="notifier-lcd160.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier lcd2-80 80 character lcd remote display/control annunciator new 2 avail">
             <a href="notifier-lcd2-80-lcd.html"><img src="https://i.ebayimg.com/images/g/lO0AAeSwRkRoycT3/s-l225.jpg" alt="NOTIFIER LCD2-80 80 CHARACTER LCD REMOTE DISPLAY/CONTROL ANNUNCIATOR NEW 2 AVAIL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-lcd2-80-lcd.html">NOTIFIER LCD2-80 80 CHARACTER LCD REMOTE DISPLAY/CONTROL ANNUNCIATOR NEW 2 AVAIL</a></div>
@@ -977,7 +1050,7 @@
                 <a href="notifier-lcd2-80-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier lcd-80 tm remote annunciator">
             <a href="notifier-lcd80.html"><img src="https://i.ebayimg.com/images/g/Bh4AAeSwuRFpUw0n/s-l225.jpg" alt="Notifier LCD-80 TM Remote Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-lcd80.html">Notifier LCD-80 TM Remote Annunciator</a></div>
@@ -985,7 +1058,7 @@
                 <a href="notifier-lcd80.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier lcm-320 fire alarm control panel loop control module">
             <a href="notifier-lcm320.html"><img src="https://i.ebayimg.com/images/g/67QAAeSwLt5pTvq9/s-l225.jpg" alt="NOTIFIER LCM-320 Fire Alarm Control Panel Loop Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-lcm320.html">NOTIFIER LCM-320 Fire Alarm Control Panel Loop Control Module</a></div>
@@ -993,7 +1066,7 @@
                 <a href="notifier-lcm320.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier lem-320 fire alarm control panel loop expander module">
             <a href="notifier-lem320.html"><img src="https://i.ebayimg.com/images/g/jn0AAeSwATBpTvnD/s-l225.jpg" alt="NOTIFIER LEM-320 Fire Alarm Control Panel Loop Expander Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-lem320.html">NOTIFIER LEM-320 Fire Alarm Control Panel Loop Expander Module</a></div>
@@ -1001,7 +1074,7 @@
                 <a href="notifier-lem320.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier n16e-dr-blk black replacement door for n16e fire alarm control panel ">
             <a href="notifier-n16e.html"><img src="https://i.ebayimg.com/images/g/TzgAAeSwaXxpOIZ0/s-l225.jpg" alt="NOTIFIER N16E-DR-BLK BLACK REPLACEMENT DOOR FOR N16E FIRE ALARM CONTROL PANEL  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-n16e.html">NOTIFIER N16E-DR-BLK BLACK REPLACEMENT DOOR FOR N16E FIRE ALARM CONTROL PANEL </a></div>
@@ -1009,7 +1082,7 @@
                 <a href="notifier-n16e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier nbg-10 fire alarm pull station dual action">
             <a href="notifier-nbg10.html"><img src="https://i.ebayimg.com/images/g/5AUAAeSwucpo8DnW/s-l225.jpg" alt="Notifier NBG-10 Fire Alarm Pull Station Dual Action - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-nbg10.html">Notifier NBG-10 Fire Alarm Pull Station Dual Action</a></div>
@@ -1017,7 +1090,7 @@
                 <a href="notifier-nbg10.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier nbg-12 dual action pull station for fire alarms manual pull">
             <a href="notifier-nbg12.html"><img src="https://i.ebayimg.com/images/g/O6MAAOSwcgdk1wT-/s-l225.jpg" alt="Notifier NBG-12 Dual Action Pull Station for Fire Alarms Manual Pull - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-nbg12.html">Notifier NBG-12 Dual Action Pull Station for Fire Alarms Manual Pull</a></div>
@@ -1025,7 +1098,7 @@
                 <a href="notifier-nbg12.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier nbg-12l pull station manual nbg-12 dual action no-code red plastic key">
             <a href="notifier-nbg12l-nbg12.html"><img src="https://i.ebayimg.com/images/g/3DcAAeSwbElo0Lkh/s-l225.jpg" alt="Notifier NBG-12L Pull Station Manual NBG-12 Dual Action No-Code Red Plastic Key - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-nbg12l-nbg12.html">Notifier NBG-12L Pull Station Manual NBG-12 Dual Action No-Code Red Plastic Key</a></div>
@@ -1033,7 +1106,7 @@
                 <a href="notifier-nbg12l-nbg12.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier nbg-12l fire alarm pull station conventional ">
             <a href="notifier-nbg12l.html"><img src="https://i.ebayimg.com/images/g/gbUAAeSwbw5oOUE0/s-l225.jpg" alt="Notifier NBG-12L Fire Alarm Pull Station Conventional  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-nbg12l.html">Notifier NBG-12L Fire Alarm Pull Station Conventional </a></div>
@@ -1041,7 +1114,7 @@
                 <a href="notifier-nbg12l.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="used notifier nbg-12lx fire alarm addressable pull station key lock. no keys.">
             <a href="notifier-nbg12lx.html"><img src="https://i.ebayimg.com/images/g/V70AAeSw0dZpSIfB/s-l225.jpg" alt="Used NOTIFIER NBG-12LX Fire Alarm Addressable Pull Station Key Lock. No Keys. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-nbg12lx.html">Used NOTIFIER NBG-12LX Fire Alarm Addressable Pull Station Key Lock. No Keys.</a></div>
@@ -1049,7 +1122,7 @@
                 <a href="notifier-nbg12lx.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier nfs-640pca xls-140 fire alarm cpu board (for parts)">
             <a href="notifier-nfs-640pca-xls140.html"><img src="https://i.ebayimg.com/images/g/-b0AAeSwUW1o5NuR/s-l225.jpg" alt="Notifier NFS-640PCA XLS-140 Fire Alarm CPU Board (FOR PARTS) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-nfs-640pca-xls140.html">Notifier NFS-640PCA XLS-140 Fire Alarm CPU Board (FOR PARTS)</a></div>
@@ -1057,7 +1130,7 @@
                 <a href="notifier-nfs-640pca-xls140.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier nfs-640. for parts">
             <a href="notifier-nfs.html"><img src="https://i.ebayimg.com/images/g/LuEAAOSwtK1mTiZl/s-l225.jpg" alt="Notifier NFS-640. FOR PARTS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-nfs.html">Notifier NFS-640. FOR PARTS</a></div>
@@ -1065,7 +1138,7 @@
                 <a href="notifier-nfs.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="(read) notifier nfw-50 addressable fire alarm control panel board (for parts)">
             <a href="notifier-nfw50.html"><img src="https://i.ebayimg.com/images/g/agUAAeSw6Eto9urG/s-l225.jpg" alt="(READ) Notifier NFW-50 Addressable Fire Alarm Control Panel Board (FOR PARTS) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-nfw50.html">(READ) Notifier NFW-50 Addressable Fire Alarm Control Panel Board (FOR PARTS)</a></div>
@@ -1073,7 +1146,7 @@
                 <a href="notifier-nfw50.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="p2r p notifier hooter strobe">
             <a href="notifier-p2r.html"><img src="https://i.ebayimg.com/images/g/jAsAAeSwAYNouxOL/s-l225.jpg" alt="P2R P Notifier Hooter Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-p2r.html">P2R P Notifier Hooter Strobe</a></div>
@@ -1081,7 +1154,7 @@
                 <a href="notifier-p2r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier p2wl wall horn strobe">
             <a href="notifier-p2wl.html"><img src="https://i.ebayimg.com/images/g/ZBQAAeSwU7JodTjt/s-l225.jpg" alt="Notifier P2WL Wall Horn Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-p2wl.html">Notifier P2WL Wall Horn Strobe</a></div>
@@ -1089,7 +1162,7 @@
                 <a href="notifier-p2wl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier kdm-r2 keypad notifier (for parts)">
             <a href="notifier-r2.html"><img src="https://i.ebayimg.com/images/g/LkQAAeSwpApowrc2/s-l225.jpg" alt="NOTIFIER KDM-R2 Keypad Notifier (for parts) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-r2.html">NOTIFIER KDM-R2 Keypad Notifier (for parts)</a></div>
@@ -1097,7 +1170,7 @@
                 <a href="notifier-r2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier ril230a methane gas detector 12-24vdc out 4 20ma vgs du-me">
             <a href="notifier-ril230a.html"><img src="https://i.ebayimg.com/images/g/LZMAAeSwGtBpPLDZ/s-l225.jpg" alt="Notifier ril230a methane gas detector 12-24vdc out 4 20ma vgs du-me - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-ril230a.html">Notifier ril230a methane gas detector 12-24vdc out 4 20ma vgs du-me</a></div>
@@ -1105,7 +1178,7 @@
                 <a href="notifier-ril230a.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier company plug-in relay s22l-24 used s22l24">
             <a href="notifier-s22l-s22l24.html"><img src="https://i.ebayimg.com/images/g/0FwAAOxygo9Q6zCD/s-l225.jpg" alt="NOTIFIER COMPANY PLUG-IN RELAY S22L-24 USED S22L24 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-s22l-s22l24.html">NOTIFIER COMPANY PLUG-IN RELAY S22L-24 USED S22L24</a></div>
@@ -1113,7 +1186,7 @@
                 <a href="notifier-s22l-s22l24.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="*new* notifier sm950b-20c fire alarm french/english pull station switch ">
             <a href="notifier-sm950b-20c.html"><img src="https://i.ebayimg.com/images/g/gywAAOSwImBfGygB/s-l225.jpg" alt="*New* Notifier sm950B-20c Fire Alarm French/English Pull Station switch  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-sm950b-20c.html">*New* Notifier sm950B-20c Fire Alarm French/English Pull Station switch </a></div>
@@ -1121,7 +1194,7 @@
                 <a href="notifier-sm950b-20c.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fcm-1 control module new / open box  (wr16)">
             <a href="notifier-wr16.html"><img src="https://i.ebayimg.com/images/g/6MoAAOSww29lIIww/s-l225.jpg" alt="NOTIFIER FCM-1 Control Module New / Open Box  (wr16) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-wr16.html">NOTIFIER FCM-1 Control Module New / Open Box  (wr16)</a></div>
@@ -1129,7 +1202,7 @@
                 <a href="notifier-wr16.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="notifier fire alarm parts xp6-c">
             <a href="notifier-xp6.html"><img src="https://i.ebayimg.com/images/g/kv8AAeSwI19pUUFE/s-l225.jpg" alt="notifier fire alarm parts XP6-C - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="notifier-xp6.html">notifier fire alarm parts XP6-C</a></div>
@@ -1156,6 +1229,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Notifier";
+    var CAMPAIGN_ID = "5339136270";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID + 
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

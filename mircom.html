@@ -139,6 +139,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #d32f2f;
+            box-shadow: 0 2px 10px rgba(211,47,47,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #fff8f8;
+            border: 1px solid #f5c6c6;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { background: #b71c1c; }
+    </style>
 </head>
 <body>
     
@@ -157,11 +212,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">Mircom</span></p>
-        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:30px;">Mircom Parts Catalog</h1>
-        <p class="lead">Browsing 67 verified items available for facility management.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">Mircom</span></p>
+        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:20px;">Mircom Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 67 verified items. Search by part number or name:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search Mircom part number (e.g. EL-7030B)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this Mircom part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom fixed emergency light el-7030b">
             <a href="el-7030b.html"><img src="https://cdn.firepartshub.com/images/mi-el7030b.webp" alt="Mircom Fixed Emergency Light EL-7030B - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="el-7030b.html">Mircom Fixed Emergency Light EL-7030B</a></div>
@@ -169,7 +242,7 @@
                 <a href="el-7030b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom horn strobe fhs-400c-ww">
             <a href="fhs-400c-ww.html"><img src="https://cdn.firepartshub.com/images/mi-fhs400cww.webp" alt="Mircom Horn Strobe FHS-400C-WW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="fhs-400c-ww.html">Mircom Horn Strobe FHS-400C-WW</a></div>
@@ -177,7 +250,7 @@
                 <a href="fhs-400c-ww.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom bb-1001dr remote annunciator backbox enclosure, lexan window, 2 keys">
             <a href="mircom-1001dr.html"><img src="https://i.ebayimg.com/images/g/fTUAAeSwT0xpQ2nS/s-l225.jpg" alt="Mircom BB-1001DR Remote Annunciator Backbox Enclosure, Lexan Window, 2 Keys - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-1001dr.html">Mircom BB-1001DR Remote Annunciator Backbox Enclosure, Lexan Window, 2 Keys</a></div>
@@ -185,7 +258,7 @@
                 <a href="mircom-1001dr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new mircom ram-1032tzds 32-zone fire alarm remote led annunciator ">
             <a href="mircom-1032tzds.html"><img src="https://i.ebayimg.com/images/g/R6sAAOSwVVVlLDij/s-l225.jpg" alt="New Mircom RAM-1032TZDS 32-zone Fire Alarm Remote LED Annunciator  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-1032tzds.html">New Mircom RAM-1032TZDS 32-zone Fire Alarm Remote LED Annunciator </a></div>
@@ -193,7 +266,7 @@
                 <a href="mircom-1032tzds.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom rax-1048tz remote multiplex annunciator.">
             <a href="mircom-1048tz.html"><img src="https://i.ebayimg.com/images/g/D5MAAeSwlPlo4AVc/s-l225.jpg" alt="Mircom RAX-1048TZ Remote Multiplex Annunciator. - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-1048tz.html">Mircom RAX-1048TZ Remote Multiplex Annunciator.</a></div>
@@ -201,7 +274,7 @@
                 <a href="mircom-1048tz.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 10ah gel f2 replaces mircom fa-204e fire control panel - 4 pack">
             <a href="mircom-10ah-f2-204e.html"><img src="https://via.placeholder.com/400x300?text=No+Image" alt="Mighty Max 12V 10AH GEL F2 Replaces Mircom FA-204E Fire Control Panel - 4 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-10ah-f2-204e.html">Mighty Max 12V 10AH GEL F2 Replaces Mircom FA-204E Fire Control Panel - 4 Pack</a></div>
@@ -209,7 +282,7 @@
                 <a href="mircom-10ah-f2-204e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 10ah gel f2 replaces mircom fa-1000 fire control panel - 3 pack">
             <a href="mircom-10ah-f2.html"><img src="https://via.placeholder.com/400x300?text=No+Image" alt="Mighty Max 12V 10AH GEL F2 Replaces Mircom FA-1000 Fire Control Panel - 3 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-10ah-f2.html">Mighty Max 12V 10AH GEL F2 Replaces Mircom FA-1000 Fire Control Panel - 3 Pack</a></div>
@@ -217,7 +290,7 @@
                 <a href="mircom-10ah-f2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom ram-208r remote annunciator module">
             <a href="mircom-208r.html"><img src="https://i.ebayimg.com/images/g/xx0AAeSwwVpor9iQ/s-l225.jpg" alt="Mircom RAM-208R Remote Annunciator Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-208r.html">Mircom RAM-208R Remote Annunciator Module</a></div>
@@ -225,7 +298,7 @@
                 <a href="mircom-208r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-2251b photoelectric smoke detector free fast ship">
             <a href="mircom-2251b.html"><img src="https://i.ebayimg.com/images/g/6OcAAOSwm8xnSbno/s-l225.jpg" alt="MIRCOM MIX-2251B PHOTOELECTRIC SMOKE DETECTOR FREE FAST SHIP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-2251b.html">MIRCOM MIX-2251B PHOTOELECTRIC SMOKE DETECTOR FREE FAST SHIP</a></div>
@@ -233,7 +306,7 @@
                 <a href="mircom-2251b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mix 2251tap mircom heat detector head only">
             <a href="mircom-2251tap.html"><img src="https://i.ebayimg.com/images/g/DnoAAeSw6l5o14hB/s-l225.jpg" alt="MIX 2251TAP Mircom Heat Detector Head Only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-2251tap.html">MIX 2251TAP Mircom Heat Detector Head Only</a></div>
@@ -241,7 +314,7 @@
                 <a href="mircom-2251tap.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom fh-240r select-a-strobe fire alarm red 24vdc,  24vfwr">
             <a href="mircom-240r-24vfwr.html"><img src="https://i.ebayimg.com/images/g/QJcAAOSwP-RjnUyA/s-l225.jpg" alt="MIRCOM FH-240R Select-A-Strobe Fire Alarm Red 24vdc,  24vfwr - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-240r-24vfwr.html">MIRCOM FH-240R Select-A-Strobe Fire Alarm Red 24vdc,  24vfwr</a></div>
@@ -249,7 +322,7 @@
                 <a href="mircom-240r-24vfwr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom ram-300lcdr fire alarm remote annunciator">
             <a href="mircom-300lcdr.html"><img src="https://i.ebayimg.com/images/g/ReQAAOSwIaZm9slr/s-l225.jpg" alt="Mircom Ram-300lcdr Fire Alarm Remote Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-300lcdr.html">Mircom Ram-300lcdr Fire Alarm Remote Annunciator</a></div>
@@ -257,7 +330,7 @@
                 <a href="mircom-300lcdr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom fhs-340r-wp horn/strobe wall mount-red">
             <a href="mircom-340r.html"><img src="https://i.ebayimg.com/images/g/g4QAAOSwr2ln0yl7/s-l225.jpg" alt="Mircom FHS-340R-WP Horn/Strobe Wall Mount-Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-340r.html">Mircom FHS-340R-WP Horn/Strobe Wall Mount-Red</a></div>
@@ -265,7 +338,7 @@
                 <a href="mircom-340r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom alc-396s so-147 analog loop controller module">
             <a href="mircom-396s.html"><img src="https://i.ebayimg.com/images/g/K~UAAOSwA9ZnOi3G/s-l225.jpg" alt="Mircom ALC-396S SO-147 Analog Loop Controller Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-396s.html">Mircom ALC-396S SO-147 Analog Loop Controller Module</a></div>
@@ -273,7 +346,7 @@
                 <a href="mircom-396s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom red wall mount low frequency sounder/strobe fhs-400-rr / fhs400rr">
             <a href="mircom-400-fhs400rr.html"><img src="https://i.ebayimg.com/images/g/FT8AAeSwC89oT2DX/s-l225.jpg" alt="Mircom Red Wall Mount Low Frequency Sounder/Strobe FHS-400-RR / FHS400RR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-400-fhs400rr.html">Mircom Red Wall Mount Low Frequency Sounder/Strobe FHS-400-RR / FHS400RR</a></div>
@@ -281,7 +354,7 @@
                 <a href="mircom-400-fhs400rr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom fhs-400c-rr horn-strobe red ceiling mount">
             <a href="mircom-400c.html"><img src="https://i.ebayimg.com/images/g/kZsAAOSwxcxmoxyU/s-l225.jpg" alt="Mircom FHS-400C-RR Horn-Strobe Red Ceiling Mount - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-400c.html">Mircom FHS-400C-RR Horn-Strobe Red Ceiling Mount</a></div>
@@ -289,7 +362,7 @@
                 <a href="mircom-400c.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-4045 . 4000series dual relay module">
             <a href="mircom-4045-4000series.html"><img src="https://i.ebayimg.com/images/g/FMAAAeSwV6No~lZz/s-l225.jpg" alt="Mircom MIX-4045 . 4000Series Dual Relay Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-4045-4000series.html">Mircom MIX-4045 . 4000Series Dual Relay Module</a></div>
@@ -297,7 +370,7 @@
                 <a href="mircom-4045-4000series.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom dspl-420ds main display module fire alarm control unit">
             <a href="mircom-420ds.html"><img src="https://i.ebayimg.com/images/g/sAkAAeSwHhhogCA0/s-l225.jpg" alt="MIRCOM DSPL-420DS Main Display Module FIRE ALARM CONTROL UNIT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-420ds.html">MIRCOM DSPL-420DS Main Display Module FIRE ALARM CONTROL UNIT</a></div>
@@ -305,7 +378,7 @@
                 <a href="mircom-420ds.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mix 5251ap mircom heat detector head only">
             <a href="mircom-5251ap.html"><img src="https://i.ebayimg.com/images/g/HE0AAeSwBcNo2i~K/s-l225.jpg" alt="MIX 5251AP Mircom Heat Detector Head Only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-5251ap.html">MIX 5251AP Mircom Heat Detector Head Only</a></div>
@@ -313,7 +386,7 @@
                 <a href="mircom-5251ap.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mix 5251apa mircom heat detector head only">
             <a href="mircom-5251apa.html"><img src="https://i.ebayimg.com/images/g/SSYAAeSw64po3MjT/s-l225.jpg" alt="MIX 5251APA Mircom Heat Detector Head Only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-5251apa.html">MIX 5251APA Mircom Heat Detector Head Only</a></div>
@@ -321,7 +394,7 @@
                 <a href="mircom-5251apa.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mix 5251b mircom heat detector head only">
             <a href="mircom-5251b.html"><img src="https://i.ebayimg.com/images/g/f6gAAeSwAiBpQSSl/s-l225.jpg" alt="MIX 5251B Mircom Heat Detector Head Only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-5251b.html">MIX 5251B Mircom Heat Detector Head Only</a></div>
@@ -329,7 +402,7 @@
                 <a href="mircom-5251b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-5251hap intelligent 190 degree high temperature heat detector">
             <a href="mircom-5251hap.html"><img src="https://i.ebayimg.com/images/g/nc0AAeSwzwtoglrJ/s-l225.jpg" alt="Mircom MIX-5251HAP Intelligent 190 degree High Temperature Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-5251hap.html">Mircom MIX-5251HAP Intelligent 190 degree High Temperature Heat Detector</a></div>
@@ -337,7 +410,7 @@
                 <a href="mircom-5251hap.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-5251p addressable heat detector">
             <a href="mircom-5251p.html"><img src="https://i.ebayimg.com/images/g/tWEAAeSwdndpABBJ/s-l225.jpg" alt="Mircom MIX-5251P Addressable Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-5251p.html">Mircom MIX-5251P Addressable Heat Detector</a></div>
@@ -345,7 +418,7 @@
                 <a href="mircom-5251p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mix 5251rap mircom heat detector head only">
             <a href="mircom-5251rap.html"><img src="https://i.ebayimg.com/images/g/kOcAAeSwDPBo3MvL/s-l225.jpg" alt="MIX 5251RAP Mircom Heat Detector Head Only - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-5251rap.html">MIX 5251RAP Mircom Heat Detector Head Only</a></div>
@@ -353,7 +426,7 @@
                 <a href="mircom-5251rap.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-5251rba heat detector 135f fixed heat">
             <a href="mircom-5251rba-135f.html"><img src="https://i.ebayimg.com/images/g/pfcAAeSwctdpNeCI/s-l225.jpg" alt="MIRCOM MIX-5251RBA Heat Detector 135F Fixed Heat - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-5251rba-135f.html">MIRCOM MIX-5251RBA Heat Detector 135F Fixed Heat</a></div>
@@ -361,7 +434,7 @@
                 <a href="mircom-5251rba-135f.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-5351ap advanced protocol 135° fixed temp heat detector - new 10 avail">
             <a href="mircom-5351ap.html"><img src="https://i.ebayimg.com/images/g/cJ8AAeSwhsFopNhj/s-l225.jpg" alt="MIRCOM MIX-5351AP ADVANCED PROTOCOL 135° FIXED TEMP HEAT DETECTOR - NEW 10 AVAIL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-5351ap.html">MIRCOM MIX-5351AP ADVANCED PROTOCOL 135° FIXED TEMP HEAT DETECTOR - NEW 10 AVAIL</a></div>
@@ -369,7 +442,7 @@
                 <a href="mircom-5351ap.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-5351rap 135° fixed temp w/ rate of rise heat detector "white" sealed">
             <a href="mircom-5351rap.html"><img src="https://i.ebayimg.com/images/g/FpgAAeSwF7JpOfWH/s-l225.jpg" alt="MIRCOM MIX-5351RAP 135° FIXED TEMP W/ RATE OF RISE HEAT DETECTOR "WHITE" SEALED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-5351rap.html">MIRCOM MIX-5351RAP 135° FIXED TEMP W/ RATE OF RISE HEAT DETECTOR "WHITE" SEALED</a></div>
@@ -377,7 +450,7 @@
                 <a href="mircom-5351rap.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 2 new mircom mir-603 mir 603 mir603 heat detector">
             <a href="mircom-603-mir603.html"><img src="https://i.ebayimg.com/images/g/FewAAOSwG9tm-YBk/s-l225.jpg" alt="LOT OF 2 NEW Mircom MIR-603 MIR 603 MIR603 Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-603-mir603.html">LOT OF 2 NEW Mircom MIR-603 MIR 603 MIR603 Heat Detector</a></div>
@@ -385,7 +458,7 @@
                 <a href="mircom-603-mir603.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 7ah gel f1 battery replaces mircom fa-101t control panel - 4 pack">
             <a href="mircom-7ah-f1-101t.html"><img src="https://i.ebayimg.com/images/g/vvMAAeSwstBop11W/s-l225.jpg" alt="Mighty Max 12V 7AH GEL F1 Battery Replaces Mircom FA-101T Control Panel - 4 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-7ah-f1-101t.html">Mighty Max 12V 7AH GEL F1 Battery Replaces Mircom FA-101T Control Panel - 4 Pack</a></div>
@@ -393,7 +466,7 @@
                 <a href="mircom-7ah-f1-101t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 7ah gel f1 battery replaces mircom fa-1025t control panel - 4pack">
             <a href="mircom-7ah-f1-1025t.html"><img src="https://i.ebayimg.com/images/g/Q-YAAeSwtI1op12R/s-l225.jpg" alt="Mighty Max 12V 7AH GEL F1 Battery Replaces Mircom FA-1025T Control Panel - 4Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-7ah-f1-1025t.html">Mighty Max 12V 7AH GEL F1 Battery Replaces Mircom FA-1025T Control Panel - 4Pack</a></div>
@@ -401,7 +474,7 @@
                 <a href="mircom-7ah-f1-1025t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mighty max 12v 7ah gel f1 battery replaces mircom fa-102t control panel - 4 pack">
             <a href="mircom-7ah-f1-102t.html"><img src="https://i.ebayimg.com/images/g/uZAAAeSwnJFop10l/s-l225.jpg" alt="Mighty Max 12V 7AH GEL F1 Battery Replaces Mircom FA-102T Control Panel - 4 Pack - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-7ah-f1-102t.html">Mighty Max 12V 7AH GEL F1 Battery Replaces Mircom FA-102T Control Panel - 4 Pack</a></div>
@@ -409,7 +482,7 @@
                 <a href="mircom-7ah-f1-102t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom innovair mix-dh200rp photoelectric non-relay duct smoke detector">
             <a href="mircom-dh200rp.html"><img src="https://i.ebayimg.com/images/g/QzUAAOSwlxhZgnyE/s-l225.jpg" alt="MIRCOM INNOVAIR MIX-DH200RP PHOTOELECTRIC NON-RELAY DUCT SMOKE DETECTOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-dh200rp.html">MIRCOM INNOVAIR MIX-DH200RP PHOTOELECTRIC NON-RELAY DUCT SMOKE DETECTOR</a></div>
@@ -417,7 +490,7 @@
                 <a href="mircom-dh200rp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom innovair mix-dh200rpl photoelectric  duct smoke detector">
             <a href="mircom-dh200rpl.html"><img src="https://i.ebayimg.com/images/g/ncgAAOSwj8lm5dhW/s-l225.jpg" alt="MIRCOM INNOVAIR MIX-DH200RPL PHOTOELECTRIC  DUCT SMOKE DETECTOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-dh200rpl.html">MIRCOM INNOVAIR MIX-DH200RPL PHOTOELECTRIC  DUCT SMOKE DETECTOR</a></div>
@@ -425,7 +498,7 @@
                 <a href="mircom-dh200rpl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-dh3000r, intelligent photoelectric duct detector with relay">
             <a href="mircom-dh3000r.html"><img src="https://i.ebayimg.com/images/g/gW4AAOSwfCVk1PvF/s-l225.jpg" alt="Mircom MIX-DH3000R, Intelligent Photoelectric Duct Detector with Relay - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-dh3000r.html">Mircom MIX-DH3000R, Intelligent Photoelectric Duct Detector with Relay</a></div>
@@ -433,7 +506,7 @@
                 <a href="mircom-dh3000r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-dh3100. intelligent photoelectric duct detector">
             <a href="mircom-dh3100.html"><img src="https://i.ebayimg.com/images/g/0ukAAeSwzMRpZfbt/s-l225.jpg" alt="Mircom MIX-DH3100. Intelligent Photoelectric Duct Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-dh3100.html">Mircom MIX-DH3100. Intelligent Photoelectric Duct Detector</a></div>
@@ -441,7 +514,7 @@
                 <a href="mircom-dh3100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-dh3100r 4-wire duct smoke detector (bin005)">
             <a href="mircom-dh3100r-bin005.html"><img src="https://i.ebayimg.com/images/g/FCsAAOSwHQBnkoOh/s-l225.jpg" alt="Mircom MIX-DH3100R 4-Wire Duct Smoke Detector (bin005) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-dh3100r-bin005.html">Mircom MIX-DH3100R 4-Wire Duct Smoke Detector (bin005)</a></div>
@@ -449,7 +522,7 @@
                 <a href="mircom-dh3100r-bin005.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-dh3100r 4-wire analog addressable duct smoke detector">
             <a href="mircom-dh3100r.html"><img src="https://i.ebayimg.com/images/g/6bsAAeSwb39pZgSb/s-l225.jpg" alt="MIRCOM MIX-DH3100R 4-WIRE ANALOG ADDRESSABLE DUCT SMOKE DETECTOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-dh3100r.html">MIRCOM MIX-DH3100R 4-WIRE ANALOG ADDRESSABLE DUCT SMOKE DETECTOR</a></div>
@@ -457,7 +530,7 @@
                 <a href="mircom-dh3100r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="fs-240r mircom wall mount select-a-strobe fire alarm">
             <a href="mircom-fs240r.html"><img src="https://i.ebayimg.com/images/g/rbYAAeSw4VlpQGZO/s-l225.jpg" alt="FS-240R Mircom Wall Mount Select-A-Strobe Fire Alarm - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-fs240r.html">FS-240R Mircom Wall Mount Select-A-Strobe Fire Alarm</a></div>
@@ -465,7 +538,7 @@
                 <a href="mircom-fs240r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new in box: mircom wall mount strobe fs-240r110 (red)">
             <a href="mircom-fs240r110.html"><img src="https://i.ebayimg.com/images/g/IVsAAOSwiHRnl-KB/s-l225.jpg" alt="NEW IN BOX: Mircom Wall Mount Strobe FS-240R110 (red) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-fs240r110.html">NEW IN BOX: Mircom Wall Mount Strobe FS-240R110 (red)</a></div>
@@ -473,7 +546,7 @@
                 <a href="mircom-fs240r110.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom fs-340r red wall mount strobe">
             <a href="mircom-fs340r.html"><img src="https://i.ebayimg.com/images/g/JKgAAeSwgYJpC6Fl/s-l225.jpg" alt="MIRCOM FS-340R RED WALL MOUNT STROBE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-fs340r.html">MIRCOM FS-340R RED WALL MOUNT STROBE</a></div>
@@ -481,7 +554,7 @@
                 <a href="mircom-fs340r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom strobe fs-400-rr / fs400rr- red - wall mount">
             <a href="mircom-fs400-fs400rr.html"><img src="https://i.ebayimg.com/images/g/cGkAAeSwGqVoQZZy/s-l225.jpg" alt="Mircom Strobe FS-400-RR / FS400RR- Red - Wall Mount - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-fs400-fs400rr.html">Mircom Strobe FS-400-RR / FS400RR- Red - Wall Mount</a></div>
@@ -489,7 +562,7 @@
                 <a href="mircom-fs400-fs400rr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom fs-400-rr / fire alarm strobe / new!!!🇺🇸">
             <a href="mircom-fs400.html"><img src="https://i.ebayimg.com/images/g/gREAAeSwPKNpE9u~/s-l225.jpg" alt="MIRCOM FS-400-RR / FIRE ALARM STROBE / NEW!!!🇺🇸 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-fs400.html">MIRCOM FS-400-RR / FIRE ALARM STROBE / NEW!!!🇺🇸</a></div>
@@ -497,7 +570,7 @@
                 <a href="mircom-fs400.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom rm-1008a auxiliary relay module">
             <a href="mircom-generic-parts.html"><img src="https://i.ebayimg.com/images/g/T3YAAOSwiUhl-G~S/s-l225.jpg" alt="Mircom RM-1008A Auxiliary Relay Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-generic-parts.html">Mircom RM-1008A Auxiliary Relay Module</a></div>
@@ -505,7 +578,7 @@
                 <a href="mircom-generic-parts.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom rax-lcd-lite remote annunciator great condition ">
             <a href="mircom-lcd.html"><img src="https://i.ebayimg.com/images/g/ac0AAOSw8i9nZP7b/s-l225.jpg" alt="MIRCOM RAX-LCD-LITE REMOTE ANNUNCIATOR GREAT CONDITION  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-lcd.html">MIRCOM RAX-LCD-LITE REMOTE ANNUNCIATOR GREAT CONDITION </a></div>
@@ -513,7 +586,7 @@
                 <a href="mircom-lcd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom raxn-lcd remote display annunciator panel firmware version 10">
             <a href="mircom-lcd1-1.html"><img src="https://i.ebayimg.com/images/g/CoYAAeSw7Uho9TtQ/s-l225.jpg" alt="Mircom RAXN-LCD remote display annunciator panel Firmware Version 10 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-lcd1-1.html">Mircom RAXN-LCD remote display annunciator panel Firmware Version 10</a></div>
@@ -521,7 +594,7 @@
                 <a href="mircom-lcd1-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom rax-lcd remote shared display annunciator v2.9.14 - brand new ">
             <a href="mircom-lcd2-1.html"><img src="https://i.ebayimg.com/images/g/N-cAAeSwFoFoq63s/s-l225.jpg" alt="MIRCOM RAX-LCD REMOTE SHARED DISPLAY ANNUNCIATOR V2.9.14 - BRAND NEW  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-lcd2-1.html">MIRCOM RAX-LCD REMOTE SHARED DISPLAY ANNUNCIATOR V2.9.14 - BRAND NEW </a></div>
@@ -529,7 +602,7 @@
                 <a href="mircom-lcd2-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom raxn-lcd / raxnlcd network remote annunciator panel fx-2000">
             <a href="mircom-lcd2000-1.html"><img src="https://i.ebayimg.com/images/g/BmEAAeSwfhpnt5zo/s-l225.jpg" alt="MIRCOM RAXN-LCD / RAXNLCD Network Remote Annunciator Panel FX-2000 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-lcd2000-1.html">MIRCOM RAXN-LCD / RAXNLCD Network Remote Annunciator Panel FX-2000</a></div>
@@ -537,7 +610,7 @@
                 <a href="mircom-lcd2000-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom rax-lcd-lite remote lcd annunciator so-243 v. 1.0.13 - same day shipping">
             <a href="mircom-lcd243-1.html"><img src="https://i.ebayimg.com/images/g/qBsAAOSwqIpmS~E5/s-l225.jpg" alt="MIRCOM RAX-LCD-LITE REMOTE LCD ANNUNCIATOR SO-243 V. 1.0.13 - SAME DAY SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-lcd243-1.html">MIRCOM RAX-LCD-LITE REMOTE LCD ANNUNCIATOR SO-243 V. 1.0.13 - SAME DAY SHIPPING</a></div>
@@ -545,7 +618,7 @@
                 <a href="mircom-lcd243-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom raxn-lcd remote annunciator panel replacement board fire alarm md-942">
             <a href="mircom-lcd942-2.html"><img src="https://i.ebayimg.com/images/g/m54AAOSw621jepFR/s-l225.jpg" alt="MIRCOM RAXN-LCD REMOTE ANNUNCIATOR PANEL REPLACEMENT BOARD FIRE ALARM MD-942 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-lcd942-2.html">MIRCOM RAXN-LCD REMOTE ANNUNCIATOR PANEL REPLACEMENT BOARD FIRE ALARM MD-942</a></div>
@@ -553,7 +626,7 @@
                 <a href="mircom-lcd942-2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom raxn-lcd md-942 for parts">
             <a href="mircom-lcd942.html"><img src="https://i.ebayimg.com/images/g/Qz0AAOSwF3tnknZJ/s-l225.jpg" alt="Mircom RAXN-LCD MD-942 For Parts - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-lcd942.html">Mircom RAXN-LCD MD-942 For Parts</a></div>
@@ -561,7 +634,7 @@
                 <a href="mircom-lcd942.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom rax-lcd ra-1000 remote annunciator">
             <a href="mircom-lcdra1000-1.html"><img src="https://i.ebayimg.com/images/g/hYEAAeSwjP1pMgra/s-l225.jpg" alt="Mircom RAX-LCD RA-1000 REMOTE ANNUNCIATOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-lcdra1000-1.html">Mircom RAX-LCD RA-1000 REMOTE ANNUNCIATOR</a></div>
@@ -569,7 +642,7 @@
                 <a href="mircom-lcdra1000-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-m500map module monitor *missing accessories*">
             <a href="mircom-m500map.html"><img src="https://i.ebayimg.com/images/g/UIMAAeSw7H9oZElE/s-l225.jpg" alt="Mircom MIX-M500MAP Module Monitor *Missing Accessories* - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-m500map.html">Mircom MIX-M500MAP Module Monitor *Missing Accessories*</a></div>
@@ -577,7 +650,7 @@
                 <a href="mircom-m500map.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-m500r relay control module">
             <a href="mircom-m500r.html"><img src="https://i.ebayimg.com/images/g/oA4AAOSwr3BnM3q0/s-l225.jpg" alt="Mircom MIX-M500R Relay Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-m500r.html">Mircom MIX-M500R Relay Control Module</a></div>
@@ -585,7 +658,7 @@
                 <a href="mircom-m500r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-m500rap relay control module 15-32vdc">
             <a href="mircom-m500rap.html"><img src="https://i.ebayimg.com/images/g/QqkAAOSwpCRmiCjV/s-l225.jpg" alt="Mircom MIX-M500RAP Relay Control Module 15-32VDC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-m500rap.html">Mircom MIX-M500RAP Relay Control Module 15-32VDC</a></div>
@@ -593,7 +666,7 @@
                 <a href="mircom-m500rap.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-m500rapa / mixm500rapa (new in box)">
             <a href="mircom-m500rapa-mixm500rapa.html"><img src="https://i.ebayimg.com/images/g/4s8AAeSwRINpYWHm/s-l225.jpg" alt="MIRCOM MIX-M500RAPA / MIXM500RAPA (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-m500rapa-mixm500rapa.html">MIRCOM MIX-M500RAPA / MIXM500RAPA (NEW IN BOX)</a></div>
@@ -601,7 +674,7 @@
                 <a href="mircom-m500rapa-mixm500rapa.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-m500s control module">
             <a href="mircom-m500s.html"><img src="https://i.ebayimg.com/images/g/rdYAAOSw3Thn4wFD/s-l225.jpg" alt="Mircom MIX-M500S Control Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-m500s.html">Mircom MIX-M500S Control Module</a></div>
@@ -609,7 +682,7 @@
                 <a href="mircom-m500s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-m500sap supervised control module">
             <a href="mircom-m500sap.html"><img src="https://i.ebayimg.com/images/g/pOgAAOSwiWhnfwtc/s-l225.jpg" alt="MIRCOM MIX-M500SAP SUPERVISED CONTROL MODULE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-m500sap.html">MIRCOM MIX-M500SAP SUPERVISED CONTROL MODULE</a></div>
@@ -617,7 +690,7 @@
                 <a href="mircom-m500sap.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-m501m mini monitor modules mixm501m new fast shipping">
             <a href="mircom-m501m-mixm501m.html"><img src="https://i.ebayimg.com/images/g/AC0AAOSw-dpmYfGA/s-l225.jpg" alt="Mircom MIX-M501M Mini Monitor Modules MIXM501M NEW FAST SHIPPING - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-m501m-mixm501m.html">Mircom MIX-M501M Mini Monitor Modules MIXM501M NEW FAST SHIPPING</a></div>
@@ -625,7 +698,7 @@
                 <a href="mircom-m501m-mixm501m.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-m501m mini monitor module open box">
             <a href="mircom-m501m.html"><img src="https://i.ebayimg.com/images/g/xaQAAeSwf2xo1bMg/s-l225.jpg" alt="Mircom MIX-M501M Mini Monitor Module OPEN BOX - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-m501m.html">Mircom MIX-M501M Mini Monitor Module OPEN BOX</a></div>
@@ -633,7 +706,7 @@
                 <a href="mircom-m501m.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix-m501map intelligent mini-monitor module new-old stock">
             <a href="mircom-m501map.html"><img src="https://i.ebayimg.com/images/g/BGIAAeSwfzNogof5/s-l225.jpg" alt="Mircom MIX-M501MAP Intelligent Mini-Monitor Module New-Old Stock - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-m501map.html">Mircom MIX-M501MAP Intelligent Mini-Monitor Module New-Old Stock</a></div>
@@ -641,7 +714,7 @@
                 <a href="mircom-m501map.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom mix3100 duct detector">
             <a href="mircom-mix3100.html"><img src="https://i.ebayimg.com/images/g/hOQAAOSwHTlnD6rC/s-l225.jpg" alt="Mircom Mix3100 Duct Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-mix3100.html">Mircom Mix3100 Duct Detector</a></div>
@@ -649,7 +722,7 @@
                 <a href="mircom-mix3100.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom p2rka 12/24v 2-wire spectralert advance horn/strobe, red">
             <a href="mircom-p2rka.html"><img src="https://i.ebayimg.com/images/g/wJgAAOSw~QBl9MN-/s-l225.jpg" alt="MIRCOM P2RKA 12/24V 2-Wire SpectrAlert Advance Horn/Strobe, Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-p2rka.html">MIRCOM P2RKA 12/24V 2-Wire SpectrAlert Advance Horn/Strobe, Red</a></div>
@@ -657,7 +730,7 @@
                 <a href="mircom-p2rka.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new mircom ra-105 remote annunciator ">
             <a href="mircom-ra105.html"><img src="https://i.ebayimg.com/images/g/QwcAAOSwCmVl5l7U/s-l225.jpg" alt="NEW Mircom RA-105 Remote Annunciator  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mircom-ra105.html">NEW Mircom RA-105 Remote Annunciator </a></div>
@@ -665,7 +738,7 @@
                 <a href="mircom-ra105.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom secutron fhs-340r horn/strobe wall mount red">
             <a href="secutron-340r.html"><img src="https://i.ebayimg.com/images/g/31MAAeSwMA5pMDZt/s-l225.jpg" alt="Mircom Secutron FHS-340R Horn/Strobe Wall Mount Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="secutron-340r.html">Mircom Secutron FHS-340R Horn/Strobe Wall Mount Red</a></div>
@@ -673,7 +746,7 @@
                 <a href="secutron-340r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="secutron mircom mri-m501m fire alarm mini monitor module piv os&y waterflow tamp">
             <a href="secutron-m501m.html"><img src="https://i.ebayimg.com/images/g/klkAAOSwA~dlZLrH/s-l225.jpg" alt="SECUTRON MIRCOM MRI-M501M FIRE ALARM MINI MONITOR MODULE PIV OS&Y WATERFLOW TAMP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="secutron-m501m.html">SECUTRON MIRCOM MRI-M501M FIRE ALARM MINI MONITOR MODULE PIV OS&Y WATERFLOW TAMP</a></div>
@@ -681,7 +754,7 @@
                 <a href="secutron-m501m.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom honeywell system sensor dual monitor and relay module m500dmr1">
             <a href="system-sensor-m500dmr1.html"><img src="https://i.ebayimg.com/images/g/qBQAAOSwPzllAQeA/s-l225.jpg" alt="Mircom Honeywell System Sensor Dual Monitor and Relay Module M500DMR1 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m500dmr1.html">Mircom Honeywell System Sensor Dual Monitor and Relay Module M500DMR1</a></div>
@@ -689,7 +762,7 @@
                 <a href="system-sensor-m500dmr1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="mircom heat detector outlet body td-200">
             <a href="td-200.html"><img src="https://cdn.firepartshub.com/images/mi-td200.webp" alt="Mircom Heat Detector Outlet Body TD-200 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="td-200.html">Mircom Heat Detector Outlet Body TD-200</a></div>
@@ -716,6 +789,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "Mircom";
+    var CAMPAIGN_ID = "5339136270";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID + 
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>

@@ -139,6 +139,61 @@
     }
 </style>
 
+    <style>
+        .silo-search-wrap {
+            margin: 0 0 30px 0;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .silo-search-input {
+            flex: 1;
+            min-width: 220px;
+            padding: 14px 20px;
+            font-size: 1em;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        .silo-search-input:focus {
+            border-color: #d32f2f;
+            box-shadow: 0 2px 10px rgba(211,47,47,0.15);
+        }
+        #silo-count-msg {
+            display: none;
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 15px;
+        }
+        #silo-no-result {
+            display: none;
+            background: #fff8f8;
+            border: 1px solid #f5c6c6;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #silo-no-result p {
+            margin: 0 0 15px 0;
+            color: #555;
+            font-size: 1em;
+        }
+        #silo-ebay-btn {
+            display: inline-block;
+            background: #d32f2f;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1em;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        #silo-ebay-btn:hover { background: #b71c1c; }
+    </style>
 </head>
 <body>
     
@@ -157,11 +212,29 @@
 </nav>
 
     <main class="main-container">
-        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> > <span style="color:#333; font-weight:bold;">System Sensor</span></p>
-        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:30px;">System Sensor Parts Catalog</h1>
-        <p class="lead">Browsing 176 verified items available for facility management.</p>
+        <p style="color:#777; font-size:0.9em;"><a href="index.html">Home</a> &gt; <span style="color:#333; font-weight:bold;">System Sensor</span></p>
+        <h1 style="border-bottom:4px solid #d32f2f;padding-bottom:10px;margin-bottom:20px;">System Sensor Parts Catalog</h1>
+        <p class="lead" style="margin-bottom:20px;">Browsing 176 verified items. Search by part number or name:</p>
+
+        <div class="silo-search-wrap">
+            <input
+                type="text"
+                id="siloSearch"
+                class="silo-search-input"
+                placeholder="Search System Sensor part number (e.g. 2151)..."
+                autocomplete="off"
+            >
+        </div>
+        <p id="silo-count-msg"></p>
+
+        <div id="silo-no-result">
+            <p>This part isn't in our catalog yet — click below to try on eBay.</p>
+            <a id="silo-ebay-btn" href="#" target="_blank" rel="nofollow sponsored">⚡ Find on eBay →</a>
+            <p style="margin-top:12px; font-size:0.8em; color:#aaa;">Compare listings, prices, and availability for this System Sensor part.</p>
+        </div>
+
         <div class="silo-grid">
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector 2151">
             <a href="2151.html"><img src="https://cdn.firepartshub.com/images/bk-2151.webp" alt="System Sensor Smoke Detector 2151 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="2151.html">System Sensor Smoke Detector 2151</a></div>
@@ -169,7 +242,7 @@
                 <a href="2151.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector 2d51">
             <a href="2d51.html"><img src="https://cdn.firepartshub.com/images/bk-2d51.webp" alt="System Sensor Smoke Detector 2D51 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="2d51.html">System Sensor Smoke Detector 2D51</a></div>
@@ -177,7 +250,7 @@
                 <a href="2d51.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector 2w-b">
             <a href="2w-b.html"><img src="https://cdn.firepartshub.com/images/bk-2wb.webp" alt="System Sensor Smoke Detector 2W-B - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="2w-b.html">System Sensor Smoke Detector 2W-B</a></div>
@@ -185,7 +258,7 @@
                 <a href="2w-b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector 4w-b">
             <a href="4w-b.html"><img src="https://cdn.firepartshub.com/images/bk-4wb.webp" alt="System Sensor Smoke Detector 4W-B - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="4w-b.html">System Sensor Smoke Detector 4W-B</a></div>
@@ -193,7 +266,7 @@
                 <a href="4w-b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor heat detector 5151">
             <a href="5151.html"><img src="https://cdn.firepartshub.com/images/bk-5151.webp" alt="System Sensor Heat Detector 5151 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5151.html">System Sensor Heat Detector 5151</a></div>
@@ -201,7 +274,7 @@
                 <a href="5151.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor temperature and humidity sensor 5601p">
             <a href="5601p.html"><img src="https://cdn.firepartshub.com/images/bk-5601p.webp" alt="System Sensor Temperature and Humidity Sensor 5601P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5601p.html">System Sensor Temperature and Humidity Sensor 5601P</a></div>
@@ -209,7 +282,7 @@
                 <a href="5601p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor temperature and humidity sensor 5602">
             <a href="5602.html"><img src="https://cdn.firepartshub.com/images/bk-5602.webp" alt="System Sensor Temperature and Humidity Sensor 5602 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5602.html">System Sensor Temperature and Humidity Sensor 5602</a></div>
@@ -217,7 +290,7 @@
                 <a href="5602.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor temperature and humidity sensor 5604">
             <a href="5604.html"><img src="https://i.ebayimg.com/images/g/USIAAeSwtVhoxBsa/s-l225.jpg" alt="System Sensor Temperature and Humidity Sensor 5604 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5604.html">System Sensor Temperature and Humidity Sensor 5604</a></div>
@@ -225,7 +298,7 @@
                 <a href="5604.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor temperature sensor 5621">
             <a href="5621.html"><img src="https://i.ebayimg.com/images/g/gMUAAOSw7K1euZz~/s-l225.jpg" alt="System Sensor Temperature Sensor 5621 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5621.html">System Sensor Temperature Sensor 5621</a></div>
@@ -233,7 +306,7 @@
                 <a href="5621.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor temperature & humidity sensor 5622">
             <a href="5622.html"><img src="https://cdn.firepartshub.com/images/bk-5622.webp" alt="System Sensor Temperature & Humidity Sensor 5622 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5622.html">System Sensor Temperature & Humidity Sensor 5622</a></div>
@@ -241,7 +314,7 @@
                 <a href="5622.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor temperature sensor 5623">
             <a href="5623.html"><img src="https://i.ebayimg.com/images/g/oHEAAOSwnLBltalY/s-l225.jpg" alt="System Sensor Temperature Sensor 5623 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="5623.html">System Sensor Temperature Sensor 5623</a></div>
@@ -249,7 +322,7 @@
                 <a href="5623.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor gas leak sensor co1224t">
             <a href="co1224t.html"><img src="https://i.ebayimg.com/images/g/ZikAAeSwMgloaAtr/s-l225.jpg" alt="System Sensor Gas Leak Sensor CO1224T - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="co1224t.html">System Sensor Gas Leak Sensor CO1224T</a></div>
@@ -257,7 +330,7 @@
                 <a href="co1224t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor gas leak sensor co1224tr">
             <a href="co1224tr.html"><img src="https://cdn.firepartshub.com/images/bk-co1224tr.webp" alt="System Sensor Gas Leak Sensor CO1224TR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="co1224tr.html">System Sensor Gas Leak Sensor CO1224TR</a></div>
@@ -265,7 +338,7 @@
                 <a href="co1224tr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor interface module cosmod2w">
             <a href="cosmod2w.html"><img src="https://cdn.firepartshub.com/images/bk-cosmod2w.webp" alt="System Sensor Interface Module COSMOD2W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="cosmod2w.html">System Sensor Interface Module COSMOD2W</a></div>
@@ -273,7 +346,7 @@
                 <a href="cosmod2w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector d2">
             <a href="d2.html"><img src="https://cdn.firepartshub.com/images/bk-d2.webp" alt="System Sensor Smoke Detector D2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="d2.html">System Sensor Smoke Detector D2</a></div>
@@ -281,7 +354,7 @@
                 <a href="d2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector d4120">
             <a href="d4120.html"><img src="https://cdn.firepartshub.com/images/bk-d4120.webp" alt="System Sensor Smoke Detector D4120 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="d4120.html">System Sensor Smoke Detector D4120</a></div>
@@ -289,7 +362,7 @@
                 <a href="d4120.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector d4120w">
             <a href="d4120w.html"><img src="https://cdn.firepartshub.com/images/bk-d4120w.webp" alt="System Sensor Smoke Detector D4120W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="d4120w.html">System Sensor Smoke Detector D4120W</a></div>
@@ -297,7 +370,7 @@
                 <a href="d4120w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector d4240">
             <a href="d4240.html"><img src="https://cdn.firepartshub.com/images/bk-d4240.webp" alt="System Sensor Smoke Detector D4240 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="d4240.html">System Sensor Smoke Detector D4240</a></div>
@@ -305,7 +378,7 @@
                 <a href="d4240.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor photoelectric sensor d4s">
             <a href="d4s.html"><img src="https://cdn.firepartshub.com/images/bk-d4s.webp" alt="System Sensor Photoelectric Sensor D4S - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="d4s.html">System Sensor Photoelectric Sensor D4S</a></div>
@@ -313,7 +386,7 @@
                 <a href="d4s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor low frequency hcrl-lf">
             <a href="hcrl-lf.html"><img src="https://cdn.firepartshub.com/images/bk-hcrllf.webp" alt="System Sensor Low Frequency HCRL-LF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hcrl-lf.html">System Sensor Low Frequency HCRL-LF</a></div>
@@ -321,7 +394,7 @@
                 <a href="hcrl-lf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor low frequency hcwl-lf">
             <a href="hcwl-lf.html"><img src="https://cdn.firepartshub.com/images/bk-hcwllf.webp" alt="System Sensor Low Frequency HCWL-LF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hcwl-lf.html">System Sensor Low Frequency HCWL-LF</a></div>
@@ -329,7 +402,7 @@
                 <a href="hcwl-lf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn hr">
             <a href="hr.html"><img src="https://cdn.firepartshub.com/images/bk-hrk.webp" alt="System Sensor Horn HR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hr.html">System Sensor Horn HR</a></div>
@@ -337,7 +410,7 @@
                 <a href="hr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor low frequency hrl-lf">
             <a href="hrl-lf.html"><img src="https://i.ebayimg.com/images/g/7hcAAeSwRohpNgeu/s-l225.jpg" alt="System Sensor Low Frequency HRL-LF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hrl-lf.html">System Sensor Low Frequency HRL-LF</a></div>
@@ -345,7 +418,7 @@
                 <a href="hrl-lf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn hrl">
             <a href="hrl.html"><img src="https://i.ebayimg.com/images/g/nisAAeSwBo9pyCzg/s-l225.jpg" alt="System Sensor Horn HRL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="hrl.html">System Sensor Horn HRL</a></div>
@@ -353,7 +426,7 @@
                 <a href="hrl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe lens lens-a">
             <a href="lens-a.html"><img src="https://i.ebayimg.com/images/g/y04AAeSw-6hoeSfQ/s-l225.jpg" alt="System Sensor Security Strobe Lens LENS-A - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lens-a.html">System Sensor Security Strobe Lens LENS-A</a></div>
@@ -361,7 +434,7 @@
                 <a href="lens-a.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe lens lens-a2">
             <a href="lens-a2.html"><img src="https://i.ebayimg.com/images/g/4AMAAeSwUs1ooN-n/s-l225.jpg" alt="System Sensor Security Strobe Lens LENS-A2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lens-a2.html">System Sensor Security Strobe Lens LENS-A2</a></div>
@@ -369,7 +442,7 @@
                 <a href="lens-a2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe lens lens-ac">
             <a href="lens-ac.html"><img src="https://cdn.firepartshub.com/images/bk-lensac.webp" alt="System Sensor Security Strobe Lens LENS-AC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lens-ac.html">System Sensor Security Strobe Lens LENS-AC</a></div>
@@ -377,7 +450,7 @@
                 <a href="lens-ac.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe lens lens-ac2">
             <a href="lens-ac2.html"><img src="https://i.ebayimg.com/images/g/bmgAAOSwoVhnT3Bh/s-l225.jpg" alt="System Sensor Security Strobe Lens LENS-AC2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lens-ac2.html">System Sensor Security Strobe Lens LENS-AC2</a></div>
@@ -385,7 +458,7 @@
                 <a href="lens-ac2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe lens lens-b3">
             <a href="lens-b3.html"><img src="https://cdn.firepartshub.com/images/bk-lensb3.webp" alt="System Sensor LED Strobe Lens LENS-B3 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lens-b3.html">System Sensor LED Strobe Lens LENS-B3</a></div>
@@ -393,7 +466,7 @@
                 <a href="lens-b3.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor lens attachment lens-bc">
             <a href="lens-bc.html"><img src="https://i.ebayimg.com/images/g/-9cAAOSw4L1ndq4C/s-l225.jpg" alt="System Sensor Lens Attachment LENS-BC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="lens-bc.html">System Sensor Lens Attachment LENS-BC</a></div>
@@ -401,7 +474,7 @@
                 <a href="lens-bc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor sync circuit module mdl3r">
             <a href="mdl3r.html"><img src="https://i.ebayimg.com/images/g/S90AAeSwPfVpIKAj/s-l225.jpg" alt="System Sensor Sync Circuit Module MDL3R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mdl3r.html">System Sensor Sync Circuit Module MDL3R</a></div>
@@ -409,7 +482,7 @@
                 <a href="mdl3r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn mhw">
             <a href="mhw.html"><img src="https://i.ebayimg.com/images/g/jJQAAeSwTSJoYtUq/s-l225.jpg" alt="System Sensor Horn MHW - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mhw.html">System Sensor Horn MHW</a></div>
@@ -417,7 +490,7 @@
                 <a href="mhw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor beam smoke detector osi-r-ss">
             <a href="osi-r-ss.html"><img src="https://cdn.firepartshub.com/images/bk-osir.webp" alt="System Sensor Beam Smoke Detector OSI-R-SS - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="osi-r-ss.html">System Sensor Beam Smoke Detector OSI-R-SS</a></div>
@@ -425,7 +498,7 @@
                 <a href="osi-r-ss.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe, led strobe p2grkled">
             <a href="p2grkled.html"><img src="https://i.ebayimg.com/images/g/Jr4AAeSw-M9pclP2/s-l225.jpg" alt="System Sensor Horn Strobe, LED Strobe P2GRKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2grkled.html">System Sensor Horn Strobe, LED Strobe P2GRKLED</a></div>
@@ -433,7 +506,7 @@
                 <a href="p2grkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe p2grl">
             <a href="p2grl.html"><img src="https://cdn.firepartshub.com/images/bk-p2grl.webp" alt="System Sensor Horn Strobe P2GRL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2grl.html">System Sensor Horn Strobe P2GRL</a></div>
@@ -441,7 +514,7 @@
                 <a href="p2grl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe, led strobe p2gwkled">
             <a href="p2gwkled.html"><img src="https://cdn.firepartshub.com/images/bk-p2gwkled.webp" alt="System Sensor Horn Strobe, LED Strobe P2GWKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2gwkled.html">System Sensor Horn Strobe, LED Strobe P2GWKLED</a></div>
@@ -449,7 +522,7 @@
                 <a href="p2gwkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe, led strobe p2gwled">
             <a href="p2gwled.html"><img src="https://cdn.firepartshub.com/images/bk-p2gwled.webp" alt="System Sensor Horn Strobe, LED Strobe P2GWLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2gwled.html">System Sensor Horn Strobe, LED Strobe P2GWLED</a></div>
@@ -457,7 +530,7 @@
                 <a href="p2gwled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe p2rk">
             <a href="p2rk.html"><img src="https://cdn.firepartshub.com/images/bk-p2rk.webp" alt="System Sensor Horn Strobe P2RK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2rk.html">System Sensor Horn Strobe P2RK</a></div>
@@ -465,7 +538,7 @@
                 <a href="p2rk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor sounder strobe p2rl-lf">
             <a href="p2rl-lf.html"><img src="https://cdn.firepartshub.com/images/bk-p2rllf.webp" alt="System Sensor Sounder Strobe P2RL-LF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2rl-lf.html">System Sensor Sounder Strobe P2RL-LF</a></div>
@@ -473,7 +546,7 @@
                 <a href="p2rl-lf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe, led strobe p2rled">
             <a href="p2rled.html"><img src="https://cdn.firepartshub.com/images/bk-p2rled.webp" alt="System Sensor Horn Strobe, LED Strobe P2RLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2rled.html">System Sensor Horn Strobe, LED Strobe P2RLED</a></div>
@@ -481,7 +554,7 @@
                 <a href="p2rled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor sounder strobe p2wl-lf">
             <a href="p2wl-lf.html"><img src="https://cdn.firepartshub.com/images/bk-p2wllf.webp" alt="System Sensor Sounder Strobe P2WL-LF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2wl-lf.html">System Sensor Sounder Strobe P2WL-LF</a></div>
@@ -489,7 +562,7 @@
                 <a href="p2wl-lf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe p2wl-p">
             <a href="p2wl-p.html"><img src="https://i.ebayimg.com/images/g/dpsAAeSwHkppQry~/s-l225.jpg" alt="System Sensor Horn Strobe P2WL-P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2wl-p.html">System Sensor Horn Strobe P2WL-P</a></div>
@@ -497,7 +570,7 @@
                 <a href="p2wl-p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor p2wled-lf">
             <a href="p2wled-lf.html"><img src="https://i.ebayimg.com/images/g/088AAeSwXUppgtsy/s-l225.jpg" alt="System Sensor P2WLED-LF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2wled-lf.html">System Sensor P2WLED-LF</a></div>
@@ -505,7 +578,7 @@
                 <a href="p2wled-lf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light p2wled-p">
             <a href="p2wled-p.html"><img src="https://i.ebayimg.com/images/g/LEoAAOSwaj1oJ4Uk/s-l225.jpg" alt="System Sensor Security Strobe Light P2WLED-P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2wled-p.html">System Sensor Security Strobe Light P2WLED-P</a></div>
@@ -513,7 +586,7 @@
                 <a href="p2wled-p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe, led strobe p2wled">
             <a href="p2wled.html"><img src="https://cdn.firepartshub.com/images/bk-p2wled.webp" alt="System Sensor Horn Strobe, LED Strobe P2WLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p2wled.html">System Sensor Horn Strobe, LED Strobe P2WLED</a></div>
@@ -521,7 +594,7 @@
                 <a href="p2wled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe p4rl">
             <a href="p4rl.html"><img src="https://cdn.firepartshub.com/images/bk-p4rl.webp" alt="System Sensor Horn Strobe P4RL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="p4rl.html">System Sensor Horn Strobe P4RL</a></div>
@@ -529,7 +602,7 @@
                 <a href="p4rl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe, led strobe pc2rkled">
             <a href="pc2rkled.html"><img src="https://cdn.firepartshub.com/images/bk-pc2rkled.webp" alt="System Sensor Horn Strobe, LED Strobe PC2RKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2rkled.html">System Sensor Horn Strobe, LED Strobe PC2RKLED</a></div>
@@ -537,7 +610,7 @@
                 <a href="pc2rkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor sounder strobe pc2rl-lf">
             <a href="pc2rl-lf.html"><img src="https://cdn.firepartshub.com/images/bk-pc2rllf.webp" alt="System Sensor Sounder Strobe PC2RL-LF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2rl-lf.html">System Sensor Sounder Strobe PC2RL-LF</a></div>
@@ -545,7 +618,7 @@
                 <a href="pc2rl-lf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe pc2rl">
             <a href="pc2rl.html"><img src="https://cdn.firepartshub.com/images/bk-pc2rl.webp" alt="System Sensor Horn Strobe PC2RL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2rl.html">System Sensor Horn Strobe PC2RL</a></div>
@@ -553,7 +626,7 @@
                 <a href="pc2rl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe, led strobe pc2rled">
             <a href="pc2rled.html"><img src="https://cdn.firepartshub.com/images/bk-pc2rled.webp" alt="System Sensor Horn Strobe, LED Strobe PC2RLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2rled.html">System Sensor Horn Strobe, LED Strobe PC2RLED</a></div>
@@ -561,7 +634,7 @@
                 <a href="pc2rled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe pc2whk">
             <a href="pc2whk.html"><img src="https://cdn.firepartshub.com/images/bk-pc2whk.webp" alt="System Sensor Horn Strobe PC2WHK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2whk.html">System Sensor Horn Strobe PC2WHK</a></div>
@@ -569,7 +642,7 @@
                 <a href="pc2whk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe pc2wk">
             <a href="pc2wk.html"><img src="https://i.ebayimg.com/images/g/lBEAAeSw5ohpyCzP/s-l225.jpg" alt="System Sensor Horn Strobe PC2WK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2wk.html">System Sensor Horn Strobe PC2WK</a></div>
@@ -577,7 +650,7 @@
                 <a href="pc2wk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe, led strobe pc2wkled">
             <a href="pc2wkled.html"><img src="https://cdn.firepartshub.com/images/bk-pc2wkled.webp" alt="System Sensor Horn Strobe, LED Strobe PC2WKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2wkled.html">System Sensor Horn Strobe, LED Strobe PC2WKLED</a></div>
@@ -585,7 +658,7 @@
                 <a href="pc2wkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor sounder strobe pc2wl-lf">
             <a href="pc2wl-lf.html"><img src="https://cdn.firepartshub.com/images/bk-pc2wllf.webp" alt="System Sensor Sounder Strobe PC2WL-LF - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2wl-lf.html">System Sensor Sounder Strobe PC2WL-LF</a></div>
@@ -593,7 +666,7 @@
                 <a href="pc2wl-lf.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe pc2wl">
             <a href="pc2wl.html"><img src="https://cdn.firepartshub.com/images/bk-pc2wl.webp" alt="System Sensor Horn Strobe PC2WL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2wl.html">System Sensor Horn Strobe PC2WL</a></div>
@@ -601,7 +674,7 @@
                 <a href="pc2wl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor horn strobe, led strobe pc2wled">
             <a href="pc2wled.html"><img src="https://cdn.firepartshub.com/images/bk-pc2wled.webp" alt="System Sensor Horn Strobe, LED Strobe PC2WLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pc2wled.html">System Sensor Horn Strobe, LED Strobe PC2WLED</a></div>
@@ -609,7 +682,7 @@
                 <a href="pc2wled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe scrled">
             <a href="scrled.html"><img src="https://cdn.firepartshub.com/images/bk-scrled.webp" alt="System Sensor LED Strobe SCRLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="scrled.html">System Sensor LED Strobe SCRLED</a></div>
@@ -617,7 +690,7 @@
                 <a href="scrled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light scwhk">
             <a href="scwhk.html"><img src="https://cdn.firepartshub.com/images/bk-scwhk.webp" alt="System Sensor Security Strobe Light SCWHK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="scwhk.html">System Sensor Security Strobe Light SCWHK</a></div>
@@ -625,7 +698,7 @@
                 <a href="scwhk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light scwk">
             <a href="scwk.html"><img src="https://cdn.firepartshub.com/images/bk-scwk.webp" alt="System Sensor Security Strobe Light SCWK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="scwk.html">System Sensor Security Strobe Light SCWK</a></div>
@@ -633,7 +706,7 @@
                 <a href="scwk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe scwkled">
             <a href="scwkled.html"><img src="https://cdn.firepartshub.com/images/bk-scwkled.webp" alt="System Sensor LED Strobe SCWKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="scwkled.html">System Sensor LED Strobe SCWKLED</a></div>
@@ -641,7 +714,7 @@
                 <a href="scwkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light scwl-clr-alert">
             <a href="scwl-clr-alert.html"><img src="https://cdn.firepartshub.com/images/bk-scwlclrrt.webp" alt="System Sensor Security Strobe Light SCWL-CLR-ALERT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="scwl-clr-alert.html">System Sensor Security Strobe Light SCWL-CLR-ALERT</a></div>
@@ -649,7 +722,7 @@
                 <a href="scwl-clr-alert.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light scwl">
             <a href="scwl.html"><img src="https://cdn.firepartshub.com/images/bk-scwl.webp" alt="System Sensor Security Strobe Light SCWL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="scwl.html">System Sensor Security Strobe Light SCWL</a></div>
@@ -657,7 +730,7 @@
                 <a href="scwl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe scwled-clr-alert">
             <a href="scwled-clr-alert.html"><img src="https://i.ebayimg.com/images/g/GVoAAeSwAiNplPMs/s-l225.jpg" alt="System Sensor LED Strobe SCWLED-CLR-ALERT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="scwled-clr-alert.html">System Sensor LED Strobe SCWLED-CLR-ALERT</a></div>
@@ -665,7 +738,7 @@
                 <a href="scwled-clr-alert.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe scwled">
             <a href="scwled.html"><img src="https://i.ebayimg.com/images/g/fwQAAeSwU69plfwN/s-l225.jpg" alt="System Sensor LED Strobe SCWLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="scwled.html">System Sensor LED Strobe SCWLED</a></div>
@@ -673,7 +746,7 @@
                 <a href="scwled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor strobe expander plate sep-spswl">
             <a href="sep-spswl.html"><img src="https://i.ebayimg.com/images/g/7IsAAeSwlaJpMvtn/s-l225.jpg" alt="System Sensor Strobe Expander Plate SEP-SPSWL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sep-spswl.html">System Sensor Strobe Expander Plate SEP-SPSWL</a></div>
@@ -681,7 +754,7 @@
                 <a href="sep-spswl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe sgrkled">
             <a href="sgrkled.html"><img src="https://cdn.firepartshub.com/images/bk-sgrkled.webp" alt="System Sensor LED Strobe SGRKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sgrkled.html">System Sensor LED Strobe SGRKLED</a></div>
@@ -689,7 +762,7 @@
                 <a href="sgrkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light sgrl">
             <a href="sgrl.html"><img src="https://i.ebayimg.com/images/g/WMQAAOSwclFnrKfx/s-l225.jpg" alt="System Sensor Security Strobe Light SGRL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sgrl.html">System Sensor Security Strobe Light SGRL</a></div>
@@ -697,7 +770,7 @@
                 <a href="sgrl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe sgwkled">
             <a href="sgwkled.html"><img src="https://cdn.firepartshub.com/images/bk-sgwkled.webp" alt="System Sensor LED Strobe SGWKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sgwkled.html">System Sensor LED Strobe SGWKLED</a></div>
@@ -705,7 +778,7 @@
                 <a href="sgwkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker spcrl">
             <a href="spcrl.html"><img src="https://cdn.firepartshub.com/images/bk-spcrl.webp" alt="System Sensor Speaker SPCRL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spcrl.html">System Sensor Speaker SPCRL</a></div>
@@ -713,7 +786,7 @@
                 <a href="spcrl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker spcwl">
             <a href="spcwl.html"><img src="https://cdn.firepartshub.com/images/bk-spcwl.webp" alt="System Sensor Speaker SPCWL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spcwl.html">System Sensor Speaker SPCWL</a></div>
@@ -721,7 +794,7 @@
                 <a href="spcwl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker sprk">
             <a href="sprk.html"><img src="https://cdn.firepartshub.com/images/bk-sprk.webp" alt="System Sensor Speaker SPRK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sprk.html">System Sensor Speaker SPRK</a></div>
@@ -729,7 +802,7 @@
                 <a href="sprk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker sprkl">
             <a href="sprkl.html"><img src="https://cdn.firepartshub.com/images/bk-sprkl.webp" alt="System Sensor Speaker SPRKL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sprkl.html">System Sensor Speaker SPRKL</a></div>
@@ -737,7 +810,7 @@
                 <a href="sprkl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker sprl">
             <a href="sprl.html"><img src="https://cdn.firepartshub.com/images/bk-sprl.webp" alt="System Sensor Speaker SPRL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="sprl.html">System Sensor Speaker SPRL</a></div>
@@ -745,7 +818,7 @@
                 <a href="sprl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe spscrled">
             <a href="spscrled.html"><img src="https://cdn.firepartshub.com/images/bk-spscrled.webp" alt="System Sensor LED Strobe SPSCRLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spscrled.html">System Sensor LED Strobe SPSCRLED</a></div>
@@ -753,7 +826,7 @@
                 <a href="spscrled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor spscwkled-p">
             <a href="spscwkled-p.html"><img src="https://cdn.firepartshub.com/images/bk-spscwklp.webp" alt="System Sensor SPSCWKLED-P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spscwkled-p.html">System Sensor SPSCWKLED-P</a></div>
@@ -761,7 +834,7 @@
                 <a href="spscwkled-p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor outdoor speaker strobe spscwkled">
             <a href="spscwkled.html"><img src="https://cdn.firepartshub.com/images/bk-spscwkled.webp" alt="System Sensor Outdoor Speaker Strobe SPSCWKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spscwkled.html">System Sensor Outdoor Speaker Strobe SPSCWKLED</a></div>
@@ -769,7 +842,7 @@
                 <a href="spscwkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker strobe spscwl-clr-alert">
             <a href="spscwl-clr-alert.html"><img src="https://cdn.firepartshub.com/images/bk-spscwlcrt.webp" alt="System Sensor Speaker Strobe SPSCWL-CLR-ALERT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spscwl-clr-alert.html">System Sensor Speaker Strobe SPSCWL-CLR-ALERT</a></div>
@@ -777,7 +850,7 @@
                 <a href="spscwl-clr-alert.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker strobe spscwl-p">
             <a href="spscwl-p.html"><img src="https://i.ebayimg.com/images/g/1BQAAeSwoytnxLIx/s-l225.jpg" alt="System Sensor Speaker Strobe SPSCWL-P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spscwl-p.html">System Sensor Speaker Strobe SPSCWL-P</a></div>
@@ -785,7 +858,7 @@
                 <a href="spscwl-p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe spscwled-clr-alert">
             <a href="spscwled-clr-alert.html"><img src="https://cdn.firepartshub.com/images/bk-spscwledc.webp" alt="System Sensor LED Strobe SPSCWLED-CLR-ALERT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spscwled-clr-alert.html">System Sensor LED Strobe SPSCWLED-CLR-ALERT</a></div>
@@ -793,7 +866,7 @@
                 <a href="spscwled-clr-alert.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe spscwled">
             <a href="spscwled.html"><img src="https://i.ebayimg.com/images/g/YiEAAeSwqj5pz65l/s-l225.jpg" alt="System Sensor LED Strobe SPSCWLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spscwled.html">System Sensor LED Strobe SPSCWLED</a></div>
@@ -801,7 +874,7 @@
                 <a href="spscwled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker strobe spsrk">
             <a href="spsrk.html"><img src="https://cdn.firepartshub.com/images/bk-spsrk.webp" alt="System Sensor Speaker Strobe SPSRK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spsrk.html">System Sensor Speaker Strobe SPSRK</a></div>
@@ -809,7 +882,7 @@
                 <a href="spsrk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor outdoor speaker strobe spsrkled">
             <a href="spsrkled.html"><img src="https://cdn.firepartshub.com/images/bk-spsrkled.webp" alt="System Sensor Outdoor Speaker Strobe SPSRKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spsrkled.html">System Sensor Outdoor Speaker Strobe SPSRKLED</a></div>
@@ -817,7 +890,7 @@
                 <a href="spsrkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe spsrled">
             <a href="spsrled.html"><img src="https://cdn.firepartshub.com/images/bk-spsrled.webp" alt="System Sensor LED Strobe SPSRLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spsrled.html">System Sensor LED Strobe SPSRLED</a></div>
@@ -825,7 +898,7 @@
                 <a href="spsrled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor outdoor speaker strobe spswkled">
             <a href="spswkled.html"><img src="https://i.ebayimg.com/images/g/vI8AAeSwU9ppj4YC/s-l225.jpg" alt="System Sensor Outdoor Speaker Strobe SPSWKLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spswkled.html">System Sensor Outdoor Speaker Strobe SPSWKLED</a></div>
@@ -833,7 +906,7 @@
                 <a href="spswkled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker strobe spswl-alert">
             <a href="spswl-alert.html"><img src="https://cdn.firepartshub.com/images/bk-spswlalrt.webp" alt="System Sensor Speaker Strobe SPSWL-ALERT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spswl-alert.html">System Sensor Speaker Strobe SPSWL-ALERT</a></div>
@@ -841,7 +914,7 @@
                 <a href="spswl-alert.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe spswled-clr-alert">
             <a href="spswled-clr-alert.html"><img src="https://cdn.firepartshub.com/images/bk-spswledcl.webp" alt="System Sensor LED Strobe SPSWLED-CLR-ALERT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spswled-clr-alert.html">System Sensor LED Strobe SPSWLED-CLR-ALERT</a></div>
@@ -849,7 +922,7 @@
                 <a href="spswled-clr-alert.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor led strobe spswled">
             <a href="spswled.html"><img src="https://cdn.firepartshub.com/images/bk-spswled.webp" alt="System Sensor LED Strobe SPSWLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spswled.html">System Sensor LED Strobe SPSWLED</a></div>
@@ -857,7 +930,7 @@
                 <a href="spswled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor outdoor speaker spwkl">
             <a href="spwkl.html"><img src="https://cdn.firepartshub.com/images/bk-spwkl.webp" alt="System Sensor Outdoor Speaker SPWKL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spwkl.html">System Sensor Outdoor Speaker SPWKL</a></div>
@@ -865,7 +938,7 @@
                 <a href="spwkl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker spwl">
             <a href="spwl.html"><img src="https://cdn.firepartshub.com/images/bk-spwl.webp" alt="System Sensor Speaker SPWL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="spwl.html">System Sensor Speaker SPWL</a></div>
@@ -873,7 +946,7 @@
                 <a href="spwl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light srk">
             <a href="srk.html"><img src="https://cdn.firepartshub.com/images/bk-srk.webp" alt="System Sensor Security Strobe Light SRK - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="srk.html">System Sensor Security Strobe Light SRK</a></div>
@@ -881,7 +954,7 @@
                 <a href="srk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light srl-sp">
             <a href="srl-sp.html"><img src="https://i.ebayimg.com/images/g/71QAAOSwpt1n0chS/s-l225.jpg" alt="System Sensor Security Strobe Light SRL-SP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="srl-sp.html">System Sensor Security Strobe Light SRL-SP</a></div>
@@ -889,7 +962,7 @@
                 <a href="srl-sp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light srl">
             <a href="srl.html"><img src="https://cdn.firepartshub.com/images/bk-srl.webp" alt="System Sensor Security Strobe Light SRL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="srl.html">System Sensor Security Strobe Light SRL</a></div>
@@ -897,7 +970,7 @@
                 <a href="srl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light srled">
             <a href="srled.html"><img src="https://cdn.firepartshub.com/images/bk-srled.webp" alt="System Sensor Security Strobe Light SRLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="srled.html">System Sensor Security Strobe Light SRLED</a></div>
@@ -905,7 +978,7 @@
                 <a href="srled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke/carbon monoxide alarm ss-fire-co">
             <a href="ss-fire-co.html"><img src="https://cdn.firepartshub.com/images/bk-ssfireco.webp" alt="System Sensor Smoke/Carbon Monoxide Alarm SS-FIRE-CO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ss-fire-co.html">System Sensor Smoke/Carbon Monoxide Alarm SS-FIRE-CO</a></div>
@@ -913,7 +986,7 @@
                 <a href="ss-fire-co.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor thermal detector ss-heat-ht">
             <a href="ss-heat-ht.html"><img src="https://cdn.firepartshub.com/images/bk-ssheatht.webp" alt="System Sensor Thermal Detector SS-HEAT-HT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ss-heat-ht.html">System Sensor Thermal Detector SS-HEAT-HT</a></div>
@@ -921,7 +994,7 @@
                 <a href="ss-heat-ht.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor thermal detector ss-heat-ror">
             <a href="ss-heat-ror.html"><img src="https://i.ebayimg.com/images/g/9boAAeSwbY5ouIFN/s-l225.jpg" alt="System Sensor Thermal Detector SS-HEAT-ROR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ss-heat-ror.html">System Sensor Thermal Detector SS-HEAT-ROR</a></div>
@@ -929,7 +1002,7 @@
                 <a href="ss-heat-ror.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor thermal detector ss-heat">
             <a href="ss-heat.html"><img src="https://cdn.firepartshub.com/images/bk-ssheat.webp" alt="System Sensor Thermal Detector SS-HEAT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ss-heat.html">System Sensor Thermal Detector SS-HEAT</a></div>
@@ -937,7 +1010,7 @@
                 <a href="ss-heat.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector ss-photo-r">
             <a href="ss-photo-r.html"><img src="https://cdn.firepartshub.com/images/bk-ssphotor.webp" alt="System Sensor Smoke Detector SS-PHOTO-R - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ss-photo-r.html">System Sensor Smoke Detector SS-PHOTO-R</a></div>
@@ -945,7 +1018,7 @@
                 <a href="ss-photo-r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke detector ss-photo">
             <a href="ss-photo.html"><img src="https://cdn.firepartshub.com/images/bk-ssphoto.webp" alt="System Sensor Smoke Detector SS-PHOTO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ss-photo.html">System Sensor Smoke Detector SS-PHOTO</a></div>
@@ -953,7 +1026,7 @@
                 <a href="ss-photo.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor alarm bell ssm24-6">
             <a href="ssm24-6.html"><img src="https://i.ebayimg.com/images/g/9LoAAOSwMsNkEGeM/s-l225.jpg" alt="System Sensor Alarm Bell SSM24-6 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="ssm24-6.html">System Sensor Alarm Bell SSM24-6</a></div>
@@ -961,7 +1034,7 @@
                 <a href="ssm24-6.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor security strobe light swled">
             <a href="swled.html"><img src="https://cdn.firepartshub.com/images/bk-swled.webp" alt="System Sensor Security Strobe Light SWLED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="swled.html">System Sensor Security Strobe Light SWLED</a></div>
@@ -969,7 +1042,7 @@
                 <a href="swled.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor fire alarm hvac duct smoke detector power board part # 102326-02">
             <a href="system-sensor-102326.html"><img src="https://i.ebayimg.com/images/g/TN4AAeSwR2Jowvbp/s-l225.jpg" alt="System Sensor Fire Alarm Hvac Duct Smoke Detector Power Board Part # 102326-02 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-102326.html">System Sensor Fire Alarm Hvac Duct Smoke Detector Power Board Part # 102326-02</a></div>
@@ -977,7 +1050,7 @@
                 <a href="system-sensor-102326.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor r-10e / fire alarm relay w/enclosure / new!!! 🇺🇸">
             <a href="system-sensor-10e.html"><img src="https://i.ebayimg.com/images/g/vmwAAeSw9oNo9yfd/s-l225.jpg" alt="System Sensor R-10E / Fire Alarm Relay w/Enclosure / NEW!!! 🇺🇸 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-10e.html">System Sensor R-10E / Fire Alarm Relay w/Enclosure / NEW!!! 🇺🇸</a></div>
@@ -985,7 +1058,7 @@
                 <a href="system-sensor-10e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="14n223 system sensor spectralert wall strobe">
             <a href="system-sensor-14n223.html"><img src="https://i.ebayimg.com/images/g/av8AAOSwTGpoLikr/s-l225.jpg" alt="14N223 System Sensor SpectrAlert Wall Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-14n223.html">14N223 System Sensor SpectrAlert Wall Strobe</a></div>
@@ -993,7 +1066,7 @@
                 <a href="system-sensor-14n223.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor pdrp-2001e (ms-5ud) fire alarm control panel (please read info)">
             <a href="system-sensor-2001e-ms5ud.html"><img src="https://i.ebayimg.com/images/g/iH8AAeSwRvppZYAi/s-l225.jpg" alt="System sensor PDRP-2001E (Ms-5UD) Fire alarm control panel (Please read info) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-2001e-ms5ud.html">System sensor PDRP-2001E (Ms-5UD) Fire alarm control panel (Please read info)</a></div>
@@ -1001,7 +1074,7 @@
                 <a href="system-sensor-2001e-ms5ud.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor fsb-200s beam smoke detector">
             <a href="system-sensor-200s.html"><img src="https://i.ebayimg.com/images/g/FiAAAeSwgPxo-4iU/s-l225.jpg" alt="System Sensor FSB-200S Beam Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-200s.html">System Sensor FSB-200S Beam Smoke Detector</a></div>
@@ -1009,7 +1082,7 @@
                 <a href="system-sensor-200s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor smoke alarm round hardwired photoelectric 20jz02">
             <a href="system-sensor-20jz02.html"><img src="https://i.ebayimg.com/images/g/HH8AAeSwzfpovyYw/s-l225.jpg" alt="System Sensor Smoke Alarm Round Hardwired Photoelectric 20JZ02 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-20jz02.html">System Sensor Smoke Alarm Round Hardwired Photoelectric 20JZ02</a></div>
@@ -1017,7 +1090,7 @@
                 <a href="system-sensor-20jz02.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor agent release service disconnect switch 30bm relay series">
             <a href="system-sensor-30bm.html"><img src="https://i.ebayimg.com/images/g/AaEAAOSwladlNt95/s-l225.jpg" alt="System Sensor Agent Release service Disconnect Switch 30BM Relay Series - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-30bm.html">System Sensor Agent Release service Disconnect Switch 30BM Relay Series</a></div>
@@ -1025,7 +1098,7 @@
                 <a href="system-sensor-30bm.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor 5251b addressable heat detector exc cond inclds base 40 aval">
             <a href="system-sensor-5251b.html"><img src="https://i.ebayimg.com/images/g/PBIAAOSwwdRfoCoI/s-l225.jpg" alt="SYSTEM SENSOR 5251B ADDRESSABLE HEAT DETECTOR EXC COND INCLDS BASE 40 AVAL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-5251b.html">SYSTEM SENSOR 5251B ADDRESSABLE HEAT DETECTOR EXC COND INCLDS BASE 40 AVAL</a></div>
@@ -1033,7 +1106,7 @@
                 <a href="system-sensor-5251b.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor 5251em heat detector free ship">
             <a href="system-sensor-5251em.html"><img src="https://i.ebayimg.com/images/g/07sAAOSwemVgWTFc/s-l225.jpg" alt="SYSTEM SENSOR 5251EM HEAT DETECTOR FREE SHIP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-5251em.html">SYSTEM SENSOR 5251EM HEAT DETECTOR FREE SHIP</a></div>
@@ -1041,7 +1114,7 @@
                 <a href="system-sensor-5251em.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor 5251rb rate-of-rise thermal heat detector sensor">
             <a href="system-sensor-5251rb.html"><img src="https://i.ebayimg.com/images/g/RDkAAOSwz0JnS2oh/s-l225.jpg" alt="System Sensor 5251RB Rate-Of-Rise Thermal Heat Detector Sensor - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-5251rb.html">System Sensor 5251RB Rate-Of-Rise Thermal Heat Detector Sensor</a></div>
@@ -1049,7 +1122,7 @@
                 <a href="system-sensor-5251rb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor 5600 series 5601p 135°f temperature heat detector">
             <a href="system-sensor-5600-5601p.html"><img src="https://i.ebayimg.com/images/g/FMkAAeSwoYRpSIGT/s-l225.jpg" alt="System Sensor 5600 Series 5601P 135°F Temperature Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-5600-5601p.html">System Sensor 5600 Series 5601P 135°F Temperature Heat Detector</a></div>
@@ -1057,7 +1130,7 @@
                 <a href="system-sensor-5600-5601p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor 5600 series heat detector model 5602 194 degree fahrenheit">
             <a href="system-sensor-5600.html"><img src="https://i.ebayimg.com/images/g/e~8AAeSwGE5pP07l/s-l225.jpg" alt="System Sensor 5600 Series Heat Detector Model 5602 194 Degree Fahrenheit - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-5600.html">System Sensor 5600 Series Heat Detector Model 5602 194 Degree Fahrenheit</a></div>
@@ -1065,7 +1138,7 @@
                 <a href="system-sensor-5600.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor 5601p heat detector 135f">
             <a href="system-sensor-5601p-135f.html"><img src="https://i.ebayimg.com/images/g/EqIAAeSwYPtpZa0X/s-l225.jpg" alt="System Sensor 5601P Heat Detector 135f - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-5601p-135f.html">System Sensor 5601P Heat Detector 135f</a></div>
@@ -1073,7 +1146,7 @@
                 <a href="system-sensor-5601p-135f.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="(qty 2) system sensor 5601p: 135 degree fixed temperature heat detector">
             <a href="system-sensor-5601p.html"><img src="https://i.ebayimg.com/images/g/cs4AAeSwrNRo2gjV/s-l225.jpg" alt="(QTY 2) System Sensor 5601P: 135 Degree Fixed Temperature Heat Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-5601p.html">(QTY 2) System Sensor 5601P: 135 Degree Fixed Temperature Heat Detector</a></div>
@@ -1081,7 +1154,7 @@
                 <a href="system-sensor-5601p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="adt 5951radt addressable rate-of-rise heat detector (system sensor 5951rb)">
             <a href="system-sensor-5951radt-5951rb.html"><img src="https://i.ebayimg.com/images/g/nD8AAeSwmnZpRv7N/s-l225.jpg" alt="ADT 5951RADT Addressable Rate-of-Rise Heat Detector (System Sensor 5951RB) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-5951radt-5951rb.html">ADT 5951RADT Addressable Rate-of-Rise Heat Detector (System Sensor 5951RB)</a></div>
@@ -1089,7 +1162,7 @@
                 <a href="system-sensor-5951radt-5951rb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 8x system sensor ra400z remote led annunciator">
             <a href="system-sensor-8x-ra400z.html"><img src="https://i.ebayimg.com/images/g/dJMAAeSwTgZovxVd/s-l225.jpg" alt="Lot of 8x System Sensor RA400Z Remote LED Annunciator - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-8x-ra400z.html">Lot of 8x System Sensor RA400Z Remote LED Annunciator</a></div>
@@ -1097,7 +1170,7 @@
                 <a href="system-sensor-8x-ra400z.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor apa151 remote annunciator hvac alarm panel">
             <a href="system-sensor-apa151.html"><img src="https://i.ebayimg.com/images/g/UR8AAOSwOrVm4IQM/s-l225.jpg" alt="System Sensor APA151 Remote Annunciator HVAC Alarm Panel - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-apa151.html">System Sensor APA151 Remote Annunciator HVAC Alarm Panel</a></div>
@@ -1105,7 +1178,7 @@
                 <a href="system-sensor-apa151.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new no box fire lite b07-009-px-2 & system sensor p4rl horn strobe marked fire">
             <a href="system-sensor-b07-009-p4rl.html"><img src="https://i.ebayimg.com/images/g/GXwAAeSwJQhpG1DL/s-l225.jpg" alt="NEW NO BOX FIRE LITE B07-009-PX-2 & System Sensor P4RL Horn Strobe Marked Fire - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-b07-009-p4rl.html">NEW NO BOX FIRE LITE B07-009-PX-2 & System Sensor P4RL Horn Strobe Marked Fire</a></div>
@@ -1113,7 +1186,7 @@
                 <a href="system-sensor-b07-009-p4rl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="smoke detector base, 6", 4 wire w/relay, 24 volt. system sensor model #b112lp">
             <a href="system-sensor-b112lp.html"><img src="https://i.ebayimg.com/images/g/ig8AAeSwRPRpOSKB/s-l225.jpg" alt="Smoke Detector Base, 6", 4 Wire W/Relay, 24 Volt. System Sensor Model #B112LP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-b112lp.html">Smoke Detector Base, 6", 4 Wire W/Relay, 24 Volt. System Sensor Model #B112LP</a></div>
@@ -1121,7 +1194,7 @@
                 <a href="system-sensor-b112lp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor b210lp smoke detector ceiling mount base">
             <a href="system-sensor-b210lp.html"><img src="https://i.ebayimg.com/images/g/BJkAAeSwTkZor~Cb/s-l225.jpg" alt="System Sensor B210LP Smoke Detector Ceiling Mount Base - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-b210lp.html">System Sensor B210LP Smoke Detector Ceiling Mount Base</a></div>
@@ -1129,7 +1202,7 @@
                 <a href="system-sensor-b210lp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor b224rb-wh detector relay base new, 5 available ">
             <a href="system-sensor-b224rb.html"><img src="https://i.ebayimg.com/images/g/nSEAAeSwgbNpYWRP/s-l225.jpg" alt="System Sensor B224RB-WH Detector Relay Base NEW, 5 available  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-b224rb.html">System Sensor B224RB-WH Detector Relay Base NEW, 5 available </a></div>
@@ -1137,7 +1210,7 @@
                 <a href="system-sensor-b224rb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor beam1224 smoke detector (no back plate)">
             <a href="system-sensor-beam1224.html"><img src="https://i.ebayimg.com/images/g/27YAAOSwV1ZoLkTv/s-l225.jpg" alt="System Sensor BEAM1224 Smoke Detector (No Back Plate) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-beam1224.html">System Sensor BEAM1224 Smoke Detector (No Back Plate)</a></div>
@@ -1145,7 +1218,7 @@
                 <a href="system-sensor-beam1224.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor beam200sa infrared detector">
             <a href="system-sensor-beam200sa.html"><img src="https://i.ebayimg.com/images/g/lBoAAOSwLl9m0RCf/s-l225.jpg" alt="System Sensor BEAM200SA Infrared Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-beam200sa.html">System Sensor BEAM200SA Infrared Detector</a></div>
@@ -1153,7 +1226,7 @@
                 <a href="system-sensor-beam200sa.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor c01224t carbon monoxide detector">
             <a href="system-sensor-c01224t.html"><img src="https://i.ebayimg.com/images/g/oGUAAeSwEShpX~Tb/s-l225.jpg" alt="System Sensor C01224T Carbon Monoxide Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-c01224t.html">System Sensor C01224T Carbon Monoxide Detector</a></div>
@@ -1161,7 +1234,7 @@
                 <a href="system-sensor-c01224t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor co1224t carbon monoxide detector">
             <a href="system-sensor-co1224t.html"><img src="https://i.ebayimg.com/images/g/ZikAAeSwMgloaAtr/s-l225.jpg" alt="System Sensor CO1224T Carbon Monoxide Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-co1224t.html">System Sensor CO1224T Carbon Monoxide Detector</a></div>
@@ -1169,7 +1242,7 @@
                 <a href="system-sensor-co1224t.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor d2 2-wire duct detector">
             <a href="system-sensor-d2.html"><img src="https://i.ebayimg.com/images/g/8tEAAeSwMIJpJj9w/s-l225.jpg" alt="SYSTEM SENSOR D2 2-WIRE DUCT DETECTOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-d2.html">SYSTEM SENSOR D2 2-WIRE DUCT DETECTOR</a></div>
@@ -1177,7 +1250,7 @@
                 <a href="system-sensor-d2.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new system sensor d4120 4-wire duct smoke detector - no cover included">
             <a href="system-sensor-d4120.html"><img src="https://i.ebayimg.com/images/g/GrkAAeSwRohpKiWf/s-l225.jpg" alt="NEW SYSTEM SENSOR D4120 4-WIRE DUCT SMOKE DETECTOR - NO COVER INCLUDED - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-d4120.html">NEW SYSTEM SENSOR D4120 4-WIRE DUCT SMOKE DETECTOR - NO COVER INCLUDED</a></div>
@@ -1185,7 +1258,7 @@
                 <a href="system-sensor-d4120.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor d4s duct smoke detector">
             <a href="system-sensor-d4s.html"><img src="https://i.ebayimg.com/images/g/NeoAAeSwT0xpPHIe/s-l225.jpg" alt="System Sensor D4S Duct Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-d4s.html">System Sensor D4S Duct Smoke Detector</a></div>
@@ -1193,7 +1266,7 @@
                 <a href="system-sensor-d4s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="innovair system sensor dh100lp ❌old stock. /parts❌missing. no cover (100-999)">
             <a href="system-sensor-dh100lp.html"><img src="https://i.ebayimg.com/images/g/odoAAOSwENplzab6/s-l225.jpg" alt="Innovair System Sensor DH100LP ❌Old Stock. /parts❌missing. No Cover (100-999) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-dh100lp.html">Innovair System Sensor DH100LP ❌Old Stock. /parts❌missing. No Cover (100-999)</a></div>
@@ -1201,7 +1274,7 @@
                 <a href="system-sensor-dh100lp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new high temp duct smoke detector system sensor dh400acdciht">
             <a href="system-sensor-dh400acdciht.html"><img src="https://i.ebayimg.com/images/g/mC4AAeSw2WJnx-CQ/s-l225.jpg" alt="New High Temp Duct Smoke Detector System Sensor DH400ACDCIHT - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-dh400acdciht.html">New High Temp Duct Smoke Detector System Sensor DH400ACDCIHT</a></div>
@@ -1209,7 +1282,7 @@
                 <a href="system-sensor-dh400acdciht.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor dnr smoke duct detector housing">
             <a href="system-sensor-dnr.html"><img src="https://i.ebayimg.com/images/g/oCQAAeSwr7ho~62H/s-l225.jpg" alt="System Sensor DNR Smoke Duct Detector Housing - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-dnr.html">System Sensor DNR Smoke Duct Detector Housing</a></div>
@@ -1217,7 +1290,7 @@
                 <a href="system-sensor-dnr.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor dnr duct smoke housing with fire lite sd365r smoke detector">
             <a href="system-sensor-dnrsd365r-1.html"><img src="https://i.ebayimg.com/images/g/W00AAeSwPGtpROTg/s-l225.jpg" alt="System Sensor DNR Duct Smoke Housing With Fire Lite SD365R Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-dnrsd365r-1.html">System Sensor DNR Duct Smoke Housing With Fire Lite SD365R Smoke Detector</a></div>
@@ -1225,7 +1298,7 @@
                 <a href="system-sensor-dnrsd365r-1.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor edh100acdclp fire alarm duct detector">
             <a href="system-sensor-edh100acdclp.html"><img src="https://i.ebayimg.com/images/g/3dYAAeSwdBxpTvmT/s-l225.jpg" alt="System Sensor EDH100ACDCLP Fire Alarm Duct Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-edh100acdclp.html">System Sensor EDH100ACDCLP Fire Alarm Duct Detector</a></div>
@@ -1233,7 +1306,7 @@
                 <a href="system-sensor-edh100acdclp.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor innovair edh100lp duct detector replaces dh400p">
             <a href="system-sensor-edh100lp-dh400p.html"><img src="https://i.ebayimg.com/images/g/g9YAAeSwTFZopKbt/s-l225.jpg" alt="SYSTEM SENSOR INNOVAIR EDH100LP DUCT DETECTOR REPLACES DH400P - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-edh100lp-dh400p.html">SYSTEM SENSOR INNOVAIR EDH100LP DUCT DETECTOR REPLACES DH400P</a></div>
@@ -1241,7 +1314,7 @@
                 <a href="system-sensor-edh100lp-dh400p.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="honeywell system sensor eolr-1 end-of-line epoxy encapsulated (spst) relay">
             <a href="system-sensor-generic-parts.html"><img src="https://i.ebayimg.com/images/g/X6oAAOSw7WZksbSw/s-l225.jpg" alt="HONEYWELL System Sensor EOLR-1 End-of-line Epoxy Encapsulated (SPST) Relay - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-generic-parts.html">HONEYWELL System Sensor EOLR-1 End-of-line Epoxy Encapsulated (SPST) Relay</a></div>
@@ -1249,7 +1322,7 @@
                 <a href="system-sensor-generic-parts.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="replacement co cell for the i4 series detectors, system sensor #co-repl">
             <a href="system-sensor-i4.html"><img src="https://i.ebayimg.com/images/g/Ro8AAeSwyndoUvIE/s-l225.jpg" alt="Replacement CO Cell for the I4 Series Detectors, System Sensor #CO-REPL - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-i4.html">Replacement CO Cell for the I4 Series Detectors, System Sensor #CO-REPL</a></div>
@@ -1257,7 +1330,7 @@
                 <a href="system-sensor-i4.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor fire alarm hvac duct smoke detector ld4p120x">
             <a href="system-sensor-ld4p120x.html"><img src="https://i.ebayimg.com/images/g/CJUAAeSwBJRpDk9q/s-l225.jpg" alt="SYSTEM SENSOR FIRE ALARM HVAC DUCT SMOKE DETECTOR LD4P120X - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-ld4p120x.html">SYSTEM SENSOR FIRE ALARM HVAC DUCT SMOKE DETECTOR LD4P120X</a></div>
@@ -1265,7 +1338,7 @@
                 <a href="system-sensor-ld4p120x.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor ld4s duct smoke detector">
             <a href="system-sensor-ld4s.html"><img src="https://i.ebayimg.com/images/g/De0AAeSwMqJpQjs5/s-l225.jpg" alt="System Sensor LD4S Duct Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-ld4s.html">System Sensor LD4S Duct Smoke Detector</a></div>
@@ -1273,7 +1346,7 @@
                 <a href="system-sensor-ld4s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new system sensor m220e dual input monitor module free uk ship">
             <a href="system-sensor-m220e.html"><img src="https://i.ebayimg.com/images/g/NHMAAOSwUAdfsu0p/s-l225.jpg" alt="NEW SYSTEM SENSOR M220E DUAL INPUT MONITOR MODULE FREE UK SHIP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m220e.html">NEW SYSTEM SENSOR M220E DUAL INPUT MONITOR MODULE FREE UK SHIP</a></div>
@@ -1281,7 +1354,7 @@
                 <a href="system-sensor-m220e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new system sensor m221e dual input monitor module free uk ship">
             <a href="system-sensor-m221e.html"><img src="https://i.ebayimg.com/images/g/9gEAAOSwTYxgBzyX/s-l225.jpg" alt="NEW SYSTEM SENSOR M221E DUAL INPUT MONITOR MODULE FREE UK SHIP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m221e.html">NEW SYSTEM SENSOR M221E DUAL INPUT MONITOR MODULE FREE UK SHIP</a></div>
@@ -1289,7 +1362,7 @@
                 <a href="system-sensor-m221e.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor m500c control module fire alarm device">
             <a href="system-sensor-m500c.html"><img src="https://i.ebayimg.com/images/g/afMAAeSw0xtoFm8N/s-l225.jpg" alt="System Sensor M500C Control Module Fire Alarm Device - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m500c.html">System Sensor M500C Control Module Fire Alarm Device</a></div>
@@ -1297,7 +1370,7 @@
                 <a href="system-sensor-m500c.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor m500m monitor module 15-32vdc lot of 2">
             <a href="system-sensor-m500m.html"><img src="https://i.ebayimg.com/images/g/BfwAAeSwpGFowX1y/s-l225.jpg" alt="System Sensor M500M Monitor Module 15-32VDC Lot Of 2 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m500m.html">System Sensor M500M Monitor Module 15-32VDC Lot Of 2</a></div>
@@ -1305,7 +1378,7 @@
                 <a href="system-sensor-m500m.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new m500mb monitor module signal device system sensor fire alarm">
             <a href="system-sensor-m500mb.html"><img src="https://i.ebayimg.com/images/g/9J0AAeSwgpJoo2AN/s-l225.jpg" alt="NEW M500MB MONITOR MODULE SIGNAL DEVICE SYSTEM SENSOR FIRE ALARM - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m500mb.html">NEW M500MB MONITOR MODULE SIGNAL DEVICE SYSTEM SENSOR FIRE ALARM</a></div>
@@ -1313,7 +1386,7 @@
                 <a href="system-sensor-m500mb.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor m500me monitor module">
             <a href="system-sensor-m500me.html"><img src="https://i.ebayimg.com/images/g/hzoAAOSw8A1fSUTv/s-l225.jpg" alt="SYSTEM SENSOR M500ME MONITOR MODULE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m500me.html">SYSTEM SENSOR M500ME MONITOR MODULE</a></div>
@@ -1321,7 +1394,7 @@
                 <a href="system-sensor-m500me.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor m500r relay module">
             <a href="system-sensor-m500r.html"><img src="https://i.ebayimg.com/images/g/I4IAAOSwxodhzPRU/s-l225.jpg" alt="SYSTEM SENSOR M500R RELAY MODULE - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m500r.html">SYSTEM SENSOR M500R RELAY MODULE</a></div>
@@ -1329,7 +1402,7 @@
                 <a href="system-sensor-m500r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor m500s addressable control supervisory module">
             <a href="system-sensor-m500s.html"><img src="https://i.ebayimg.com/images/g/lzgAAOSwPN1n8-2r/s-l225.jpg" alt="System Sensor M500S Addressable Control Supervisory Module - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m500s.html">System Sensor M500S Addressable Control Supervisory Module</a></div>
@@ -1337,7 +1410,7 @@
                 <a href="system-sensor-m500s.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor m501m mini monitor fire alarm module free shipping !!!">
             <a href="system-sensor-m501m.html"><img src="https://i.ebayimg.com/images/g/8hEAAOSw2J9k~k63/s-l225.jpg" alt="SYSTEM SENSOR M501M MINI MONITOR FIRE ALARM MODULE FREE SHIPPING !!! - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-m501m.html">SYSTEM SENSOR M501M MINI MONITOR FIRE ALARM MODULE FREE SHIPPING !!!</a></div>
@@ -1345,7 +1418,7 @@
                 <a href="system-sensor-m501m.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor mp120kl (101624)">
             <a href="system-sensor-mp120kl.html"><img src="https://i.ebayimg.com/images/g/fcgAAOSw5AtnEEL0/s-l225.jpg" alt="System Sensor MP120KL (101624) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-mp120kl.html">System Sensor MP120KL (101624)</a></div>
@@ -1353,7 +1426,7 @@
                 <a href="system-sensor-mp120kl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor p1224mcw fire alarm horn/strobe white ">
             <a href="system-sensor-p1224mcw.html"><img src="https://i.ebayimg.com/images/g/Xo8AAeSwGpZn2H4W/s-l225.jpg" alt="System Sensor P1224MCW Fire Alarm Horn/Strobe White  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-p1224mcw.html">System Sensor P1224MCW Fire Alarm Horn/Strobe White </a></div>
@@ -1361,7 +1434,7 @@
                 <a href="system-sensor-p1224mcw.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor p2475 fire alarm horn strobe wall red">
             <a href="system-sensor-p2475.html"><img src="https://i.ebayimg.com/images/g/BiIAAeSwLrBpTvp~/s-l225.jpg" alt="System Sensor P2475 Fire Alarm Horn Strobe Wall Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-p2475.html">System Sensor P2475 Fire Alarm Horn Strobe Wall Red</a></div>
@@ -1369,7 +1442,7 @@
                 <a href="system-sensor-p2475.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor p2grl l-series compact horn strobe">
             <a href="system-sensor-p2grl.html"><img src="https://i.ebayimg.com/images/g/GPYAAeSwlxdpYJ3l/s-l225.jpg" alt="System Sensor P2GRL L-Series Compact Horn Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-p2grl.html">System Sensor P2GRL L-Series Compact Horn Strobe</a></div>
@@ -1377,7 +1450,7 @@
                 <a href="system-sensor-p2grl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor p2rl 2 wire horn strobe sensor - red">
             <a href="system-sensor-p2rl.html"><img src="https://i.ebayimg.com/images/g/ErkAAeSwaJppC-05/s-l225.jpg" alt="System Sensor P2RL 2 Wire Horn Strobe Sensor - Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-p2rl.html">System Sensor P2RL 2 Wire Horn Strobe Sensor - Red</a></div>
@@ -1385,7 +1458,7 @@
                 <a href="system-sensor-p2rl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor p2w horn/strobe 2w std cd white spectralert advance honeywell">
             <a href="system-sensor-p2w.html"><img src="https://i.ebayimg.com/images/g/RykAAeSwchhofcMK/s-l225.jpg" alt="System Sensor P2W Horn/Strobe 2W STD CD White Spectralert Advance Honeywell - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-p2w.html">System Sensor P2W Horn/Strobe 2W STD CD White Spectralert Advance Honeywell</a></div>
@@ -1393,7 +1466,7 @@
                 <a href="system-sensor-p2w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor p2wl wall indoor selectable output horn strobe 2wire 10 available ">
             <a href="system-sensor-p2wl-2wire.html"><img src="https://i.ebayimg.com/images/g/AisAAeSwNJNpYWrQ/s-l225.jpg" alt="System Sensor P2WL Wall Indoor Selectable Output Horn Strobe 2Wire 10 available  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-p2wl-2wire.html">System Sensor P2WL Wall Indoor Selectable Output Horn Strobe 2Wire 10 available </a></div>
@@ -1401,7 +1474,7 @@
                 <a href="system-sensor-p2wl-2wire.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor p2wl fire alarm horn strobe wall white">
             <a href="system-sensor-p2wl.html"><img src="https://i.ebayimg.com/images/g/t-kAAOSwcglf9yQX/s-l225.jpg" alt="System Sensor P2WL Fire Alarm Horn Strobe Wall White - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-p2wl.html">System Sensor P2WL Fire Alarm Horn Strobe Wall White</a></div>
@@ -1409,7 +1482,7 @@
                 <a href="system-sensor-p2wl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor p4r horn strobe, red, wall mount, four-wire, fire lettering">
             <a href="system-sensor-p4r.html"><img src="https://i.ebayimg.com/images/g/D10AAeSw791omqNT/s-l225.jpg" alt="System Sensor P4R Horn Strobe, Red, Wall Mount, Four-Wire, FIRE Lettering - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-p4r.html">System Sensor P4R Horn Strobe, Red, Wall Mount, Four-Wire, FIRE Lettering</a></div>
@@ -1417,7 +1490,7 @@
                 <a href="system-sensor-p4r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor pc24115 fire ceiling horn/strobe red indoor alarm red">
             <a href="system-sensor-pc24115.html"><img src="https://i.ebayimg.com/images/g/OR0AAOSwJvBnkv1L/s-l225.jpg" alt="System Sensor PC24115 Fire Ceiling Horn/Strobe Red Indoor Alarm Red - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-pc24115.html">System Sensor PC24115 Fire Ceiling Horn/Strobe Red Indoor Alarm Red</a></div>
@@ -1425,7 +1498,7 @@
                 <a href="system-sensor-pc24115.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor pc2430w fire alarm horn strobe ceiling mount white ">
             <a href="system-sensor-pc2430w.html"><img src="https://i.ebayimg.com/images/g/TzYAAeSwTG9n2H7Z/s-l225.jpg" alt="System Sensor PC2430W Fire Alarm Horn Strobe Ceiling Mount White  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-pc2430w.html">System Sensor PC2430W Fire Alarm Horn Strobe Ceiling Mount White </a></div>
@@ -1433,7 +1506,7 @@
                 <a href="system-sensor-pc2430w.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="new spectralert advance system sensor pc2r ceiling mount horn strobe ⚪️">
             <a href="system-sensor-pc2r.html"><img src="https://i.ebayimg.com/images/g/owgAAeSwI~VpSt9z/s-l225.jpg" alt="NEW SpectrAlert Advance System Sensor PC2R Ceiling Mount Horn Strobe ⚪️ - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-pc2r.html">NEW SpectrAlert Advance System Sensor PC2R Ceiling Mount Horn Strobe ⚪️</a></div>
@@ -1441,7 +1514,7 @@
                 <a href="system-sensor-pc2r.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor part# pc2wh">
             <a href="system-sensor-pc2wh.html"><img src="https://i.ebayimg.com/images/g/oHAAAeSwVoZoG1cd/s-l225.jpg" alt="System sensor Part# PC2WH - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-pc2wh.html">System sensor Part# PC2WH</a></div>
@@ -1449,7 +1522,7 @@
                 <a href="system-sensor-pc2wh.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor pc2wk fire alarm horn strobe backbox only (new in box)">
             <a href="system-sensor-pc2wk.html"><img src="https://i.ebayimg.com/images/g/v~QAAeSwTHlpTviV/s-l225.jpg" alt="System Sensor PC2WK Fire Alarm Horn Strobe Backbox Only (NEW IN BOX) - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-pc2wk.html">System Sensor PC2WK Fire Alarm Horn Strobe Backbox Only (NEW IN BOX)</a></div>
@@ -1457,7 +1530,7 @@
                 <a href="system-sensor-pc2wk.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor pc2wl ceiling horn strobe - 82776">
             <a href="system-sensor-pc2wl.html"><img src="https://i.ebayimg.com/images/g/S9YAAeSwZjJovL0G/s-l225.jpg" alt="System Sensor PC2WL Ceiling Horn Strobe - 82776 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-pc2wl.html">System Sensor PC2WL Ceiling Horn Strobe - 82776</a></div>
@@ -1465,7 +1538,7 @@
                 <a href="system-sensor-pc2wl.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor ps24lo system sensor ps24lo add-on strobe">
             <a href="system-sensor-ps24lo.html"><img src="https://i.ebayimg.com/images/g/ovAAAeSw3i5o--wj/s-l225.jpg" alt="SYSTEM SENSOR PS24LO System Sensor PS24LO Add-on Strobe - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-ps24lo.html">SYSTEM SENSOR PS24LO System Sensor PS24LO Add-on Strobe</a></div>
@@ -1473,7 +1546,7 @@
                 <a href="system-sensor-ps24lo.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="ra100z system sensor 5cgz3 remote annunciator l00-2611-001">
             <a href="system-sensor-ra100z-5cgz3-l00.html"><img src="https://i.ebayimg.com/images/g/6iYAAOSwMN9mWamM/s-l225.jpg" alt="RA100Z System Sensor 5CGZ3 Remote Annunciator L00-2611-001 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-ra100z-5cgz3-l00.html">RA100Z System Sensor 5CGZ3 Remote Annunciator L00-2611-001</a></div>
@@ -1481,7 +1554,7 @@
                 <a href="system-sensor-ra100z-5cgz3-l00.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor ra100z 5cgz3 remote annunciator signalling device">
             <a href="system-sensor-ra100z-5cgz3.html"><img src="https://i.ebayimg.com/images/g/5poAAOSwD-1jhLu9/s-l225.jpg" alt="System Sensor RA100Z 5CGZ3 Remote Annunciator Signalling Device - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-ra100z-5cgz3.html">System Sensor RA100Z 5CGZ3 Remote Annunciator Signalling Device</a></div>
@@ -1489,7 +1562,7 @@
                 <a href="system-sensor-ra100z-5cgz3.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 3 pcs system sensor ra100z remote annunciator">
             <a href="system-sensor-ra100z.html"><img src="https://i.ebayimg.com/images/g/fSMAAOSwwNxoALUU/s-l225.jpg" alt="LOT OF 3 PCS SYSTEM SENSOR RA100Z REMOTE ANNUNCIATOR - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-ra100z.html">LOT OF 3 PCS SYSTEM SENSOR RA100Z REMOTE ANNUNCIATOR</a></div>
@@ -1497,7 +1570,7 @@
                 <a href="system-sensor-ra100z.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor ra400z remote led annunciator lot of 11 pieces see pics #a67">
             <a href="system-sensor-ra400z-a67.html"><img src="https://i.ebayimg.com/images/g/QAwAAOSw9r1V9uRp/s-l225.jpg" alt="SYSTEM SENSOR RA400Z REMOTE LED ANNUNCIATOR LOT OF 11 PIECES SEE PICS #A67 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-ra400z-a67.html">SYSTEM SENSOR RA400Z REMOTE LED ANNUNCIATOR LOT OF 11 PIECES SEE PICS #A67</a></div>
@@ -1505,7 +1578,7 @@
                 <a href="system-sensor-ra400z-a67.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor ra400z remote led annunciator - lot of 12 pcs new">
             <a href="system-sensor-ra400z.html"><img src="https://i.ebayimg.com/images/g/0vMAAOSwgsRixFN1/s-l225.jpg" alt="System Sensor RA400Z Remote LED Annunciator - Lot of 12 Pcs New - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-ra400z.html">System Sensor RA400Z Remote LED Annunciator - Lot of 12 Pcs New</a></div>
@@ -1513,7 +1586,7 @@
                 <a href="system-sensor-ra400z.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor fire alarm remote test station part no. rts151">
             <a href="system-sensor-rts151.html"><img src="https://i.ebayimg.com/images/g/JJkAAeSw6gNo1uSJ/s-l225.jpg" alt="System Sensor Fire Alarm Remote Test Station Part No. RTS151 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-rts151.html">System Sensor Fire Alarm Remote Test Station Part No. RTS151</a></div>
@@ -1521,7 +1594,7 @@
                 <a href="system-sensor-rts151.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor rts151key remote test station with key for duct smoke detector">
             <a href="system-sensor-rts151key.html"><img src="https://i.ebayimg.com/images/g/KGMAAOSwjspnqOLe/s-l225.jpg" alt="System Sensor RTS151KEY Remote Test Station with Key for Duct Smoke Detector - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-rts151key.html">System Sensor RTS151KEY Remote Test Station with Key for Duct Smoke Detector</a></div>
@@ -1529,7 +1602,7 @@
                 <a href="system-sensor-rts151key.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor rts451 fire alarm smoke detector remote test station">
             <a href="system-sensor-rts451.html"><img src="https://i.ebayimg.com/images/g/HFkAAeSwdkFpIeQc/s-l225.jpg" alt="System Sensor RTS451 Fire Alarm Smoke Detector Remote Test Station - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-rts451.html">System Sensor RTS451 Fire Alarm Smoke Detector Remote Test Station</a></div>
@@ -1537,7 +1610,7 @@
                 <a href="system-sensor-rts451.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="lot of 5- spectralert classic system sensor strobe model s241575 & s1224mc">
             <a href="system-sensor-s241575-s1224mc.html"><img src="https://i.ebayimg.com/images/g/RoQAAeSwI2FougN5/s-l225.jpg" alt="Lot of 5- SpectrAlert Classic System Sensor Strobe MODEL S241575 & S1224MC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-s241575-s1224mc.html">Lot of 5- SpectrAlert Classic System Sensor Strobe MODEL S241575 & S1224MC</a></div>
@@ -1545,7 +1618,7 @@
                 <a href="system-sensor-s241575-s1224mc.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor sc24177 spectralert red ceiling mount 177cd strobe - new ">
             <a href="system-sensor-sc24177-177cd.html"><img src="https://i.ebayimg.com/images/g/9tAAAeSwiVZo~35I/s-l225.jpg" alt="SYSTEM SENSOR SC24177 SPECTRALERT RED CEILING MOUNT 177CD STROBE - NEW  - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="system-sensor-sc24177-177cd.html">SYSTEM SENSOR SC24177 SPECTRALERT RED CEILING MOUNT 177CD STROBE - NEW </a></div>
@@ -1553,7 +1626,7 @@
                 <a href="system-sensor-sc24177-177cd.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor speaker tcpa-10">
             <a href="tcpa-10.html"><img src="https://i.ebayimg.com/images/g/AisAAeSw9RtoG92R/s-l225.jpg" alt="System Sensor Speaker TCPA-10 - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="tcpa-10.html">System Sensor Speaker TCPA-10</a></div>
@@ -1561,7 +1634,7 @@
                 <a href="tcpa-10.html" class="btn-primary">View Part</a>
             </div>
         </div>
-        <div class="card product-item">
+        <div class="card product-item" data-title="system sensor synchronization module w-sync">
             <a href="w-sync.html"><img src="https://cdn.firepartshub.com/images/bk-wsync.webp" alt="System Sensor Synchronization Module W-SYNC - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="w-sync.html">System Sensor Synchronization Module W-SYNC</a></div>
@@ -1588,6 +1661,73 @@
         </div>
     </div>
 </footer>
+
+    
+<script>
+(function() {
+    var MARCA = "System Sensor";
+    var CAMPAIGN_ID = "5339136270";
+
+    function buildEbayUrl(query) {
+        return "https://www.ebay.com/sch/i.html?_nkw=" + encodeURIComponent(query) +
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=" + CAMPAIGN_ID + 
+               "&toolid=10001&mkevt=1";
+    }
+
+    function siloSearch() {
+        var input  = document.getElementById("siloSearch");
+        var query  = input ? input.value.trim() : "";
+        var cards  = document.querySelectorAll(".product-item");
+        var count  = 0;
+        var filter = query.toLowerCase();
+
+        cards.forEach(function(card) {
+            var match = !filter || card.getAttribute("data-title").indexOf(filter) > -1;
+            card.style.display = match ? "" : "none";
+            if (match) count++;
+        });
+
+        var noResult = document.getElementById("silo-no-result");
+        var ebayBtn  = document.getElementById("silo-ebay-btn");
+        var countMsg = document.getElementById("silo-count-msg");
+
+        if (filter.length > 1) {
+            countMsg.textContent = count + " result" + (count !== 1 ? "s" : "") + " for \"" + query + "\"";
+            countMsg.style.display = "block";
+        } else {
+            countMsg.style.display = "none";
+        }
+
+        if (filter.length > 1 && count === 0) {
+            noResult.style.display = "block";
+            ebayBtn.href = buildEbayUrl(MARCA + " " + query);
+            ebayBtn.textContent = "🔎 Search \"" + query + "\" on eBay →";
+            ebayBtn.onclick = function() {
+                if (typeof gtag !== "undefined") {
+                    gtag("event", "ebay_fallback_click", {
+                        "brand": MARCA,
+                        "search_term": query
+                    });
+                }
+            };
+        } else {
+            noResult.style.display = "none";
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var input = document.getElementById("siloSearch");
+        if (input) {
+            input.addEventListener("input", siloSearch);
+            var params = new URLSearchParams(window.location.search);
+            if (params.get("q")) {
+                input.value = params.get("q");
+                siloSearch();
+            }
+        }
+    });
+})();
+</script>
 
 </body>
 </html>
