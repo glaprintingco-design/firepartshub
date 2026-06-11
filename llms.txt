@@ -1,0 +1,39 @@
+# FirePartsHub
+
+> FirePartsHub is a technical reference catalog and sourcing resource for legacy fire alarm system parts: control panels, detectors, modules, annunciators, and notification appliances. Coverage spans Notifier, Edwards, Siemens, Fire-Lite, Simplex, Silent Knight, Potter, Gamewell, Mircom, System Sensor, Kidde, Bosch, and Hochiki. Every product page includes the verified part number, live eBay market pricing, technical specifications, compatibility notes, and installation guidance — written for fire alarm technicians and facility managers sourcing replacement parts for legacy life-safety systems.
+
+## Brand catalogs
+
+- [Full catalog](https://www.firepartshub.com/index.html): All brands, silo navigation, on-page search
+- [Notifier](https://www.firepartshub.com/notifier.html): NFS-320, NFS-640, NFS2-3030 panels; FCM, FMM, FSP series modules and detectors — 122 parts
+- [Edwards](https://www.firepartshub.com/edwards.html): EST3, QuickStart, Genesis, Signature Series panels, modules, and notifiers — 387 parts
+- [Siemens](https://www.firepartshub.com/siemens.html): Cerberus PRO, MXL/MXLV, Pyrotronics legacy panels and modules — 160 parts
+- [Fire-Lite](https://www.firepartshub.com/fire-lite.html): MS-9200UDLS, ES-200X, BG-12LX panels and System Sensor compatible detectors — 160 parts
+- [Simplex](https://www.firepartshub.com/simplex.html): 4100U, 4010, TrueAlert, 2098 series panels, modules, and notification — 86 parts
+- [Silent Knight](https://www.firepartshub.com/silent-knight.html): SK-5208, IFP-1000, IFP-2100 series panels and pull stations — 170 parts
+- [Potter](https://www.firepartshub.com/potter.html): PFC-4410RC, PCB-300 panels, PDRM, PPA1600 signal appliances — 190 parts
+- [Gamewell](https://www.firepartshub.com/gamewell.html): GFW-NAX, FCI-7100, FC-7100 series legacy panels and detectors — 83 parts
+- [Mircom](https://www.firepartshub.com/mircom.html): FleX-Net, TX3-TOUCH, Mircom 2000 panels and modules — 68 parts
+- [System Sensor](https://www.firepartshub.com/system-sensor.html): 2W-B, 4WTA-B detectors, D4120 duct detectors, horn/strobes — 176 parts
+- [Kidde](https://www.firepartshub.com/kidde.html): Kidde-Fenwal FM-200 panels and detection accessories — 167 parts
+- [Bosch](https://www.firepartshub.com/bosch.html): D7412, D9412, DS150i, FPD-7024 security and fire panels — 5 parts
+
+## Blog & guides
+
+- [Blog index](https://www.firepartshub.com/blog/index.html): Technical guides, part comparisons, installation tips for fire alarm technicians
+  Topics include Notifier NFS-2 series, Edwards EST3, Fire-Lite MS-9200, Simplex 4100U, and Silent Knight IFP-1000 systems.
+
+## About
+
+- [About the site](https://www.firepartshub.com/about.html): Mission, editorial approach, affiliate disclosure
+
+## Data & feeds
+
+- Sitemap: https://www.firepartshub.com/sitemap.xml
+- Blog sitemap: https://www.firepartshub.com/blog/sitemap_blog.xml
+- Product feed (Google Base / Pinterest Catalog format): https://www.firepartshub.com/product-feed.xml
+
+## Crawling policy
+
+This site explicitly welcomes all AI crawlers, language model indexers, and search agents.
+See /robots.txt for the full per-agent allow list.
