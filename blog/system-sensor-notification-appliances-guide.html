@@ -105,6 +105,21 @@
     .related-card:hover { border-color: #d32f2f; transform: translateY(-3px);
                            box-shadow: 0 6px 18px rgba(211,47,47,0.1); }
 
+    .related-card { display: flex; flex-direction: column; }
+    .rc-img { background: #fff; border-radius: 6px; overflow: hidden; margin-bottom: 12px;
+              height: 140px; display: flex; align-items: center; justify-content: center; }
+    .rc-img img { max-height: 140px; width: auto; object-fit: contain; }
+    .rc-title { font-size: 0.88em; color: #222; display: block; margin-bottom: 8px;
+                line-height: 1.4; }
+    .rc-price { font-size: 1.15em; font-weight: 800; color: #d32f2f; margin-bottom: 12px; }
+    .rc-btn { display: block; background: #111; color: #fff; text-align: center;
+              padding: 10px; border-radius: 5px; font-size: 0.8em; font-weight: 700;
+              margin-top: auto; }
+    .rc-btn:hover { background: #d32f2f; opacity: 1; }
+    .rc-ebay { display: block; text-align: center; margin-top: 8px; font-size: 0.78em;
+               font-weight: 600; color: #666; }
+    .rc-ebay:hover { color: #d32f2f; }
+
     /* ── FAQ ── */
     .faq-section { margin-top: 40px; }
     .faq-item { border-bottom: 1px solid #eee; }
@@ -318,36 +333,40 @@
         <h2 id="listings">Find These Parts on FirePartsHub</h2>
         <p>Browse our verified inventory of System Sensor components sourced from trusted eBay sellers:</p>
         <div class="related-grid">
-            
-        <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor Speaker Strobe SPSRK</strong>
-            <a href="../spsrk.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="related-card">
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/bk-spswledcl.webp" alt="System Sensor LED Strobe SPSWLED-CLR-ALERT" loading="lazy"></div>
+            <strong class="rc-title">System Sensor LED Strobe SPSWLED-CLR-ALERT</strong>
+            <div class="rc-price">~$109.25</div>
+            <a href="../spswled-clr-alert.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=spswled+clr+alert&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-notification-appliances-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor Outdoor Speaker Strobe SPSRKLED</strong>
-            <a href="../spsrkled.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/bk-spswled.webp" alt="System Sensor LED Strobe SPSWLED" loading="lazy"></div>
+            <strong class="rc-title">System Sensor LED Strobe SPSWLED</strong>
+            <div class="rc-price">~$60.00</div>
+            <a href="../spswled.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=spswled&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-notification-appliances-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor LED Strobe SPSWLED-CLR-ALERT</strong>
-            <a href="../spswled-clr-alert.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/7IsAAeSwlaJpMvtn/s-l225.jpg" alt="System Sensor Strobe Expander Plate SEP-SPSWL" loading="lazy"></div>
+            <strong class="rc-title">System Sensor Strobe Expander Plate SEP-SPSWL</strong>
+            <div class="rc-price">~$45.00</div>
+            <a href="../sep-spswl.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=sep+spswl&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-notification-appliances-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor LED Strobe SPSWLED</strong>
-            <a href="../spswled.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/bk-sgrkled.webp" alt="System Sensor LED Strobe SGRKLED" loading="lazy"></div>
+            <strong class="rc-title">System Sensor LED Strobe SGRKLED</strong>
+            <div class="rc-price">~$75.95</div>
+            <a href="../sgrkled.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=sgrkled&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-notification-appliances-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor Speaker SPCWL</strong>
-            <a href="../spcwl.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/bk-spcwl.webp" alt="System Sensor Speaker SPCWL" loading="lazy"></div>
+            <strong class="rc-title">System Sensor Speaker SPCWL</strong>
+            <div class="rc-price">~$19.99</div>
+            <a href="../spcwl.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=spcwl&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-notification-appliances-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         </div>
 
@@ -420,5 +439,6 @@
     </div>
 </footer>
 
+<!-- CARDS-V2 -->
 </body>
 </html>

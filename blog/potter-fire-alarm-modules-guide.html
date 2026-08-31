@@ -105,6 +105,21 @@
     .related-card:hover { border-color: #d32f2f; transform: translateY(-3px);
                            box-shadow: 0 6px 18px rgba(211,47,47,0.1); }
 
+    .related-card { display: flex; flex-direction: column; }
+    .rc-img { background: #fff; border-radius: 6px; overflow: hidden; margin-bottom: 12px;
+              height: 140px; display: flex; align-items: center; justify-content: center; }
+    .rc-img img { max-height: 140px; width: auto; object-fit: contain; }
+    .rc-title { font-size: 0.88em; color: #222; display: block; margin-bottom: 8px;
+                line-height: 1.4; }
+    .rc-price { font-size: 1.15em; font-weight: 800; color: #d32f2f; margin-bottom: 12px; }
+    .rc-btn { display: block; background: #111; color: #fff; text-align: center;
+              padding: 10px; border-radius: 5px; font-size: 0.8em; font-weight: 700;
+              margin-top: auto; }
+    .rc-btn:hover { background: #d32f2f; opacity: 1; }
+    .rc-ebay { display: block; text-align: center; margin-top: 8px; font-size: 0.78em;
+               font-weight: 600; color: #666; }
+    .rc-ebay:hover { color: #d32f2f; }
+
     /* ── FAQ ── */
     .faq-section { margin-top: 40px; }
     .faq-item { border-bottom: 1px solid #eee; }
@@ -309,36 +324,40 @@
         <h2 id="listings">Find These Parts on FirePartsHub</h2>
         <p>Browse our verified inventory of Potter components sourced from trusted eBay sellers:</p>
         <div class="related-grid">
+            <div class="related-card">
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/pl-4410g3pca.webp" alt="Potter PFC-4410G3-PCA" loading="lazy"></div>
+            <strong class="rc-title">Potter PFC-4410G3-PCA</strong>
             
-        <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Potter Retard Switch Assembly 1029030</strong>
-            <a href="../1029030.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <a href="../pfc-4410g3-pca.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=Potter+PFC-4410G3-PCA&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-potter-fire-alarm-modules-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Potter 1340415</strong>
-            <a href="../1340415.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/pl-pfc4410g3.webp" alt="Potter PFC-4410G3" loading="lazy"></div>
+            <strong class="rc-title">Potter PFC-4410G3</strong>
+            <div class="rc-price">~$799.00</div>
+            <a href="../pfc-4410g3.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=pfc+4410g3&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-potter-fire-alarm-modules-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Potter Switch 3001000</strong>
-            <a href="../3001000.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/pl-pfc6006.webp" alt="Potter Fire Alarm Control Panel PFC-6006" loading="lazy"></div>
+            <strong class="rc-title">Potter Fire Alarm Control Panel PFC-6006</strong>
+            <div class="rc-price">~$614.55</div>
+            <a href="../pfc-6006.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=pfc+6006&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-potter-fire-alarm-modules-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Potter 3992694/PSN-1000</strong>
-            <a href="../3992694-psn-1000.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/HcsAAeSw5udpA3-G/s-l225.jpg" alt="Mighty Max 12V 18Ah SLA Replaces Potter PFC-4410RC Control Panel +12V " loading="lazy"></div>
+            <strong class="rc-title">Mighty Max 12V 18Ah SLA Replaces Potter PFC-4410RC Control Panel +12V </strong>
+            <div class="rc-price">~$64.99</div>
+            <a href="../potter-18ah-4410rc.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=Mighty+Max+12V+18Ah+SLA+Replaces+Potter+PFC-4410RC+Control+Panel++12V+SolarPanel&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-potter-fire-alarm-modules-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Potter Fire Alarm Control Panel 3992752</strong>
-            <a href="../3992752.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/S-EAAeSwGFxop10Z/s-l225.jpg" alt="Mighty Max 12V 7AH GEL F1 Replaces Potter PFC6800 Fire Control Panel -" loading="lazy"></div>
+            <strong class="rc-title">Mighty Max 12V 7AH GEL F1 Replaces Potter PFC6800 Fire Control Panel -</strong>
+            <div class="rc-price">~$79.99</div>
+            <a href="../potter-7ah-f1-pfc6800.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=potter+7ah+f1+pfc6800&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-potter-fire-alarm-modules-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         </div>
 
@@ -429,5 +448,6 @@
     </div>
 </footer>
 
+<!-- CARDS-V2 -->
 </body>
 </html>

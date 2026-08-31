@@ -105,6 +105,21 @@
     .related-card:hover { border-color: #d32f2f; transform: translateY(-3px);
                            box-shadow: 0 6px 18px rgba(211,47,47,0.1); }
 
+    .related-card { display: flex; flex-direction: column; }
+    .rc-img { background: #fff; border-radius: 6px; overflow: hidden; margin-bottom: 12px;
+              height: 140px; display: flex; align-items: center; justify-content: center; }
+    .rc-img img { max-height: 140px; width: auto; object-fit: contain; }
+    .rc-title { font-size: 0.88em; color: #222; display: block; margin-bottom: 8px;
+                line-height: 1.4; }
+    .rc-price { font-size: 1.15em; font-weight: 800; color: #d32f2f; margin-bottom: 12px; }
+    .rc-btn { display: block; background: #111; color: #fff; text-align: center;
+              padding: 10px; border-radius: 5px; font-size: 0.8em; font-weight: 700;
+              margin-top: auto; }
+    .rc-btn:hover { background: #d32f2f; opacity: 1; }
+    .rc-ebay { display: block; text-align: center; margin-top: 8px; font-size: 0.78em;
+               font-weight: 600; color: #666; }
+    .rc-ebay:hover { color: #d32f2f; }
+
     /* ── FAQ ── */
     .faq-section { margin-top: 40px; }
     .faq-item { border-bottom: 1px solid #eee; }
@@ -317,36 +332,40 @@
         <h2 id="listings">Find These Parts on FirePartsHub</h2>
         <p>Browse our verified inventory of Fire-Lite components sourced from trusted eBay sellers:</p>
         <div class="related-grid">
-            
-        <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Honeywell Fire-Lite C304 Control module</strong>
-            <a href="../fire-lite-c304.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="related-card">
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/JgYAAOSwCBJoNLp9/s-l225.jpg" alt="Honeywell Fire-Lite C304 Control module" loading="lazy"></div>
+            <strong class="rc-title">Honeywell Fire-Lite C304 Control module</strong>
+            <div class="rc-price">~$40.00</div>
+            <a href="../fire-lite-c304.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=Honeywell+Fire-Lite+C304+Control+module&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-fire-lite-parts-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Fire-Lite Pull Station BG-12</strong>
-            <a href="../bg-12.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/UV8AAOSwPCFoLipX/s-l225.jpg" alt="Fire-Lite Alarms SD355 Low Profile Smoke and Heat Detector" loading="lazy"></div>
+            <strong class="rc-title">Fire-Lite Alarms SD355 Low Profile Smoke and Heat Detector</strong>
+            <div class="rc-price">~$45.00</div>
+            <a href="../fire-lite-sd355.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=fire+lite+sd355&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-fire-lite-parts-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Fire-Lite Pull Station BG-12LA</strong>
-            <a href="../bg-12la.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/91EAAeSwE6dpJGsj/s-l225.jpg" alt="Fire-Lite SD355R Photoelectric Smoke Detector w/ Remote Test - USED" loading="lazy"></div>
+            <strong class="rc-title">Fire-Lite SD355R Photoelectric Smoke Detector w/ Remote Test - USED</strong>
+            <div class="rc-price">~$39.00</div>
+            <a href="../fire-lite-sd355r.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=fire+lite+sd355r&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-fire-lite-parts-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Fire-Lite Pull Station BG-12LAO</strong>
-            <a href="../bg-12lao.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/k-IAAeSw2KdpHAOd/s-l225.jpg" alt="SD355T Fire-Lite Wireless Photoelectric Smoke Detectors fast shipping" loading="lazy"></div>
+            <strong class="rc-title">SD355T Fire-Lite Wireless Photoelectric Smoke Detectors fast shipping</strong>
+            <div class="rc-price">~$40.00</div>
+            <a href="../fire-lite-sd355t.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=fire+lite+sd355t&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-fire-lite-parts-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Fire-Lite Pull Station BG-12LO</strong>
-            <a href="../bg-12lo.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/cLEAAeSwzoppF0AP/s-l225.jpg" alt="Fire Lite Alarms BG-12 Addressable Pull Station" loading="lazy"></div>
+            <strong class="rc-title">Fire Lite Alarms BG-12 Addressable Pull Station</strong>
+            <div class="rc-price">~$37.56</div>
+            <a href="../fire-lite-bg12.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=fire+lite+bg12&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-fire-lite-parts-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         </div>
 
@@ -419,5 +438,6 @@
     </div>
 </footer>
 
+<!-- CARDS-V2 -->
 </body>
 </html>

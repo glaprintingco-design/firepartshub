@@ -105,6 +105,21 @@
     .related-card:hover { border-color: #d32f2f; transform: translateY(-3px);
                            box-shadow: 0 6px 18px rgba(211,47,47,0.1); }
 
+    .related-card { display: flex; flex-direction: column; }
+    .rc-img { background: #fff; border-radius: 6px; overflow: hidden; margin-bottom: 12px;
+              height: 140px; display: flex; align-items: center; justify-content: center; }
+    .rc-img img { max-height: 140px; width: auto; object-fit: contain; }
+    .rc-title { font-size: 0.88em; color: #222; display: block; margin-bottom: 8px;
+                line-height: 1.4; }
+    .rc-price { font-size: 1.15em; font-weight: 800; color: #d32f2f; margin-bottom: 12px; }
+    .rc-btn { display: block; background: #111; color: #fff; text-align: center;
+              padding: 10px; border-radius: 5px; font-size: 0.8em; font-weight: 700;
+              margin-top: auto; }
+    .rc-btn:hover { background: #d32f2f; opacity: 1; }
+    .rc-ebay { display: block; text-align: center; margin-top: 8px; font-size: 0.78em;
+               font-weight: 600; color: #666; }
+    .rc-ebay:hover { color: #d32f2f; }
+
     /* ── FAQ ── */
     .faq-section { margin-top: 40px; }
     .faq-item { border-bottom: 1px solid #eee; }
@@ -325,24 +340,12 @@ Understanding the specifications of your fire alarm system is crucial for effect
         <h2 id="listings">Find These Parts on FirePartsHub</h2>
         <p>Browse our verified inventory of Notifier components sourced from trusted eBay sellers:</p>
         <div class="related-grid">
-            
-        <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">SIMPLEX 556-681 FIRE ALARM TROUBLE NOTIFIER CARD SIMPLEX 2001 556-638</strong>
-            <a href="../notifier-556.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
-        </div>
-        <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">New Honeywell NBG-12LR Agent Release Pull Station Notifier Auto Pulse & Key 222B</strong>
-            <a href="../honeywell-nbg12lr-222b.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
-        </div>
-        <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Notifier XPIQ-PSE Power Supply (For Parts)</strong>
-            <a href="../notifier-11-2.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="related-card">
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/nhAAAOSwMMFbWNUp/s-l225.jpg" alt="SIMPLEX 556-681 FIRE ALARM TROUBLE NOTIFIER CARD SIMPLEX 2001 556-638" loading="lazy"></div>
+            <strong class="rc-title">SIMPLEX 556-681 FIRE ALARM TROUBLE NOTIFIER CARD SIMPLEX 2001 556-638</strong>
+            <div class="rc-price">~$69.95</div>
+            <a href="../notifier-556.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=notifier+556&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-fire-alarm-panel-troubleshooting-trouble-codes" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         </div>
 
@@ -448,5 +451,6 @@ Understanding the specifications of your fire alarm system is crucial for effect
     </div>
 </footer>
 
+<!-- CARDS-V2 -->
 </body>
 </html>

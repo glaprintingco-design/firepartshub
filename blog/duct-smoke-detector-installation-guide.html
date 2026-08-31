@@ -105,6 +105,21 @@
     .related-card:hover { border-color: #d32f2f; transform: translateY(-3px);
                            box-shadow: 0 6px 18px rgba(211,47,47,0.1); }
 
+    .related-card { display: flex; flex-direction: column; }
+    .rc-img { background: #fff; border-radius: 6px; overflow: hidden; margin-bottom: 12px;
+              height: 140px; display: flex; align-items: center; justify-content: center; }
+    .rc-img img { max-height: 140px; width: auto; object-fit: contain; }
+    .rc-title { font-size: 0.88em; color: #222; display: block; margin-bottom: 8px;
+                line-height: 1.4; }
+    .rc-price { font-size: 1.15em; font-weight: 800; color: #d32f2f; margin-bottom: 12px; }
+    .rc-btn { display: block; background: #111; color: #fff; text-align: center;
+              padding: 10px; border-radius: 5px; font-size: 0.8em; font-weight: 700;
+              margin-top: auto; }
+    .rc-btn:hover { background: #d32f2f; opacity: 1; }
+    .rc-ebay { display: block; text-align: center; margin-top: 8px; font-size: 0.78em;
+               font-weight: 600; color: #666; }
+    .rc-ebay:hover { color: #d32f2f; }
+
     /* ── FAQ ── */
     .faq-section { margin-top: 40px; }
     .faq-item { border-bottom: 1px solid #eee; }
@@ -313,24 +328,26 @@ Regular maintenance and testing are crucial to ensure the reliability of duct sm
         <h2 id="listings">Find These Parts on FirePartsHub</h2>
         <p>Browse our verified inventory of Notifier components sourced from trusted eBay sellers:</p>
         <div class="related-grid">
-            
-        <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Notifier FST-851R Intelligent Heat Detector FST851R</strong>
-            <a href="../notifier-fst851r.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="related-card">
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/22AAAeSwFjVoKIkU/s-l225.jpg" alt="HONEYWELL NOTIFIER FSD-751RP / FSD751RP DUCT DETECTOR" loading="lazy"></div>
+            <strong class="rc-title">HONEYWELL NOTIFIER FSD-751RP / FSD751RP DUCT DETECTOR</strong>
+            <div class="rc-price">~$125.55</div>
+            <a href="../honeywell-fsd751rp.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=HONEYWELL+NOTIFIER+FSD-751RP+/+FSD751RP+DUCT+DETECTOR&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-duct-smoke-detector-installation-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">HONEYWELL NOTIFIER FSD-751RP / FSD751RP DUCT DETECTOR</strong>
-            <a href="../honeywell-fsd751rp.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/wP0AAeSwIJ9orX-6/s-l225.jpg" alt="Notifier FST-851R Intelligent Heat Detector FST851R" loading="lazy"></div>
+            <strong class="rc-title">Notifier FST-851R Intelligent Heat Detector FST851R</strong>
+            <div class="rc-price">~$39.90</div>
+            <a href="../notifier-fst851r.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=notifier+fst851r&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-duct-smoke-detector-installation-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">🔥Notifier NP-200R-IV Photoelectric Smoke Duct Detector Honeywell "WHITE"</strong>
-            <a href="../honeywell-200r.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/1B8AAOSwl-Fmttst/s-l225.jpg" alt="Notifier NP-200R-IV Photoelectric Smoke Duct Detector Honeywell "WHITE" loading="lazy"></div>
+            <strong class="rc-title">Notifier NP-200R-IV Photoelectric Smoke Duct Detector Honeywell "WHITE</strong>
+            <div class="rc-price">~$176.99</div>
+            <a href="../honeywell-200r.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=honeywell+200r&customid=blog-duct-smoke-detector-installation-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         </div>
 
@@ -421,5 +438,6 @@ Regular maintenance and testing are crucial to ensure the reliability of duct sm
     </div>
 </footer>
 
+<!-- CARDS-V2 -->
 </body>
 </html>

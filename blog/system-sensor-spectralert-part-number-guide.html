@@ -105,6 +105,21 @@
     .related-card:hover { border-color: #d32f2f; transform: translateY(-3px);
                            box-shadow: 0 6px 18px rgba(211,47,47,0.1); }
 
+    .related-card { display: flex; flex-direction: column; }
+    .rc-img { background: #fff; border-radius: 6px; overflow: hidden; margin-bottom: 12px;
+              height: 140px; display: flex; align-items: center; justify-content: center; }
+    .rc-img img { max-height: 140px; width: auto; object-fit: contain; }
+    .rc-title { font-size: 0.88em; color: #222; display: block; margin-bottom: 8px;
+                line-height: 1.4; }
+    .rc-price { font-size: 1.15em; font-weight: 800; color: #d32f2f; margin-bottom: 12px; }
+    .rc-btn { display: block; background: #111; color: #fff; text-align: center;
+              padding: 10px; border-radius: 5px; font-size: 0.8em; font-weight: 700;
+              margin-top: auto; }
+    .rc-btn:hover { background: #d32f2f; opacity: 1; }
+    .rc-ebay { display: block; text-align: center; margin-top: 8px; font-size: 0.78em;
+               font-weight: 600; color: #666; }
+    .rc-ebay:hover { color: #d32f2f; }
+
     /* ── FAQ ── */
     .faq-section { margin-top: 40px; }
     .faq-item { border-bottom: 1px solid #eee; }
@@ -306,36 +321,40 @@ To ensure proper operation, reference the device's installation manual for speci
         <h2 id="listings">Find These Parts on FirePartsHub</h2>
         <p>Browse our verified inventory of System Sensor components sourced from trusted eBay sellers:</p>
         <div class="related-grid">
-            
-        <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor Horn Strobe P2RK</strong>
-            <a href="../p2rk.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="related-card">
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/Jr4AAeSw-M9pclP2/s-l225.jpg" alt="System Sensor Horn Strobe, LED Strobe P2GRKLED" loading="lazy"></div>
+            <strong class="rc-title">System Sensor Horn Strobe, LED Strobe P2GRKLED</strong>
+            <div class="rc-price">~$69.99</div>
+            <a href="../p2grkled.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=p2grkled&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-spectralert-part-number-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor LED Strobe SPSRLED</strong>
-            <a href="../spsrled.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/bk-spscwledc.webp" alt="System Sensor LED Strobe SPSCWLED-CLR-ALERT" loading="lazy"></div>
+            <strong class="rc-title">System Sensor LED Strobe SPSCWLED-CLR-ALERT</strong>
+            <div class="rc-price">~$96.85</div>
+            <a href="../spscwled-clr-alert.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=spscwled+clr+alert&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-spectralert-part-number-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor Horn Strobe, LED Strobe PC2WLED</strong>
-            <a href="../pc2wled.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/YiEAAeSwqj5pz65l/s-l225.jpg" alt="System Sensor LED Strobe SPSCWLED" loading="lazy"></div>
+            <strong class="rc-title">System Sensor LED Strobe SPSCWLED</strong>
+            <div class="rc-price">~$65.00</div>
+            <a href="../spscwled.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=spscwled&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-spectralert-part-number-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor LED Strobe SPSCWLED-CLR-ALERT</strong>
-            <a href="../spscwled-clr-alert.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/bk-spsrk.webp" alt="System Sensor Speaker Strobe SPSRK" loading="lazy"></div>
+            <strong class="rc-title">System Sensor Speaker Strobe SPSRK</strong>
+            <div class="rc-price">~$74.89</div>
+            <a href="../spsrk.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=spsrk&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-spectralert-part-number-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">System Sensor LED Strobe SPSCWLED</strong>
-            <a href="../spscwled.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/bk-spsrkled.webp" alt="System Sensor Outdoor Speaker Strobe SPSRKLED" loading="lazy"></div>
+            <strong class="rc-title">System Sensor Outdoor Speaker Strobe SPSRKLED</strong>
+            <div class="rc-price">~$60.00</div>
+            <a href="../spsrkled.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=spsrkled&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-system-sensor-spectralert-part-number-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         </div>
 
@@ -450,5 +469,6 @@ To ensure proper operation, reference the device's installation manual for speci
     </div>
 </footer>
 
+<!-- CARDS-V2 -->
 </body>
 </html>

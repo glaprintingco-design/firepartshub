@@ -105,6 +105,21 @@
     .related-card:hover { border-color: #d32f2f; transform: translateY(-3px);
                            box-shadow: 0 6px 18px rgba(211,47,47,0.1); }
 
+    .related-card { display: flex; flex-direction: column; }
+    .rc-img { background: #fff; border-radius: 6px; overflow: hidden; margin-bottom: 12px;
+              height: 140px; display: flex; align-items: center; justify-content: center; }
+    .rc-img img { max-height: 140px; width: auto; object-fit: contain; }
+    .rc-title { font-size: 0.88em; color: #222; display: block; margin-bottom: 8px;
+                line-height: 1.4; }
+    .rc-price { font-size: 1.15em; font-weight: 800; color: #d32f2f; margin-bottom: 12px; }
+    .rc-btn { display: block; background: #111; color: #fff; text-align: center;
+              padding: 10px; border-radius: 5px; font-size: 0.8em; font-weight: 700;
+              margin-top: auto; }
+    .rc-btn:hover { background: #d32f2f; opacity: 1; }
+    .rc-ebay { display: block; text-align: center; margin-top: 8px; font-size: 0.78em;
+               font-weight: 600; color: #666; }
+    .rc-ebay:hover { color: #d32f2f; }
+
     /* ── FAQ ── */
     .faq-section { margin-top: 40px; }
     .faq-item { border-bottom: 1px solid #eee; }
@@ -322,36 +337,40 @@ Regular maintenance ensures that pull stations remain functional and ready for u
         <h2 id="listings">Find These Parts on FirePartsHub</h2>
         <p>Browse our verified inventory of Edwards components sourced from trusted eBay sellers:</p>
         <div class="related-grid">
-            
-        <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">EST Edwards SIGA-270 Fire Alarm Pull Station With Glass Rod</strong>
-            <a href="../edwards-estsiga270-1.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="related-card">
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/FcQAAOSwfRxnj-~R/s-l225.jpg" alt="EST Edwards SIGA-270 Fire Alarm Pull Station With Glass Rod" loading="lazy"></div>
+            <strong class="rc-title">EST Edwards SIGA-270 Fire Alarm Pull Station With Glass Rod</strong>
+            <div class="rc-price">~$38.99</div>
+            <a href="../edwards-estsiga270-1.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=EST+Edwards+SIGA-270+Fire+Alarm+Pull+Station+With+Glass+Rod+&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-edwards-siga-270-bng-1rs-pull-station-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Edwards Pull Station 278A-REL</strong>
-            <a href="../278a-rel.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://i.ebayimg.com/images/g/dpEAAeSwzm5pRJoj/s-l225.jpg" alt="EST Edwards 270-SPO Fire Alarm Addressable Pull Station FAST" loading="lazy"></div>
+            <strong class="rc-title">EST Edwards 270-SPO Fire Alarm Addressable Pull Station FAST</strong>
+            <div class="rc-price">~$34.95</div>
+            <a href="../edwards-est270.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=edwards+est270&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-edwards-siga-270-bng-1rs-pull-station-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Edwards 276B-1120 Pull Station Manual S-Action No-Code Screw Terms Plastic Break</strong>
-            <a href="../edwards-276b.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/ed-278arel.webp" alt="Edwards Pull Station 278A-REL" loading="lazy"></div>
+            <strong class="rc-title">Edwards Pull Station 278A-REL</strong>
+            <div class="rc-price">~$35.99</div>
+            <a href="../278a-rel.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=278a+rel&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-edwards-siga-270-bng-1rs-pull-station-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">EDWARDS E-278 INTELLIGENT MANUAL PULL STATION FIRE ALARM PART</strong>
-            <a href="../edwards-278.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/ed-k278b1110.webp" alt="Edwards Pull Station K-278B-1110" loading="lazy"></div>
+            <strong class="rc-title">Edwards Pull Station K-278B-1110</strong>
+            <div class="rc-price">~$38.00</div>
+            <a href="../k-278b-1110.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=k+278b+1110&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-edwards-siga-270-bng-1rs-pull-station-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         <div class="related-card">
-            <strong style="font-size:0.9em; color:#222; display:block; margin-bottom:8px;">Edwards 278B-1120 Pull Station</strong>
-            <a href="../edwards-278b.html" style="font-size:0.82em; font-weight:700; color:#d32f2f;">
-                View Listing →
-            </a>
+            <div class="rc-img"><img src="https://cdn.firepartshub.com/images/ed-k279b1110.webp" alt="Edwards Pull Station K-279B-1110" loading="lazy"></div>
+            <strong class="rc-title">Edwards Pull Station K-279B-1110</strong>
+            <div class="rc-price">~$52.98</div>
+            <a href="../k-279b-1110.html" class="rc-btn">View details &amp; specs &rarr;</a>
+            <a href="https://www.ebay.com/sch/i.html?_nkw=k+279b+1110&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=blog-edwards-siga-270-bng-1rs-pull-station-guide" class="rc-ebay" target="_blank" rel="nofollow sponsored">Check price on eBay &rarr;</a>
         </div>
         </div>
 
@@ -466,5 +485,6 @@ Regular maintenance ensures that pull stations remain functional and ready for u
     </div>
 </footer>
 
+<!-- CARDS-V2 -->
 </body>
 </html>
