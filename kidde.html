@@ -1374,7 +1374,7 @@
             <a href="kir-osd.html"><img src="https://cdn.firepartshub.com/images/ed-kirosd.webp" alt="Kidde Smoke Detector KIR-OSD - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="kir-osd.html">Kidde Smoke Detector KIR-OSD</a></div>
-                <div class="card-price">~$14.99</div>
+                <div class="card-price">~$45.00</div>
                 <a href="kir-osd.html" class="btn-primary">View Part</a>
             </div>
         </div>
@@ -1522,9 +1522,13 @@
 (function() {
     var MARCA = "Kidde";
     var CAMPAIGN_ID = "5339136270";
+    var SUB_ID = "silo-kidde";
     function buildEbayUrl(q) {
+        // customid = SubID de EPN: sin el, el reporte no puede atribuir el clic
+        // a este silo y todo su trafico queda mezclado con el resto.
         return "https://www.ebay.com/sch/i.html?_nkw="+encodeURIComponent(q)+
-               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid="+CAMPAIGN_ID+"&toolid=10001&mkevt=1";
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid="+CAMPAIGN_ID+
+               "&toolid=10001&mkevt=1&customid="+encodeURIComponent(SUB_ID);
     }
     function siloSearch() {
         var input=document.getElementById("siloSearch"),query=input?input.value.trim():"";

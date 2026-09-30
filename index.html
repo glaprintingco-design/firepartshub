@@ -162,7 +162,7 @@ function filterProducts(){
             if(++count>20)break;}}
     defaultGrid.style.display="none";siloSection.style.display="none";resultArea.style.display="block";
     if(count>0){resultArea.innerHTML='<h3>Found '+count+'+ results for "'+input.value+'"</h3>'+resultsHTML;}
-    else{var u='https://www.ebay.com/sch/i.html?_nkw='+encodeURIComponent(input.value)+'&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1';
+    else{var u='https://www.ebay.com/sch/i.html?_nkw='+encodeURIComponent(input.value)+'&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid=5339136270&toolid=10001&mkevt=1&customid=buscador-home';
         resultArea.innerHTML='<p>No matches found. <a href="'+u+'" target="_blank" rel="nofollow" style="color:#d32f2f;font-weight:bold;">Search on eBay &rarr;</a></p>';}
 }
 </script>

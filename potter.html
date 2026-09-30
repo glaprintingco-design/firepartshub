@@ -254,7 +254,7 @@
             <a href="chs-24ar-wp.html"><img src="https://cdn.firepartshub.com/images/pl-chs24arwp.webp" alt="Potter Horn/Strobe CHS-24AR-WP - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="chs-24ar-wp.html">Potter Horn/Strobe CHS-24AR-WP</a></div>
-                <div class="card-price">~$54.99</div>
+                <div class="card-price">~$30.00</div>
                 <a href="chs-24ar-wp.html" class="btn-primary">View Part</a>
             </div>
         </div>
@@ -414,7 +414,7 @@
             <a href="mht-1224w.html"><img src="https://cdn.firepartshub.com/images/pl-mht1224w.webp" alt="Potter Horn MHT-1224W - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="mht-1224w.html">Potter Horn MHT-1224W</a></div>
-                <div class="card-price">~$176.03</div>
+                <div class="card-price">~$54.99</div>
                 <a href="mht-1224w.html" class="btn-primary">View Part</a>
             </div>
         </div>
@@ -566,7 +566,7 @@
             <a href="pe-ghsr-co.html"><img src="https://cdn.firepartshub.com/images/pl-peghsrco.webp" alt="Potter PE-GHSR-CO - Fire Alarm Part" class="card-img" loading="lazy"></a>
             <div class="card-body">
                 <div class="card-title"><a href="pe-ghsr-co.html">Potter PE-GHSR-CO</a></div>
-                <div class="card-price">~$158.78</div>
+                <div class="card-price">~$176.03</div>
                 <a href="pe-ghsr-co.html" class="btn-primary">View Part</a>
             </div>
         </div>
@@ -1722,9 +1722,13 @@
 (function() {
     var MARCA = "Potter";
     var CAMPAIGN_ID = "5339136270";
+    var SUB_ID = "silo-potter";
     function buildEbayUrl(q) {
+        // customid = SubID de EPN: sin el, el reporte no puede atribuir el clic
+        // a este silo y todo su trafico queda mezclado con el resto.
         return "https://www.ebay.com/sch/i.html?_nkw="+encodeURIComponent(q)+
-               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid="+CAMPAIGN_ID+"&toolid=10001&mkevt=1";
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid="+CAMPAIGN_ID+
+               "&toolid=10001&mkevt=1&customid="+encodeURIComponent(SUB_ID);
     }
     function siloSearch() {
         var input=document.getElementById("siloSearch"),query=input?input.value.trim():"";

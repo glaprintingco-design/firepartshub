@@ -1482,9 +1482,13 @@
 (function() {
     var MARCA = "Siemens";
     var CAMPAIGN_ID = "5339136270";
+    var SUB_ID = "silo-siemens";
     function buildEbayUrl(q) {
+        // customid = SubID de EPN: sin el, el reporte no puede atribuir el clic
+        // a este silo y todo su trafico queda mezclado con el resto.
         return "https://www.ebay.com/sch/i.html?_nkw="+encodeURIComponent(q)+
-               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid="+CAMPAIGN_ID+"&toolid=10001&mkevt=1";
+               "&mkcid=1&mkrid=711-53200-19255-0&siteid=0&campid="+CAMPAIGN_ID+
+               "&toolid=10001&mkevt=1&customid="+encodeURIComponent(SUB_ID);
     }
     function siloSearch() {
         var input=document.getElementById("siloSearch"),query=input?input.value.trim():"";
