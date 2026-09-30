@@ -5,17 +5,17 @@
 ## Brand catalogs
 
 - [Full catalog](https://www.firepartshub.com/index.html): All brands, silo navigation, on-page search
-- [Notifier](https://www.firepartshub.com/notifier.html): NFS-320, NFS-640, NFS2-3030 panels; FCM, FMM, FSP series modules and detectors — 124 parts
-- [Edwards](https://www.firepartshub.com/edwards.html): EST3, QuickStart, Genesis, Signature Series panels, modules, and notifiers — 389 parts
-- [Siemens](https://www.firepartshub.com/siemens.html): Cerberus PRO, MXL/MXLV, Pyrotronics legacy panels and modules — 165 parts
-- [Fire-Lite](https://www.firepartshub.com/fire-lite.html): MS-9200UDLS, ES-200X, BG-12LX panels and System Sensor compatible detectors — 162 parts
-- [Simplex](https://www.firepartshub.com/simplex.html): 4100U, 4010, TrueAlert, 2098 series panels, modules, and notification — 89 parts
-- [Silent Knight](https://www.firepartshub.com/silent-knight.html): SK-5208, IFP-1000, IFP-2100 series panels and pull stations — 170 parts
+- [Notifier](https://www.firepartshub.com/notifier.html): NFS-320, NFS-640, NFS2-3030 panels; FCM, FMM, FSP series modules and detectors — 125 parts
+- [Edwards](https://www.firepartshub.com/edwards.html): EST3, QuickStart, Genesis, Signature Series panels, modules, and notifiers — 397 parts
+- [Siemens](https://www.firepartshub.com/siemens.html): Cerberus PRO, MXL/MXLV, Pyrotronics legacy panels and modules — 169 parts
+- [Fire-Lite](https://www.firepartshub.com/fire-lite.html): MS-9200UDLS, ES-200X, BG-12LX panels and System Sensor compatible detectors — 166 parts
+- [Simplex](https://www.firepartshub.com/simplex.html): 4100U, 4010, TrueAlert, 2098 series panels, modules, and notification — 92 parts
+- [Silent Knight](https://www.firepartshub.com/silent-knight.html): SK-5208, IFP-1000, IFP-2100 series panels and pull stations — 171 parts
 - [Potter](https://www.firepartshub.com/potter.html): PFC-4410RC, PCB-300 panels, PDRM, PPA1600 signal appliances — 195 parts
 - [Gamewell](https://www.firepartshub.com/gamewell.html): GFW-NAX, FCI-7100, FC-7100 series legacy panels and detectors — 83 parts
 - [Mircom](https://www.firepartshub.com/mircom.html): FleX-Net, TX3-TOUCH, Mircom 2000 panels and modules — 69 parts
 - [System Sensor](https://www.firepartshub.com/system-sensor.html): 2W-B, 4WTA-B detectors, D4120 duct detectors, horn/strobes — 178 parts
-- [Kidde](https://www.firepartshub.com/kidde.html): Kidde-Fenwal FM-200 panels and detection accessories — 170 parts
+- [Kidde](https://www.firepartshub.com/kidde.html): Kidde-Fenwal FM-200 panels and detection accessories — 174 parts
 - [Bosch](https://www.firepartshub.com/bosch.html): D7412, D9412, DS150i, FPD-7024 security and fire panels — 5 parts
 
 ## Blog & guides
