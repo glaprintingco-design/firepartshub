@@ -23,8 +23,15 @@
     .nav-logo { height: 60px; width: auto; margin-right: 15px; flex-shrink: 0; }
     .nav-links a { color: #bbb; margin-left: 20px; font-size: 0.9em; font-weight: 600; text-transform: uppercase; }
     .nav-links a:hover { color: #fff; }
+    /* --- Boton hamburguesa: oculto en escritorio, el menu va inline --- */
+    .nav-toggle { display: none; background: none; border: 0; padding: 10px 4px; cursor: pointer; line-height: 0; }
+    .nav-toggle span { display: block; width: 24px; height: 2px; background: #fff; border-radius: 2px; transition: transform .2s, opacity .2s; }
+    .nav-toggle span + span { margin-top: 5px; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
     footer { background-color: #1a1a1a; color: #bbb; padding: 50px 0; margin-top: 60px; font-size: 0.9em; border-top: 4px solid #d32f2f; text-align: center; }
-    footer .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; min-height: 60vh; }
+    footer .container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
     footer h2 { color: #ddd; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-size: 1.1em; }
     footer .legal-links { display: flex; justify-content: center; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
     footer .legal-links a { color: #999; border-bottom: 1px dotted #555; }
@@ -76,11 +83,17 @@
     .specs-table th { text-align: left; padding: 12px; border-bottom: 1px solid #eee; color: #111; width: 40%; font-weight: 600; background: #fafafa; }
     .specs-table td { padding: 12px; border-bottom: 1px solid #eee; color: #555; }
     @media (max-width: 768px) {
-        .navbar .container { flex-direction: column; gap: 10px; }
-        .nav-logo { height: 45px; margin-right: 10px; }
-        .brand { font-size: 1.4em; white-space: normal; text-align: center; }
-        .nav-links { margin-top: 10px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-        .nav-links a { margin: 0; }
+        /* Header compacto en una fila; los enlaces viven en el hamburguesa.
+           Antes: apilado en columna, 118px de alto y encima sticky. */
+        .navbar { padding: 8px 0; }
+        .navbar .container { flex-wrap: wrap; gap: 4px 12px; padding: 0 14px; }
+        .nav-logo { height: 36px; margin-right: 8px; }
+        .brand { font-size: 1.05em; }
+        /* Los enlaces pasan a desplegable: el header queda en una sola fila. */
+        .nav-toggle { display: block; }
+        .nav-links { display: none; width: 100%; flex-direction: column; gap: 0; margin: 0; }
+        .nav-links.abierto { display: flex; }
+        .nav-links a { margin: 0; padding: 12px 2px; font-size: 0.8em; border-top: 1px solid #2a2a2a; }
         .search-container { width: 90%; }
         .grid { grid-template-columns: 1fr 1fr; gap: 10px; }
         .card-title { font-size: 0.85em; }
@@ -91,7 +104,15 @@
     }
     .sticky-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; padding: 10px 15px; background: #fff; box-shadow: 0 -3px 15px rgba(0,0,0,0.18); z-index: 9999; }
     .sticky-cta .btn-ebay { margin: 0; padding: 14px; font-size: 1.05em; border-radius: 6px; }
-    @media (max-width: 768px) { .sticky-cta { display: block; } body { padding-bottom: 72px; } }
+    @media (max-width: 768px) { .sticky-cta { display: block; } body { padding-bottom: 110px; }  /* el CTA flotante mide hasta 102px cuando el texto parte en dos lineas */ }
+    /* Telefonos estrechos: a 320px la marca mas el boton no caben y el boton
+       saltaba a una segunda fila, dejando el header en 92px. */
+    @media (max-width: 360px) {
+        .navbar .container { padding: 0 10px; gap: 4px 8px; }
+        .nav-logo { height: 32px; margin-right: 6px; }
+        .brand { font-size: 0.88em; }
+    }
+
 </style>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1G85B10CF0"></script>
@@ -161,12 +182,27 @@
             <img src="logo.png" alt="FirePartsHub Logo" class="nav-logo">
             Fire<span>Parts</span>Hub
         </a>
-        <div class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="nav-links">
             <a href="index.html">Catalog</a>
             <a href="blog/index.html">Blog</a>
             <a href="about.html">About Us</a>
         </div>
     </div>
+
+<script>
+(function () {
+  var b = document.querySelector('.nav-toggle');
+  if (!b) return;
+  b.addEventListener('click', function () {
+    var l = document.getElementById('nav-links');
+    if (!l) return;
+    b.setAttribute('aria-expanded', l.classList.toggle('abierto') ? 'true' : 'false');
+  });
+})();
+</script>
 </nav>
     <div class="product-container">
         <p style="color:#777; font-size:0.9em;"><a href="index.html" style="color:#d32f2f;">Home</a> &gt; <a href="edwards.html" style="color:#d32f2f;">Edwards</a> &gt; Edwards Handset 6830-5A-4</p>

@@ -180,7 +180,16 @@
     @media (max-width: 500px) {
         .related-grid { grid-template-columns: 1fr; }
     }
-</style>
+
+    /* fix-desborde-movil */
+    /* `1fr` es minmax(auto,1fr): sin esto, una tabla ancha no deja encoger la
+       columna y arrastra el layout viewport (medido: 524px en un movil de 390). */
+    .blog-wrapper > * { min-width: 0; }
+    .blog-article img { max-width: 100%; height: auto; }
+    .blog-article pre, .blog-article code { max-width: 100%; overflow-x: auto; }
+    .blog-article table, .spec-table { display: block; max-width: 100%;
+                                        min-width: 0; overflow-x: auto; }
+  </style>
 
 </head>
 <body>
